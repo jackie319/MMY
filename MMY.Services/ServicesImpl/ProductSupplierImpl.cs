@@ -14,15 +14,8 @@ namespace MMY.Services.ServicesImpl
     public class ProductSupplierImpl:IProductSupplier
     {
         private IRepository<ProductSupplier> ProductSupplierRepository;
-      //  private IDbContext DbContext;
         private ICacheManager CacheManager;
-        private const string PRODUCTS_BY_ID_KEY = "MMY.product.uid-{0}";
-        //public ProductSupplierImpl(IRepository<ProductSupplier> useraccountRepository, IDbContextGetter dbContext, ICacheManager cacheManager)
-        //{
-        //    ProductSupplierRepository = useraccountRepository;
-        //    DbContext = dbContext.GetByName<IDbContext>("MMYEntities");
-        //    CacheManager = cacheManager;
-        //}
+        private const string PRODUCTS_BY_ID_KEY = "MMY.productSupplier.uid-{0}";
 
         public ProductSupplierImpl(IRepository<ProductSupplier> useraccountRepository,  ICacheManager cacheManager)
         {
@@ -41,9 +34,19 @@ namespace MMY.Services.ServicesImpl
             return CacheManager.Get(key, () => ProductSupplierRepository.Table.FirstOrDefault(q => q.Guid == uid && !q.IsDeleted));
         }
 
-        public IList<ProductSupplier> Query()
+        public IList<ProductSupplier> Query(string supplierName, string supplierAddress,int skip,int take,out int total)
         {
-            return ProductSupplierRepository.Table.Where(q=>!q.IsDeleted).ToList();
+            var queryable = ProductSupplierRepository.Table.Where(q=>!q.IsDeleted);
+            if (!string.IsNullOrEmpty(supplierName))
+            {
+                queryable = queryable.Where(q => q.SupplierName.Contains(supplierName));
+            }
+            if (!string.IsNullOrEmpty(supplierAddress))
+            {
+                queryable = queryable.Where(q => q.SupplierAddress.Contains(supplierAddress));
+            }
+            total = queryable.Count();
+            return queryable.OrderByDescending(q=>q.TimeCreated).Skip(skip).Take(take).ToList();
         }
     }
 }

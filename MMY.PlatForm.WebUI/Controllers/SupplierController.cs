@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MMY.PlatForm.WebUI.Models;
+using MMY.PlatForm.WebUI.Models.Product;
 using MMY.Services.IServices;
 
 namespace MMY.PlatForm.WebUI.Controllers
@@ -15,10 +17,12 @@ namespace MMY.PlatForm.WebUI.Controllers
             Supplier = supplier;
         }
         // GET: Supplier
-        public ActionResult Index()
+        public ActionResult List(SupplierQueryModel query)
         {
-            var supplier=Supplier.Query();
-            return View(supplier);
+            int total;
+            var supplier=Supplier.Query(query.SupplierName, query.SupplierAddress, query.Skip, query.Take,out total);
+            ResultModel< ProductListViewModel > sModel=new ResultModel<ProductListViewModel>();
+            return Json(new ProductListViewModel());
         }
     }
 }

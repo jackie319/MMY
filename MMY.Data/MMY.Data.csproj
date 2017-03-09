@@ -138,6 +138,9 @@
     <Compile Include="Model\ProductSupplier.cs">
       <DependentUpon>MMYModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="partial\Activity.partial.cs" />
+    <Compile Include="partial\AuthorityFunction.partial.cs" />
+    <Compile Include="partial\AuthrityRole.partial.cs" />
     <Compile Include="partial\ProductSupplier.partial.cs" />
     <Compile Include="Model\sysdiagrams.cs">
       <DependentUpon>MMYModel.tt</DependentUpon>

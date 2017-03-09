@@ -9,7 +9,7 @@ namespace MMY.Services.IServices
 {
     public interface IProductSupplier
     {
-        IList<ProductSupplier> Query();
+        IList<ProductSupplier> Query(string supplierName,string supplierAddress,int skip,int take,out int total);
         ProductSupplier Find(Guid uid);
         ProductSupplier FindWithCache(Guid uid);
     }
