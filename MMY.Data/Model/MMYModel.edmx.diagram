@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8093a094f4634e33bd4c75ce5fc2d917" Name="Diagram1">
+        <EntityTypeShape EntityType="MMYModel.Activity" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.AuthorityFunction" Width="1.5" PointX="14.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.AuthorityRole" Width="1.5" PointX="14.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.AuthorityRoleInFunction" Width="1.5" PointX="17" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.AuthorityUserInRole" Width="1.5" PointX="17" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.Merchant" Width="1.5" PointX="15.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.MerchantProduct" Width="1.5" PointX="18" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.Order" Width="1.5" PointX="10" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.OrderDelivery" Width="1.5" PointX="7.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.OrderEvaluation" Width="1.5" PointX="12.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.OrderPayment" Width="1.5" PointX="7.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.OrderPayRecords" Width="1.5" PointX="12.25" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.PositionCity" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.PositionDistrict" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.PositionProvince" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.PositionZipCode" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.Product" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.ProductAlbum" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.ProductCategory" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.ProductClassification" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.ProductQRCode" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.ProductSupplier" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.UserAccount" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.UserDeliveryAddress" Width="1.5" PointX="13" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.UserFavorite" Width="1.5" PointX="13" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.UserOperationRecords" Width="1.5" PointX="13" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMYModel.UserShoppingCart" Width="1.5" PointX="13" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="MMYModel.FK_RoleInFunction_Function" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_RoleInFunction_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_UserInRole_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_MerchantProduct_Merchant" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_Order_OrderDelivery" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_Order_OrderPayment" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_OrderEvaluation_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_OrderPayRecords_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_Product_ProductCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_ProductAlbum_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_ProductClassification_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_ProductQRCode_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_UserDeliveryAddress_UserAccount" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_UserFavorite_UserAccount" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_UserOperationRecords_UserAccount" ManuallyRouted="false" />
+        <AssociationConnector Association="MMYModel.FK_UserShoppingCart_UserAccount" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

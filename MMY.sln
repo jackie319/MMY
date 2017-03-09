@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMY.FrontSite.WebUI", "MMY.FrontSite.WebUI\MMY.FrontSite.WebUI.csproj", "{4A7663CB-13AF-4540-9A3F-DFF111877CB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMY.FrontSite.Domain", "MMY.FrontSite.Domain\MMY.FrontSite.Domain.csproj", "{4EAB2722-8695-4A4A-8E51-F0A080CDCF6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "用户侧", "用户侧", "{6F3A7FC5-17B4-4C7A-AF4A-1F56F098C7AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "平台侧", "平台侧", "{EE994144-328D-400D-AD89-B8D642ABC557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMY.PlatForm.WebUI", "MMY.PlatForm.WebUI\MMY.PlatForm.WebUI.csproj", "{D3587F04-C6BD-40C7-BED5-21B0B429E17A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMY.PlatForm.Domain", "MMY.PlatForm.Domain\MMY.PlatForm.Domain.csproj", "{F1C091BB-F75C-4D4B-ACB5-ABC8731E386B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMY.Data", "MMY.Data\MMY.Data.csproj", "{E5D91290-E87D-4097-A316-92AEFD8329EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMY.Services", "MMY.Services\MMY.Services.csproj", "{6465A8E9-EACC-4876-8E33-5D8E2EEE841A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2EB402BE-71B8-4E59-9F4F-EDAFF7ACF06E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{9BB57045-5070-44C9-B449-D74DAE9CFB1F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\..\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Core\bin\Debug\JK.Framework.Core.dll = ..\..\..\..\..\..\..\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Core\bin\Debug\JK.Framework.Core.dll
+		..\..\..\..\..\..\..\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Data\bin\Debug\JK.Framework.Data.dll = ..\..\..\..\..\..\..\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Data\bin\Debug\JK.Framework.Data.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A7663CB-13AF-4540-9A3F-DFF111877CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A7663CB-13AF-4540-9A3F-DFF111877CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A7663CB-13AF-4540-9A3F-DFF111877CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A7663CB-13AF-4540-9A3F-DFF111877CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EAB2722-8695-4A4A-8E51-F0A080CDCF6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAB2722-8695-4A4A-8E51-F0A080CDCF6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAB2722-8695-4A4A-8E51-F0A080CDCF6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAB2722-8695-4A4A-8E51-F0A080CDCF6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3587F04-C6BD-40C7-BED5-21B0B429E17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3587F04-C6BD-40C7-BED5-21B0B429E17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3587F04-C6BD-40C7-BED5-21B0B429E17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3587F04-C6BD-40C7-BED5-21B0B429E17A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1C091BB-F75C-4D4B-ACB5-ABC8731E386B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1C091BB-F75C-4D4B-ACB5-ABC8731E386B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1C091BB-F75C-4D4B-ACB5-ABC8731E386B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1C091BB-F75C-4D4B-ACB5-ABC8731E386B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5D91290-E87D-4097-A316-92AEFD8329EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D91290-E87D-4097-A316-92AEFD8329EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D91290-E87D-4097-A316-92AEFD8329EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D91290-E87D-4097-A316-92AEFD8329EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6465A8E9-EACC-4876-8E33-5D8E2EEE841A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6465A8E9-EACC-4876-8E33-5D8E2EEE841A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6465A8E9-EACC-4876-8E33-5D8E2EEE841A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6465A8E9-EACC-4876-8E33-5D8E2EEE841A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A7663CB-13AF-4540-9A3F-DFF111877CB8} = {6F3A7FC5-17B4-4C7A-AF4A-1F56F098C7AE}
+		{4EAB2722-8695-4A4A-8E51-F0A080CDCF6A} = {6F3A7FC5-17B4-4C7A-AF4A-1F56F098C7AE}
+		{D3587F04-C6BD-40C7-BED5-21B0B429E17A} = {EE994144-328D-400D-AD89-B8D642ABC557}
+		{F1C091BB-F75C-4D4B-ACB5-ABC8731E386B} = {EE994144-328D-400D-AD89-B8D642ABC557}
+		{E5D91290-E87D-4097-A316-92AEFD8329EA} = {2EB402BE-71B8-4E59-9F4F-EDAFF7ACF06E}
+		{6465A8E9-EACC-4876-8E33-5D8E2EEE841A} = {2EB402BE-71B8-4E59-9F4F-EDAFF7ACF06E}
+	EndGlobalSection
+EndGlobal
