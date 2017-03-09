@@ -6,14 +6,12 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\MMY.Dat
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\EntityFramework.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\Autofac.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\Autofac.Integration.Mvc.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\MMY.Data.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\JK.Framework.Core.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\JK.Framework.Data.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\EntityFramework.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\Autofac.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\Autofac.Integration.Mvc.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\Microsoft.Web.Infrastructure.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\obj\Debug\MMY.Services.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\obj\Debug\MMY.Services.dll

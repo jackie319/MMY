@@ -1,0 +1,4 @@
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.FrontSite.Domain.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.FrontSite.Domain.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.pdb

@@ -6,13 +6,11 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\EntityFrame
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\JK.Framework.Core.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\Autofac.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\Autofac.Integration.Mvc.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\EntityFramework.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\EntityFramework.SqlServer.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\JK.Framework.Core.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\Autofac.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\Autofac.Integration.Mvc.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\Microsoft.Web.Infrastructure.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Data\obj\Debug\MMY.Data.csprojResolveAssemblyReference.cache

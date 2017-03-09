@@ -113,3 +113,7 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Autofac
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Core.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Data.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\log4net.xml
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Web.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Extensions.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Web.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Extensions.pdb

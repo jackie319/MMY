@@ -52,11 +52,17 @@
       <HintPath>..\packages\Autofac.Mvc5.4.0.1\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="JK.Framework.Core">
-      <HintPath>..\..\..\..\..\..\..\..\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Core\bin\Debug\JK.Framework.Core.dll</HintPath>
+    <Reference Include="JK.Framework.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Core\bin\Debug\JK.Framework.Core.dll</HintPath>
     </Reference>
-    <Reference Include="JK.Framework.Data">
+    <Reference Include="JK.Framework.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Data\bin\Debug\JK.Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="JK.Framework.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Web.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>

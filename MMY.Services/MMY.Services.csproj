@@ -30,11 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JK.Framework.Core">
-      <HintPath>..\..\..\..\..\..\..\..\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Core\bin\Debug\JK.Framework.Core.dll</HintPath>
+    <Reference Include="JK.Framework.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Core\bin\Debug\JK.Framework.Core.dll</HintPath>
     </Reference>
-    <Reference Include="JK.Framework.Data">
-      <HintPath>..\..\..\..\..\..\..\..\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Data\bin\Debug\JK.Framework.Data.dll</HintPath>
+    <Reference Include="JK.Framework.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Data\bin\Debug\JK.Framework.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
