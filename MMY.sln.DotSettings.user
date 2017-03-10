@@ -2,4 +2,5 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="E:\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Core\bin\Debug\JK.Framework.Core.dll" /&gt;&#xD;
   &lt;Assembly Path="E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Web.dll" /&gt;&#xD;
+  &lt;Assembly Path="E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Core.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>

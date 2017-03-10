@@ -12,18 +12,43 @@ namespace MMY.PlatForm.WebUI.Controllers
 {
     public class SupplierController : Controller
     {
-        private IProductSupplier Supplier;
+        private IProductSupplier _Supplier;
         public SupplierController(IProductSupplier supplier)
         {
-            Supplier = supplier;
+            _Supplier = supplier;
         }
         // GET: Supplier
         public ActionResult List(SupplierQueryModel query)
         {
             int total;
-            var supplier=Supplier.Query(query.SupplierName, query.SupplierAddress, query.Skip, query.Take,out total);
-           IList< ProductListViewModel > models=new List<ProductListViewModel>();
-            return this.JsonOk(total,models);
+            var supplier = _Supplier.Query(query.SupplierName, query.SupplierAddress, query.Skip, query.Take, out total);
+            IList<SupplierViewModel> models = supplier.Select(item=> SupplierViewModel.CopyFrom(item)).ToList();
+            return this.ResultListModel(total, models);
+        }
+
+        public ActionResult Detail(Guid supplierGuid)
+        {
+            var supplier= _Supplier.Find(supplierGuid);
+            var result = SupplierViewModel.CopyFrom(supplier);
+            return this.ResultModel(result);
+        }
+
+        public ActionResult Add(SupplierViewModel model)
+        {
+            _Supplier.Add(model.CopyTo());
+            return this.ResultSuccess();
+        }
+
+        public ActionResult Update(SupplierViewModel model)
+        {
+            _Supplier.Update(model.CopyTo());
+            return this.ResultSuccess();
+        }
+
+        public ActionResult Delete(Guid guid)
+        {
+            _Supplier.Delete(guid);
+            return this.ResultSuccess();
         }
     }
 }

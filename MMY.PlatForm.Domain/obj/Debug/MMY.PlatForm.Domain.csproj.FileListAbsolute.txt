@@ -2,3 +2,4 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.Domain\bin\Debug\
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.PlatForm.Domain.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.csprojResolveAssemblyReference.cache

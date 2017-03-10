@@ -11,6 +11,11 @@ namespace MMY.Services.IServices
     {
         IList<ProductSupplier> Query(string supplierName,string supplierAddress,int skip,int take,out int total);
         ProductSupplier Find(Guid uid);
+
+        void Add(ProductSupplier supplier);
+
+        void Update(ProductSupplier supplier);
+        void Delete(Guid guid);
         ProductSupplier FindWithCache(Guid uid);
     }
 }
