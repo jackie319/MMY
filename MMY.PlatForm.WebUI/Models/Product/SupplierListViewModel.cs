@@ -6,7 +6,7 @@ using MMY.Data.Model;
 
 namespace MMY.PlatForm.WebUI.Models.Product
 {
-    public class SupplierViewModel
+    public class SupplierListViewModel
     {
         public Guid Guid { set; get; }
         /// <summary>
@@ -26,9 +26,9 @@ namespace MMY.PlatForm.WebUI.Models.Product
         /// </summary>
         public System.DateTime TimeCreated { get; set; }
 
-        public static SupplierViewModel CopyFrom(ProductSupplier supplier)
+        public static SupplierListViewModel CopyFrom(ProductSupplier supplier)
         {
-            SupplierViewModel model=new SupplierViewModel();
+            SupplierListViewModel model =new SupplierListViewModel();
             model.Guid = supplier.Guid;
             model.SupplierName = supplier.SupplierName;
             model.SupplierAddress = supplier.SupplierAddress;

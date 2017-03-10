@@ -22,7 +22,7 @@ namespace MMY.PlatForm.WebUI.Controllers
         {
             int total;
             var supplier = _Supplier.Query(query.SupplierName, query.SupplierAddress, query.Skip, query.Take, out total);
-            IList<SupplierViewModel> models = supplier.Select(item=> SupplierViewModel.CopyFrom(item)).ToList();
+            IList<SupplierListViewModel> models = supplier.Select(item=> SupplierListViewModel.CopyFrom(item)).ToList();
             return this.ResultListModel(total, models);
         }
 
