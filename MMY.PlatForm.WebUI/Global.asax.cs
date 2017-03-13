@@ -45,10 +45,10 @@ namespace MMY.PlatForm.WebUI
             //倘若需要默认注册所有的，请这样写（主要参数需要修改）
             //builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
             //   .AsImplementedInterfaces();
-           
-            RegisterAutofacForJK.RegisterAutofacForJKFramework(builder,connectionStr);
 
-           // builder.RegisterType<DbContextGetter>().As<IDbContextGetter>().SingleInstance();
+            RegisterAutofacForJK.RegisterAutofacForJKFramework(builder, connectionStr);
+
+            // builder.RegisterType<DbContextGetter>().As<IDbContextGetter>().SingleInstance();
 
             builder.RegisterType<ProductSupplierImpl>().As<IProductSupplier>().InstancePerHttpRequest(); //mvc
 
@@ -63,6 +63,19 @@ namespace MMY.PlatForm.WebUI
         {
             var logCfg = new FileInfo(AppDomain.CurrentDomain.BaseDirectory + "log4net.config");
             XmlConfigurator.ConfigureAndWatch(logCfg);
+        }
+
+        protected void Application_error(object sender, EventArgs e)
+        {
+            HttpException error = (HttpException)Server.GetLastError();
+            if (error.GetHttpCode() == 404)
+            {
+                Response.Redirect("/Error/NotFound");
+
+                //请求不存在的页面之前会话已过期
+                //（触发新的错误，左侧菜单不能正常显示,解决：跳转到登录页面，让用户登录恢复会话）
+                // Response.Redirect("/Account/Login");
+            }
         }
     }
 }
