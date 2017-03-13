@@ -9,7 +9,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
 {
     public class SupplierViewModel
     {
-        public Guid Guid { set; get; }
+        public Guid? Uid { set; get; }
         /// <summary>
         /// 供货商名称
         /// </summary>
@@ -28,12 +28,12 @@ namespace MMY.PlatForm.WebUI.Models.Product
         /// <summary>
         /// 创建时间
         /// </summary>
-        public System.DateTime TimeCreated { get; set; }
+        public System.DateTime?  TimeCreated { get; set; }
 
         public static SupplierViewModel CopyFrom(ProductSupplier supplier)
         {
             SupplierViewModel model = new SupplierViewModel();
-            model.Guid = supplier.Guid;
+            model.Uid = supplier.Guid;
             model.SupplierName = supplier.SupplierName;
             model.SupplierAddress = supplier.SupplierAddress;
             model.SupplierPhone = supplier.SupplierPhone;
@@ -44,6 +44,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
         public ProductSupplier CopyTo()
         {
             ProductSupplier supplier = new ProductSupplier();
+            supplier.Guid = Uid??Guid.Empty;
             supplier.SupplierName = SupplierName;
             supplier.SupplierPhone = SupplierPhone;
             supplier.SupplierAddress = SupplierAddress;

@@ -13,5 +13,20 @@ namespace MMY.PlatForm.WebUI.Controllers
         {
             return View();
         }
+
+        public ActionResult Detail()
+        {
+            return View();
+        }
+
+        public ActionResult Update()
+        {
+            return View();
+        }
+
+        public ActionResult Delete()
+        {
+            return View();
+        }
     }
 }

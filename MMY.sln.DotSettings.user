@@ -3,4 +3,5 @@
   &lt;Assembly Path="E:\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Core\bin\Debug\JK.Framework.Core.dll" /&gt;&#xD;
   &lt;Assembly Path="E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Web.dll" /&gt;&#xD;
   &lt;Assembly Path="E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Core.dll" /&gt;&#xD;
+  &lt;Assembly Path="E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>

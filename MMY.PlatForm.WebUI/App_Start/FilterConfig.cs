@@ -10,7 +10,7 @@ namespace MMY.PlatForm.WebUI
         {
             filters.Add(new HandleErrorAttribute());
             //mvc 模型验证
-            filters.Add(new ValidationFilter());
+            //filters.Add(new ValidationFilter());
         }
     }
 }
