@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MMY.PlatForm.WebUI.App_Start
+namespace MMY.PlatForm.WebUI
 {
     public class AuthorityWebFilter : ActionFilterAttribute
     {
