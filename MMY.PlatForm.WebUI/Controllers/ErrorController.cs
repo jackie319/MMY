@@ -9,11 +9,12 @@ namespace MMY.PlatForm.WebUI.Controllers
     public class ErrorController : Controller
     {
         // GET: Error
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
         }
-
+        [AllowAnonymous]
         public ActionResult NotFound()
         {
             return View();

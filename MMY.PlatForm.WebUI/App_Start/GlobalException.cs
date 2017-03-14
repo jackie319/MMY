@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using JK.Framework.Core;
 using JKResultModel=JK.Framework.Web.Model.ResultModel;
 using log4net;
 
@@ -14,6 +15,7 @@ namespace MMY.PlatForm.WebUI
         {
             var url = exceptionfiltercontext.RequestContext.HttpContext.Request.RawUrl;
             var exception = exceptionfiltercontext.Exception;
+            //if(exception is AuthorizeException)
             while (exception.InnerException != null)
             {
                 exception = exception.InnerException;

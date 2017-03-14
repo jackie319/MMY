@@ -24,3 +24,57 @@
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
 
+[03-14 15:27:28 捕获全局异常：]
+用户未通过认证
+
+/
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext) 位置 E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\Filter\JKAuthorizeAttribute.cs:行号 22
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[03-14 15:27:44 捕获全局异常：]
+用户未通过认证
+
+/Error
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext) 位置 E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\Filter\JKAuthorizeAttribute.cs:行号 22
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[03-14 15:34:51 捕获全局异常：]
+用户未通过认证
+
+/
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext) 位置 E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\Filter\JKAuthorizeAttribute.cs:行号 22
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[03-14 15:34:55 捕获全局异常：]
+用户未通过认证
+
+/Error/Index
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext) 位置 E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\Filter\JKAuthorizeAttribute.cs:行号 22
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[03-14 15:34:58 捕获全局异常：]
+用户未通过认证
+
+/Error/Index
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext) 位置 E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\Filter\JKAuthorizeAttribute.cs:行号 22
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[03-14 15:35:01 捕获全局异常：]
+用户未通过认证
+
+/Error/Index
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext) 位置 E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\Filter\JKAuthorizeAttribute.cs:行号 22
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+

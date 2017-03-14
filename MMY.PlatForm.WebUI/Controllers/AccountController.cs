@@ -26,18 +26,22 @@ namespace MMY.PlatForm.WebUI.Controllers
             _userAccount = userAccount;
             _authority = authority;
         }
+
+        [AllowAnonymous]
         public ActionResult Login()
         {
-            string md5 = "12345678".ToMd5();
+            return View();
+        }
+        [AllowAnonymous]
+        public ActionResult SubmitLogin(string userName,string nickName)
+        {
+            string md5 = nickName.ToMd5();
             try
             {
-                var account=_userAccount.Login("Jackie", md5);
+                var account=_userAccount.Login(userName, md5);
                 var menu = _authority.GetUserMenu(new Guid(), Guid.Empty);
-                UserModel userModel=new UserModel();
-                userModel.UserGuid = account.Guid;
-                userModel.UserName = account.UserName;
-                userModel.NickName = account.NickName;
-                userModel.UserMenuModels = menu;
+                UserModel userModel = new UserModel(account.Guid, account.UserName, account.NickName, menu, true) {};
+               
                 Session["UserInfoModel"]=userModel;
             }
             catch (CommonException)
