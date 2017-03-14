@@ -19,13 +19,14 @@ namespace MMY.Services.ServicesImpl
         {
             _userAccountRepository = useraccountRepository;
         }
-        public void Login(string userName,string password)
+        public UserAccount Login(string userName,string password)
         {
             var userAccount= _userAccountRepository.Table.FirstOrDefault(q => !q.IsDeleted && q.UserName.Equals(userName));
              if(userAccount==null)throw new CommonException("用户不存在");
             var passwordSalt = password.ToMd5WithSalt(_Salt);
              if(!userAccount.Password.Equals(passwordSalt)) throw new CommonException("密码错误");
-
+            userAccount.Password = "";
+            return userAccount;
         }
     }
 }

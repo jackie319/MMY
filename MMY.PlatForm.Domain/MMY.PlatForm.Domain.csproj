@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JK.Framework.Core">
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +47,10 @@
     <Compile Include="UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MMY.Data\MMY.Data.csproj">
+      <Project>{E5D91290-E87D-4097-A316-92AEFD8329EA}</Project>
+      <Name>MMY.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MMY.Services\MMY.Services.csproj">
       <Project>{6465A8E9-EACC-4876-8E33-5D8E2EEE841A}</Project>
       <Name>MMY.Services</Name>

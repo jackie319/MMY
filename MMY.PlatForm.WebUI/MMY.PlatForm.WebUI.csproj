@@ -302,6 +302,10 @@
       <Project>{E5D91290-E87D-4097-A316-92AEFD8329EA}</Project>
       <Name>MMY.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MMY.PlatForm.Domain\MMY.PlatForm.Domain.csproj">
+      <Project>{F1C091BB-F75C-4D4B-ACB5-ABC8731E386B}</Project>
+      <Name>MMY.PlatForm.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MMY.Services\MMY.Services.csproj">
       <Project>{6465A8E9-EACC-4876-8E33-5D8E2EEE841A}</Project>
       <Name>MMY.Services</Name>

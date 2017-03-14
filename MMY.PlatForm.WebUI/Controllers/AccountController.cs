@@ -11,6 +11,7 @@ using JK.Framework.Web.Model;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using MMY.PlatForm.Domain;
 using MMY.Services.IServices;
 
 namespace MMY.PlatForm.WebUI.Controllers
@@ -18,17 +19,26 @@ namespace MMY.PlatForm.WebUI.Controllers
     public class AccountController : Controller
     {
         private IUserAccount _userAccount;
+        private IAuthority _authority;
 
-        public AccountController(IUserAccount userAccount)
+        public AccountController(IUserAccount userAccount, IAuthority authority)
         {
             _userAccount = userAccount;
+            _authority = authority;
         }
         public ActionResult Login()
         {
             string md5 = "12345678".ToMd5();
             try
             {
-                _userAccount.Login("Jackie", md5);
+                var account=_userAccount.Login("Jackie", md5);
+                var menu = _authority.GetUserMenu(new Guid(), Guid.Empty);
+                UserModel userModel=new UserModel();
+                userModel.UserGuid = account.Guid;
+                userModel.UserName = account.UserName;
+                userModel.NickName = account.NickName;
+                userModel.UserMenuModels = menu;
+                Session["UserInfoModel"]=userModel;
             }
             catch (CommonException)
             {

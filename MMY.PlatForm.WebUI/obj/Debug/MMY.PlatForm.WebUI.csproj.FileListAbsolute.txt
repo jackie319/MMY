@@ -117,3 +117,5 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Fram
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Extensions.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Web.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Extensions.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.pdb

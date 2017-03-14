@@ -9,6 +9,6 @@ namespace MMY.Services.IServices
 {
     public interface IUserAccount
     {
-        void Login(string userName,string password);
+        UserAccount Login(string userName,string password);
     }
 }
