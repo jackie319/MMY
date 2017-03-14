@@ -26,10 +26,9 @@ namespace MMY.PlatForm.WebUI.Controllers
         public ActionResult Login()
         {
             string md5 = "12345678".ToMd5();
-            string md5salt = md5.ToMd5WithSalt("_MMYPlatform");
             try
             {
-                _userAccount.Login("Jackie", "12345678");
+                _userAccount.Login("Jackie", md5);
             }
             catch (CommonException)
             {
