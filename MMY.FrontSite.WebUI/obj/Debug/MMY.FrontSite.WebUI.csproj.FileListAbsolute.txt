@@ -98,4 +98,3 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\zh-Han
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.csprojResolveAssemblyReference.cache
