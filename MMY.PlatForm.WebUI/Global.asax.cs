@@ -15,6 +15,7 @@ using JK.Framework.Core.Data;
 using JK.Framework.Data;
 using log4net.Config;
 using MMY.Data.Model;
+using MMY.PlatForm.Domain;
 using MMY.Services.IServices;
 using MMY.Services.ServicesImpl;
 using ICacheManager = WebGrease.ICacheManager;
@@ -78,5 +79,14 @@ namespace MMY.PlatForm.WebUI
                 // Response.Redirect("/Account/Login");
             }
         }
+
+        //private void MvcApplicationPostAcquireRequestState(object sender, EventArgs e)
+        //{
+        //    var user = Session["UserInfoModel"];
+        //    if (user is UserModel)
+        //    {
+        //        HttpContext.Current.User = user as UserModel;
+        //    }
+        //}
     }
 }

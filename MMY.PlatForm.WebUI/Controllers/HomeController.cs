@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using JK.Framework.Web.Model;
+using MMY.PlatForm.Domain;
 
 namespace MMY.PlatForm.WebUI.Controllers
 {
@@ -11,6 +13,12 @@ namespace MMY.PlatForm.WebUI.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Menu()
+        {
+            var model = (UserModel)Session["UserInfoModel"];
+            return this.ResultModel(model.UserMenuModels);
         }
 
     }

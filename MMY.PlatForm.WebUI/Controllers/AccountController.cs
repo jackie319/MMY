@@ -16,6 +16,7 @@ using MMY.Services.IServices;
 
 namespace MMY.PlatForm.WebUI.Controllers
 {
+    
     public class AccountController : Controller
     {
         private IUserAccount _userAccount;
@@ -26,7 +27,6 @@ namespace MMY.PlatForm.WebUI.Controllers
             _userAccount = userAccount;
             _authority = authority;
         }
-
         [AllowAnonymous]
         public ActionResult Login()
         {
@@ -41,7 +41,7 @@ namespace MMY.PlatForm.WebUI.Controllers
                 var account=_userAccount.Login(userName, md5);
                 var menu = _authority.GetUserMenu(new Guid(), Guid.Empty);
                 UserModel userModel = new UserModel(account.Guid, account.UserName, account.NickName, menu, true) {};
-               
+                HttpContext.User = userModel;
                 Session["UserInfoModel"]=userModel;
             }
             catch (CommonException)

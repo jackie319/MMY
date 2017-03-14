@@ -10,7 +10,7 @@ namespace MMY.PlatForm.WebUI
         {
             //filters.Add(new HandleErrorAttribute());
             filters.Add(new GlobalExceptionFilter(GlobalExceptionHandler, "Error", "Index"));
-           // filters.Add(new JKAuthorizeAttribute());
+            filters.Add(new JKAuthorizeAttribute());
         }
     }
 }
