@@ -60,6 +60,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Data\bin\Debug\JK.Framework.Data.dll</HintPath>
     </Reference>
+    <Reference Include="JK.Framework.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Extensions\bin\Debug\JK.Framework.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="JK.Framework.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Web.dll</HintPath>

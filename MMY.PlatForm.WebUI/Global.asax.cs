@@ -52,7 +52,7 @@ namespace MMY.PlatForm.WebUI
 
             builder.RegisterType<ProductSupplierImpl>().As<IProductSupplier>().InstancePerHttpRequest(); //mvc
             builder.RegisterType<AuthorityImpl>().As<IAuthority>().InstancePerRequest();
-
+            builder.RegisterType<UserAccountImpl>().As<IUserAccount>().InstancePerDependency();
             #endregion
             // then
             var container = builder.Build();
