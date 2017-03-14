@@ -51,6 +51,7 @@ namespace MMY.PlatForm.WebUI
             // builder.RegisterType<DbContextGetter>().As<IDbContextGetter>().SingleInstance();
 
             builder.RegisterType<ProductSupplierImpl>().As<IProductSupplier>().InstancePerHttpRequest(); //mvc
+            builder.RegisterType<AuthorityImpl>().As<IAuthority>().InstancePerRequest();
 
             #endregion
             // then

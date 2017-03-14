@@ -161,6 +161,7 @@
     <Compile Include="Model\UserShoppingCart.cs">
       <DependentUpon>MMYModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="partial\UserAccount.partial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

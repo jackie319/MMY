@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using JK.Framework.Core;
+using System.Threading.Tasks;using JK.Framework.Core;
 
 namespace MMY.Data.Model
 {
-    public partial class AuthorityFunction:BaseEntity
+    public partial class UserAccount:BaseEntity
     {
     }
 }
