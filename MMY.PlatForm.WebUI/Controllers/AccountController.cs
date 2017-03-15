@@ -33,12 +33,12 @@ namespace MMY.PlatForm.WebUI.Controllers
             return View();
         }
         [AllowAnonymous]
-        public ActionResult SubmitLogin(string userName,string nickName)
+        [HttpPost]
+        public ActionResult SubmitLogin(string userName,string passwordMd5)
         {
-            string md5 = nickName.ToMd5();
             try
             {
-                var account=_userAccount.Login(userName, md5);
+                var account=_userAccount.Login(userName, passwordMd5);
                 var menu = _authority.GetUserMenu(new Guid(), Guid.Empty);
                 UserModel userModel = new UserModel(account.Guid, account.UserName, account.NickName, menu, true) {};
                 HttpContext.User = userModel;

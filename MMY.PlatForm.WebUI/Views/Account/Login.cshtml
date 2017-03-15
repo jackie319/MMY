@@ -1,4 +1,4 @@
-﻿@model MMY.PlatForm.Domain.UserModel
+﻿@model MMY.PlatForm.WebUI.Models.Account.LogInViewModel
 
 @{
     ViewBag.Title = "Login";
@@ -24,10 +24,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NickName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PasswordMd5, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NickName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NickName, "12345678", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.PasswordMd5, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PasswordMd5, "25d55ad283aa400af464c76d713c07ad(12345678)", new { @class = "text-danger" })
             </div>
         </div>
 

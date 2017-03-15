@@ -231,6 +231,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account\LogInViewModel.cs" />
     <Compile Include="Models\Product\SupplierListViewModel.cs" />
     <Compile Include="Models\Product\SupplierQueryModel.cs" />
     <Compile Include="Models\Product\SupplierViewModel.cs" />
