@@ -13,17 +13,19 @@ namespace MMY.PlatForm.WebUI
     {
         private static JKResultModel GlobalExceptionHandler(ExceptionContext exceptionfiltercontext)
         {
+            string errorMsg = string.Empty;
             var url = exceptionfiltercontext.RequestContext.HttpContext.Request.RawUrl;
             var exception = exceptionfiltercontext.Exception;
-            //if(exception is AuthorizeException)
+            if (exception is AuthorizeException) errorMsg = "用户认证未通过";
             while (exception.InnerException != null)
             {
                 exception = exception.InnerException;
+                errorMsg = exception.Message;
             }
 
             var logger = LogManager.GetLogger(typeof(FilterConfig));
-            logger.Error("出错了！错误信息："+exception.Message+"访问路径："+url+"堆栈："+exception.StackTrace);
-            var result = new JKResultModel(false,exception.Message,0,url,null) {};
+            logger.Error("出错了！错误信息："+ errorMsg + "访问路径："+url+"堆栈："+exception.StackTrace);
+            var result = new JKResultModel(false, errorMsg, 0,url,null) {};
             return result;
         }
     }
