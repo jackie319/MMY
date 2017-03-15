@@ -224,6 +224,7 @@
     <Compile Include="App_Start\GlobalException.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SupplierController.cs" />
@@ -231,6 +232,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account\ChangePasswordViewModel.cs" />
     <Compile Include="Models\Account\LogInViewModel.cs" />
     <Compile Include="Models\Product\SupplierListViewModel.cs" />
     <Compile Include="Models\Product\SupplierQueryModel.cs" />
@@ -290,6 +292,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\Order\" />
+    <Folder Include="Views\Base\" />
     <Folder Include="Views\Supplier\" />
   </ItemGroup>
   <ItemGroup>

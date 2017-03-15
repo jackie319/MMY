@@ -13,6 +13,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MMY.PlatForm.Domain;
+using MMY.PlatForm.WebUI.Models.Account;
 using MMY.Services.IServices;
 
 namespace MMY.PlatForm.WebUI.Controllers
@@ -34,15 +35,15 @@ namespace MMY.PlatForm.WebUI.Controllers
         }
         [AllowAnonymous]
         [HttpPost]
-        public ActionResult SubmitLogin(string userName,string passwordMd5)
+        public ActionResult SubmitLogin(string userName, string passwordMd5)
         {
             try
             {
-                var account=_userAccount.Login(userName, passwordMd5);
+                var account = _userAccount.Login(userName, passwordMd5);
                 var menu = _authority.GetUserMenu(new Guid(), Guid.Empty);
-                UserModel userModel = new UserModel(account.Guid, account.UserName, account.NickName, menu, true) {};
+                UserModel userModel = new UserModel(account.Guid, account.UserName, account.NickName, menu, true) { };
                 HttpContext.User = userModel;
-                Session["UserInfoModel"]=userModel;
+                Session["UserInfoModel"] = userModel;
             }
             catch (CommonException)
             {
@@ -50,6 +51,32 @@ namespace MMY.PlatForm.WebUI.Controllers
             }
             return this.ResultSuccess();
         }
+       
+
+        [HttpPost]
+        public ActionResult UserInfo()
+        {
+            var mmyUser = (UserModel)HttpContext.User;
+            return this.ResultModel(mmyUser);
+        }
+        [HttpPost]
+        [ValidationFilter]
+        public ActionResult ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!model.NewPasswordMd5Confirm.Equals(model.NewPasswordMd5))
+                return this.ResultError("俩次输入的密码不匹配");
+            try
+            {
+                var mmyUser = (UserModel) HttpContext.User;
+                _userAccount.ChangePwd(mmyUser.UserName, model.OldPasswordMd5, model.NewPasswordMd5);
+            }
+            catch (CommonException ex)
+            {
+                return this.ResultError(ex.Message);
+            }
+            return this.ResultSuccess();
+        }
+
         [HttpPost]
         public ActionResult Logout()
         {

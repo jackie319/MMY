@@ -14,9 +14,16 @@ namespace MMY.PlatForm.WebUI
         private static JKResultModel GlobalExceptionHandler(ExceptionContext exceptionfiltercontext)
         {
             string errorMsg = string.Empty;
+            JKExceptionType type=JKExceptionType.Common;
+            string redirectUrl = string.Empty;
             var url = exceptionfiltercontext.RequestContext.HttpContext.Request.RawUrl;
             var exception = exceptionfiltercontext.Exception;
-            if (exception is AuthorizeException) errorMsg = "用户认证未通过";
+            if (exception is AuthorizeException)
+            {
+                type=JKExceptionType.NoAuthorized;
+                redirectUrl = "/Account/Login";
+                errorMsg = "用户认证未通过";
+            }
             while (exception.InnerException != null)
             {
                 exception = exception.InnerException;
@@ -25,7 +32,7 @@ namespace MMY.PlatForm.WebUI
 
             var logger = LogManager.GetLogger(typeof(FilterConfig));
             logger.Error("出错了！错误信息："+ errorMsg + "访问路径："+url+"堆栈："+exception.StackTrace);
-            var result = new JKResultModel(false, errorMsg, 0,url,null) {};
+            var result = new JKResultModel(false, errorMsg, 0,url, type, redirectUrl, null) {};
             return result;
         }
     }

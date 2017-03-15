@@ -10,5 +10,7 @@ namespace MMY.Services.IServices
     public interface IUserAccount
     {
         UserAccount Login(string userName,string password);
+
+        void ChangePwd(string userName,string oldPassowrdMd5, string newPasswordMd5);
     }
 }

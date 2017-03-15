@@ -28,5 +28,16 @@ namespace MMY.Services.ServicesImpl
             userAccount.Password = "";
             return userAccount;
         }
+
+        public void ChangePwd(string userName,string oldPassowrdMd5, string newPasswordMd5)
+        {
+            var userAccount = _userAccountRepository.Table.FirstOrDefault(q => !q.IsDeleted && q.UserName.Equals(userName));
+            if (userAccount == null) throw new CommonException("用户不存在");
+            var passwordSalt = oldPassowrdMd5.ToMd5WithSalt(_Salt);
+            if (!userAccount.Password.Equals(passwordSalt)) throw new CommonException("原密码错误");
+            var newPasswordSalt = newPasswordMd5.ToMd5WithSalt(_Salt);
+            userAccount.Password = newPasswordSalt;
+            _userAccountRepository.Update(userAccount);
+        }
     }
 }
