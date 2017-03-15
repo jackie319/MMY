@@ -29,5 +29,10 @@ namespace MMY.PlatForm.WebUI.Controllers
         {
             return View();
         }
+
+        public ActionResult Logout()
+        {
+            return View();
+        }
     }
 }

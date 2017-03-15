@@ -50,6 +50,7 @@ namespace MMY.PlatForm.WebUI.Controllers
             }
             return this.ResultSuccess();
         }
+        [HttpPost]
         public ActionResult Logout()
         {
             Session.RemoveAll();

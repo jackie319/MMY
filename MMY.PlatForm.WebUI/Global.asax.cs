@@ -86,6 +86,7 @@ namespace MMY.PlatForm.WebUI
 
         protected void MvcApplicationPostAcquireRequestState(object sender, EventArgs e)
         {
+            if (HttpContext.Current.Session == null) return;
             var user = Session["UserInfoModel"];
             if (user is UserModel)
             {
