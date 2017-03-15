@@ -24,6 +24,10 @@ namespace MMY.PlatForm.WebUI
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        public MvcApplication()
+        {
+            PostAcquireRequestState += MvcApplicationPostAcquireRequestState;
+        }
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -80,13 +84,13 @@ namespace MMY.PlatForm.WebUI
             }
         }
 
-        //private void MvcApplicationPostAcquireRequestState(object sender, EventArgs e)
-        //{
-        //    var user = Session["UserInfoModel"];
-        //    if (user is UserModel)
-        //    {
-        //        HttpContext.Current.User = user as UserModel;
-        //    }
-        //}
+        protected void MvcApplicationPostAcquireRequestState(object sender, EventArgs e)
+        {
+            var user = Session["UserInfoModel"];
+            if (user is UserModel)
+            {
+                HttpContext.Current.User = user as UserModel;
+            }
+        }
     }
 }

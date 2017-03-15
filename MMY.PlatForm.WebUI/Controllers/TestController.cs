@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MMY.PlatForm.WebUI.Controllers
 {
+    [AllowAnonymous]
     public class TestController : Controller
     {
         // GET: Test

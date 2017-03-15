@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using JK.Framework.Web.Filter;
 using JK.Framework.Web.Model;
 using MMY.PlatForm.Domain;
 
@@ -17,7 +18,7 @@ namespace MMY.PlatForm.WebUI.Controllers
 
         public ActionResult Menu()
         {
-            var model = (UserModel)Session["UserInfoModel"];
+            var model = (UserModel)HttpContext.User;
             return this.ResultModel(model.UserMenuModels);
         }
 

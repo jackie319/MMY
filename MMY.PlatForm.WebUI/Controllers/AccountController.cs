@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using JK.Framework.Core;
 using JK.Framework.Extensions;
+using JK.Framework.Web.Filter;
 using JK.Framework.Web.Model;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -16,7 +17,6 @@ using MMY.Services.IServices;
 
 namespace MMY.PlatForm.WebUI.Controllers
 {
-    
     public class AccountController : Controller
     {
         private IUserAccount _userAccount;
