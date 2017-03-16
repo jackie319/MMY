@@ -27,6 +27,7 @@ namespace MMY.Data.Model
         public string ProductName { get; set; }
         public System.Guid CategoryGuid { get; set; }
         public int ProductNumber { get; set; }
+        public string DefaultPic { get; set; }
         public string SaleTitle { get; set; }
         public string SaleSubTitle { get; set; }
         public int Price { get; set; }
@@ -36,6 +37,7 @@ namespace MMY.Data.Model
         public string Status { get; set; }
         public bool IsSpecialOffer { get; set; }
         public bool IsRecommended { get; set; }
+        public int DisplayOrder { get; set; }
         public bool IsDeleted { get; set; }
         public System.DateTime TimeCreated { get; set; }
     

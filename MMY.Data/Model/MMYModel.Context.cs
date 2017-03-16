@@ -41,7 +41,6 @@ namespace MMY.Data.Model
         public virtual DbSet<PositionDistrict> PositionDistrict { get; set; }
         public virtual DbSet<PositionProvince> PositionProvince { get; set; }
         public virtual DbSet<PositionZipCode> PositionZipCode { get; set; }
-        public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductAlbum> ProductAlbum { get; set; }
         public virtual DbSet<ProductCategory> ProductCategory { get; set; }
         public virtual DbSet<ProductClassification> ProductClassification { get; set; }
@@ -54,5 +53,7 @@ namespace MMY.Data.Model
         public virtual DbSet<UserFavorite> UserFavorite { get; set; }
         public virtual DbSet<UserOperationRecords> UserOperationRecords { get; set; }
         public virtual DbSet<UserShoppingCart> UserShoppingCart { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<ProductV> ProductV { get; set; }
     }
 }

@@ -26,7 +26,7 @@ namespace MMY.Data.Model
         public string Remark { get; set; }
         public System.DateTime TimeCreated { get; set; }
     
-        public virtual Product Product { get; set; }
         public virtual ProductSupplier ProductSupplier { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

@@ -12,9 +12,12 @@ namespace MMY.Services.ServicesImpl
     public class ProductImpl:IProduct
     {
         private IRepository<Product> _productRepository;
-        public ProductImpl(IRepository<Product> productRepository)
+
+        private IRepository<ProductV> _productVRepository;
+        public ProductImpl(IRepository<Product> productRepository, IRepository<ProductV> productVRepository)
         {
             _productRepository = productRepository;
+            _productVRepository = productVRepository;
         }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MMYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MMYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Activity">
           <Key>
             <PropertyRef Name="Guid" />
@@ -165,6 +165,7 @@
           <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="CategoryGuid" Type="uniqueidentifier" Nullable="false" />
           <Property Name="ProductNumber" Type="int" Nullable="false" />
+          <Property Name="DefaultPic" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="SaleTitle" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="SaleSubTitle" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Price" Type="int" Nullable="false" />
@@ -174,6 +175,7 @@
           <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IsSpecialOffer" Type="bit" Nullable="false" />
           <Property Name="IsRecommended" Type="bit" Nullable="false" />
+          <Property Name="DisplayOrder" Type="int" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
@@ -328,6 +330,48 @@
           <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“MMY.dbo.ProductV”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="ProductV">
+          <Key>
+            <PropertyRef Name="TimeCreated" />
+            <PropertyRef Name="IsDeleted" />
+            <PropertyRef Name="IsRecommended" />
+            <PropertyRef Name="IsSpecialOffer" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="ProductRemark" />
+            <PropertyRef Name="ProductDetail" />
+            <PropertyRef Name="PromotionPrice" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="SaleSubTitle" />
+            <PropertyRef Name="SaleTitle" />
+            <PropertyRef Name="DefaultPic" />
+            <PropertyRef Name="ProductNumber" />
+            <PropertyRef Name="CategoryGuid" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Guid" />
+            <PropertyRef Name="DisplayOrder" />
+          </Key>
+          <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="IsRecommended" Type="bit" Nullable="false" />
+          <Property Name="IsSpecialOffer" Type="bit" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductRemark" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="ProductDetail" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PromotionPrice" Type="int" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="SaleSubTitle" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="SaleTitle" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="DefaultPic" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="ProductNumber" Type="int" Nullable="false" />
+          <Property Name="CategoryGuid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ParentGuid" Type="uniqueidentifier" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DisplayOrder" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_MerchantProduct_Merchant">
           <End Role="Merchant" Type="Self.Merchant" Multiplicity="1" />
@@ -575,6 +619,29 @@
           <EntitySet Name="UserFavorite" EntityType="Self.UserFavorite" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserOperationRecords" EntityType="Self.UserOperationRecords" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserShoppingCart" EntityType="Self.UserShoppingCart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductV" EntityType="Self.ProductV" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ProductV].[TimeCreated] AS [TimeCreated], 
+    [ProductV].[IsDeleted] AS [IsDeleted], 
+    [ProductV].[IsRecommended] AS [IsRecommended], 
+    [ProductV].[IsSpecialOffer] AS [IsSpecialOffer], 
+    [ProductV].[Status] AS [Status], 
+    [ProductV].[ProductRemark] AS [ProductRemark], 
+    [ProductV].[ProductDetail] AS [ProductDetail], 
+    [ProductV].[PromotionPrice] AS [PromotionPrice], 
+    [ProductV].[Price] AS [Price], 
+    [ProductV].[SaleSubTitle] AS [SaleSubTitle], 
+    [ProductV].[SaleTitle] AS [SaleTitle], 
+    [ProductV].[DefaultPic] AS [DefaultPic], 
+    [ProductV].[ProductNumber] AS [ProductNumber], 
+    [ProductV].[CategoryGuid] AS [CategoryGuid], 
+    [ProductV].[ProductName] AS [ProductName], 
+    [ProductV].[Guid] AS [Guid], 
+    [ProductV].[ParentGuid] AS [ParentGuid], 
+    [ProductV].[CategoryName] AS [CategoryName], 
+    [ProductV].[DisplayOrder] AS [DisplayOrder]
+    FROM [dbo].[ProductV] AS [ProductV]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_MerchantProduct_Merchant" Association="Self.FK_MerchantProduct_Merchant">
             <End Role="Merchant" EntitySet="Merchant" />
             <End Role="MerchantProduct" EntitySet="MerchantProduct" />
@@ -648,8 +715,7 @@
             <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MMYModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -821,31 +887,6 @@
           <Property Name="Guid" Type="Guid" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
         </EntityType>
-        <EntityType Name="Product">
-          <Key>
-            <PropertyRef Name="Guid" />
-          </Key>
-          <Property Name="Guid" Type="Guid" Nullable="false" />
-          <Property Name="ProductName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="CategoryGuid" Type="Guid" Nullable="false" />
-          <Property Name="ProductNumber" Type="Int32" Nullable="false" />
-          <Property Name="SaleTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SaleSubTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Price" Type="Int32" Nullable="false" />
-          <Property Name="PromotionPrice" Type="Int32" Nullable="false" />
-          <Property Name="ProductDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ProductRemark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IsSpecialOffer" Type="Boolean" Nullable="false" />
-          <Property Name="IsRecommended" Type="Boolean" Nullable="false" />
-          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="ProductCategory" Relationship="Self.FK_Product_ProductCategory" FromRole="Product" ToRole="ProductCategory" />
-          <NavigationProperty Name="ProductAlbum" Relationship="Self.FK_ProductAlbum_Product" FromRole="Product" ToRole="ProductAlbum" />
-          <NavigationProperty Name="ProductClassification" Relationship="Self.FK_ProductClassification_Product" FromRole="Product" ToRole="ProductClassification" />
-          <NavigationProperty Name="ProductPurchaseRecords" Relationship="Self.FK_ProductPurchaseRecords_Product" FromRole="Product" ToRole="ProductPurchaseRecords" />
-          <NavigationProperty Name="ProductQRCode" Relationship="Self.FK_ProductQRCode_Product" FromRole="Product" ToRole="ProductQRCode" />
-        </EntityType>
         <EntityType Name="ProductAlbum">
           <Key>
             <PropertyRef Name="Guid" />
@@ -856,7 +897,7 @@
           <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_ProductAlbum_Product" FromRole="ProductAlbum" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="MMYModel.FK_ProductAlbum_Product" FromRole="ProductAlbum" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductCategory">
           <Key>
@@ -868,7 +909,7 @@
           <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_Product_ProductCategory" FromRole="ProductCategory" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="MMYModel.FK_Product_ProductCategory" FromRole="ProductCategory" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductClassification">
           <Key>
@@ -883,7 +924,7 @@
           <Property Name="AlbumGuid" Type="Guid" Nullable="false" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_ProductClassification_Product" FromRole="ProductClassification" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="MMYModel.FK_ProductClassification_Product" FromRole="ProductClassification" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductPurchaseRecords">
           <Key>
@@ -900,8 +941,8 @@
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_ProductPurchaseRecords_Product" FromRole="ProductPurchaseRecords" ToRole="Product" />
           <NavigationProperty Name="ProductSupplier" Relationship="Self.FK_ProductPurchaseRecords_ProductSupplier" FromRole="ProductPurchaseRecords" ToRole="ProductSupplier" />
+          <NavigationProperty Name="Product" Relationship="MMYModel.FK_ProductPurchaseRecords_Product" FromRole="ProductPurchaseRecords" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductQRCode">
           <Key>
@@ -912,7 +953,7 @@
           <Property Name="ClassGuid" Type="Guid" Nullable="false" />
           <Property Name="SupplierGuid" Type="Guid" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_ProductQRCode_Product" FromRole="ProductQRCode" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="MMYModel.FK_ProductQRCode_Product" FromRole="ProductQRCode" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductSupplier">
           <Key>
@@ -1109,66 +1150,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Product_ProductCategory">
-          <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="1" />
-          <End Role="Product" Type="Self.Product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ProductCategory">
-              <PropertyRef Name="Guid" />
-            </Principal>
-            <Dependent Role="Product">
-              <PropertyRef Name="CategoryGuid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductAlbum_Product">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductAlbum" Type="Self.ProductAlbum" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="Guid" />
-            </Principal>
-            <Dependent Role="ProductAlbum">
-              <PropertyRef Name="ProductGuid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductClassification_Product">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductClassification" Type="Self.ProductClassification" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="Guid" />
-            </Principal>
-            <Dependent Role="ProductClassification">
-              <PropertyRef Name="ProductGuid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductPurchaseRecords_Product">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductPurchaseRecords" Type="Self.ProductPurchaseRecords" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="Guid" />
-            </Principal>
-            <Dependent Role="ProductPurchaseRecords">
-              <PropertyRef Name="ProductGuid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductQRCode_Product">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductQRCode" Type="Self.ProductQRCode" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="Guid" />
-            </Principal>
-            <Dependent Role="ProductQRCode">
-              <PropertyRef Name="ProductGuid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ProductPurchaseRecords_ProductSupplier">
           <End Role="ProductSupplier" Type="Self.ProductSupplier" Multiplicity="1" />
           <End Role="ProductPurchaseRecords" Type="Self.ProductPurchaseRecords" Multiplicity="*" />
@@ -1246,7 +1227,6 @@
           <EntitySet Name="PositionDistrict" EntityType="Self.PositionDistrict" />
           <EntitySet Name="PositionProvince" EntityType="Self.PositionProvince" />
           <EntitySet Name="PositionZipCode" EntityType="Self.PositionZipCode" />
-          <EntitySet Name="Product" EntityType="Self.Product" />
           <EntitySet Name="ProductAlbum" EntityType="Self.ProductAlbum" />
           <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" />
           <EntitySet Name="ProductClassification" EntityType="Self.ProductClassification" />
@@ -1291,26 +1271,6 @@
             <End Role="Order" EntitySet="Order" />
             <End Role="OrderPayRecords" EntitySet="OrderPayRecords" />
           </AssociationSet>
-          <AssociationSet Name="FK_Product_ProductCategory" Association="Self.FK_Product_ProductCategory">
-            <End Role="ProductCategory" EntitySet="ProductCategory" />
-            <End Role="Product" EntitySet="Product" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductAlbum_Product" Association="Self.FK_ProductAlbum_Product">
-            <End Role="Product" EntitySet="Product" />
-            <End Role="ProductAlbum" EntitySet="ProductAlbum" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductClassification_Product" Association="Self.FK_ProductClassification_Product">
-            <End Role="Product" EntitySet="Product" />
-            <End Role="ProductClassification" EntitySet="ProductClassification" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductPurchaseRecords_Product" Association="Self.FK_ProductPurchaseRecords_Product">
-            <End Role="Product" EntitySet="Product" />
-            <End Role="ProductPurchaseRecords" EntitySet="ProductPurchaseRecords" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductQRCode_Product" Association="Self.FK_ProductQRCode_Product">
-            <End Role="Product" EntitySet="Product" />
-            <End Role="ProductQRCode" EntitySet="ProductQRCode" />
-          </AssociationSet>
           <AssociationSet Name="FK_ProductPurchaseRecords_ProductSupplier" Association="Self.FK_ProductPurchaseRecords_ProductSupplier">
             <End Role="ProductSupplier" EntitySet="ProductSupplier" />
             <End Role="ProductPurchaseRecords" EntitySet="ProductPurchaseRecords" />
@@ -1331,7 +1291,156 @@
             <End Role="UserAccount" EntitySet="UserAccount" />
             <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
           </AssociationSet>
+          <EntitySet Name="Product" EntityType="MMYModel.Product" />
+          <EntitySet Name="ProductV" EntityType="MMYModel.ProductV" />
+          <AssociationSet Name="FK_Product_ProductCategory" Association="MMYModel.FK_Product_ProductCategory">
+            <End Role="ProductCategory" EntitySet="ProductCategory" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductAlbum_Product" Association="MMYModel.FK_ProductAlbum_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductAlbum" EntitySet="ProductAlbum" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductClassification_Product" Association="MMYModel.FK_ProductClassification_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductClassification" EntitySet="ProductClassification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPurchaseRecords_Product" Association="MMYModel.FK_ProductPurchaseRecords_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductPurchaseRecords" EntitySet="ProductPurchaseRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductQRCode_Product" Association="MMYModel.FK_ProductQRCode_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductQRCode" EntitySet="ProductQRCode" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Name="Guid" Type="Guid" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryGuid" Type="Guid" Nullable="false" />
+          <Property Name="ProductNumber" Type="Int32" Nullable="false" />
+          <Property Name="DefaultPic" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SaleTitle" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SaleSubTitle" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="PromotionPrice" Type="Int32" Nullable="false" />
+          <Property Name="ProductDetail" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProductRemark" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsSpecialOffer" Type="Boolean" Nullable="false" />
+          <Property Name="IsRecommended" Type="Boolean" Nullable="false" />
+          <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+          <NavigationProperty Name="ProductCategory" Relationship="MMYModel.FK_Product_ProductCategory" FromRole="Product" ToRole="ProductCategory" />
+          <NavigationProperty Name="ProductAlbum" Relationship="MMYModel.FK_ProductAlbum_Product" FromRole="Product" ToRole="ProductAlbum" />
+          <NavigationProperty Name="ProductClassification" Relationship="MMYModel.FK_ProductClassification_Product" FromRole="Product" ToRole="ProductClassification" />
+          <NavigationProperty Name="ProductPurchaseRecords" Relationship="MMYModel.FK_ProductPurchaseRecords_Product" FromRole="Product" ToRole="ProductPurchaseRecords" />
+          <NavigationProperty Name="ProductQRCode" Relationship="MMYModel.FK_ProductQRCode_Product" FromRole="Product" ToRole="ProductQRCode" />
+        </EntityType>
+        <EntityType Name="ProductV">
+          <Key>
+            <PropertyRef Name="TimeCreated" />
+            <PropertyRef Name="IsDeleted" />
+            <PropertyRef Name="IsRecommended" />
+            <PropertyRef Name="IsSpecialOffer" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="ProductRemark" />
+            <PropertyRef Name="ProductDetail" />
+            <PropertyRef Name="PromotionPrice" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="SaleSubTitle" />
+            <PropertyRef Name="SaleTitle" />
+            <PropertyRef Name="DefaultPic" />
+            <PropertyRef Name="ProductNumber" />
+            <PropertyRef Name="CategoryGuid" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Guid" />
+            <PropertyRef Name="DisplayOrder" />
+          </Key>
+          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="IsRecommended" Type="Boolean" Nullable="false" />
+          <Property Name="IsSpecialOffer" Type="Boolean" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductRemark" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ProductDetail" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PromotionPrice" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="SaleSubTitle" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SaleTitle" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultPic" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ProductNumber" Type="Int32" Nullable="false" />
+          <Property Name="CategoryGuid" Type="Guid" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Guid" Type="Guid" Nullable="false" />
+          <Property Name="ParentGuid" Type="Guid" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Product_ProductCategory">
+          <End Type="MMYModel.ProductCategory" Role="ProductCategory" Multiplicity="1" />
+          <End Type="MMYModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductCategory">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductAlbum_Product">
+          <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="MMYModel.ProductAlbum" Role="ProductAlbum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="ProductAlbum">
+              <PropertyRef Name="ProductGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductClassification_Product">
+          <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="MMYModel.ProductClassification" Role="ProductClassification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="ProductClassification">
+              <PropertyRef Name="ProductGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductPurchaseRecords_Product">
+          <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="MMYModel.ProductPurchaseRecords" Role="ProductPurchaseRecords" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="ProductPurchaseRecords">
+              <PropertyRef Name="ProductGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductQRCode_Product">
+          <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="MMYModel.ProductQRCode" Role="ProductQRCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="ProductQRCode">
+              <PropertyRef Name="ProductGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1506,27 +1615,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Product">
-            <EntityTypeMapping TypeName="MMYModel.Product">
-              <MappingFragment StoreEntitySet="Product">
-                <ScalarProperty Name="Guid" ColumnName="Guid" />
-                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-                <ScalarProperty Name="CategoryGuid" ColumnName="CategoryGuid" />
-                <ScalarProperty Name="ProductNumber" ColumnName="ProductNumber" />
-                <ScalarProperty Name="SaleTitle" ColumnName="SaleTitle" />
-                <ScalarProperty Name="SaleSubTitle" ColumnName="SaleSubTitle" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
-                <ScalarProperty Name="ProductDetail" ColumnName="ProductDetail" />
-                <ScalarProperty Name="ProductRemark" ColumnName="ProductRemark" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="IsSpecialOffer" ColumnName="IsSpecialOffer" />
-                <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ProductAlbum">
             <EntityTypeMapping TypeName="MMYModel.ProductAlbum">
               <MappingFragment StoreEntitySet="ProductAlbum">
@@ -1686,6 +1774,54 @@
                 <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
                 <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="MMYModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
+                <ScalarProperty Name="IsSpecialOffer" ColumnName="IsSpecialOffer" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ProductRemark" ColumnName="ProductRemark" />
+                <ScalarProperty Name="ProductDetail" ColumnName="ProductDetail" />
+                <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="SaleSubTitle" ColumnName="SaleSubTitle" />
+                <ScalarProperty Name="SaleTitle" ColumnName="SaleTitle" />
+                <ScalarProperty Name="DefaultPic" ColumnName="DefaultPic" />
+                <ScalarProperty Name="ProductNumber" ColumnName="ProductNumber" />
+                <ScalarProperty Name="CategoryGuid" ColumnName="CategoryGuid" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductV">
+            <EntityTypeMapping TypeName="MMYModel.ProductV">
+              <MappingFragment StoreEntitySet="ProductV">
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="ParentGuid" ColumnName="ParentGuid" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="CategoryGuid" ColumnName="CategoryGuid" />
+                <ScalarProperty Name="ProductNumber" ColumnName="ProductNumber" />
+                <ScalarProperty Name="DefaultPic" ColumnName="DefaultPic" />
+                <ScalarProperty Name="SaleTitle" ColumnName="SaleTitle" />
+                <ScalarProperty Name="SaleSubTitle" ColumnName="SaleSubTitle" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
+                <ScalarProperty Name="ProductDetail" ColumnName="ProductDetail" />
+                <ScalarProperty Name="ProductRemark" ColumnName="ProductRemark" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="IsSpecialOffer" ColumnName="IsSpecialOffer" />
+                <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
                 <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
               </MappingFragment>

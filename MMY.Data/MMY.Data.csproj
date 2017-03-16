@@ -139,6 +139,9 @@
     <Compile Include="Model\ProductSupplier.cs">
       <DependentUpon>MMYModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ProductV.cs">
+      <DependentUpon>MMYModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="partial\Activity.partial.cs" />
     <Compile Include="partial\AuthorityFunction.partial.cs" />
     <Compile Include="partial\AuthrityRole.partial.cs" />
@@ -162,6 +165,7 @@
     <Compile Include="Model\UserShoppingCart.cs">
       <DependentUpon>MMYModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="partial\ProductV.partial.cs" />
     <Compile Include="partial\UserAccount.partial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
