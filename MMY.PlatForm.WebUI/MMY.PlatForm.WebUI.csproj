@@ -227,6 +227,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SupplierController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
@@ -293,6 +294,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\Order\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Product\" />
     <Folder Include="Views\Supplier\" />
   </ItemGroup>
   <ItemGroup>
