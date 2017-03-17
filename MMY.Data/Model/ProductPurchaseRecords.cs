@@ -21,12 +21,13 @@ namespace MMY.Data.Model
         public string SupplierName { get; set; }
         public string OperatorName { get; set; }
         public System.Guid OperatorGuid { get; set; }
+        public string Purchaser { get; set; }
         public int Number { get; set; }
         public bool IsDeleted { get; set; }
         public string Remark { get; set; }
         public System.DateTime TimeCreated { get; set; }
     
-        public virtual ProductSupplier ProductSupplier { get; set; }
         public virtual Product Product { get; set; }
+        public virtual ProductSupplier ProductSupplier { get; set; }
     }
 }

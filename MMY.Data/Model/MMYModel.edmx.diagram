@@ -24,7 +24,6 @@
         <EntityTypeShape EntityType="MMYModel.ProductAlbum" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MMYModel.ProductCategory" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MMYModel.ProductClassification" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MMYModel.ProductQRCode" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MMYModel.ProductSupplier" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MMYModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
@@ -41,18 +40,19 @@
         <AssociationConnector Association="MMYModel.FK_Order_OrderPayment" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_OrderEvaluation_Order" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_OrderPayRecords_Order" ManuallyRouted="false" />
-        <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_UserDeliveryAddress_UserAccount" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_UserFavorite_UserAccount" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_UserOperationRecords_UserAccount" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_UserShoppingCart_UserAccount" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="MMYModel.Product" Width="1.5" PointX="3.375" PointY="5.125" />
+        <EntityTypeShape EntityType="MMYModel.Product" Width="1.5" PointX="3.375" PointY="4.875" />
         <EntityTypeShape EntityType="MMYModel.ProductV" Width="1.5" PointX="0.75" PointY="11.75" />
         <AssociationConnector Association="MMYModel.FK_Product_ProductCategory" />
         <AssociationConnector Association="MMYModel.FK_ProductAlbum_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductClassification_Product" />
-        <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductQRCode_Product" />
+        <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="8.25" PointY="7.125" />
+        <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" />
+        <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

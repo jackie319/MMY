@@ -14,6 +14,22 @@ namespace MMY.Services.IServices
             bool? isSpecialOffer, bool? isRecommended,
             DateTime? timeCreatedBegin, DateTime? timeCreatedEnd, int skip, int take, out int total);
 
-        void  CreatedProduct(Product product);
+        void  CreatedProduct(Product product, IList<ProductClassification> classifications, IList<ProductAlbum> albums);
+
+        void UpdateProduct(Product product, IList<ProductClassification> classifications, IList<ProductAlbum> albums);
+
+        void OnShelf(Guid productGuid);
+        void OffShelf(Guid productGuid);
+
+        void Delete(Guid productGuid);
+
+        IList<ProductPurchaseRecords> GetProductPurchaseRecords(Guid? productGuid, Guid? supplierGuid, int skip,
+            int take, out int total);
+
+        void AddPurchaseRecords(ProductPurchaseRecords records);
+
+        Product FindProduct(Guid productGuid);
+        IList<ProductClassification> GetClassifications(Guid productGuid);
+        IList<ProductAlbum> GetAlbums(Guid productGuid);
     }
 }

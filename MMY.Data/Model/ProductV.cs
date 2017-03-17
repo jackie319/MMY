@@ -35,5 +35,8 @@ namespace MMY.Data.Model
         public int DisplayOrder { get; set; }
         public System.DateTime TimeOnShelf { get; set; }
         public System.DateTime TimeOffShelf { get; set; }
+        public int ImaginaryNumber { get; set; }
+        public int VisitedTotal { get; set; }
+        public int SoldTotal { get; set; }
     }
 }
