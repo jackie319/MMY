@@ -177,6 +177,8 @@
           <Property Name="IsRecommended" Type="bit" Nullable="false" />
           <Property Name="DisplayOrder" Type="int" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="TimeOnShelf" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="TimeOffShelf" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="ProductAlbum">
@@ -352,6 +354,8 @@
             <PropertyRef Name="ProductName" />
             <PropertyRef Name="Guid" />
             <PropertyRef Name="DisplayOrder" />
+            <PropertyRef Name="TimeOnShelf" />
+            <PropertyRef Name="TimeOffShelf" />
           </Key>
           <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
@@ -372,6 +376,8 @@
           <Property Name="ParentGuid" Type="uniqueidentifier" />
           <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
           <Property Name="DisplayOrder" Type="int" Nullable="false" />
+          <Property Name="TimeOnShelf" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="TimeOffShelf" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <Association Name="FK_MerchantProduct_Merchant">
           <End Role="Merchant" Type="Self.Merchant" Multiplicity="1" />
@@ -639,7 +645,9 @@
     [ProductV].[Guid] AS [Guid], 
     [ProductV].[ParentGuid] AS [ParentGuid], 
     [ProductV].[CategoryName] AS [CategoryName], 
-    [ProductV].[DisplayOrder] AS [DisplayOrder]
+    [ProductV].[DisplayOrder] AS [DisplayOrder], 
+    [ProductV].[TimeOnShelf] AS [TimeOnShelf], 
+    [ProductV].[TimeOffShelf] AS [TimeOffShelf]
     FROM [dbo].[ProductV] AS [ProductV]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_MerchantProduct_Merchant" Association="Self.FK_MerchantProduct_Merchant">
@@ -1313,7 +1321,7 @@
             <End Role="Product" EntitySet="Product" />
             <End Role="ProductQRCode" EntitySet="ProductQRCode" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="Product">
           <Key>
             <PropertyRef Name="Guid" />
@@ -1334,6 +1342,8 @@
           <Property Name="IsRecommended" Type="Boolean" Nullable="false" />
           <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="TimeOnShelf" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="TimeOffShelf" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
           <NavigationProperty Name="ProductCategory" Relationship="MMYModel.FK_Product_ProductCategory" FromRole="Product" ToRole="ProductCategory" />
           <NavigationProperty Name="ProductAlbum" Relationship="MMYModel.FK_ProductAlbum_Product" FromRole="Product" ToRole="ProductAlbum" />
@@ -1360,6 +1370,8 @@
             <PropertyRef Name="ProductName" />
             <PropertyRef Name="Guid" />
             <PropertyRef Name="DisplayOrder" />
+            <PropertyRef Name="TimeOnShelf" />
+            <PropertyRef Name="TimeOffShelf" />
           </Key>
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
@@ -1380,6 +1392,8 @@
           <Property Name="ParentGuid" Type="Guid" />
           <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
+          <Property Name="TimeOnShelf" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="TimeOffShelf" Type="DateTime" Nullable="false" Precision="7" />
         </EntityType>
         <Association Name="FK_Product_ProductCategory">
           <End Type="MMYModel.ProductCategory" Role="ProductCategory" Multiplicity="1" />
@@ -1441,7 +1455,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1783,6 +1797,8 @@
             <EntityTypeMapping TypeName="MMYModel.Product">
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+                <ScalarProperty Name="TimeOffShelf" ColumnName="TimeOffShelf" />
+                <ScalarProperty Name="TimeOnShelf" ColumnName="TimeOnShelf" />
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
                 <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
                 <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
@@ -1805,6 +1821,8 @@
           <EntitySetMapping Name="ProductV">
             <EntityTypeMapping TypeName="MMYModel.ProductV">
               <MappingFragment StoreEntitySet="ProductV">
+                <ScalarProperty Name="TimeOffShelf" ColumnName="TimeOffShelf" />
+                <ScalarProperty Name="TimeOnShelf" ColumnName="TimeOnShelf" />
                 <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
                 <ScalarProperty Name="ParentGuid" ColumnName="ParentGuid" />

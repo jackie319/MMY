@@ -46,14 +46,14 @@
         <AssociationConnector Association="MMYModel.FK_UserFavorite_UserAccount" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_UserOperationRecords_UserAccount" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_UserShoppingCart_UserAccount" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="MMYModel.Product" Width="1.5" PointX="3.375" PointY="5.375" />
+        <EntityTypeShape EntityType="MMYModel.Product" Width="1.5" PointX="3.375" PointY="5.125" />
         <EntityTypeShape EntityType="MMYModel.ProductV" Width="1.5" PointX="0.75" PointY="11.75" />
         <AssociationConnector Association="MMYModel.FK_Product_ProductCategory" />
         <AssociationConnector Association="MMYModel.FK_ProductAlbum_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductClassification_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductQRCode_Product" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

@@ -39,6 +39,8 @@ namespace MMY.Data.Model
         public bool IsRecommended { get; set; }
         public int DisplayOrder { get; set; }
         public bool IsDeleted { get; set; }
+        public System.DateTime TimeOnShelf { get; set; }
+        public System.DateTime TimeOffShelf { get; set; }
         public System.DateTime TimeCreated { get; set; }
     
         public virtual ProductCategory ProductCategory { get; set; }

@@ -33,5 +33,7 @@ namespace MMY.Data.Model
         public Nullable<System.Guid> ParentGuid { get; set; }
         public string CategoryName { get; set; }
         public int DisplayOrder { get; set; }
+        public System.DateTime TimeOnShelf { get; set; }
+        public System.DateTime TimeOffShelf { get; set; }
     }
 }
