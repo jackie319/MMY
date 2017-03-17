@@ -57,6 +57,7 @@
     <Compile Include="IServices\IUserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceModel\FunctionType.cs" />
+    <Compile Include="ServiceModel\ProductStatusEnum.cs" />
     <Compile Include="ServiceModel\UserMenuModel.cs" />
     <Compile Include="ServicesImpl\AuthorityImpl.cs" />
     <Compile Include="ServicesImpl\ProductImpl.cs" />
