@@ -20,9 +20,5 @@ namespace MMY.Services.ServiceModel
         /// 已下架
         /// </summary>
         OffShelf,
-        /// <summary>
-        /// 所有
-        /// </summary>
-        All,
     }
 }

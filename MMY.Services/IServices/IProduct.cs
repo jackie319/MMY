@@ -10,7 +10,7 @@ namespace MMY.Services.IServices
 {
     public interface IProduct
     {
-        IList<ProductV> GetProductVs(string productName, Guid? categoryGuid, ProductStatusEnum status,
+        IList<ProductV> GetProductVs(string productName, Guid? categoryGuid, ProductStatusEnum? status,
             bool? isSpecialOffer, bool? isRecommended,
             DateTime? timeCreatedBegin, DateTime? timeCreatedEnd, int skip, int take, out int total);
 

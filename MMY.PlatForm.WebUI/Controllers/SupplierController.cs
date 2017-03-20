@@ -49,7 +49,7 @@ namespace MMY.PlatForm.WebUI.Controllers
         [HttpPost]
         public ActionResult Update(SupplierViewModel model)
         {
-            if (model.Uid == null ||model.Uid == Guid.Empty) return this.ResultError("Guid不能为空");
+            if (model.Uid == null ||model.Uid == Guid.Empty) return this.ResultError("供货商Guid不能为空");
             _Supplier.Update(model.CopyTo());
             return this.ResultSuccess();
         }

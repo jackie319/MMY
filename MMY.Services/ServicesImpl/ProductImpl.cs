@@ -30,7 +30,7 @@ namespace MMY.Services.ServicesImpl
             _productAlbumRepository = productAlbumRepository;
         }
 
-        public IList<ProductV> GetProductVs(string productName,Guid? categoryGuid, ProductStatusEnum status,bool? isSpecialOffer,bool? isRecommended,
+        public IList<ProductV> GetProductVs(string productName,Guid? categoryGuid, ProductStatusEnum? status,bool? isSpecialOffer,bool? isRecommended,
             DateTime? timeCreatedBegin,DateTime? timeCreatedEnd,int skip,int take,out int total)
         {
             var query = _productVRepository.Table;
@@ -42,7 +42,7 @@ namespace MMY.Services.ServicesImpl
             {
                 query = query.Where(q => q.CategoryGuid == categoryGuid);
             }
-            if (status != ProductStatusEnum.All)
+            if (status !=null)
             {
                 string statusStr = status.ToString();
                 query = query.Where(q => q.Status.Equals(statusStr));

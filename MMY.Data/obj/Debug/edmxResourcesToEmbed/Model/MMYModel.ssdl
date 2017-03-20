@@ -160,6 +160,7 @@
     <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="CategoryGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ProductNumber" Type="int" Nullable="false" />
+    <Property Name="DefaultPic" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="SaleTitle" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="SaleSubTitle" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="Price" Type="int" Nullable="false" />
@@ -169,7 +170,13 @@
     <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="IsSpecialOffer" Type="bit" Nullable="false" />
     <Property Name="IsRecommended" Type="bit" Nullable="false" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="ImaginaryNumber" Type="int" Nullable="false" />
+    <Property Name="VisitedTotal" Type="int" Nullable="false" />
+    <Property Name="SoldTotal" Type="int" Nullable="false" />
+    <Property Name="TimeOnShelf" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="TimeOffShelf" Type="datetime2" Precision="7" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
   </EntityType>
   <EntityType Name="ProductAlbum">
@@ -219,6 +226,7 @@
     <Property Name="SupplierName" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="OperatorName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="OperatorGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Purchaser" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Number" Type="int" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="Remark" Type="nvarchar" MaxLength="500" Nullable="false" />
@@ -323,6 +331,58 @@
     <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MMY.dbo.ProductV”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ProductV">
+    <Key>
+      <PropertyRef Name="TimeCreated" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="IsRecommended" />
+      <PropertyRef Name="IsSpecialOffer" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="ProductRemark" />
+      <PropertyRef Name="ProductDetail" />
+      <PropertyRef Name="PromotionPrice" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="SaleSubTitle" />
+      <PropertyRef Name="SaleTitle" />
+      <PropertyRef Name="DefaultPic" />
+      <PropertyRef Name="ProductNumber" />
+      <PropertyRef Name="CategoryGuid" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="Guid" />
+      <PropertyRef Name="DisplayOrder" />
+      <PropertyRef Name="TimeOnShelf" />
+      <PropertyRef Name="TimeOffShelf" />
+      <PropertyRef Name="ImaginaryNumber" />
+      <PropertyRef Name="VisitedTotal" />
+      <PropertyRef Name="SoldTotal" />
+    </Key>
+    <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="IsRecommended" Type="bit" Nullable="false" />
+    <Property Name="IsSpecialOffer" Type="bit" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductRemark" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="ProductDetail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PromotionPrice" Type="int" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="SaleSubTitle" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="SaleTitle" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="DefaultPic" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ProductNumber" Type="int" Nullable="false" />
+    <Property Name="CategoryGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentGuid" Type="uniqueidentifier" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+    <Property Name="TimeOnShelf" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="TimeOffShelf" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ImaginaryNumber" Type="int" Nullable="false" />
+    <Property Name="VisitedTotal" Type="int" Nullable="false" />
+    <Property Name="SoldTotal" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_MerchantProduct_Merchant">
     <End Role="Merchant" Type="Self.Merchant" Multiplicity="1" />
@@ -570,6 +630,34 @@
     <EntitySet Name="UserFavorite" EntityType="Self.UserFavorite" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserOperationRecords" EntityType="Self.UserOperationRecords" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserShoppingCart" EntityType="Self.UserShoppingCart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductV" EntityType="Self.ProductV" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ProductV].[TimeCreated] AS [TimeCreated], 
+    [ProductV].[IsDeleted] AS [IsDeleted], 
+    [ProductV].[IsRecommended] AS [IsRecommended], 
+    [ProductV].[IsSpecialOffer] AS [IsSpecialOffer], 
+    [ProductV].[Status] AS [Status], 
+    [ProductV].[ProductRemark] AS [ProductRemark], 
+    [ProductV].[ProductDetail] AS [ProductDetail], 
+    [ProductV].[PromotionPrice] AS [PromotionPrice], 
+    [ProductV].[Price] AS [Price], 
+    [ProductV].[SaleSubTitle] AS [SaleSubTitle], 
+    [ProductV].[SaleTitle] AS [SaleTitle], 
+    [ProductV].[DefaultPic] AS [DefaultPic], 
+    [ProductV].[ProductNumber] AS [ProductNumber], 
+    [ProductV].[CategoryGuid] AS [CategoryGuid], 
+    [ProductV].[ProductName] AS [ProductName], 
+    [ProductV].[Guid] AS [Guid], 
+    [ProductV].[ParentGuid] AS [ParentGuid], 
+    [ProductV].[CategoryName] AS [CategoryName], 
+    [ProductV].[DisplayOrder] AS [DisplayOrder], 
+    [ProductV].[TimeOnShelf] AS [TimeOnShelf], 
+    [ProductV].[TimeOffShelf] AS [TimeOffShelf], 
+    [ProductV].[ImaginaryNumber] AS [ImaginaryNumber], 
+    [ProductV].[VisitedTotal] AS [VisitedTotal], 
+    [ProductV].[SoldTotal] AS [SoldTotal]
+    FROM [dbo].[ProductV] AS [ProductV]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_MerchantProduct_Merchant" Association="Self.FK_MerchantProduct_Merchant">
       <End Role="Merchant" EntitySet="Merchant" />
       <End Role="MerchantProduct" EntitySet="MerchantProduct" />
