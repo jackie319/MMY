@@ -228,6 +228,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PictureController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\PurchaseRecordsController.cs" />
     <Compile Include="Controllers\SupplierController.cs" />
@@ -302,6 +303,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Order\" />
+    <Folder Include="Views\Picture\" />
     <Folder Include="Views\Product\" />
     <Folder Include="Views\PurchaseRecords\" />
     <Folder Include="Views\Supplier\" />
