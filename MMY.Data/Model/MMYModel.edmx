@@ -85,7 +85,7 @@
           <Property Name="ProductGuid" Type="uniqueidentifier" Nullable="false" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="ProductPrice" Type="int" Nullable="false" />
-          <Property Name="productNumber" Type="int" Nullable="false" />
+          <Property Name="ProductNumber" Type="int" Nullable="false" />
           <Property Name="UserGuid" Type="uniqueidentifier" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="UserNickName" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -97,6 +97,7 @@
           <Property Name="DeliveryGuid" Type="uniqueidentifier" Nullable="false" />
           <Property Name="DeliveryName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="OrderStatus" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TimePaid" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="OrderDelivery">
@@ -104,6 +105,7 @@
             <PropertyRef Name="Guid" />
           </Key>
           <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DeliveryName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="OrderEvaluation">
@@ -119,6 +121,7 @@
             <PropertyRef Name="Guid" />
           </Key>
           <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PaymentName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="OrderPayRecords">
@@ -818,41 +821,14 @@
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
           <NavigationProperty Name="Merchant" Relationship="Self.FK_MerchantProduct_Merchant" FromRole="MerchantProduct" ToRole="Merchant" />
         </EntityType>
-        <EntityType Name="Order">
-          <Key>
-            <PropertyRef Name="Guid" />
-          </Key>
-          <Property Name="Guid" Type="Guid" Nullable="false" />
-          <Property Name="OrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="OrderAmount" Type="Int32" Nullable="false" />
-          <Property Name="ProductGuid" Type="Guid" Nullable="false" />
-          <Property Name="ProductName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ProductPrice" Type="Int32" Nullable="false" />
-          <Property Name="productNumber" Type="Int32" Nullable="false" />
-          <Property Name="UserGuid" Type="Guid" Nullable="false" />
-          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserNickName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DeliveryAddressGuid" Type="Guid" Nullable="false" />
-          <Property Name="DeliveryAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="PaymentGuid" Type="Guid" Nullable="false" />
-          <Property Name="PaymentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="PayBatch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="DeliveryGuid" Type="Guid" Nullable="false" />
-          <Property Name="DeliveryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="OrderStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="OrderDelivery" Relationship="Self.FK_Order_OrderDelivery" FromRole="Order" ToRole="OrderDelivery" />
-          <NavigationProperty Name="OrderPayment" Relationship="Self.FK_Order_OrderPayment" FromRole="Order" ToRole="OrderPayment" />
-          <NavigationProperty Name="OrderEvaluation" Relationship="Self.FK_OrderEvaluation_Order" FromRole="Order" ToRole="OrderEvaluation" />
-          <NavigationProperty Name="OrderPayRecords" Relationship="Self.FK_OrderPayRecords_Order" FromRole="Order" ToRole="OrderPayRecords" />
-        </EntityType>
         <EntityType Name="OrderDelivery">
           <Key>
             <PropertyRef Name="Guid" />
           </Key>
           <Property Name="Guid" Type="Guid" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_Order_OrderDelivery" FromRole="OrderDelivery" ToRole="Order" />
+          <Property Name="DeliveryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Order" Relationship="MMYModel.FK_Order_OrderDelivery" FromRole="OrderDelivery" ToRole="Order" />
         </EntityType>
         <EntityType Name="OrderEvaluation">
           <Key>
@@ -861,7 +837,7 @@
           <Property Name="Guid" Type="Guid" Nullable="false" />
           <Property Name="OrderGuid" Type="Guid" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_OrderEvaluation_Order" FromRole="OrderEvaluation" ToRole="Order" />
+          <NavigationProperty Name="Order" Relationship="MMYModel.FK_OrderEvaluation_Order" FromRole="OrderEvaluation" ToRole="Order" />
         </EntityType>
         <EntityType Name="OrderPayment">
           <Key>
@@ -869,7 +845,8 @@
           </Key>
           <Property Name="Guid" Type="Guid" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_Order_OrderPayment" FromRole="OrderPayment" ToRole="Order" />
+          <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Order" Relationship="MMYModel.FK_Order_OrderPayment" FromRole="OrderPayment" ToRole="Order" />
         </EntityType>
         <EntityType Name="OrderPayRecords">
           <Key>
@@ -878,7 +855,7 @@
           <Property Name="Guid" Type="Guid" Nullable="false" />
           <Property Name="OrderGuid" Type="Guid" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_OrderPayRecords_Order" FromRole="OrderPayRecords" ToRole="Order" />
+          <NavigationProperty Name="Order" Relationship="MMYModel.FK_OrderPayRecords_Order" FromRole="OrderPayRecords" ToRole="Order" />
         </EntityType>
         <EntityType Name="PositionCity">
           <Key>
@@ -1105,54 +1082,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Order_OrderDelivery">
-          <End Role="OrderDelivery" Type="Self.OrderDelivery" Multiplicity="1" />
-          <End Role="Order" Type="Self.Order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="OrderDelivery">
-              <PropertyRef Name="Guid" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="DeliveryGuid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Order_OrderPayment">
-          <End Role="OrderPayment" Type="Self.OrderPayment" Multiplicity="1" />
-          <End Role="Order" Type="Self.Order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="OrderPayment">
-              <PropertyRef Name="Guid" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="PaymentGuid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrderEvaluation_Order">
-          <End Role="Order" Type="Self.Order" Multiplicity="1" />
-          <End Role="OrderEvaluation" Type="Self.OrderEvaluation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Order">
-              <PropertyRef Name="Guid" />
-            </Principal>
-            <Dependent Role="OrderEvaluation">
-              <PropertyRef Name="OrderGuid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrderPayRecords_Order">
-          <End Role="Order" Type="Self.Order" Multiplicity="1" />
-          <End Role="OrderPayRecords" Type="Self.OrderPayRecords" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Order">
-              <PropertyRef Name="Guid" />
-            </Principal>
-            <Dependent Role="OrderPayRecords">
-              <PropertyRef Name="OrderGuid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_UserDeliveryAddress_UserAccount">
           <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="1" />
           <End Role="UserDeliveryAddress" Type="Self.UserDeliveryAddress" Multiplicity="*" />
@@ -1209,7 +1138,6 @@
           <EntitySet Name="AuthorityUserInRole" EntityType="Self.AuthorityUserInRole" />
           <EntitySet Name="Merchant" EntityType="Self.Merchant" />
           <EntitySet Name="MerchantProduct" EntityType="Self.MerchantProduct" />
-          <EntitySet Name="Order" EntityType="Self.Order" />
           <EntitySet Name="OrderDelivery" EntityType="Self.OrderDelivery" />
           <EntitySet Name="OrderEvaluation" EntityType="Self.OrderEvaluation" />
           <EntitySet Name="OrderPayment" EntityType="Self.OrderPayment" />
@@ -1244,22 +1172,6 @@
           <AssociationSet Name="FK_MerchantProduct_Merchant" Association="Self.FK_MerchantProduct_Merchant">
             <End Role="Merchant" EntitySet="Merchant" />
             <End Role="MerchantProduct" EntitySet="MerchantProduct" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Order_OrderDelivery" Association="Self.FK_Order_OrderDelivery">
-            <End Role="OrderDelivery" EntitySet="OrderDelivery" />
-            <End Role="Order" EntitySet="Order" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Order_OrderPayment" Association="Self.FK_Order_OrderPayment">
-            <End Role="OrderPayment" EntitySet="OrderPayment" />
-            <End Role="Order" EntitySet="Order" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrderEvaluation_Order" Association="Self.FK_OrderEvaluation_Order">
-            <End Role="Order" EntitySet="Order" />
-            <End Role="OrderEvaluation" EntitySet="OrderEvaluation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrderPayRecords_Order" Association="Self.FK_OrderPayRecords_Order">
-            <End Role="Order" EntitySet="Order" />
-            <End Role="OrderPayRecords" EntitySet="OrderPayRecords" />
           </AssociationSet>
           <AssociationSet Name="FK_UserDeliveryAddress_UserAccount" Association="Self.FK_UserDeliveryAddress_UserAccount">
             <End Role="UserAccount" EntitySet="UserAccount" />
@@ -1303,6 +1215,23 @@
           <AssociationSet Name="FK_ProductPurchaseRecords_ProductSupplier" Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier">
             <End Role="ProductSupplier" EntitySet="ProductSupplier" />
             <End Role="ProductPurchaseRecords" EntitySet="ProductPurchaseRecords" />
+          </AssociationSet>
+          <EntitySet Name="Order" EntityType="MMYModel.Order" />
+          <AssociationSet Name="FK_Order_OrderDelivery" Association="MMYModel.FK_Order_OrderDelivery">
+            <End Role="OrderDelivery" EntitySet="OrderDelivery" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_OrderPayment" Association="MMYModel.FK_Order_OrderPayment">
+            <End Role="OrderPayment" EntitySet="OrderPayment" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderEvaluation_Order" Association="MMYModel.FK_OrderEvaluation_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderEvaluation" EntitySet="OrderEvaluation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderPayRecords_Order" Association="MMYModel.FK_OrderPayRecords_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderPayRecords" EntitySet="OrderPayRecords" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="Product">
@@ -1478,6 +1407,83 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Name="Guid" Type="Guid" Nullable="false" />
+          <Property Name="OrderNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OrderAmount" Type="Int32" Nullable="false" />
+          <Property Name="ProductGuid" Type="Guid" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ProductPrice" Type="Int32" Nullable="false" />
+          <Property Name="ProductNumber" Type="Int32" Nullable="false" />
+          <Property Name="UserGuid" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserNickName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryAddressGuid" Type="Guid" Nullable="false" />
+          <Property Name="DeliveryAddress" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentGuid" Type="Guid" Nullable="false" />
+          <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PayBatch" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeliveryGuid" Type="Guid" Nullable="false" />
+          <Property Name="DeliveryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TimePaid" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+          <NavigationProperty Name="OrderDelivery" Relationship="MMYModel.FK_Order_OrderDelivery" FromRole="Order" ToRole="OrderDelivery" />
+          <NavigationProperty Name="OrderPayment" Relationship="MMYModel.FK_Order_OrderPayment" FromRole="Order" ToRole="OrderPayment" />
+          <NavigationProperty Name="OrderEvaluation" Relationship="MMYModel.FK_OrderEvaluation_Order" FromRole="Order" ToRole="OrderEvaluation" />
+          <NavigationProperty Name="OrderPayRecords" Relationship="MMYModel.FK_OrderPayRecords_Order" FromRole="Order" ToRole="OrderPayRecords" />
+        </EntityType>
+        <Association Name="FK_Order_OrderDelivery">
+          <End Type="MMYModel.OrderDelivery" Role="OrderDelivery" Multiplicity="1" />
+          <End Type="MMYModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrderDelivery">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="DeliveryGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_OrderPayment">
+          <End Type="MMYModel.OrderPayment" Role="OrderPayment" Multiplicity="1" />
+          <End Type="MMYModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrderPayment">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="PaymentGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderEvaluation_Order">
+          <End Type="MMYModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="MMYModel.OrderEvaluation" Role="OrderEvaluation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="OrderEvaluation">
+              <PropertyRef Name="OrderGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderPayRecords_Order">
+          <End Type="MMYModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="MMYModel.OrderPayRecords" Role="OrderPayRecords" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="OrderPayRecords">
+              <PropertyRef Name="OrderGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1561,34 +1567,10 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Order">
-            <EntityTypeMapping TypeName="MMYModel.Order">
-              <MappingFragment StoreEntitySet="Order">
-                <ScalarProperty Name="Guid" ColumnName="Guid" />
-                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
-                <ScalarProperty Name="OrderAmount" ColumnName="OrderAmount" />
-                <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
-                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
-                <ScalarProperty Name="productNumber" ColumnName="productNumber" />
-                <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="UserNickName" ColumnName="UserNickName" />
-                <ScalarProperty Name="DeliveryAddressGuid" ColumnName="DeliveryAddressGuid" />
-                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
-                <ScalarProperty Name="PaymentGuid" ColumnName="PaymentGuid" />
-                <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
-                <ScalarProperty Name="PayBatch" ColumnName="PayBatch" />
-                <ScalarProperty Name="DeliveryGuid" ColumnName="DeliveryGuid" />
-                <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
-                <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
-                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="OrderDelivery">
             <EntityTypeMapping TypeName="MMYModel.OrderDelivery">
               <MappingFragment StoreEntitySet="OrderDelivery">
+                <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
                 <ScalarProperty Name="Guid" ColumnName="Guid" />
                 <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
               </MappingFragment>
@@ -1606,6 +1588,7 @@
           <EntitySetMapping Name="OrderPayment">
             <EntityTypeMapping TypeName="MMYModel.OrderPayment">
               <MappingFragment StoreEntitySet="OrderPayment">
+                <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
                 <ScalarProperty Name="Guid" ColumnName="Guid" />
                 <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
               </MappingFragment>
@@ -1871,6 +1854,32 @@
                 <ScalarProperty Name="SupplierGuid" ColumnName="SupplierGuid" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order">
+            <EntityTypeMapping TypeName="MMYModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+                <ScalarProperty Name="TimePaid" ColumnName="TimePaid" />
+                <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+                <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
+                <ScalarProperty Name="DeliveryGuid" ColumnName="DeliveryGuid" />
+                <ScalarProperty Name="PayBatch" ColumnName="PayBatch" />
+                <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
+                <ScalarProperty Name="PaymentGuid" ColumnName="PaymentGuid" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="DeliveryAddressGuid" ColumnName="DeliveryAddressGuid" />
+                <ScalarProperty Name="UserNickName" ColumnName="UserNickName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+                <ScalarProperty Name="ProductNumber" ColumnName="ProductNumber" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+                <ScalarProperty Name="OrderAmount" ColumnName="OrderAmount" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
                 <ScalarProperty Name="Guid" ColumnName="Guid" />
               </MappingFragment>
             </EntityTypeMapping>

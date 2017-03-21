@@ -145,6 +145,7 @@
     <Compile Include="partial\Activity.partial.cs" />
     <Compile Include="partial\AuthorityFunction.partial.cs" />
     <Compile Include="partial\AuthrityRole.partial.cs" />
+    <Compile Include="partial\Order.partial.cs" />
     <Compile Include="partial\Product.partial.cs" />
     <Compile Include="partial\ProductAlbum.partial.cs" />
     <Compile Include="partial\ProductCategory.partial.cs" />

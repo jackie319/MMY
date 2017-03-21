@@ -27,7 +27,7 @@ namespace MMY.Data.Model
         public System.Guid ProductGuid { get; set; }
         public string ProductName { get; set; }
         public int ProductPrice { get; set; }
-        public int productNumber { get; set; }
+        public int ProductNumber { get; set; }
         public System.Guid UserGuid { get; set; }
         public string UserName { get; set; }
         public string UserNickName { get; set; }
@@ -39,6 +39,7 @@ namespace MMY.Data.Model
         public System.Guid DeliveryGuid { get; set; }
         public string DeliveryName { get; set; }
         public string OrderStatus { get; set; }
+        public System.DateTime TimePaid { get; set; }
         public System.DateTime TimeCreated { get; set; }
     
         public virtual OrderDelivery OrderDelivery { get; set; }

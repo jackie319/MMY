@@ -59,6 +59,7 @@ namespace MMY.PlatForm.WebUI
             builder.RegisterType<AuthorityImpl>().As<IAuthority>().InstancePerRequest();
             builder.RegisterType<UserAccountImpl>().As<IUserAccount>().InstancePerDependency();
             builder.RegisterType<ProductImpl>().As<IProduct>().InstancePerDependency();
+            builder.RegisterType<OrderImpl>().As<IOrder>().InstancePerDependency();
             #endregion
             // then
             var container = builder.Build();

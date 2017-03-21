@@ -52,15 +52,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IServices\IAuthority.cs" />
+    <Compile Include="IServices\IOrder.cs" />
     <Compile Include="IServices\IProduct.cs" />
     <Compile Include="IServices\IProductCategory.cs" />
     <Compile Include="IServices\IProductSupplier.cs" />
     <Compile Include="IServices\IUserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceModel\FunctionType.cs" />
+    <Compile Include="ServiceModel\OrderStatusEnum.cs" />
     <Compile Include="ServiceModel\ProductStatusEnum.cs" />
     <Compile Include="ServiceModel\UserMenuModel.cs" />
     <Compile Include="ServicesImpl\AuthorityImpl.cs" />
+    <Compile Include="ServicesImpl\OrderImpl.cs" />
     <Compile Include="ServicesImpl\ProductCategoryImpl.cs" />
     <Compile Include="ServicesImpl\ProductImpl.cs" />
     <Compile Include="ServicesImpl\ProductSupplierImpl.cs" />

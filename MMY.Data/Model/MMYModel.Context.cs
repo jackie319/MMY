@@ -32,7 +32,6 @@ namespace MMY.Data.Model
         public virtual DbSet<AuthorityUserInRole> AuthorityUserInRole { get; set; }
         public virtual DbSet<Merchant> Merchant { get; set; }
         public virtual DbSet<MerchantProduct> MerchantProduct { get; set; }
-        public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderDelivery> OrderDelivery { get; set; }
         public virtual DbSet<OrderEvaluation> OrderEvaluation { get; set; }
         public virtual DbSet<OrderPayment> OrderPayment { get; set; }
@@ -55,5 +54,6 @@ namespace MMY.Data.Model
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductV> ProductV { get; set; }
         public virtual DbSet<ProductPurchaseRecords> ProductPurchaseRecords { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
     }
 }

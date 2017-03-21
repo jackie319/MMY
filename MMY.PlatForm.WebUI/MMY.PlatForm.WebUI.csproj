@@ -227,6 +227,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\PurchaseRecordsController.cs" />
     <Compile Include="Controllers\SupplierController.cs" />
@@ -236,6 +237,8 @@
     </Compile>
     <Compile Include="Models\Account\ChangePasswordViewModel.cs" />
     <Compile Include="Models\Account\LogInViewModel.cs" />
+    <Compile Include="Models\Order\OrderListViewModel.cs" />
+    <Compile Include="Models\Order\OrderQueryModel.cs" />
     <Compile Include="Models\Product\ProductListViewModel.cs" />
     <Compile Include="Models\Product\ProductPurchaseRecordsViewModel.cs" />
     <Compile Include="Models\Product\ProductQueryModel.cs" />
@@ -297,8 +300,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Order\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Order\" />
     <Folder Include="Views\Product\" />
     <Folder Include="Views\PurchaseRecords\" />
     <Folder Include="Views\Supplier\" />

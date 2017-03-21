@@ -80,7 +80,7 @@
     <Property Name="ProductGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="ProductPrice" Type="int" Nullable="false" />
-    <Property Name="productNumber" Type="int" Nullable="false" />
+    <Property Name="ProductNumber" Type="int" Nullable="false" />
     <Property Name="UserGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="UserNickName" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -92,6 +92,7 @@
     <Property Name="DeliveryGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="DeliveryName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="OrderStatus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TimePaid" Type="datetime2" Precision="7" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
   </EntityType>
   <EntityType Name="OrderDelivery">
@@ -99,6 +100,7 @@
       <PropertyRef Name="Guid" />
     </Key>
     <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DeliveryName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
   </EntityType>
   <EntityType Name="OrderEvaluation">
@@ -114,6 +116,7 @@
       <PropertyRef Name="Guid" />
     </Key>
     <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PaymentName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
   </EntityType>
   <EntityType Name="OrderPayRecords">

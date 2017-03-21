@@ -33,7 +33,7 @@ namespace MMY.Services.ServicesImpl
         public IList<ProductV> GetProductVs(string productName,Guid? categoryGuid, ProductStatusEnum? status,bool? isSpecialOffer,bool? isRecommended,
             DateTime? timeCreatedBegin,DateTime? timeCreatedEnd,int skip,int take,out int total)
         {
-            var query = _productVRepository.Table;
+            var query = _productVRepository.Table.Where(q=>!q.IsDeleted);
             if (!string.IsNullOrEmpty(productName))
             {
                 query = query.Where(q => q.ProductName.Contains(productName)|| q.SaleTitle.Contains(productName));

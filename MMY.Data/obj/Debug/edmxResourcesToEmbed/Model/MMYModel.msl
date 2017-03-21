@@ -78,34 +78,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Order">
-      <EntityTypeMapping TypeName="MMYModel.Order">
-        <MappingFragment StoreEntitySet="Order">
-          <ScalarProperty Name="Guid" ColumnName="Guid" />
-          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
-          <ScalarProperty Name="OrderAmount" ColumnName="OrderAmount" />
-          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
-          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
-          <ScalarProperty Name="productNumber" ColumnName="productNumber" />
-          <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
-          <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="UserNickName" ColumnName="UserNickName" />
-          <ScalarProperty Name="DeliveryAddressGuid" ColumnName="DeliveryAddressGuid" />
-          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
-          <ScalarProperty Name="PaymentGuid" ColumnName="PaymentGuid" />
-          <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
-          <ScalarProperty Name="PayBatch" ColumnName="PayBatch" />
-          <ScalarProperty Name="DeliveryGuid" ColumnName="DeliveryGuid" />
-          <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
-          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
-          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="OrderDelivery">
       <EntityTypeMapping TypeName="MMYModel.OrderDelivery">
         <MappingFragment StoreEntitySet="OrderDelivery">
+          <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
           <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
         </MappingFragment>
@@ -123,6 +99,7 @@
     <EntitySetMapping Name="OrderPayment">
       <EntityTypeMapping TypeName="MMYModel.OrderPayment">
         <MappingFragment StoreEntitySet="OrderPayment">
+          <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
           <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
         </MappingFragment>
@@ -388,6 +365,32 @@
           <ScalarProperty Name="SupplierGuid" ColumnName="SupplierGuid" />
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
           <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="MMYModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="TimePaid" ColumnName="TimePaid" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
+          <ScalarProperty Name="DeliveryGuid" ColumnName="DeliveryGuid" />
+          <ScalarProperty Name="PayBatch" ColumnName="PayBatch" />
+          <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
+          <ScalarProperty Name="PaymentGuid" ColumnName="PaymentGuid" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="DeliveryAddressGuid" ColumnName="DeliveryAddressGuid" />
+          <ScalarProperty Name="UserNickName" ColumnName="UserNickName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+          <ScalarProperty Name="ProductNumber" ColumnName="ProductNumber" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+          <ScalarProperty Name="OrderAmount" ColumnName="OrderAmount" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
         </MappingFragment>
       </EntityTypeMapping>

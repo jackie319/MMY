@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="MMYModel.AuthorityUserInRole" Width="1.5" PointX="17" PointY="19.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MMYModel.Merchant" Width="1.5" PointX="15.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MMYModel.MerchantProduct" Width="1.5" PointX="18" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MMYModel.Order" Width="1.5" PointX="10" PointY="15.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MMYModel.OrderDelivery" Width="1.5" PointX="7.75" PointY="16.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MMYModel.OrderEvaluation" Width="1.5" PointX="12.25" PointY="15.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MMYModel.OrderPayment" Width="1.5" PointX="7.75" PointY="13.875" IsExpanded="true" />
@@ -36,10 +35,6 @@
         <AssociationConnector Association="MMYModel.FK_RoleInFunction_Role" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_UserInRole_Role" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_MerchantProduct_Merchant" ManuallyRouted="false" />
-        <AssociationConnector Association="MMYModel.FK_Order_OrderDelivery" ManuallyRouted="false" />
-        <AssociationConnector Association="MMYModel.FK_Order_OrderPayment" ManuallyRouted="false" />
-        <AssociationConnector Association="MMYModel.FK_OrderEvaluation_Order" ManuallyRouted="false" />
-        <AssociationConnector Association="MMYModel.FK_OrderPayRecords_Order" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_UserDeliveryAddress_UserAccount" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_UserFavorite_UserAccount" ManuallyRouted="false" />
         <AssociationConnector Association="MMYModel.FK_UserOperationRecords_UserAccount" ManuallyRouted="false" />
@@ -53,6 +48,11 @@
         <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="8.25" PointY="7.125" />
         <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier" />
+        <EntityTypeShape EntityType="MMYModel.Order" Width="1.5" PointX="10" PointY="13.5" />
+        <AssociationConnector Association="MMYModel.FK_Order_OrderDelivery" />
+        <AssociationConnector Association="MMYModel.FK_Order_OrderPayment" />
+        <AssociationConnector Association="MMYModel.FK_OrderEvaluation_Order" />
+        <AssociationConnector Association="MMYModel.FK_OrderPayRecords_Order" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
