@@ -5,4 +5,5 @@
   &lt;Assembly Path="E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Core.dll" /&gt;&#xD;
   &lt;Assembly Path="E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" /&gt;&#xD;
   &lt;Assembly Path="E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\packages\log4net.2.0.7\lib\net45-full\log4net.dll" /&gt;&#xD;
+  &lt;Assembly Path="E:\tools\development tools\GItHub\mmy\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Extensions.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>
