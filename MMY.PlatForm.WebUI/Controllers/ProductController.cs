@@ -41,25 +41,45 @@ namespace MMY.PlatForm.WebUI.Controllers
             return this.ResultModel(resultProduct);
         }
 
+        //[ValidationFilter]
+        //[HttpPost]
+        //public ActionResult Add(ProductViewModel model)
+        //{
+        //    var albums=model.Albums.Select(item => item.CopyTo()).ToList();
+        //    var classifications = model.Classifications.Select(item => item.CopyTo()).ToList();
+        //    _product.CreatedProduct(model.CopyTo(),classifications,albums);
+        //    return this.ResultSuccess();
+        //}
+        //[ValidationFilter]
+        //[HttpPost]
+        //public ActionResult Update(ProductViewModel model)
+        //{
+        //    if ( model.Guid == Guid.Empty) return this.ResultError("产品Guid不能为空");
+        //    var albums = model.Albums.Select(item => item.CopyTo()).ToList();
+        //    var classifications = model.Classifications.Select(item => item.CopyTo()).ToList();
+        //    _product.UpdateProduct(model.CopyTo(), classifications, albums);
+        //    return this.ResultSuccess();
+        //}
+
         [ValidationFilter]
         [HttpPost]
-        public ActionResult Add(ProductViewModel model)
+        public ActionResult Save(ProductViewModel model)
         {
-            var albums=model.Albums.Select(item => item.CopyTo()).ToList();
-            var classifications = model.Classifications.Select(item => item.CopyTo()).ToList();
-            _product.CreatedProduct(model.CopyTo(),classifications,albums);
-            return this.ResultSuccess();
-        }
-        [ValidationFilter]
-        [HttpPost]
-        public ActionResult Update(ProductViewModel model)
-        {
-            if ( model.Guid == Guid.Empty) return this.ResultError("产品Guid不能为空");
             var albums = model.Albums.Select(item => item.CopyTo()).ToList();
             var classifications = model.Classifications.Select(item => item.CopyTo()).ToList();
-            _product.UpdateProduct(model.CopyTo(), classifications, albums);
+            if (model.Guid == Guid.Empty)
+            {
+              
+                _product.CreatedProduct(model.CopyTo(), classifications, albums);
+            }
+            else
+            {
+                _product.UpdateProduct(model.CopyTo(), classifications, albums);
+            }
             return this.ResultSuccess();
         }
+
+
 
         [HttpPost]
         public ActionResult Delete(Guid productGuid)

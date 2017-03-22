@@ -30,7 +30,7 @@ namespace MMY.PlatForm.WebUI.Controllers
 
         [ValidationFilter]
         [HttpPost]
-        public ActionResult Add(ProductPurchaseRecordsViewModel model)
+        public ActionResult Save(ProductPurchaseRecordsViewModel model)
         {
             var record = model.CopyTo();
             var user = (UserModel) HttpContext.User;

@@ -38,19 +38,34 @@ namespace MMY.PlatForm.WebUI.Controllers
             var result = SupplierViewModel.CopyFrom(supplier);
             return this.ResultModel(result);
         }
+        //[ValidationFilter]
+        //[HttpPost]
+        //public ActionResult Add(SupplierViewModel model)
+        //{
+        //    _Supplier.Add(model.CopyTo());
+        //    return this.ResultSuccess();
+        //}
+        //[ValidationFilter]
+        //[HttpPost]
+        //public ActionResult Update(SupplierViewModel model)
+        //{
+        //    if (model.Uid == null ||model.Uid == Guid.Empty) return this.ResultError("供货商Guid不能为空");
+        //    _Supplier.Update(model.CopyTo());
+        //    return this.ResultSuccess();
+        //}
+
         [ValidationFilter]
         [HttpPost]
-        public ActionResult Add(SupplierViewModel model)
+        public ActionResult Save(SupplierViewModel model)
         {
-            _Supplier.Add(model.CopyTo());
-            return this.ResultSuccess();
-        }
-        [ValidationFilter]
-        [HttpPost]
-        public ActionResult Update(SupplierViewModel model)
-        {
-            if (model.Uid == null ||model.Uid == Guid.Empty) return this.ResultError("供货商Guid不能为空");
-            _Supplier.Update(model.CopyTo());
+            if (model.Uid == Guid.Empty)
+            {
+                _Supplier.Add(model.CopyTo());
+            }
+            else
+            {
+                _Supplier.Update(model.CopyTo());
+            }
             return this.ResultSuccess();
         }
 
