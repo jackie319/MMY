@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
+using Autofac;
+using Autofac.Integration.Mvc;
+using JK.Framework.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MMY.Data.Model;
 using MMY.Services.IServices;
@@ -13,11 +18,13 @@ namespace MMY.Test
     [TestClass]
     public class ProductTest
     {
-        private IProduct _product;
+ 
+        public IProduct _product { set; get; }
         [TestInitialize]
-        public void Initial(IProduct product)
+        public void Initialize()
         {
-            _product=product;
+            Initial.RegisterAutofac();
+            _product=Initial._container.Resolve<IProduct>();
         }
         [TestMethod]
         public void TestAddProduct()
@@ -31,10 +38,10 @@ namespace MMY.Test
             product.IsSpecialOffer = true;
             product.Price = 200;
             product.PromotionPrice = 100;
-            product.ProductDetail = "产品详情";
-            product.ProductName = "产品名称";
+            product.ProductDetail = "产品详情ok";
+            product.ProductName = "产品名称ok1111";
             product.ProductNumber = 100;
-            product.ProductRemark = "单元测试";
+            product.ProductRemark = "单元测试ok";
             product.SaleSubTitle = "商品副标题";
             product.SaleTitle = "商品标题";
             product.SoldTotal = 100;
