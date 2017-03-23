@@ -83,7 +83,8 @@ namespace MMY.Services.ServicesImpl
         }
         public void CreatedProduct(Product product,IList<ProductClassification> classifications,IList<ProductAlbum> albums)
         {
-            product.Guid = Guid.NewGuid();
+            Guid uid = Guid.NewGuid();
+            product.Guid = uid;
             product.TimeCreated=DateTime.Now;
             product.TimeOnShelf = product.TimeCreated;
             product.TimeOffShelf = product.TimeCreated;
@@ -96,11 +97,13 @@ namespace MMY.Services.ServicesImpl
 
             foreach (var item in classifications)
             {
+                item.ProductGuid = uid;
                 CreateProductClassification(item);
             }
 
             foreach (var item in albums)
             {
+                item.ProductGuid = uid;
                 CreateProductAlbum(item);
             }
           
