@@ -38,7 +38,7 @@ namespace MMY.Services.ServicesImpl
             {
                 query = query.Where(q => q.ProductName.Contains(productName)|| q.SaleTitle.Contains(productName));
             }
-            if (categoryGuid != null)
+            if (categoryGuid != null && categoryGuid!=Guid.Empty)
             {
                 query = query.Where(q => q.CategoryGuid == categoryGuid);
             }
@@ -55,11 +55,11 @@ namespace MMY.Services.ServicesImpl
             {
                 query = query.Where(q => q.IsRecommended == isRecommended);
             }
-            if (timeCreatedBegin != null)
+            if (timeCreatedBegin != null && timeCreatedBegin!=DateTime.MinValue)
             {
                 query = query.Where(q => q.TimeCreated >= timeCreatedBegin);
             }
-            if (timeCreatedEnd != null)
+            if (timeCreatedEnd != null && timeCreatedEnd!=DateTime.MinValue)
             {
                 query = query.Where(q => q.TimeCreated < timeCreatedEnd);
             }

@@ -8,6 +8,8 @@ using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
 using JK.Framework.Data;
+using MMY.FrontSite.WebUI;
+using MMY.PlatForm.WebUI;
 using MMY.Services.IServices;
 using MMY.Services.ServicesImpl;
 
@@ -21,20 +23,10 @@ namespace MMY.Test
             string connectionStr = System.Web.Configuration.WebConfigurationManager.
                 ConnectionStrings["MMYEntities"].ConnectionString;
 
-            ContainerBuilder builder = new ContainerBuilder();
-            //builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly()).AsImplementedInterfaces();
-            RegisterAutofacForJK.RegisterAutofacForJKFramework(builder, connectionStr);
-
-            builder.RegisterType<ProductSupplierImpl>().As<IProductSupplier>().InstancePerRequest(); 
-            builder.RegisterType<AuthorityImpl>().As<IAuthority>().InstancePerRequest();
-            builder.RegisterType<UserAccountImpl>().As<IUserAccount>().InstancePerDependency();
-            builder.RegisterType<ProductImpl>().As<IProduct>().InstancePerDependency();
-            builder.RegisterType<OrderImpl>().As<IOrder>().InstancePerDependency();
-
-            // then
-            _container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(_container));
+            RegisterAutofacForJK.Register(connectionStr, AutoFacRegister.RegisterAutofacDelegate);
+            _container = RegisterAutofacForJK._container;
 
         }
+
     }
 }

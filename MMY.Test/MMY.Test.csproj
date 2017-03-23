@@ -108,6 +108,14 @@
       <Project>{E5D91290-E87D-4097-A316-92AEFD8329EA}</Project>
       <Name>MMY.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MMY.FrontSite.WebUI\MMY.FrontSite.WebUI.csproj">
+      <Project>{4A7663CB-13AF-4540-9A3F-DFF111877CB8}</Project>
+      <Name>MMY.FrontSite.WebUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMY.PlatForm.WebUI\MMY.PlatForm.WebUI.csproj">
+      <Project>{D3587F04-C6BD-40C7-BED5-21B0B429E17A}</Project>
+      <Name>MMY.PlatForm.WebUI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MMY.Services\MMY.Services.csproj">
       <Project>{6465a8e9-eacc-4876-8e33-5d8e2eee841a}</Project>
       <Name>MMY.Services</Name>

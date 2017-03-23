@@ -58,7 +58,7 @@
     </Reference>
     <Reference Include="JK.Framework.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\Jackie\tools\JK.Framework\JK.Framework\JK.Framework.Data\bin\Debug\JK.Framework.Data.dll</HintPath>
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Data\bin\Debug\JK.Framework.Data.dll</HintPath>
     </Reference>
     <Reference Include="JK.Framework.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -219,6 +219,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AuthorityWebFilter.cs" />
+    <Compile Include="App_Start\AutoFacRegister.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\GlobalException.cs" />

@@ -16,6 +16,7 @@ using JK.Framework.Data;
 using log4net.Config;
 using MMY.Data.Model;
 using MMY.PlatForm.Domain;
+using MMY.PlatForm.WebUI;
 using MMY.Services.IServices;
 using MMY.Services.ServicesImpl;
 using ICacheManager = WebGrease.ICacheManager;
@@ -43,28 +44,7 @@ namespace MMY.PlatForm.WebUI
             string connectionStr = System.Web.Configuration.WebConfigurationManager.
                 ConnectionStrings["MMYEntities"].ConnectionString;
 
-            ContainerBuilder builder = new ContainerBuilder();
-            builder.RegisterControllers(Assembly.GetExecutingAssembly());
-
-            #region IOC注册区域
-            //倘若需要默认注册所有的，请这样写（主要参数需要修改）
-            //builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
-            //   .AsImplementedInterfaces();
-
-            RegisterAutofacForJK.RegisterAutofacForJKFramework(builder, connectionStr);
-
-            // builder.RegisterType<DbContextGetter>().As<IDbContextGetter>().SingleInstance();
-
-            builder.RegisterType<ProductSupplierImpl>().As<IProductSupplier>().InstancePerDependency(); 
-            builder.RegisterType<AuthorityImpl>().As<IAuthority>().InstancePerRequest();
-            builder.RegisterType<UserAccountImpl>().As<IUserAccount>().InstancePerDependency();
-            builder.RegisterType<ProductImpl>().As<IProduct>().InstancePerDependency();
-            builder.RegisterType<OrderImpl>().As<IOrder>().InstancePerDependency();
-            #endregion
-            // then
-            var container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-
+            RegisterAutofacForJK.Register(connectionStr, AutoFacRegister.RegisterAutofacDelegate);
         }
 
         private static void InitLog4Net()

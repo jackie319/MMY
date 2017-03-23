@@ -34,12 +34,12 @@ namespace MMY.Test
             product.DefaultPic = "";
             product.DisplayOrder = 1;
             product.ImaginaryNumber = 100;
-            product.IsRecommended = true;
-            product.IsSpecialOffer = true;
+            product.IsRecommended = false;
+            product.IsSpecialOffer = false;
             product.Price = 200;
             product.PromotionPrice = 100;
             product.ProductDetail = "产品详情ok";
-            product.ProductName = "产品名称ok1111";
+            product.ProductName = "产品名称ok2222";
             product.ProductNumber = 100;
             product.ProductRemark = "单元测试ok";
             product.SaleSubTitle = "商品副标题";
