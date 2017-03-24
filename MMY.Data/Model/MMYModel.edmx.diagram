@@ -48,9 +48,7 @@
         <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="8.25" PointY="7.125" />
         <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier" />
-        <EntityTypeShape EntityType="MMYModel.Order" Width="1.5" PointX="10" PointY="13.5" />
-        <AssociationConnector Association="MMYModel.FK_Order_OrderDelivery" />
-        <AssociationConnector Association="MMYModel.FK_Order_OrderPayment" />
+        <EntityTypeShape EntityType="MMYModel.Order" Width="1.5" PointX="10" PointY="15.125" />
         <AssociationConnector Association="MMYModel.FK_OrderEvaluation_Order" />
         <AssociationConnector Association="MMYModel.FK_OrderPayRecords_Order" />
         </Diagram>

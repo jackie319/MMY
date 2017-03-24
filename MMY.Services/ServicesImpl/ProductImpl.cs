@@ -197,9 +197,13 @@ namespace MMY.Services.ServicesImpl
         /// <param name="records"></param>
         public void AddPurchaseRecords(ProductPurchaseRecords records)
         {
+            records.Guid = Guid.NewGuid();
             records.TimeCreated=DateTime.Now;
             records.IsDeleted = false;
             _productPurchaseRepository.Insert(records);
+            var product=FindProduct(records.ProductGuid);
+            product.ProductNumber += records.Number;
+            _productRepository.Update(product);//TODO:事务
         }
 
         private void CreateProductClassification(ProductClassification classification)

@@ -85,7 +85,6 @@
     <Property Name="Guid" Type="Guid" Nullable="false" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
     <Property Name="DeliveryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Order" Relationship="MMYModel.FK_Order_OrderDelivery" FromRole="OrderDelivery" ToRole="Order" />
   </EntityType>
   <EntityType Name="OrderEvaluation">
     <Key>
@@ -103,7 +102,6 @@
     <Property Name="Guid" Type="Guid" Nullable="false" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
     <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Order" Relationship="MMYModel.FK_Order_OrderPayment" FromRole="OrderPayment" ToRole="Order" />
   </EntityType>
   <EntityType Name="OrderPayRecords">
     <Key>
@@ -474,14 +472,6 @@
       <End Role="ProductPurchaseRecords" EntitySet="ProductPurchaseRecords" />
     </AssociationSet>
     <EntitySet Name="Order" EntityType="MMYModel.Order" />
-    <AssociationSet Name="FK_Order_OrderDelivery" Association="MMYModel.FK_Order_OrderDelivery">
-      <End Role="OrderDelivery" EntitySet="OrderDelivery" />
-      <End Role="Order" EntitySet="Order" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Order_OrderPayment" Association="MMYModel.FK_Order_OrderPayment">
-      <End Role="OrderPayment" EntitySet="OrderPayment" />
-      <End Role="Order" EntitySet="Order" />
-    </AssociationSet>
     <AssociationSet Name="FK_OrderEvaluation_Order" Association="MMYModel.FK_OrderEvaluation_Order">
       <End Role="Order" EntitySet="Order" />
       <End Role="OrderEvaluation" EntitySet="OrderEvaluation" />
@@ -685,38 +675,13 @@
     <Property Name="PayBatch" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="DeliveryGuid" Type="Guid" Nullable="false" />
     <Property Name="DeliveryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TrackingNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="TimePaid" Type="DateTime" Nullable="false" Precision="7" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-    <NavigationProperty Name="OrderDelivery" Relationship="MMYModel.FK_Order_OrderDelivery" FromRole="Order" ToRole="OrderDelivery" />
-    <NavigationProperty Name="OrderPayment" Relationship="MMYModel.FK_Order_OrderPayment" FromRole="Order" ToRole="OrderPayment" />
     <NavigationProperty Name="OrderEvaluation" Relationship="MMYModel.FK_OrderEvaluation_Order" FromRole="Order" ToRole="OrderEvaluation" />
     <NavigationProperty Name="OrderPayRecords" Relationship="MMYModel.FK_OrderPayRecords_Order" FromRole="Order" ToRole="OrderPayRecords" />
   </EntityType>
-  <Association Name="FK_Order_OrderDelivery">
-    <End Type="MMYModel.OrderDelivery" Role="OrderDelivery" Multiplicity="1" />
-    <End Type="MMYModel.Order" Role="Order" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OrderDelivery">
-        <PropertyRef Name="Guid" />
-      </Principal>
-      <Dependent Role="Order">
-        <PropertyRef Name="DeliveryGuid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Order_OrderPayment">
-    <End Type="MMYModel.OrderPayment" Role="OrderPayment" Multiplicity="1" />
-    <End Type="MMYModel.Order" Role="Order" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OrderPayment">
-        <PropertyRef Name="Guid" />
-      </Principal>
-      <Dependent Role="Order">
-        <PropertyRef Name="PaymentGuid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_OrderEvaluation_Order">
     <End Type="MMYModel.Order" Role="Order" Multiplicity="1" />
     <End Type="MMYModel.OrderEvaluation" Role="OrderEvaluation" Multiplicity="*" />

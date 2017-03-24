@@ -38,12 +38,11 @@ namespace MMY.Data.Model
         public string PayBatch { get; set; }
         public System.Guid DeliveryGuid { get; set; }
         public string DeliveryName { get; set; }
+        public string TrackingNumber { get; set; }
         public string OrderStatus { get; set; }
         public System.DateTime TimePaid { get; set; }
         public System.DateTime TimeCreated { get; set; }
     
-        public virtual OrderDelivery OrderDelivery { get; set; }
-        public virtual OrderPayment OrderPayment { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderEvaluation> OrderEvaluation { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

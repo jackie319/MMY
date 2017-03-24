@@ -91,6 +91,7 @@
     <Property Name="PayBatch" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="DeliveryGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="DeliveryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TrackingNumber" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="OrderStatus" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="TimePaid" Type="datetime2" Precision="7" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
@@ -399,30 +400,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Order_OrderDelivery">
-    <End Role="OrderDelivery" Type="Self.OrderDelivery" Multiplicity="1" />
-    <End Role="Order" Type="Self.Order" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OrderDelivery">
-        <PropertyRef Name="Guid" />
-      </Principal>
-      <Dependent Role="Order">
-        <PropertyRef Name="DeliveryGuid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Order_OrderPayment">
-    <End Role="OrderPayment" Type="Self.OrderPayment" Multiplicity="1" />
-    <End Role="Order" Type="Self.Order" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OrderPayment">
-        <PropertyRef Name="Guid" />
-      </Principal>
-      <Dependent Role="Order">
-        <PropertyRef Name="PaymentGuid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_OrderEvaluation_Order">
     <End Role="Order" Type="Self.Order" Multiplicity="1" />
     <End Role="OrderEvaluation" Type="Self.OrderEvaluation" Multiplicity="*" />
@@ -664,14 +641,6 @@
     <AssociationSet Name="FK_MerchantProduct_Merchant" Association="Self.FK_MerchantProduct_Merchant">
       <End Role="Merchant" EntitySet="Merchant" />
       <End Role="MerchantProduct" EntitySet="MerchantProduct" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Order_OrderDelivery" Association="Self.FK_Order_OrderDelivery">
-      <End Role="OrderDelivery" EntitySet="OrderDelivery" />
-      <End Role="Order" EntitySet="Order" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Order_OrderPayment" Association="Self.FK_Order_OrderPayment">
-      <End Role="OrderPayment" EntitySet="OrderPayment" />
-      <End Role="Order" EntitySet="Order" />
     </AssociationSet>
     <AssociationSet Name="FK_OrderEvaluation_Order" Association="Self.FK_OrderEvaluation_Order">
       <End Role="Order" EntitySet="Order" />

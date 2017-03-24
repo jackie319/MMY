@@ -12,5 +12,10 @@ namespace MMY.Services.IServices
     {
         IList<Order> GetList(string orderNo, OrderStatusEnum? status, string userNickName,
             DateTime? timeCreatedBegin, DateTime? timeCreatedEnd, int skip, int take, out int total);
+
+        void CreateOrder(Order order);
+
+        void CreateOrderPayment(OrderPayment orderPayment);
+        void CreatedOrderDelivery(OrderDelivery orderDelivery);
     }
 }

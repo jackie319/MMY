@@ -63,5 +63,21 @@ namespace MMY.Test
             albums.Add(album);
             _product.CreatedProduct(product, classifications, albums);
         }
+
+        [TestMethod]
+        public void AddPurchaseRecordsTest()
+        {
+            ProductPurchaseRecords records=new ProductPurchaseRecords();
+            records.Number = 1000;
+            records.OperatorGuid = Guid.Empty;
+            records.OperatorName = "单元测试";
+            records.ProductGuid = Guid.Parse("D1C9886C-8228-48BE-938C-38BD9F0CBF37");
+            records.ProductName = "单元测试";
+            records.Purchaser = "单元测试";
+            records.Remark = "单元测试";
+            records.SupplierGuid = Guid.Parse("47A7065A-B308-49DE-BD74-6D0E6697B213");
+            records.SupplierName = "单元测试";
+            _product.AddPurchaseRecords(records);
+        }
     }
 }

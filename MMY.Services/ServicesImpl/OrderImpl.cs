@@ -13,9 +13,13 @@ namespace MMY.Services.ServicesImpl
     public class OrderImpl:IOrder
     {
         private IRepository<Order> _ordeRepository;
-        public OrderImpl(IRepository<Order> ordeRepository)
+        private IRepository<OrderPayment> _orderPaymentRepository;
+        private IRepository<OrderDelivery> _orderDeliveryRepository;
+        public OrderImpl(IRepository<Order> ordeRepository, IRepository<OrderPayment> orderPaymentRepository, IRepository<OrderDelivery> orderDeliveryRepository)
         {
             _ordeRepository = ordeRepository;
+            _orderDeliveryRepository = orderDeliveryRepository;
+            _orderPaymentRepository = orderPaymentRepository;
         }
         public IList<Order> GetList(string orderNo, OrderStatusEnum? status, string userNickName,
             DateTime? timeCreatedBegin, DateTime? timeCreatedEnd, int skip, int take, out int total)
@@ -43,6 +47,40 @@ namespace MMY.Services.ServicesImpl
             }
             total = query.Count();
             return query.OrderByDescending(q => q.TimeCreated).Skip(skip).Take(take).ToList();
+        }
+
+        public void CreateOrder(Order order)
+        {
+            order.Guid=Guid.NewGuid();
+            order.TimeCreated=DateTime.Now;
+            order.PayBatch = string.Empty;
+            order.PaymentGuid = Guid.Empty;
+            order.PaymentName = string.Empty;
+            order.DeliveryGuid = Guid.Empty;
+            order.DeliveryName = string.Empty;
+            order.DeliveryAddressGuid = Guid.Empty;
+            order.DeliveryAddress = string.Empty;
+            order.OrderStatus = OrderStatusEnum.Default.ToString();
+           _ordeRepository.Insert(order);
+        }
+
+        private string CreateOrderNo()
+        {
+            return string.Empty;
+        }
+
+        public void CreateOrderPayment(OrderPayment orderPayment)
+        {
+            orderPayment.Guid=Guid.NewGuid();
+            orderPayment.TimeCreated=DateTime.Now;
+            _orderPaymentRepository.Insert(orderPayment);
+        }
+
+        public void CreatedOrderDelivery(OrderDelivery orderDelivery)
+        {
+            orderDelivery.Guid = Guid.NewGuid();
+            orderDelivery.TimeCreated=DateTime.Now;
+           _orderDeliveryRepository.Insert(orderDelivery);
         }
     }
 }

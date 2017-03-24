@@ -375,6 +375,7 @@
           <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
           <ScalarProperty Name="TimePaid" ColumnName="TimePaid" />
           <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="TrackingNumber" ColumnName="TrackingNumber" />
           <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
           <ScalarProperty Name="DeliveryGuid" ColumnName="DeliveryGuid" />
           <ScalarProperty Name="PayBatch" ColumnName="PayBatch" />

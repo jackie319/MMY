@@ -17,6 +17,10 @@ namespace MMY.Services.ServiceModel
         /// </summary>
         Paid,
         /// <summary>
+        /// 已发货
+        /// </summary>
+        Delivered,
+        /// <summary>
         /// 已完成
         /// </summary>
         Finished,
