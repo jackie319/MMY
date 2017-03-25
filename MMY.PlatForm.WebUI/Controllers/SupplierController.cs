@@ -58,7 +58,7 @@ namespace MMY.PlatForm.WebUI.Controllers
         [HttpPost]
         public ActionResult Save(SupplierViewModel model)
         {
-            if (model.Uid == Guid.Empty)
+            if (model.Guid == Guid.Empty)
             {
                 _Supplier.Add(model.CopyTo());
             }

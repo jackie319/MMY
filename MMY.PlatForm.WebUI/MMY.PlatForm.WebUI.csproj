@@ -265,6 +265,69 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="log4net.config" />
+    <Content Include="wwwroot\Account\ChangePassword.html" />
+    <Content Include="wwwroot\apiConfig.js" />
+    <Content Include="wwwroot\css\app.css" />
+    <Content Include="wwwroot\css\rich_media_content.css" />
+    <Content Include="wwwroot\css\schema.default.css" />
+    <Content Include="wwwroot\css\theme\default.css" />
+    <Content Include="wwwroot\css\theme\default\good.png" />
+    <Content Include="wwwroot\css\theme\default\search.png" />
+    <Content Include="wwwroot\css\theme\default\u279.png" />
+    <Content Include="wwwroot\Demo\Detail.html" />
+    <Content Include="wwwroot\Demo\Dialog.html" />
+    <Content Include="wwwroot\Demo\Docs.html" />
+    <Content Include="wwwroot\Demo\Icons.html" />
+    <Content Include="wwwroot\Demo\List.html" />
+    <Content Include="wwwroot\Demo\ListDetail.html" />
+    <Content Include="wwwroot\fonts\element-icons.svg" />
+    <Content Include="wwwroot\fonts\powerbiglyphs-regular.svg" />
+    <Content Include="wwwroot\Home\Welcome.html" />
+    <Content Include="wwwroot\images\avatar.jpg" />
+    <Content Include="wwwroot\index.html" />
+    <Content Include="wwwroot\login.html" />
+    <Content Include="wwwroot\main.html" />
+    <Content Include="wwwroot\Order\ListDetail.html" />
+    <Content Include="wwwroot\ReadMe.txt" />
+    <Content Include="wwwroot\scripts\checkinframework.js" />
+    <Content Include="wwwroot\scripts\cookies.js" />
+    <Content Include="wwwroot\scripts\dateformat.js" />
+    <Content Include="wwwroot\scripts\element-ui\lib\index.js" />
+    <Content Include="wwwroot\scripts\element-ui\lib\theme-default\fonts\element-icons.svg" />
+    <Content Include="wwwroot\scripts\element-ui\lib\theme-default\index.css" />
+    <Content Include="wwwroot\scripts\element-ui\lib\theme-default\red.css" />
+    <Content Include="wwwroot\scripts\framework.js" />
+    <Content Include="wwwroot\scripts\guid.js" />
+    <Content Include="wwwroot\scripts\jszip.js" />
+    <Content Include="wwwroot\scripts\linq.js" />
+    <Content Include="wwwroot\scripts\md5.js" />
+    <Content Include="wwwroot\scripts\polyfill\DOMParser.parseFromString.js" />
+    <Content Include="wwwroot\scripts\polyfill\Object.assign.js" />
+    <Content Include="wwwroot\scripts\referenceCss.js" />
+    <Content Include="wwwroot\scripts\referenceJs.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\actionsheet\HtmlPage.html" />
+    <Content Include="wwwroot\scripts\vue-plugins\actionsheet\JavaScript.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\alert\HtmlPage.html" />
+    <Content Include="wwwroot\scripts\vue-plugins\alert\JavaScript.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\confirm\HtmlPage.html" />
+    <Content Include="wwwroot\scripts\vue-plugins\confirm\JavaScript.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\loading\HtmlPage.html" />
+    <Content Include="wwwroot\scripts\vue-plugins\loading\JavaScript.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\prompt\HtmlPage.html" />
+    <Content Include="wwwroot\scripts\vue-plugins\prompt\JavaScript.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\vue-resource\vue-resource.common.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\vue-resource\vue-resource.es2015.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\vue-resource\vue-resource.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\vue-resource\vue-resource.min.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\vue-router\vue-router.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\vue-router\vue-router.min.js" />
+    <Content Include="wwwroot\scripts\vue.js" />
+    <Content Include="wwwroot\scripts\vue.min.js" />
+    <Content Include="wwwroot\Supplier\List.html" />
+    <Content Include="wwwroot\UI\框架.png" />
+    <Content Include="wwwroot\UI\登录.png" />
+    <Content Include="wwwroot\webConfig.js" />
+    <Content Include="wwwroot\welcome.html" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -299,6 +362,24 @@
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Test\Logout.cshtml" />
+    <Content Include="wwwroot\data\demolist.json" />
+    <Content Include="wwwroot\data\userlogin.json" />
+    <Content Include="wwwroot\Diagram\客户端类图.vsdx" />
+    <Content Include="wwwroot\Diagram\跳转流程.vsdx" />
+    <Content Include="wwwroot\fonts\element-icons.eot" />
+    <Content Include="wwwroot\fonts\element-icons.ttf" />
+    <Content Include="wwwroot\fonts\element-icons.woff" />
+    <Content Include="wwwroot\fonts\powerbiglyphs-regular.eot" />
+    <Content Include="wwwroot\fonts\powerbiglyphs-regular.ttf" />
+    <Content Include="wwwroot\fonts\powerbiglyphs-regular.woff" />
+    <Content Include="wwwroot\scripts\element-ui\lib\theme-default\fonts\element-icons.eot" />
+    <Content Include="wwwroot\scripts\element-ui\lib\theme-default\fonts\element-icons.ttf" />
+    <Content Include="wwwroot\scripts\element-ui\lib\theme-default\fonts\element-icons.woff" />
+    <Content Include="wwwroot\vwd.webinfo" />
+    <Content Include="wwwroot\Web.config" />
+    <None Include="wwwroot\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,6 +389,8 @@
     <Folder Include="Views\Product\" />
     <Folder Include="Views\PurchaseRecords\" />
     <Folder Include="Views\Supplier\" />
+    <Folder Include="wwwroot\.vs\电商后台\v15\" />
+    <Folder Include="wwwroot\Design\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
