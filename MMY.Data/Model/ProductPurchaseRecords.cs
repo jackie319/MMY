@@ -17,6 +17,8 @@ namespace MMY.Data.Model
         public System.Guid Guid { get; set; }
         public System.Guid ProductGuid { get; set; }
         public string ProductName { get; set; }
+        public System.Guid ClassificationGuid { get; set; }
+        public string ClassificationName { get; set; }
         public System.Guid SupplierGuid { get; set; }
         public string SupplierName { get; set; }
         public string OperatorName { get; set; }

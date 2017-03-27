@@ -15,7 +15,7 @@ namespace MMY.Data.Model
     public partial class OrderDelivery
     {
         public System.Guid Guid { get; set; }
-        public System.DateTime TimeCreated { get; set; }
         public string DeliveryName { get; set; }
+        public System.DateTime TimeCreated { get; set; }
     }
 }

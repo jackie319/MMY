@@ -15,7 +15,7 @@ namespace MMY.Data.Model
     public partial class OrderPayment
     {
         public System.Guid Guid { get; set; }
-        public System.DateTime TimeCreated { get; set; }
         public string PaymentName { get; set; }
+        public System.DateTime TimeCreated { get; set; }
     }
 }

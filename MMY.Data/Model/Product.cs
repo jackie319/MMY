@@ -19,8 +19,8 @@ namespace MMY.Data.Model
         {
             this.ProductAlbum = new HashSet<ProductAlbum>();
             this.ProductClassification = new HashSet<ProductClassification>();
-            this.ProductQRCode = new HashSet<ProductQRCode>();
             this.ProductPurchaseRecords = new HashSet<ProductPurchaseRecords>();
+            this.ProductQRCode = new HashSet<ProductQRCode>();
         }
     
         public System.Guid Guid { get; set; }
@@ -30,6 +30,7 @@ namespace MMY.Data.Model
         public string DefaultPic { get; set; }
         public string SaleTitle { get; set; }
         public string SaleSubTitle { get; set; }
+        public int BuyingPrice { get; set; }
         public int Price { get; set; }
         public int PromotionPrice { get; set; }
         public string ProductDetail { get; set; }
@@ -52,8 +53,8 @@ namespace MMY.Data.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductClassification> ProductClassification { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductQRCode> ProductQRCode { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductPurchaseRecords> ProductPurchaseRecords { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductQRCode> ProductQRCode { get; set; }
     }
 }
