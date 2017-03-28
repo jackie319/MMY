@@ -30,7 +30,6 @@ namespace MMY.Data.Model
         public string DefaultPic { get; set; }
         public string SaleTitle { get; set; }
         public string SaleSubTitle { get; set; }
-        public int BuyingPrice { get; set; }
         public int Price { get; set; }
         public int PromotionPrice { get; set; }
         public string ProductDetail { get; set; }

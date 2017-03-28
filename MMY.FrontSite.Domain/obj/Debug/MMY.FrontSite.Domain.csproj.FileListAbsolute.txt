@@ -2,3 +2,15 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.FrontSite.Domain.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Web.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Core.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Extensions.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\Autofac.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\Autofac.Integration.Mvc.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\Newtonsoft.Json.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Web.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Core.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Extensions.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\Autofac.xml
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\Autofac.Integration.Mvc.xml
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug\Newtonsoft.Json.xml

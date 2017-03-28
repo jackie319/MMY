@@ -79,6 +79,8 @@
     <Property Name="OrderAmount" Type="int" Nullable="false" />
     <Property Name="ProductGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ClassificationGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClassificationName" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="ProductPrice" Type="int" Nullable="false" />
     <Property Name="ProductNumber" Type="int" Nullable="false" />
     <Property Name="UserGuid" Type="uniqueidentifier" Nullable="false" />
@@ -226,6 +228,9 @@
     <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ProductGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ClassificationGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClassificationName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="BuyingPrice" Type="int" Nullable="false" />
     <Property Name="SupplierGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="SupplierName" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="OperatorName" Type="nvarchar" MaxLength="50" Nullable="false" />
