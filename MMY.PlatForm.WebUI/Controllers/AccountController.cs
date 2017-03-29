@@ -15,6 +15,7 @@ using Microsoft.Owin.Security;
 using MMY.PlatForm.Domain;
 using MMY.PlatForm.WebUI.Models.Account;
 using MMY.Services.IServices;
+using MMY.Services.ServiceModel;
 
 namespace MMY.PlatForm.WebUI.Controllers
 {
@@ -40,6 +41,10 @@ namespace MMY.PlatForm.WebUI.Controllers
             try
             {
                 var account = _userAccount.Login(userName, passwordMd5);
+                if (!account.UserType.Equals(UserTypeEnum.Admin.ToString()))
+                {
+                    return this.ResultError("用户名或密码错误");
+                }
                 var menu = _authority.GetUserMenu(new Guid(), Guid.Empty);
                 UserModel userModel = new UserModel(account.Guid, account.UserName, account.NickName, menu, true) { };
                 HttpContext.User = userModel;

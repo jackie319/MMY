@@ -58,18 +58,12 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\roslyn\VBCS
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.FrontSite.WebUI.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Microsoft.Owin.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.Optimization.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Owin.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.FrontSite.WebUI.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Microsoft.Owin.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.Optimization.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Microsoft.AspNet.Identity.Core.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\zh-Hans\Microsoft.Owin.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\zh-Hans\System.Web.Optimization.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.PlatForm.WebUI.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Web.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\log4net.dll
@@ -83,3 +77,5 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.PlatFor
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Antlr3.Runtime.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.FrontSite.Domain.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.FrontSite.Domain.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Newtonsoft.Json.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Newtonsoft.Json.xml

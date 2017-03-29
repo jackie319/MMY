@@ -222,9 +222,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\UserAccount\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -285,6 +283,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MMY.Data\MMY.Data.csproj">
+      <Project>{E5D91290-E87D-4097-A316-92AEFD8329EA}</Project>
+      <Name>MMY.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MMY.FrontSite.Domain\MMY.FrontSite.Domain.csproj">
       <Project>{4EAB2722-8695-4A4A-8E51-F0A080CDCF6A}</Project>
       <Name>MMY.FrontSite.Domain</Name>
