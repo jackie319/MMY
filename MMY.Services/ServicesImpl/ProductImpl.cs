@@ -72,6 +72,7 @@ namespace MMY.Services.ServicesImpl
             return _productRepository.Table.FirstOrDefault(q => q.Guid == productGuid && !q.IsDeleted);
         }
 
+
         public IList<ProductClassification> GetClassifications(Guid productGuid)
         {
             return _productClassificationrRepository.Table.Where(q => q.ProductGuid == productGuid && !q.IsDeleted).ToList();

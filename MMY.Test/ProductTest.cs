@@ -79,5 +79,20 @@ namespace MMY.Test
             records.SupplierName = "单元测试";
             _product.AddPurchaseRecords(records);
         }
+
+        [TestMethod]
+        public void TestGetProducts()
+        {
+          // var list= _product.ListPruducts();
+            //foreach (var item in list)
+            //{
+            //    var url=item.ProductAlbum.FirstOrDefault().ImageUrl;
+            //    var cl = item.ProductClassification.FirstOrDefault().Name;
+            //    var ca = item.ProductCategory.CategoryName;
+            //    var ss = item.ProductCategory.DisplayOrder;
+            //}
+            //Assert.IsFalse(false);
+        }
     }
 }
+
