@@ -38,7 +38,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
 
         public  IList<ProductAlbumViewModel> Albums { set; get; }
 
-        public static ProductViewModel CopyFrom(Data.Model.Product product,IList<Data.Model.ProductClassification>classifications,IList<Data.Model.ProductAlbum> albums  )
+        public static ProductViewModel CopyFrom(Data.Model.Product product)
         {
             ProductViewModel productViewModel=new ProductViewModel();
             productViewModel.Guid = product.Guid;
@@ -56,8 +56,8 @@ namespace MMY.PlatForm.WebUI.Models.Product
             productViewModel.SaleTitle = product.SaleTitle;
             productViewModel.SaleSubTitle = product.SaleSubTitle;
             productViewModel.ProductNumber = product.ProductNumber;
-            var classes=classifications.Select(item => ProductClassificationViewModel.CopyFrom(item)).ToList();
-            var albumList = albums.Select(item => ProductAlbumViewModel.CopyFrom(item)).ToList();
+            var classes= product.ProductClassification.Select(item => ProductClassificationViewModel.CopyFrom(item)).ToList();
+            var albumList = product.ProductAlbum.Select(item => ProductAlbumViewModel.CopyFrom(item)).ToList();
             productViewModel.Classifications = classes;
             productViewModel.Albums = albumList;
             return productViewModel;

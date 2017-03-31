@@ -35,9 +35,7 @@ namespace MMY.PlatForm.WebUI.Controllers
         public ActionResult Detail(Guid productGuid)
         {
             var product = _product.FindProduct(productGuid);
-            var productClassification = _product.GetClassifications(productGuid);
-            var productAlbum = _product.GetAlbums(productGuid);
-            var resultProduct = ProductViewModel.CopyFrom(product, productClassification, productAlbum);
+            var resultProduct = ProductViewModel.CopyFrom(product);
             return this.ResultModel(resultProduct);
         }
 
