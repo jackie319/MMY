@@ -9,7 +9,7 @@ namespace MMY.Services.IServices
 {
     public interface IProductCategory
     {
-        IList<ProductCategory> GetAlParentCategory();
+        IList<ProductCategory> GetAllParentCategory();
 
         IList<ProductCategory> GetCategoriesByParent(Guid parentGuid);
     }

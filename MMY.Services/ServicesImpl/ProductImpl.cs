@@ -36,7 +36,7 @@ namespace MMY.Services.ServicesImpl
             var query = _productVRepository.Table.Where(q=>!q.IsDeleted);
             if (!string.IsNullOrEmpty(productName))
             {
-                query = query.Where(q => q.ProductName.Contains(productName)|| q.SaleTitle.Contains(productName));
+                query = query.Where(q => q.ProductName.Contains(productName)|| q.SaleTitle.Contains(productName)||q.SaleSubTitle.Contains(productName));
             }
             if (categoryGuid != null && categoryGuid!=Guid.Empty)
             {
@@ -64,6 +64,23 @@ namespace MMY.Services.ServicesImpl
                 query = query.Where(q => q.TimeCreated < timeCreatedEnd);
             }
             total = query.Count();
+            return query.OrderByDescending(q=>q.DisplayOrder)
+                .ThenBy(q=>q.IsRecommended)
+                .ThenBy(q=>q.IsSpecialOffer).
+                ThenByDescending(q => q.TimeCreated).Skip(skip).Take(take).ToList();
+        }
+
+        public IList<ProductV> HotList(int skip, int take, out int total)
+        {
+            var query = _productVRepository.Table.Where(q=>q.SoldTotal>0);
+            total = query.Count();
+            return query.OrderByDescending(q => q.SoldTotal).Skip(0).Take(take).ToList();
+        }
+
+        public IList<ProductV> NewList(int skip,int take,out int total)
+        {
+            var query = _productVRepository.Table;
+             total = query.Count();
             return query.OrderByDescending(q => q.TimeCreated).Skip(skip).Take(take).ToList();
         }
 
@@ -80,7 +97,7 @@ namespace MMY.Services.ServicesImpl
 
         public IList<ProductAlbum> GetAlbums(Guid productGuid)
         {
-            return _productAlbumRepository.Table.Where(q => q.ProductGuid == productGuid && !q.IsDeleted).ToList();
+            return _productAlbumRepository.Table.Where(q => q.ProductGuid == productGuid && !q.IsDeleted).OrderByDescending(q=>q.TimeCreated).ToList();
         }
         public void CreatedProduct(Product product,IList<ProductClassification> classifications,IList<ProductAlbum> albums)
         {

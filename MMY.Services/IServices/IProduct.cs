@@ -31,7 +31,7 @@ namespace MMY.Services.IServices
         Product FindProduct(Guid productGuid);
         IList<ProductClassification> GetClassifications(Guid productGuid);
         IList<ProductAlbum> GetAlbums(Guid productGuid);
-
-
+        IList<ProductV> HotList(int skip, int take, out int total);
+        IList<ProductV> NewList(int skip, int take, out int total);
     }
 }

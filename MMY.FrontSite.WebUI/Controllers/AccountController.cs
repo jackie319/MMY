@@ -57,5 +57,16 @@ namespace MMY.FrontSite.WebUI.Controllers
             }
             return this.ResultSuccess();
         }
+
+
+        public ActionResult Logout()
+        {
+            return null;
+        }
+
+        public ActionResult UserInfo()
+        {
+            return null;
+        }
     }
 }

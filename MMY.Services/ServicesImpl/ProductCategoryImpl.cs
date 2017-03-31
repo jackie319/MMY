@@ -20,9 +20,9 @@ namespace MMY.Services.ServicesImpl
         /// 所有一级分类
         /// </summary>
         /// <returns></returns>
-        public IList<ProductCategory> GetAlParentCategory()
+        public IList<ProductCategory> GetAllParentCategory()
         {
-            return _productCategoryRepository.Table.Where(q => !q.IsDeleted && q.ParentGuid == Guid.Empty).ToList();
+            return _productCategoryRepository.Table.Where(q => !q.IsDeleted && q.ParentGuid == Guid.Empty).OrderByDescending(q=>q.DisplayOrder).ToList();
         }
         /// <summary>
         /// 某分类的所有子分类
@@ -31,7 +31,7 @@ namespace MMY.Services.ServicesImpl
         /// <returns></returns>
         public IList<ProductCategory> GetCategoriesByParent(Guid parentGuid)
         {
-            return _productCategoryRepository.Table.Where(q => !q.IsDeleted && q.ParentGuid == parentGuid).ToList();
+            return _productCategoryRepository.Table.Where(q => !q.IsDeleted && q.ParentGuid == parentGuid).OrderByDescending(q=>q.DisplayOrder).ToList();
         }
 
 
