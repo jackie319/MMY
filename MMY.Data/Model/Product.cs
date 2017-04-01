@@ -21,6 +21,7 @@ namespace MMY.Data.Model
             this.ProductClassification = new HashSet<ProductClassification>();
             this.ProductPurchaseRecords = new HashSet<ProductPurchaseRecords>();
             this.ProductQRCode = new HashSet<ProductQRCode>();
+            this.UserFavorite = new HashSet<UserFavorite>();
         }
     
         public System.Guid Guid { get; set; }
@@ -55,5 +56,7 @@ namespace MMY.Data.Model
         public virtual ICollection<ProductPurchaseRecords> ProductPurchaseRecords { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductQRCode> ProductQRCode { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserFavorite> UserFavorite { get; set; }
     }
 }

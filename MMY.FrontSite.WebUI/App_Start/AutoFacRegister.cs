@@ -20,6 +20,7 @@ namespace MMY.FrontSite.WebUI.App_Start
             builder.RegisterType<UserAccountImpl>().As<IUserAccount>().InstancePerDependency();
             builder.RegisterType<ProductImpl>().As<IProduct>().InstancePerDependency();
             builder.RegisterType<OrderImpl>().As<IOrder>().InstancePerDependency();
+            builder.RegisterType<UserFavoriteImpl>().As<IUserFavorite>().InstancePerDependency();
         }
     }
 }

@@ -5,52 +5,53 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="8093a094f4634e33bd4c75ce5fc2d917" Name="Diagram1">
-        <EntityTypeShape EntityType="MMYModel.Activity" Width="1.875" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="MMYModel.AuthorityFunction" Width="1.875" PointX="12.75" PointY="19.875" />
-        <EntityTypeShape EntityType="MMYModel.AuthorityRole" Width="1.875" PointX="12.75" PointY="15.875" />
-        <EntityTypeShape EntityType="MMYModel.AuthorityRoleInFunction" Width="1.875" PointX="15" PointY="19.375" />
-        <EntityTypeShape EntityType="MMYModel.AuthorityUserInRole" Width="1.875" PointX="15" PointY="16.5" />
-        <EntityTypeShape EntityType="MMYModel.Merchant" Width="1.875" PointX="0.75" PointY="1.125" />
-        <EntityTypeShape EntityType="MMYModel.MerchantProduct" Width="1.875" PointX="3" PointY="0.875" />
-        <EntityTypeShape EntityType="MMYModel.Order" Width="1.875" PointX="7.75" PointY="15.125" />
-        <EntityTypeShape EntityType="MMYModel.OrderDelivery" Width="1.875" PointX="7.75" PointY="0.75" />
-        <EntityTypeShape EntityType="MMYModel.OrderEvaluation" Width="1.875" PointX="10" PointY="15.75" />
-        <EntityTypeShape EntityType="MMYModel.OrderPayment" Width="1.875" PointX="7.75" PointY="3.75" />
-        <EntityTypeShape EntityType="MMYModel.OrderPayRecords" Width="1.875" PointX="10" PointY="18.25" />
-        <EntityTypeShape EntityType="MMYModel.PositionCity" Width="1.875" PointX="9.75" PointY="0.75" />
-        <EntityTypeShape EntityType="MMYModel.PositionDistrict" Width="1.875" PointX="7.75" PointY="11.75" />
-        <EntityTypeShape EntityType="MMYModel.PositionProvince" Width="1.875" PointX="9.75" PointY="11.75" />
-        <EntityTypeShape EntityType="MMYModel.PositionZipCode" Width="1.875" PointX="0.75" PointY="12.75" />
-        <EntityTypeShape EntityType="MMYModel.ProductAlbum" Width="1.875" PointX="5.25" PointY="3.875" />
-        <EntityTypeShape EntityType="MMYModel.ProductCategory" Width="1.875" PointX="0.75" PointY="7.125" />
-        <EntityTypeShape EntityType="MMYModel.ProductQRCode" Width="1.875" PointX="5.25" PointY="11.625" />
-        <EntityTypeShape EntityType="MMYModel.ProductSupplier" Width="1.875" PointX="6" PointY="7.125" />
-        <EntityTypeShape EntityType="MMYModel.sysdiagrams" Width="1.875" PointX="15.75" PointY="0.75" />
-        <EntityTypeShape EntityType="MMYModel.UserAccount" Width="1.875" PointX="10.75" PointY="4.75" />
-        <EntityTypeShape EntityType="MMYModel.UserDeliveryAddress" Width="1.875" PointX="13" PointY="7.25" />
-        <EntityTypeShape EntityType="MMYModel.UserFavorite" Width="1.875" PointX="13" PointY="1.375" />
-        <EntityTypeShape EntityType="MMYModel.UserOperationRecords" Width="1.875" PointX="13" PointY="11.5" />
-        <EntityTypeShape EntityType="MMYModel.UserShoppingCart" Width="1.875" PointX="13" PointY="4.25" />
+        <EntityTypeShape EntityType="MMYModel.Activity" Width="1.5" PointX="0.75" PointY="2" />
+        <EntityTypeShape EntityType="MMYModel.AuthorityFunction" Width="1.5" PointX="10.75" PointY="14.25" />
+        <EntityTypeShape EntityType="MMYModel.AuthorityRole" Width="1.5" PointX="10.75" PointY="10.25" />
+        <EntityTypeShape EntityType="MMYModel.AuthorityRoleInFunction" Width="1.5" PointX="13" PointY="10.75" />
+        <EntityTypeShape EntityType="MMYModel.AuthorityUserInRole" Width="1.5" PointX="13" PointY="13.625" />
+        <EntityTypeShape EntityType="MMYModel.Merchant" Width="1.5" PointX="13.75" PointY="2.375" />
+        <EntityTypeShape EntityType="MMYModel.MerchantProduct" Width="1.5" PointX="16" PointY="2.25" />
+        <EntityTypeShape EntityType="MMYModel.Order" Width="1.5" PointX="8.75" PointY="2.375" />
+        <EntityTypeShape EntityType="MMYModel.OrderDelivery" Width="1.5" PointX="2.75" PointY="2" />
+        <EntityTypeShape EntityType="MMYModel.OrderEvaluation" Width="1.5" PointX="11" PointY="5.625" />
+        <EntityTypeShape EntityType="MMYModel.OrderPayment" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="MMYModel.OrderPayRecords" Width="1.5" PointX="11" PointY="3.125" />
+        <EntityTypeShape EntityType="MMYModel.PositionCity" Width="1.5" PointX="13.75" PointY="5" />
+        <EntityTypeShape EntityType="MMYModel.PositionDistrict" Width="1.5" PointX="13.75" PointY="8" />
+        <EntityTypeShape EntityType="MMYModel.PositionProvince" Width="1.5" PointX="15.75" PointY="5" />
+        <EntityTypeShape EntityType="MMYModel.PositionZipCode" Width="1.5" PointX="15.75" PointY="8" />
+        <EntityTypeShape EntityType="MMYModel.Product" Width="1.5" PointX="3" PointY="8.25" />
+        <EntityTypeShape EntityType="MMYModel.ProductAlbum" Width="1.5" PointX="5.25" PointY="6.875" />
+        <EntityTypeShape EntityType="MMYModel.ProductCategory" Width="1.5" PointX="0.75" PointY="10.125" />
+        <EntityTypeShape EntityType="MMYModel.ProductClassification" Width="1.5" PointX="5.25" PointY="20.75" />
+        <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="5.25" PointY="10.25" />
+        <EntityTypeShape EntityType="MMYModel.ProductQRCode" Width="1.5" PointX="5.25" PointY="17.875" />
+        <EntityTypeShape EntityType="MMYModel.ProductSupplier" Width="1.5" PointX="3" PointY="15.125" />
+        <EntityTypeShape EntityType="MMYModel.sysdiagrams" Width="1.5" PointX="15.75" PointY="11" />
+        <EntityTypeShape EntityType="MMYModel.UserAccount" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="MMYModel.UserDeliveryAddress" Width="1.5" PointX="8.25" PointY="16.25" />
+        <EntityTypeShape EntityType="MMYModel.UserFavorite" Width="1.5" PointX="8.25" PointY="10.125" />
+        <EntityTypeShape EntityType="MMYModel.UserOperationRecords" Width="1.5" PointX="8.25" PointY="13.75" />
+        <EntityTypeShape EntityType="MMYModel.UserShoppingCart" Width="1.5" PointX="8.25" PointY="20.375" />
         <AssociationConnector Association="MMYModel.FK_RoleInFunction_Function" />
         <AssociationConnector Association="MMYModel.FK_RoleInFunction_Role" />
         <AssociationConnector Association="MMYModel.FK_UserInRole_Role" />
         <AssociationConnector Association="MMYModel.FK_MerchantProduct_Merchant" />
         <AssociationConnector Association="MMYModel.FK_OrderEvaluation_Order" />
         <AssociationConnector Association="MMYModel.FK_OrderPayRecords_Order" />
-        <AssociationConnector Association="MMYModel.FK_UserDeliveryAddress_UserAccount" />
-        <AssociationConnector Association="MMYModel.FK_UserFavorite_UserAccount" />
-        <AssociationConnector Association="MMYModel.FK_UserOperationRecords_UserAccount" />
-        <AssociationConnector Association="MMYModel.FK_UserShoppingCart_UserAccount" />
-        <EntityTypeShape EntityType="MMYModel.Product" Width="1.5" PointX="3.375" PointY="22.25" />
-        <EntityTypeShape EntityType="MMYModel.ProductClassification" Width="1.5" PointX="5.625" PointY="28.75" />
-        <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="8.625" PointY="21.625" />
         <AssociationConnector Association="MMYModel.FK_Product_ProductCategory" />
         <AssociationConnector Association="MMYModel.FK_ProductAlbum_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductClassification_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductQRCode_Product" />
+        <AssociationConnector Association="MMYModel.FK_UserFavorite_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier" />
-        <EntityTypeShape EntityType="MMYModel.ProductV" Width="1.5" PointX="3.375" PointY="14.75" />
+        <AssociationConnector Association="MMYModel.FK_UserDeliveryAddress_UserAccount" />
+        <AssociationConnector Association="MMYModel.FK_UserFavorite_UserAccount" />
+        <AssociationConnector Association="MMYModel.FK_UserOperationRecords_UserAccount" />
+        <AssociationConnector Association="MMYModel.FK_UserShoppingCart_UserAccount" />
+        <EntityTypeShape EntityType="MMYModel.ProductV" Width="1.5" PointX="15.375" PointY="13.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

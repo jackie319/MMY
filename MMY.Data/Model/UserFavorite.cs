@@ -20,6 +20,7 @@ namespace MMY.Data.Model
         public bool IsDeleted { get; set; }
         public System.DateTime TimeCreated { get; set; }
     
+        public virtual Product Product { get; set; }
         public virtual UserAccount UserAccount { get; set; }
     }
 }
