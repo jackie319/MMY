@@ -223,11 +223,13 @@
     <Compile Include="Controllers\FavoriteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PayController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Order\UserOrdersViewModel.cs" />
     <Compile Include="Models\Product\CategoryListViewModel.cs" />
     <Compile Include="Models\Product\ProductListViewModel.cs" />
     <Compile Include="Models\Product\ProductViewModel.cs" />
@@ -287,6 +289,7 @@
     <Folder Include="Views\Category\" />
     <Folder Include="Views\Favorite\" />
     <Folder Include="Views\Order\" />
+    <Folder Include="Views\Pay\" />
     <Folder Include="Views\Product\" />
     <Folder Include="Views\ShoppingCart\" />
   </ItemGroup>

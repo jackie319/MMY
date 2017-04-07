@@ -13,6 +13,10 @@ namespace MMY.Services.ServiceModel
         /// </summary>
         Default,
         /// <summary>
+        /// 已取消
+        /// </summary>
+        Cancel,
+        /// <summary>
         /// 已支付
         /// </summary>
         Paid,

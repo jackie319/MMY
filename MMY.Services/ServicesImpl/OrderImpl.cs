@@ -49,6 +49,13 @@ namespace MMY.Services.ServicesImpl
             return query.OrderByDescending(q => q.TimeCreated).Skip(skip).Take(take).ToList();
         }
 
+        public IList<Order> GetUserOrders(Guid userGuid,int skip,int take,out int total)
+        {
+            var query = _ordeRepository.Table.Where(q => q.UserGuid==userGuid);
+            total = query.Count();
+            return query.OrderByDescending(q => q.TimeCreated).Skip(skip).Take(take).ToList();
+        }
+
         public void CreateOrder(Order order)
         {
             order.Guid=Guid.NewGuid();

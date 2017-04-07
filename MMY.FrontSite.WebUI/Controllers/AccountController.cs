@@ -61,7 +61,8 @@ namespace MMY.FrontSite.WebUI.Controllers
 
         public ActionResult Logout()
         {
-            return null;
+            Session.RemoveAll();
+            return this.ResultSuccess();
         }
 
         public ActionResult UserInfo()
