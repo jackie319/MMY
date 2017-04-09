@@ -86,6 +86,8 @@
                              width="400">
                 <template scope="scope">
                     <el-button size="small"
+                               v-on:click="onPurchaseList(scope.$index, scope.row)">进货记录</el-button>
+                    <el-button size="small"
                                v-on:click="onEdit(scope.$index, scope.row)">编辑</el-button>
                     <el-button size="small"
                                type="danger"
@@ -188,6 +190,9 @@
                 handleCurrentChange: function (val) {
                     this.list.currentPage = val;
                     this.loadData();
+                },
+                onPurchaseList: function (i, m) {
+                    this.$purchaselist.open({ SupplierGuid: m.Guid });
                 },
                 onAdd: function () {
                     var me = this;

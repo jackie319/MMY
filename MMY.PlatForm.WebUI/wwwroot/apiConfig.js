@@ -3,5 +3,10 @@
     user_info: "/Account/UserInfo",
     user_changepassword: "/Account/ChangePassword",
     supplier_query: "",
-    order_query: "/Order/List"
+    order_query: "/Order/List",
+    purchase_query: "/PurchaseRecords/List",
+    product_query: "/Product/List",
+    product_onshelf: "/Product/OnShelf",
+    product_offshelf: "/Product/OffShelf",
+    product_delete: "/Product/Delete"
 };

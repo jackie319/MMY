@@ -15,9 +15,9 @@ namespace MMY.PlatForm.WebUI.Controllers
     {
         private IProduct _product;
         // GET: PurchaseRecords
-        public ActionResult Index(IProduct product)
+        public  PurchaseRecordsController(IProduct product)
         {
-            return View();
+            _product = product;
         }
 
         public ActionResult List(PurchaseRecordsQueryModel model)

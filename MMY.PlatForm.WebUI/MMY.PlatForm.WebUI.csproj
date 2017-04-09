@@ -289,6 +289,8 @@
     <Content Include="wwwroot\main.html" />
     <Content Include="wwwroot\Order\List.html" />
     <Content Include="wwwroot\Order\ListDetail.html" />
+    <Content Include="wwwroot\Product\List.html" />
+    <Content Include="wwwroot\Purchase\List.html" />
     <Content Include="wwwroot\ReadMe.txt" />
     <Content Include="wwwroot\scripts\checkinframework.js" />
     <Content Include="wwwroot\scripts\cookies.js" />
@@ -316,6 +318,7 @@
     <Content Include="wwwroot\scripts\vue-plugins\loading\JavaScript.js" />
     <Content Include="wwwroot\scripts\vue-plugins\prompt\HtmlPage.html" />
     <Content Include="wwwroot\scripts\vue-plugins\prompt\JavaScript.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\purchaserlist\JavaScript.js" />
     <Content Include="wwwroot\scripts\vue-plugins\vue-resource\vue-resource.common.js" />
     <Content Include="wwwroot\scripts\vue-plugins\vue-resource\vue-resource.es2015.js" />
     <Content Include="wwwroot\scripts\vue-plugins\vue-resource\vue-resource.js" />

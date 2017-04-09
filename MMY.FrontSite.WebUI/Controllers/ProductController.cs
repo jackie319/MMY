@@ -21,6 +21,11 @@ namespace MMY.FrontSite.WebUI.Controllers
         {
             return View();
         }
+
+        public ActionResult List()
+        {
+            return null;
+        }
         /// <summary>
         /// 某分类下的商品
         /// </summary>

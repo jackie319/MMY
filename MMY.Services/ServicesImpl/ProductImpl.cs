@@ -198,11 +198,11 @@ namespace MMY.Services.ServicesImpl
         public IList<ProductPurchaseRecords> GetProductPurchaseRecords(Guid? productGuid,Guid? supplierGuid,int skip,int take,out int total)
         {
             var query = _productPurchaseRepository.Table;
-            if (productGuid != null)
+            if (productGuid != null && productGuid!=Guid.Empty)
             {
                 query = query.Where(q => q.ProductGuid == productGuid);
             }
-            if (supplierGuid != null)
+            if (supplierGuid != null && supplierGuid != Guid.Empty)
             {
                 query = query.Where(q => q.SupplierGuid == supplierGuid);
             }
