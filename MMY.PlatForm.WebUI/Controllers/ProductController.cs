@@ -28,7 +28,7 @@ namespace MMY.PlatForm.WebUI.Controllers
             int total;
             var list=_product.GetProductVs(query.ProductName, query.CategoryGuid, query.Status, query.IsSpecialOffer,
                 query.IsRecommended, query.TimeCreatedBegin, query.TimeCreatedEnd, query.Skip, query.Take, out total);
-            var resultList = list.Select(q => ProductListViewModel.CopyFrom(q));
+            var resultList = list.Select(q => ProductListViewModel.CopyFrom(q)).ToList();
             return this.ResultListModel(total,resultList);
         }
 

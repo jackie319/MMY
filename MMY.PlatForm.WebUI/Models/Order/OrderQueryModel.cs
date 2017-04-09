@@ -12,7 +12,7 @@ namespace MMY.PlatForm.WebUI.Models.Order
        public string OrderNo { set; get; }
         public string UserNickName { set; get; }
 
-        public OrderStatusEnum Status { get; set; }
+        public OrderStatusEnum? Status { get; set; }
         public DateTime? TimeCreatedBegin { set; get; }
         public DateTime? TimeCreatedEnd { set; get; }
 
