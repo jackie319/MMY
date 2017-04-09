@@ -173,7 +173,7 @@
                 //Microsoft json Date \/Date(1450800000000)\/ \/Date(-62135596800000)\/
                 o[p] = new Date(parseInt(o[p].substring(6)));
             }
-            
+
         }
         return o;
     };
@@ -359,9 +359,9 @@
                     var xhr = event.target;
                     fn({
                         template: '<div class="horizontal-vertical-center">' +
-                                    '<h1>{{status}}&nbsp;{{statusText}}</h1>' +
-                                    '<h2 class="horizontal-vertical-center">{{message}}</h2>' +
-                                  '</div>',
+                        '<h1>{{status}}&nbsp;{{statusText}}</h1>' +
+                        '<h2 class="horizontal-vertical-center">{{message}}</h2>' +
+                        '</div>',
                         data: function () {
                             return {
                                 status: xhr.status,
@@ -477,21 +477,29 @@
     };
 
     /**
+    *@method getVueOptionsFromStirng
+    *@param {string} text
+    *@returns {string}
+    */
+    Framework.prototype.getVueOptionsFromStirng = function (text) {
+        var start = text.search(/(?!new Vue\(){/);
+        var end = text.search(/(?=\);s*\r?\n\s*$)/);
+        var ostr = text.substring(start, end);
+        return ostr;
+    };
+
+    /**
      * @method getVueOptions
      * @param {sring} text 
      * @returns {object} 
      */
     Framework.prototype.getVueOptions = function (text) {
         var me = this;
-        //text = text.replace(/\/\/.*\r?\n/g, "");    //one line comment
-        //text = text.replace(/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*/g, "");   //multi comment http://blog.ostermiller.org/find-comment
-        text = text.replace(/\r?\n/g, "");
-        text = text.replace(/\s+/g, " ");
-        var result = /(?!new Vue)\(({.*})\);/.exec(text);
+        var result = me.getVueOptionsFromStirng(text);
 
         if (!result) return { data: function () { } };
 
-        return me.createObjectFromText(result[1]);
+        return me.createObjectFromText(result);
     };
 
     /**
@@ -617,7 +625,7 @@
 
 
         // continue to next interceptor
-        next(function(response) {
+        next(function (response) {
             if (typeof vm.loading === "boolean") {
                 vm.loading = false; //隐藏加载
             }
@@ -627,10 +635,10 @@
                     w.$f.errorHander(response.data);
                     // stop and return response
                     next(request.respondWith(body,
-                    {
-                        status: 404,
-                        statusText: 'Not Find'
-                    }));
+                        {
+                            status: 404,
+                            statusText: 'Not Find'
+                        }));
                 }
             }
         });

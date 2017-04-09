@@ -9,10 +9,16 @@ namespace MMY.PlatForm.WebUI.Models.Account
     public class ChangePasswordViewModel
     {
         [Required]
+        [MinLength(6,ErrorMessage = "密码不能少于6位")]
+        [MaxLength(32,ErrorMessage = "密码最长为32位")]
         public string OldPasswordMd5 { set; get; }
         [Required]
+        [MinLength(6, ErrorMessage = "密码不能少于6位")]
+        [MaxLength(32, ErrorMessage = "密码最长为32位")]
         public string NewPasswordMd5 { set; get; }
         [Required]
+        [MinLength(6, ErrorMessage = "密码不能少于6位")]
+        [MaxLength(32, ErrorMessage = "密码最长为32位")]
         public string NewPasswordMd5Confirm { get; set; }
     }
 }

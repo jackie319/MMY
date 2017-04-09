@@ -175,6 +175,34 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="MMYModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="TimeOffShelf" ColumnName="TimeOffShelf" />
+          <ScalarProperty Name="TimeOnShelf" ColumnName="TimeOnShelf" />
+          <ScalarProperty Name="SoldTotal" ColumnName="SoldTotal" />
+          <ScalarProperty Name="VisitedTotal" ColumnName="VisitedTotal" />
+          <ScalarProperty Name="ImaginaryNumber" ColumnName="ImaginaryNumber" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
+          <ScalarProperty Name="IsSpecialOffer" ColumnName="IsSpecialOffer" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductRemark" ColumnName="ProductRemark" />
+          <ScalarProperty Name="ProductDetail" ColumnName="ProductDetail" />
+          <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SaleSubTitle" ColumnName="SaleSubTitle" />
+          <ScalarProperty Name="SaleTitle" ColumnName="SaleTitle" />
+          <ScalarProperty Name="DefaultPic" ColumnName="DefaultPic" />
+          <ScalarProperty Name="ProductNumber" ColumnName="ProductNumber" />
+          <ScalarProperty Name="CategoryGuid" ColumnName="CategoryGuid" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ProductAlbum">
       <EntityTypeMapping TypeName="MMYModel.ProductAlbum">
         <MappingFragment StoreEntitySet="ProductAlbum">
@@ -195,6 +223,42 @@
           <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
           <ScalarProperty Name="ParentGuid" ColumnName="ParentGuid" />
           <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductClassification">
+      <EntityTypeMapping TypeName="MMYModel.ProductClassification">
+        <MappingFragment StoreEntitySet="ProductClassification">
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AlbumGuid" ColumnName="AlbumGuid" />
+          <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPurchaseRecords">
+      <EntityTypeMapping TypeName="MMYModel.ProductPurchaseRecords">
+        <MappingFragment StoreEntitySet="ProductPurchaseRecords">
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Purchaser" ColumnName="Purchaser" />
+          <ScalarProperty Name="OperatorGuid" ColumnName="OperatorGuid" />
+          <ScalarProperty Name="OperatorName" ColumnName="OperatorName" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierGuid" ColumnName="SupplierGuid" />
+          <ScalarProperty Name="BuyingPrice" ColumnName="BuyingPrice" />
+          <ScalarProperty Name="ClassificationName" ColumnName="ClassificationName" />
+          <ScalarProperty Name="ClassificationGuid" ColumnName="ClassificationGuid" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -303,70 +367,6 @@
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
           <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
-          <ScalarProperty Name="Guid" ColumnName="Guid" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Product">
-      <EntityTypeMapping TypeName="MMYModel.Product">
-        <MappingFragment StoreEntitySet="Product">
-          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-          <ScalarProperty Name="TimeOffShelf" ColumnName="TimeOffShelf" />
-          <ScalarProperty Name="TimeOnShelf" ColumnName="TimeOnShelf" />
-          <ScalarProperty Name="SoldTotal" ColumnName="SoldTotal" />
-          <ScalarProperty Name="VisitedTotal" ColumnName="VisitedTotal" />
-          <ScalarProperty Name="ImaginaryNumber" ColumnName="ImaginaryNumber" />
-          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
-          <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
-          <ScalarProperty Name="IsSpecialOffer" ColumnName="IsSpecialOffer" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="ProductRemark" ColumnName="ProductRemark" />
-          <ScalarProperty Name="ProductDetail" ColumnName="ProductDetail" />
-          <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="SaleSubTitle" ColumnName="SaleSubTitle" />
-          <ScalarProperty Name="SaleTitle" ColumnName="SaleTitle" />
-          <ScalarProperty Name="DefaultPic" ColumnName="DefaultPic" />
-          <ScalarProperty Name="ProductNumber" ColumnName="ProductNumber" />
-          <ScalarProperty Name="CategoryGuid" ColumnName="CategoryGuid" />
-          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-          <ScalarProperty Name="Guid" ColumnName="Guid" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ProductClassification">
-      <EntityTypeMapping TypeName="MMYModel.ProductClassification">
-        <MappingFragment StoreEntitySet="ProductClassification">
-          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-          <ScalarProperty Name="AlbumGuid" ColumnName="AlbumGuid" />
-          <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Number" ColumnName="Number" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
-          <ScalarProperty Name="Guid" ColumnName="Guid" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ProductPurchaseRecords">
-      <EntityTypeMapping TypeName="MMYModel.ProductPurchaseRecords">
-        <MappingFragment StoreEntitySet="ProductPurchaseRecords">
-          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-          <ScalarProperty Name="Number" ColumnName="Number" />
-          <ScalarProperty Name="Purchaser" ColumnName="Purchaser" />
-          <ScalarProperty Name="OperatorGuid" ColumnName="OperatorGuid" />
-          <ScalarProperty Name="OperatorName" ColumnName="OperatorName" />
-          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
-          <ScalarProperty Name="SupplierGuid" ColumnName="SupplierGuid" />
-          <ScalarProperty Name="BuyingPrice" ColumnName="BuyingPrice" />
-          <ScalarProperty Name="ClassificationName" ColumnName="ClassificationName" />
-          <ScalarProperty Name="ClassificationGuid" ColumnName="ClassificationGuid" />
-          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
         </MappingFragment>
       </EntityTypeMapping>

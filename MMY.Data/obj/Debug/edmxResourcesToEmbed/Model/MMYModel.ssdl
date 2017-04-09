@@ -537,6 +537,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_UserFavorite_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="UserFavorite" Type="Self.UserFavorite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="UserFavorite">
+        <PropertyRef Name="ProductGuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_UserFavorite_UserAccount">
     <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="1" />
     <End Role="UserFavorite" Type="Self.UserFavorite" Multiplicity="*" />
@@ -690,6 +702,10 @@
     <AssociationSet Name="FK_UserDeliveryAddress_UserAccount" Association="Self.FK_UserDeliveryAddress_UserAccount">
       <End Role="UserAccount" EntitySet="UserAccount" />
       <End Role="UserDeliveryAddress" EntitySet="UserDeliveryAddress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserFavorite_Product" Association="Self.FK_UserFavorite_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="UserFavorite" EntitySet="UserFavorite" />
     </AssociationSet>
     <AssociationSet Name="FK_UserFavorite_UserAccount" Association="Self.FK_UserFavorite_UserAccount">
       <End Role="UserAccount" EntitySet="UserAccount" />
