@@ -58,16 +58,13 @@ namespace MMY.FrontSite.WebUI.Controllers
             return this.ResultSuccess();
         }
 
-
+        [JKAuthorize]
         public ActionResult Logout()
         {
             Session.RemoveAll();
             return this.ResultSuccess();
         }
 
-        public ActionResult UserInfo()
-        {
-            return null;
-        }
+     
     }
 }
