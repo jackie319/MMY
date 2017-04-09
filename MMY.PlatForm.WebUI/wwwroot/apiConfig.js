@@ -1,6 +1,7 @@
 ﻿var apiConfig = {
-    user_login: "/wwwroot/data/loginSuccess.json",
-    user_info: "/wwwroot/data/userInfo.json",
+    user_login: "/Account/SubmitLogin",
+    user_info: "/Account/UserInfo",
+    user_changepassword: "/Account/ChangePassword",
     supplier_query: "",
-    order_query: "/wwwroot/data/orderlist.json",
+    order_query: "/Order/List"
 };

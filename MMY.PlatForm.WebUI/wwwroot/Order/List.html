@@ -36,10 +36,15 @@
                 <el-input placeholder="用户" v-model="search.UserNickName"></el-input>
             </el-form-item>
             <el-form-item>
-                <el-input placeholder="状态" v-model="search.Status"></el-input>
+                <el-select v-model="search.Status" placeholder="订单状态">
+                    <el-option v-for="item in search.StatusList"
+                               :label="item.label"
+                               :value="item.value">
+                    </el-option>
+                </el-select>
             </el-form-item>
             <el-form-item>
-                <el-date-picker v-mode="search.TimeCreated"
+                <el-date-picker v-model="search.TimeCreated"
                                 type="daterange"
                                 align="right"
                                 placeholder="创建时间范围"
@@ -135,11 +140,35 @@
                     TimeCreated: new Date()
                 },
                 search: {
-                    Guid: Guid.empty.toString(),
-                    SupplierName: '',
-                    SupplierPhone: '',
-                    SupplierAddress: '',
-                    TimeCreated:[]
+                    OrderNo: "",
+                    UserNickName:"",
+                    TimeCreated: [],
+                    Status: "Default",
+                    StatusList: [
+                    {
+                        value: 'Default',
+                        label: '未支付'
+                    },
+                    {
+                        value: 'Cancel',
+                        label: '已取消'
+                    },
+                    {
+                        value: 'Paid',
+                        label: '已支付'
+                    },
+                    {
+                        value: 'Delivered',
+                        label: '已发货'
+                    },
+                    {
+                        value: 'Finished',
+                        label: '已完成'
+                    },
+                    {
+                        value: 'Refund',
+                        label: '已退款'
+                    }]
                 },
                 detail: {
                     isVisible: false,
@@ -194,10 +223,17 @@
 
                     var queryModel = Object.assign({
                         skip: me.getSkip(),
-                        top: me.list.pageSize
+                        top: me.list.pageSize,
+                        TimeCreatedBegin: null,
+                        TimeCreatedEnd:null
                     },
                     me.search
                     );
+
+                    if (queryModel.TimeCreated.length > 0 && queryModel.TimeCreated[0] && queryModel.TimeCreated[1]) {
+                        queryModel.TimeCreatedBegin = queryModel.TimeCreated[0].Start.Format("yyyy-MM-dd HH:mm:ss.S");
+                        queryModel.TimeCreatedEnd = queryModel.TimeCreated[1].End.Format("yyyy-MM-dd HH:mm:ss.S");
+                    }
 
                     me.$http.get(apiConfig.order_query, {
                         params: queryModel

@@ -10,5 +10,6 @@ namespace MMY.PlatForm.WebUI.Models.Product
     {
        public Guid? ProductGuid { set; get; }
         public Guid? SupplierGuid { set; get; }
+        //TODO:查询条件待完善
     }
 }

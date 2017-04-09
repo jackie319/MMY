@@ -218,18 +218,6 @@
         }
     };
 
-    Framework.prototype.timeTrace = function (text) {
-      if(webConfig.debug) console.log(text + ",time:"+new Date().Format("yyyy-MM-dd HH:mm:ss.S"));
-    };
-
-    Framework.prototype.timeTraceStart = function (text) {
-        this.timeTrace(text + "，start");
-    };
-
-    Framework.prototype.timeTraceEnd = function (text) {
-        this.timeTrace(text + "，end");
-    };
-
     /**
      * 确定
      * @param {string} text 
@@ -300,7 +288,6 @@
             }
         });
         xhr.addEventListener("loadend", function (loadendEvent) {
-            me.timeTraceEnd(settings.url);
             settings.complete(this.responseText, loadendEvent);
         });
         xhr.addEventListener("progress", function (progressEvent) {
@@ -311,9 +298,6 @@
         });
         xhr.open(settings.method, settings.url);
         xhr.setRequestHeader("Accept", settings.accept);
-
-        me.timeTraceStart(settings.url);
-
         xhr.send(settings.data);
     };
 
@@ -646,7 +630,7 @@
             vm.loading = true;//显示加载
         }
 
-        $f.timeTraceStart(request.url);
+
 
         // continue to next interceptor
         next(function (response) {
@@ -655,7 +639,6 @@
             }
 
             if (response.ok) {
-                $f.timeTraceEnd(request.url);
                 if (/application\/json/i.test(response.headers.get("Content-Type")) && !response.data.Success) {
                     w.$f.errorHander(response.data);
                     // stop and return response

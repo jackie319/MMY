@@ -75,7 +75,7 @@ function GMTStringToDate(text) {
 //(new Date()).AddDate('m',3)  ==> 加三月
 Date.prototype.AddDate = function (interval, number) {
     var d = this;
-    var k = { 'y': 'FullYear', 'q': 'Month', 'm': 'Month', 'w': 'Date', 'd': 'Date', 'h': 'Hours', 'n': 'Minutes', 's': 'Seconds', 'ms': 'MilliSeconds' };
+    var k = { 'y': 'FullYear', 'q': 'Month', 'm': 'Month', 'w': 'Date', 'd': 'Date', 'h': 'Hours', 'n': 'Minutes', 's': 'Seconds', 'ms': 'Milliseconds' };
     var n = { 'q': 3, 'w': 7 };
     eval('d.set' + k[interval] + '(d.get' + k[interval] + '()+' + ((n[interval] || 1) * number) + ')');
     return d;
@@ -101,7 +101,7 @@ Date.prototype.Start = function () {
 };
 
 Date.prototype.End = function () {
-    return this.Start().AddDate("s", 86399);
+    return this.Start().AddDate("ms", 86400*1000 -1);
 }
 
 /************************周**************************/

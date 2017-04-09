@@ -38,7 +38,7 @@
         </div>
     </div>
     <script>
-       var vm= new Vue({
+        new Vue({
             el: "#login",
             compomets: $f.formCompomets,
             data: {
