@@ -24,8 +24,7 @@ namespace MMY.Services.ServicesImpl
         public IList<Order> GetList(string orderNo, OrderStatusEnum? status, string userNickName,
             DateTime? timeCreatedBegin, DateTime? timeCreatedEnd, int skip, int take, out int total)
         {
-            var guid = Guid.Empty;
-            var query = _orderRepository.Table.Where(q=>q.Guid!= guid);
+            var query = _orderRepository.Table.Where(q=>q.Guid!=Guid.Empty);
             if (!string.IsNullOrEmpty(orderNo))
             {
                 query = query.Where(q => q.OrderNo.Contains(orderNo));
@@ -33,7 +32,7 @@ namespace MMY.Services.ServicesImpl
             if (status != null)
             {
                 var statusStr = status.ToString();
-                query = query.Where(q => q.Equals(statusStr));
+                query = query.Where(q => q.OrderStatus.Equals(statusStr));
             }
             if (!string.IsNullOrEmpty(userNickName))
             {
