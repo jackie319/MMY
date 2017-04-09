@@ -33,6 +33,13 @@ namespace MMY.Test
             order.UserNickName = string.Empty;
             _order.CreateOrder(order);
         }
+        [TestMethod]
+        public void GetListTest()
+        {
+            int total;
+            var list=_order.GetList("", null, "", null, null, 0, 20, out total);
+            Assert.IsTrue(true);
+        }
 
         [TestMethod]
         public void CreateOrderPaymentTest()

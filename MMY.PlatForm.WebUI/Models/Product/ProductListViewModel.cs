@@ -10,25 +10,58 @@ namespace MMY.PlatForm.WebUI.Models.Product
     public class ProductListViewModel
     {
         public System.DateTime TimeCreated { get; set; }
+        /// <summary>
+        /// 是否推荐
+        /// </summary>
         public bool IsRecommended { get; set; }
+        /// <summary>
+        /// 是否特卖
+        /// </summary>
         public bool IsSpecialOffer { get; set; }
         public string Status { get; set; }
+        /// <summary>
+        /// 优惠价
+        /// </summary>
         public decimal PromotionPrice { get; set; }
+        /// <summary>
+        /// 原价
+        /// </summary>
         public decimal Price { get; set; }
+        /// <summary>
+        /// 商品副标题
+        /// </summary>
         public string SaleSubTitle { get; set; }
+        /// <summary>
+        /// 商品标题
+        /// </summary>
         public string SaleTitle { get; set; }
         public string DefaultPic { get; set; }
         public int ProductNumber { get; set; }
         public System.Guid CategoryGuid { get; set; }
+        /// <summary>
+        /// 产品名称
+        /// </summary>
         public string ProductName { get; set; }
         public System.Guid Guid { get; set; }
         public Nullable<System.Guid> ParentGuid { get; set; }
         public string CategoryName { get; set; }
+        /// <summary>
+        /// 排序
+        /// </summary>
         public int DisplayOrder { get; set; }
         public System.DateTime TimeOnShelf { get; set; }
         public System.DateTime TimeOffShelf { get; set; }
+        /// <summary>
+        /// 虚数
+        /// </summary>
         public int ImaginaryNumber { get; set; }
+        /// <summary>
+        ///访问数
+        /// </summary>
         public int VisitedTotal { get; set; }
+        /// <summary>
+        /// 销量
+        /// </summary>
         public int SoldTotal { get; set; }
 
         public static ProductListViewModel CopyFrom(ProductV productV)
