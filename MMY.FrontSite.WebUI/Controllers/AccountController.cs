@@ -25,14 +25,19 @@ namespace MMY.FrontSite.WebUI.Controllers
         {
             _userAccount = userAccount;
         }
-
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="passwordMd5"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult SubmitLogin(string userName, string passwordMd5)
         {
             try
             {
                 var account = _userAccount.Login(userName, passwordMd5);
-                UserModel userModel = new UserModel(account.Guid, account.UserName, account.NickName, true) { };
+                UserModel userModel = new UserModel(account, account.NickName, true) { };
                 HttpContext.User = userModel;
                 Session["UserInfoModel"] = userModel;
             }
@@ -43,6 +48,11 @@ namespace MMY.FrontSite.WebUI.Controllers
             return this.ResultSuccess();
         }
 
+        /// <summary>
+        /// 注册
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidationFilter]
         public ActionResult Register(RegisterViewModel model)

@@ -11,6 +11,7 @@ namespace MMY.Services.IServices
     public interface IUserAccount
     {
         UserAccount Login(string userName,string password);
+        UserAccount FindUserAccount(Guid userAccountGuid);
 
         void ChangePwd(string userName,string oldPassowrdMd5, string newPasswordMd5);
 
@@ -23,5 +24,15 @@ namespace MMY.Services.IServices
         /// <param name="smsCode"></param>
         /// <exception cref="CommonException">CommonException</exception>
         void Register(string mobilePhone, string password, string smsCode);
+
+        void GetBackPassword(string mobilePhone, string password, string smsCode);
+
+        void UpdateUserInfo(UserAccount userAccount);
+        IList<UserDeliveryAddress> GetList(Guid userGuid,int skip, int take, out int total);
+        UserDeliveryAddress FinDeliveryAddress(Guid addressGuid);
+        void AddDeliveryAddress(UserDeliveryAddress userDeliveryAddress);
+        void UpdateDeliveryAddress(UserDeliveryAddress userDeliveryAddress);
+        void SetDefaultDeliveryAddress(Guid addressGuid);
+         void DeleteDeliveryAddress(Guid addressGuid);
     }
 }
