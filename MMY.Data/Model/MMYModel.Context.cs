@@ -54,6 +54,7 @@ namespace MMY.Data.Model
         public virtual DbSet<UserFavorite> UserFavorite { get; set; }
         public virtual DbSet<UserOperationRecords> UserOperationRecords { get; set; }
         public virtual DbSet<UserShoppingCart> UserShoppingCart { get; set; }
+        public virtual DbSet<OrderV> OrderV { get; set; }
         public virtual DbSet<ProductV> ProductV { get; set; }
     }
 }

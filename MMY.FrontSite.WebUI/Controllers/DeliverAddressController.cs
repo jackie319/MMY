@@ -38,6 +38,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// </summary>
         /// <returns></returns>
         [JKAuthorize]
+        [ValidationFilter]
         public ActionResult Save(UserDeliveryAddressViewModel model)
         {
             var mmyUser = (UserModel)HttpContext.User;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using MMY.Data.Model;
@@ -9,21 +10,30 @@ namespace MMY.FrontSite.WebUI.Models.UserAccount
     public class UserDeliveryAddressViewModel
     {
         public System.Guid Guid { get; set; }
-        //public System.Guid ProvinceGuid { get; set; }
-        //public System.Guid CityGuid { get; set; }
-        //public System.Guid DistrictGuid { get; set; }
-        //public System.Guid ZipCodeGuid { get; set; }
+        /// <summary>
+        /// 省市区
+        /// </summary>
+        [Required]
+        public string Region { get; set; }
+        /// <summary>
+        /// 邮编
+        /// </summary>
+        [Required]
+        public string ZipCode { get; set; }
         /// <summary>
         /// 收货人
         /// </summary>
+        [Required]
         public string ReceiverName { get; set; }
         /// <summary>
         /// 手机号
         /// </summary>
+        [Required]
         public string Phone { get; set; }
         /// <summary>
-        /// 收货地址
+        /// 详细地址
         /// </summary>
+        [Required]
         public string Address { get; set; }
         /// <summary>
         /// 是否是默认收货地址
@@ -38,6 +48,8 @@ namespace MMY.FrontSite.WebUI.Models.UserAccount
             model.IsDefault = address.IsDefault;
             model.Phone = address.Phone;
             model.ReceiverName = address.ReceiverName;
+            model.Region = address.Region;
+            model.ZipCode = address.ZipCode;
             return model;
 
         }
@@ -50,6 +62,8 @@ namespace MMY.FrontSite.WebUI.Models.UserAccount
             address.Phone = Phone;
             address.Address = Address;
             address.IsDefault = IsDefault;
+            address.Region = Region;
+            address.ZipCode = ZipCode;
             return address;
         }
     }

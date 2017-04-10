@@ -179,7 +179,8 @@ namespace MMY.Services.ServicesImpl
             entity.Address = userDeliveryAddress.Address;
             entity.Phone = userDeliveryAddress.Phone;
             entity.ReceiverName = userDeliveryAddress.ReceiverName;
-            //TODO:省市区邮编待改
+            entity.Region = userDeliveryAddress.Region;
+            entity.ZipCode = userDeliveryAddress.ZipCode;
             _userDeliveryAddressRepository.Update(entity);
         }
 

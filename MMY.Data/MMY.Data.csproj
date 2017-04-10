@@ -106,6 +106,9 @@
     <Compile Include="Model\OrderPayRecords.cs">
       <DependentUpon>MMYModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\OrderV.cs">
+      <DependentUpon>MMYModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\PositionCity.cs">
       <DependentUpon>MMYModel.tt</DependentUpon>
     </Compile>

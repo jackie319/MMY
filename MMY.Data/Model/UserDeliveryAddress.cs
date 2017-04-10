@@ -16,10 +16,8 @@ namespace MMY.Data.Model
     {
         public System.Guid Guid { get; set; }
         public System.Guid UserGuid { get; set; }
-        public System.Guid ProvinceGuid { get; set; }
-        public System.Guid CityGuid { get; set; }
-        public System.Guid DistrictGuid { get; set; }
-        public System.Guid ZipCodeGuid { get; set; }
+        public string Region { get; set; }
+        public string ZipCode { get; set; }
         public string ReceiverName { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
