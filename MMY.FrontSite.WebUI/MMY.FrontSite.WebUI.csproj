@@ -58,6 +58,10 @@
     <Reference Include="JK.Framework.Data">
       <HintPath>..\MMY.PlatForm.WebUI\Bin\JK.Framework.Data.dll</HintPath>
     </Reference>
+    <Reference Include="JK.Framework.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\JK.Framework.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="JK.Framework.Web">
       <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Web.dll</HintPath>
     </Reference>
@@ -226,6 +230,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\PayController.cs" />
+    <Compile Include="Controllers\PictureController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\UserInfoController.cs" />
@@ -299,6 +304,7 @@
     <Folder Include="Views\Favorite\" />
     <Folder Include="Views\Order\" />
     <Folder Include="Views\Pay\" />
+    <Folder Include="Views\Picture\" />
     <Folder Include="Views\Product\" />
     <Folder Include="Views\ShoppingCart\" />
     <Folder Include="Views\UserInfo\" />
