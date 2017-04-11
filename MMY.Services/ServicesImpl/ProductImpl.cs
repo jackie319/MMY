@@ -244,7 +244,7 @@ namespace MMY.Services.ServicesImpl
 
         private void CreateProductAlbum(ProductAlbum album)
         {
-            album.Guid = Guid.NewGuid();
+            album.Guid = album.Guid == Guid.Empty ? Guid.NewGuid() : album.Guid;
             album.TimeCreated=DateTime.Now;
             album.IsDeleted = false;
             _productAlbumRepository.Insert(album);

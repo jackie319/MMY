@@ -249,6 +249,7 @@
     <Compile Include="Models\Product\SupplierListViewModel.cs" />
     <Compile Include="Models\Product\SupplierQueryModel.cs" />
     <Compile Include="Models\Product\SupplierViewModel.cs" />
+    <Compile Include="Models\Product\UploadListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
