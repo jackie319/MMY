@@ -37,6 +37,14 @@ namespace MMY.Services.ServiceModel
 
     public enum ShoppingCartEnum
     {
-        Default
+        /// <summary>
+        /// 默认
+        /// </summary>
+        Default,
+        /// <summary>
+        /// 已转化为订单
+        /// </summary>
+        BeOrder
+
     }
 }

@@ -237,6 +237,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ConfirmOrder\ConfirmOrderViewModel.cs" />
+    <Compile Include="Models\ConfirmOrder\AddConfirmOrderViewModel.cs" />
     <Compile Include="Models\Order\UserOrdersViewModel.cs" />
     <Compile Include="Models\Product\CategoryListViewModel.cs" />
     <Compile Include="Models\Product\ProductListViewModel.cs" />
