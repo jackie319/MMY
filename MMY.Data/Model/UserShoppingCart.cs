@@ -17,10 +17,13 @@ namespace MMY.Data.Model
         public System.Guid Guid { get; set; }
         public System.Guid UserGuid { get; set; }
         public System.Guid ProductGuid { get; set; }
+        public System.Guid ClassificationGuid { get; set; }
+        public int ProductNum { get; set; }
         public string Status { get; set; }
         public bool IsDeleted { get; set; }
         public System.DateTime TimeCreated { get; set; }
     
+        public virtual Product Product { get; set; }
         public virtual UserAccount UserAccount { get; set; }
     }
 }

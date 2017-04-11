@@ -28,9 +28,9 @@ namespace MMY.Services.ServicesImpl
             _userFavoriteRepository.Insert(favorite);
         }
 
-        public IList<UserFavorite> GetUserFavorites(int skip, int take, out int total)
+        public IList<UserFavorite> GetUserFavorites(Guid userGuid,int skip, int take, out int total)
         {
-            var query = _userFavoriteRepository.Table.Where(q => !q.IsDeleted);
+            var query = _userFavoriteRepository.Table.Where(q => !q.IsDeleted && q.UserGuid==userGuid);
             total = query.Count();
             return query.OrderByDescending(q => q.TimeCreated)
                     .Skip(skip)

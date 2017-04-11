@@ -179,6 +179,7 @@
     <Compile Include="partial\UserAccount.partial.cs" />
     <Compile Include="partial\UserDeliveryAddress.partial.cs" />
     <Compile Include="partial\UserFavorite.partial.cs" />
+    <Compile Include="partial\UserShoppingCart.partial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

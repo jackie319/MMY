@@ -11,7 +11,7 @@ namespace MMY.Services.IServices
     public interface IUserFavorite
     {
         void Add(Guid userGuid,Guid productGuid);
-        IList<UserFavorite> GetUserFavorites(int skip,int take,out int total);
+        IList<UserFavorite> GetUserFavorites(Guid userGuid,int skip,int take,out int total);
         void Delete(Guid uid);
     }
 }

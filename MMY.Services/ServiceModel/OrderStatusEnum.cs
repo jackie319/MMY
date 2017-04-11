@@ -34,4 +34,9 @@ namespace MMY.Services.ServiceModel
         Refund
 
     }
+
+    public enum ShoppingCartEnum
+    {
+        Default
+    }
 }

@@ -340,6 +340,8 @@
           <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
           <Property Name="UserGuid" Type="uniqueidentifier" Nullable="false" />
           <Property Name="ProductGuid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ClassificationGuid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProductNum" Type="int" Nullable="false" />
           <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
@@ -634,6 +636,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_UserShoppingCart_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="UserShoppingCart" Type="Self.UserShoppingCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="UserShoppingCart">
+              <PropertyRef Name="ProductGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_UserShoppingCart_UserAccount">
           <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="1" />
           <End Role="UserShoppingCart" Type="Self.UserShoppingCart" Multiplicity="*" />
@@ -793,6 +807,10 @@
             <End Role="UserAccount" EntitySet="UserAccount" />
             <End Role="UserOperationRecords" EntitySet="UserOperationRecords" />
           </AssociationSet>
+          <AssociationSet Name="FK_UserShoppingCart_Product" Association="Self.FK_UserShoppingCart_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
+          </AssociationSet>
           <AssociationSet Name="FK_UserShoppingCart_UserAccount" Association="Self.FK_UserShoppingCart_UserAccount">
             <End Role="UserAccount" EntitySet="UserAccount" />
             <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
@@ -831,7 +849,6 @@
           <EntitySet Name="UserDeliveryAddress" EntityType="MMYModel.UserDeliveryAddress" />
           <EntitySet Name="UserFavorite" EntityType="MMYModel.UserFavorite" />
           <EntitySet Name="UserOperationRecords" EntityType="MMYModel.UserOperationRecords" />
-          <EntitySet Name="UserShoppingCart" EntityType="MMYModel.UserShoppingCart" />
           <EntitySet Name="OrderV" EntityType="MMYModel.OrderV" />
           <EntitySet Name="ProductV" EntityType="MMYModel.ProductV" />
           <AssociationSet Name="FK_RoleInFunction_Function" Association="MMYModel.FK_RoleInFunction_Function">
@@ -898,11 +915,16 @@
             <End Role="UserAccount" EntitySet="UserAccount" />
             <End Role="UserOperationRecords" EntitySet="UserOperationRecords" />
           </AssociationSet>
+          <EntitySet Name="UserShoppingCart" EntityType="MMYModel.UserShoppingCart" />
+          <AssociationSet Name="FK_UserShoppingCart_Product" Association="MMYModel.FK_UserShoppingCart_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
+          </AssociationSet>
           <AssociationSet Name="FK_UserShoppingCart_UserAccount" Association="MMYModel.FK_UserShoppingCart_UserAccount">
             <End Role="UserAccount" EntitySet="UserAccount" />
             <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="Activity">
           <Key>
             <PropertyRef Name="Guid" />
@@ -1105,6 +1127,7 @@
           <NavigationProperty Name="ProductPurchaseRecords" Relationship="MMYModel.FK_ProductPurchaseRecords_Product" FromRole="Product" ToRole="ProductPurchaseRecords" />
           <NavigationProperty Name="ProductQRCode" Relationship="MMYModel.FK_ProductQRCode_Product" FromRole="Product" ToRole="ProductQRCode" />
           <NavigationProperty Name="UserFavorite" Relationship="MMYModel.FK_UserFavorite_Product" FromRole="Product" ToRole="UserFavorite" />
+          <NavigationProperty Name="UserShoppingCart" Relationship="MMYModel.FK_UserShoppingCart_Product" FromRole="Product" ToRole="UserShoppingCart" />
         </EntityType>
         <EntityType Name="ProductAlbum">
           <Key>
@@ -1263,18 +1286,6 @@
           <Property Name="UserGuid" Type="Guid" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
           <NavigationProperty Name="UserAccount" Relationship="MMYModel.FK_UserOperationRecords_UserAccount" FromRole="UserOperationRecords" ToRole="UserAccount" />
-        </EntityType>
-        <EntityType Name="UserShoppingCart">
-          <Key>
-            <PropertyRef Name="Guid" />
-          </Key>
-          <Property Name="Guid" Type="Guid" Nullable="false" />
-          <Property Name="UserGuid" Type="Guid" Nullable="false" />
-          <Property Name="ProductGuid" Type="Guid" Nullable="false" />
-          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="UserAccount" Relationship="MMYModel.FK_UserShoppingCart_UserAccount" FromRole="UserShoppingCart" ToRole="UserAccount" />
         </EntityType>
         <EntityType Name="OrderV">
           <Key>
@@ -1559,6 +1570,33 @@
             </Principal>
             <Dependent Role="UserOperationRecords">
               <PropertyRef Name="UserGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UserShoppingCart">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Name="Guid" Type="Guid" Nullable="false" />
+          <Property Name="UserGuid" Type="Guid" Nullable="false" />
+          <Property Name="ProductGuid" Type="Guid" Nullable="false" />
+          <Property Name="ClassificationGuid" Type="Guid" Nullable="false" />
+          <Property Name="ProductNum" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+          <NavigationProperty Name="Product" Relationship="MMYModel.FK_UserShoppingCart_Product" FromRole="UserShoppingCart" ToRole="Product" />
+          <NavigationProperty Name="UserAccount" Relationship="MMYModel.FK_UserShoppingCart_UserAccount" FromRole="UserShoppingCart" ToRole="UserAccount" />
+        </EntityType>
+        <Association Name="FK_UserShoppingCart_Product">
+          <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="MMYModel.UserShoppingCart" Role="UserShoppingCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="UserShoppingCart">
+              <PropertyRef Name="ProductGuid" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1936,18 +1974,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="UserShoppingCart">
-            <EntityTypeMapping TypeName="MMYModel.UserShoppingCart">
-              <MappingFragment StoreEntitySet="UserShoppingCart">
-                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
-                <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
-                <ScalarProperty Name="Guid" ColumnName="Guid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="OrderV">
             <EntityTypeMapping TypeName="MMYModel.OrderV">
               <MappingFragment StoreEntitySet="OrderV">
@@ -2002,6 +2028,20 @@
                 <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
                 <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserShoppingCart">
+            <EntityTypeMapping TypeName="MMYModel.UserShoppingCart">
+              <MappingFragment StoreEntitySet="UserShoppingCart">
+                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ProductNum" ColumnName="ProductNum" />
+                <ScalarProperty Name="ClassificationGuid" ColumnName="ClassificationGuid" />
+                <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+                <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -37,9 +37,10 @@ namespace MMY.FrontSite.WebUI.Controllers
         [JKAuthorize]
         public ActionResult List()
         {
+            var user = (UserModel)HttpContext.User;
             var query=new QueryBase();
             int total;
-            var list=_userFavorite.GetUserFavorites(query.Skip, query.Take, out total);
+            var list=_userFavorite.GetUserFavorites(user.UserGuid,query.Skip, query.Take, out total);
             var resultList = list.Select(item => UserFavoriteViewModel.CopyFrom(item));
             return this.ResultListModel(total, resultList);
         }
