@@ -45,11 +45,24 @@ namespace MMY.FrontSite.WebUI.Controllers
         }
 
         /// <summary>
-        /// 更改颜色分类，数量
+        /// 更改数量
         /// </summary>
         /// <returns></returns>
-        public ActionResult Update()
+        public ActionResult UpdateNum(Guid shopppingCartGuid,int num)
         {
+            _shoppingCart.UpdateShoppingCartNum(shopppingCartGuid,num);
+            return this.ResultSuccess();
+        }
+
+        /// <summary>
+        /// 更改颜色分类
+        /// </summary>
+        /// <param name="shoppingCartGuid"></param>
+        /// <param name="classificationGuid"></param>
+        /// <returns></returns>
+        public ActionResult UpdateClassification(Guid shoppingCartGuid,Guid classificationGuid)
+        {
+            _shoppingCart.UpdateClassification(shoppingCartGuid,classificationGuid);
             return this.ResultSuccess();
         }
         /// <summary>
