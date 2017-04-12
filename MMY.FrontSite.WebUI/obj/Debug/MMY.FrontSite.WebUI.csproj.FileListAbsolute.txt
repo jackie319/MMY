@@ -108,7 +108,6 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\log4ne
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\MMY.FrontSite.Domain.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\MMY.Services.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\MMY.Data.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Extensions.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\MMY.FrontSite.Domain.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\MMY.Services.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\Autofac.xml

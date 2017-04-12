@@ -301,10 +301,8 @@
     </Key>
     <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="UserGuid" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="ProvinceGuid" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="CityGuid" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DistrictGuid" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="ZipCodeGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Region" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ReceiverName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Address" Type="nvarchar" MaxLength="200" Nullable="false" />
@@ -337,9 +335,57 @@
     <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="UserGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ProductGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClassificationGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProductNum" Type="int" Nullable="false" />
     <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MMY.dbo.OrderV”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="OrderV">
+    <Key>
+      <PropertyRef Name="OrderNo" />
+      <PropertyRef Name="Guid" />
+      <PropertyRef Name="OrderAmount" />
+      <PropertyRef Name="ProductGuid" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="ProductPrice" />
+      <PropertyRef Name="productNumber" />
+      <PropertyRef Name="UserGuid" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="UserNickName" />
+      <PropertyRef Name="DeliveryAddressGuid" />
+      <PropertyRef Name="DeliveryAddress" />
+      <PropertyRef Name="PaymentGuid" />
+      <PropertyRef Name="PaymentName" />
+      <PropertyRef Name="PayBatch" />
+      <PropertyRef Name="DeliveryGuid" />
+      <PropertyRef Name="DeliveryName" />
+      <PropertyRef Name="OrderStatus" />
+      <PropertyRef Name="TimeCreated" />
+    </Key>
+    <Property Name="OrderNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrderAmount" Type="int" Nullable="false" />
+    <Property Name="ProductGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ProductPrice" Type="int" Nullable="false" />
+    <Property Name="productNumber" Type="int" Nullable="false" />
+    <Property Name="UserGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserNickName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DeliveryAddressGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DeliveryAddress" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="PaymentGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PaymentName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PayBatch" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DeliveryGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DeliveryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrderStatus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Expr1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Expr2" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
 警告 6002: 表/视图“MMY.dbo.ProductV”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
@@ -585,6 +631,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_UserShoppingCart_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="UserShoppingCart" Type="Self.UserShoppingCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="UserShoppingCart">
+        <PropertyRef Name="ProductGuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_UserShoppingCart_UserAccount">
     <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="1" />
     <End Role="UserShoppingCart" Type="Self.UserShoppingCart" Multiplicity="*" />
@@ -627,6 +685,31 @@
     <EntitySet Name="UserFavorite" EntityType="Self.UserFavorite" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserOperationRecords" EntityType="Self.UserOperationRecords" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserShoppingCart" EntityType="Self.UserShoppingCart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderV" EntityType="Self.OrderV" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OrderV].[OrderNo] AS [OrderNo], 
+    [OrderV].[Guid] AS [Guid], 
+    [OrderV].[OrderAmount] AS [OrderAmount], 
+    [OrderV].[ProductGuid] AS [ProductGuid], 
+    [OrderV].[ProductName] AS [ProductName], 
+    [OrderV].[ProductPrice] AS [ProductPrice], 
+    [OrderV].[productNumber] AS [productNumber], 
+    [OrderV].[UserGuid] AS [UserGuid], 
+    [OrderV].[UserName] AS [UserName], 
+    [OrderV].[UserNickName] AS [UserNickName], 
+    [OrderV].[DeliveryAddressGuid] AS [DeliveryAddressGuid], 
+    [OrderV].[DeliveryAddress] AS [DeliveryAddress], 
+    [OrderV].[PaymentGuid] AS [PaymentGuid], 
+    [OrderV].[PaymentName] AS [PaymentName], 
+    [OrderV].[PayBatch] AS [PayBatch], 
+    [OrderV].[DeliveryGuid] AS [DeliveryGuid], 
+    [OrderV].[DeliveryName] AS [DeliveryName], 
+    [OrderV].[OrderStatus] AS [OrderStatus], 
+    [OrderV].[TimeCreated] AS [TimeCreated], 
+    [OrderV].[Expr1] AS [Expr1], 
+    [OrderV].[Expr2] AS [Expr2]
+    FROM [dbo].[OrderV] AS [OrderV]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="ProductV" EntityType="Self.ProductV" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [ProductV].[TimeCreated] AS [TimeCreated], 
@@ -718,6 +801,10 @@
     <AssociationSet Name="FK_UserOperationRecords_UserAccount" Association="Self.FK_UserOperationRecords_UserAccount">
       <End Role="UserAccount" EntitySet="UserAccount" />
       <End Role="UserOperationRecords" EntitySet="UserOperationRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserShoppingCart_Product" Association="Self.FK_UserShoppingCart_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
     </AssociationSet>
     <AssociationSet Name="FK_UserShoppingCart_UserAccount" Association="Self.FK_UserShoppingCart_UserAccount">
       <End Role="UserAccount" EntitySet="UserAccount" />

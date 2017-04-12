@@ -247,6 +247,7 @@
     <Compile Include="Models\ShoppingCart\ShoppingCartViewModel.cs" />
     <Compile Include="Models\UserAccount\ChangePasswordViewModel.cs" />
     <Compile Include="Models\UserAccount\GetBackPasswrodViewModel.cs" />
+    <Compile Include="Models\UserAccount\LogInViewModel.cs" />
     <Compile Include="Models\UserAccount\RegisterViewModel.cs" />
     <Compile Include="Models\UserAccount\UserDeliveryAddressViewModel.cs" />
     <Compile Include="Models\UserAccount\UserFavoriteViewModel.cs" />
@@ -298,6 +299,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

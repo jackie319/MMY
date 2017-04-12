@@ -48,6 +48,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// 更改数量
         /// </summary>
         /// <returns></returns>
+        [JKAuthorize]
         public ActionResult UpdateNum(Guid shopppingCartGuid,int num)
         {
             _shoppingCart.UpdateShoppingCartNum(shopppingCartGuid,num);
@@ -60,6 +61,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// <param name="shoppingCartGuid"></param>
         /// <param name="classificationGuid"></param>
         /// <returns></returns>
+        [JKAuthorize]
         public ActionResult UpdateClassification(Guid shoppingCartGuid,Guid classificationGuid)
         {
             _shoppingCart.UpdateClassification(shoppingCartGuid,classificationGuid);

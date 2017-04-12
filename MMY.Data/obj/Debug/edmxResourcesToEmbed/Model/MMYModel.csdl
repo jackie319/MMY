@@ -29,7 +29,8 @@
     <EntitySet Name="UserDeliveryAddress" EntityType="MMYModel.UserDeliveryAddress" />
     <EntitySet Name="UserFavorite" EntityType="MMYModel.UserFavorite" />
     <EntitySet Name="UserOperationRecords" EntityType="MMYModel.UserOperationRecords" />
-    <EntitySet Name="UserShoppingCart" EntityType="MMYModel.UserShoppingCart" />
+    <EntitySet Name="OrderV" EntityType="MMYModel.OrderV" />
+    <EntitySet Name="ProductV" EntityType="MMYModel.ProductV" />
     <AssociationSet Name="FK_RoleInFunction_Function" Association="MMYModel.FK_RoleInFunction_Function">
       <End Role="AuthorityFunction" EntitySet="AuthorityFunction" />
       <End Role="AuthorityRoleInFunction" EntitySet="AuthorityRoleInFunction" />
@@ -94,11 +95,15 @@
       <End Role="UserAccount" EntitySet="UserAccount" />
       <End Role="UserOperationRecords" EntitySet="UserOperationRecords" />
     </AssociationSet>
+    <EntitySet Name="UserShoppingCart" EntityType="MMYModel.UserShoppingCart" />
+    <AssociationSet Name="FK_UserShoppingCart_Product" Association="MMYModel.FK_UserShoppingCart_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
+    </AssociationSet>
     <AssociationSet Name="FK_UserShoppingCart_UserAccount" Association="MMYModel.FK_UserShoppingCart_UserAccount">
       <End Role="UserAccount" EntitySet="UserAccount" />
       <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
     </AssociationSet>
-    <EntitySet Name="ProductV" EntityType="MMYModel.ProductV" />
   </EntityContainer>
   <EntityType Name="Activity">
     <Key>
@@ -302,6 +307,7 @@
     <NavigationProperty Name="ProductPurchaseRecords" Relationship="MMYModel.FK_ProductPurchaseRecords_Product" FromRole="Product" ToRole="ProductPurchaseRecords" />
     <NavigationProperty Name="ProductQRCode" Relationship="MMYModel.FK_ProductQRCode_Product" FromRole="Product" ToRole="ProductQRCode" />
     <NavigationProperty Name="UserFavorite" Relationship="MMYModel.FK_UserFavorite_Product" FromRole="Product" ToRole="UserFavorite" />
+    <NavigationProperty Name="UserShoppingCart" Relationship="MMYModel.FK_UserShoppingCart_Product" FromRole="Product" ToRole="UserShoppingCart" />
   </EntityType>
   <EntityType Name="ProductAlbum">
     <Key>
@@ -430,10 +436,8 @@
     </Key>
     <Property Name="Guid" Type="Guid" Nullable="false" />
     <Property Name="UserGuid" Type="Guid" Nullable="false" />
-    <Property Name="ProvinceGuid" Type="Guid" Nullable="false" />
-    <Property Name="CityGuid" Type="Guid" Nullable="false" />
-    <Property Name="DistrictGuid" Type="Guid" Nullable="false" />
-    <Property Name="ZipCodeGuid" Type="Guid" Nullable="false" />
+    <Property Name="Region" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ReceiverName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Address" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
@@ -463,17 +467,99 @@
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
     <NavigationProperty Name="UserAccount" Relationship="MMYModel.FK_UserOperationRecords_UserAccount" FromRole="UserOperationRecords" ToRole="UserAccount" />
   </EntityType>
-  <EntityType Name="UserShoppingCart">
+  <EntityType Name="OrderV">
     <Key>
+      <PropertyRef Name="OrderNo" />
       <PropertyRef Name="Guid" />
+      <PropertyRef Name="OrderAmount" />
+      <PropertyRef Name="ProductGuid" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="ProductPrice" />
+      <PropertyRef Name="productNumber" />
+      <PropertyRef Name="UserGuid" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="UserNickName" />
+      <PropertyRef Name="DeliveryAddressGuid" />
+      <PropertyRef Name="DeliveryAddress" />
+      <PropertyRef Name="PaymentGuid" />
+      <PropertyRef Name="PaymentName" />
+      <PropertyRef Name="PayBatch" />
+      <PropertyRef Name="DeliveryGuid" />
+      <PropertyRef Name="DeliveryName" />
+      <PropertyRef Name="OrderStatus" />
+      <PropertyRef Name="TimeCreated" />
     </Key>
+    <Property Name="OrderNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Guid" Type="Guid" Nullable="false" />
-    <Property Name="UserGuid" Type="Guid" Nullable="false" />
+    <Property Name="OrderAmount" Type="Int32" Nullable="false" />
     <Property Name="ProductGuid" Type="Guid" Nullable="false" />
-    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPrice" Type="Int32" Nullable="false" />
+    <Property Name="productNumber" Type="Int32" Nullable="false" />
+    <Property Name="UserGuid" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserNickName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryAddressGuid" Type="Guid" Nullable="false" />
+    <Property Name="DeliveryAddress" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentGuid" Type="Guid" Nullable="false" />
+    <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PayBatch" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeliveryGuid" Type="Guid" Nullable="false" />
+    <Property Name="DeliveryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-    <NavigationProperty Name="UserAccount" Relationship="MMYModel.FK_UserShoppingCart_UserAccount" FromRole="UserShoppingCart" ToRole="UserAccount" />
+    <Property Name="Expr1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Expr2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductV">
+    <Key>
+      <PropertyRef Name="TimeCreated" />
+      <PropertyRef Name="IsDeleted" />
+      <PropertyRef Name="IsRecommended" />
+      <PropertyRef Name="IsSpecialOffer" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="ProductRemark" />
+      <PropertyRef Name="ProductDetail" />
+      <PropertyRef Name="PromotionPrice" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="SaleSubTitle" />
+      <PropertyRef Name="SaleTitle" />
+      <PropertyRef Name="DefaultPic" />
+      <PropertyRef Name="ProductNumber" />
+      <PropertyRef Name="CategoryGuid" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="Guid" />
+      <PropertyRef Name="DisplayOrder" />
+      <PropertyRef Name="TimeOnShelf" />
+      <PropertyRef Name="TimeOffShelf" />
+      <PropertyRef Name="ImaginaryNumber" />
+      <PropertyRef Name="VisitedTotal" />
+      <PropertyRef Name="SoldTotal" />
+    </Key>
+    <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="IsRecommended" Type="Boolean" Nullable="false" />
+    <Property Name="IsSpecialOffer" Type="Boolean" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductRemark" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProductDetail" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PromotionPrice" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="SaleSubTitle" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SaleTitle" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DefaultPic" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ProductNumber" Type="Int32" Nullable="false" />
+    <Property Name="CategoryGuid" Type="Guid" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Guid" Type="Guid" Nullable="false" />
+    <Property Name="ParentGuid" Type="Guid" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
+    <Property Name="TimeOnShelf" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="TimeOffShelf" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ImaginaryNumber" Type="Int32" Nullable="false" />
+    <Property Name="VisitedTotal" Type="Int32" Nullable="false" />
+    <Property Name="SoldTotal" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="FK_RoleInFunction_Function">
     <End Type="MMYModel.AuthorityFunction" Role="AuthorityFunction" Multiplicity="1" />
@@ -667,6 +753,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="UserShoppingCart">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="Guid" Type="Guid" Nullable="false" />
+    <Property Name="UserGuid" Type="Guid" Nullable="false" />
+    <Property Name="ProductGuid" Type="Guid" Nullable="false" />
+    <Property Name="ClassificationGuid" Type="Guid" Nullable="false" />
+    <Property Name="ProductNum" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="Product" Relationship="MMYModel.FK_UserShoppingCart_Product" FromRole="UserShoppingCart" ToRole="Product" />
+    <NavigationProperty Name="UserAccount" Relationship="MMYModel.FK_UserShoppingCart_UserAccount" FromRole="UserShoppingCart" ToRole="UserAccount" />
+  </EntityType>
+  <Association Name="FK_UserShoppingCart_Product">
+    <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="MMYModel.UserShoppingCart" Role="UserShoppingCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="UserShoppingCart">
+        <PropertyRef Name="ProductGuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_UserShoppingCart_UserAccount">
     <End Type="MMYModel.UserAccount" Role="UserAccount" Multiplicity="1" />
     <End Type="MMYModel.UserShoppingCart" Role="UserShoppingCart" Multiplicity="*" />
@@ -679,54 +792,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="ProductV">
-    <Key>
-      <PropertyRef Name="TimeCreated" />
-      <PropertyRef Name="IsDeleted" />
-      <PropertyRef Name="IsRecommended" />
-      <PropertyRef Name="IsSpecialOffer" />
-      <PropertyRef Name="Status" />
-      <PropertyRef Name="ProductRemark" />
-      <PropertyRef Name="ProductDetail" />
-      <PropertyRef Name="PromotionPrice" />
-      <PropertyRef Name="Price" />
-      <PropertyRef Name="SaleSubTitle" />
-      <PropertyRef Name="SaleTitle" />
-      <PropertyRef Name="DefaultPic" />
-      <PropertyRef Name="ProductNumber" />
-      <PropertyRef Name="CategoryGuid" />
-      <PropertyRef Name="ProductName" />
-      <PropertyRef Name="Guid" />
-      <PropertyRef Name="DisplayOrder" />
-      <PropertyRef Name="TimeOnShelf" />
-      <PropertyRef Name="TimeOffShelf" />
-      <PropertyRef Name="ImaginaryNumber" />
-      <PropertyRef Name="VisitedTotal" />
-      <PropertyRef Name="SoldTotal" />
-    </Key>
-    <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <Property Name="IsRecommended" Type="Boolean" Nullable="false" />
-    <Property Name="IsSpecialOffer" Type="Boolean" Nullable="false" />
-    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ProductRemark" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="ProductDetail" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="PromotionPrice" Type="Int32" Nullable="false" />
-    <Property Name="Price" Type="Int32" Nullable="false" />
-    <Property Name="SaleSubTitle" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="SaleTitle" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="DefaultPic" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="ProductNumber" Type="Int32" Nullable="false" />
-    <Property Name="CategoryGuid" Type="Guid" Nullable="false" />
-    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Guid" Type="Guid" Nullable="false" />
-    <Property Name="ParentGuid" Type="Guid" />
-    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
-    <Property Name="TimeOnShelf" Type="DateTime" Nullable="false" Precision="7" />
-    <Property Name="TimeOffShelf" Type="DateTime" Nullable="false" Precision="7" />
-    <Property Name="ImaginaryNumber" Type="Int32" Nullable="false" />
-    <Property Name="VisitedTotal" Type="Int32" Nullable="false" />
-    <Property Name="SoldTotal" Type="Int32" Nullable="false" />
-  </EntityType>
 </Schema>

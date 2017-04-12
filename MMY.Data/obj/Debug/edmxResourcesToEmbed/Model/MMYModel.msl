@@ -330,10 +330,8 @@
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
-          <ScalarProperty Name="ZipCodeGuid" ColumnName="ZipCodeGuid" />
-          <ScalarProperty Name="DistrictGuid" ColumnName="DistrictGuid" />
-          <ScalarProperty Name="CityGuid" ColumnName="CityGuid" />
-          <ScalarProperty Name="ProvinceGuid" ColumnName="ProvinceGuid" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
           <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
         </MappingFragment>
@@ -359,15 +357,30 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="UserShoppingCart">
-      <EntityTypeMapping TypeName="MMYModel.UserShoppingCart">
-        <MappingFragment StoreEntitySet="UserShoppingCart">
+    <EntitySetMapping Name="OrderV">
+      <EntityTypeMapping TypeName="MMYModel.OrderV">
+        <MappingFragment StoreEntitySet="OrderV">
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
           <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
+          <ScalarProperty Name="DeliveryGuid" ColumnName="DeliveryGuid" />
+          <ScalarProperty Name="PayBatch" ColumnName="PayBatch" />
+          <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
+          <ScalarProperty Name="PaymentGuid" ColumnName="PaymentGuid" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="DeliveryAddressGuid" ColumnName="DeliveryAddressGuid" />
+          <ScalarProperty Name="UserNickName" ColumnName="UserNickName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+          <ScalarProperty Name="productNumber" ColumnName="productNumber" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+          <ScalarProperty Name="OrderAmount" ColumnName="OrderAmount" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -398,6 +411,20 @@
           <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserShoppingCart">
+      <EntityTypeMapping TypeName="MMYModel.UserShoppingCart">
+        <MappingFragment StoreEntitySet="UserShoppingCart">
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductNum" ColumnName="ProductNum" />
+          <ScalarProperty Name="ClassificationGuid" ColumnName="ClassificationGuid" />
+          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+          <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

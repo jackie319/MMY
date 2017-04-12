@@ -25,6 +25,11 @@ namespace MMY.FrontSite.WebUI.Controllers
         {
             _userAccount = userAccount;
         }
+
+        public ActionResult Index()
+        {
+            return View();
+        }
         /// <summary>
         /// 登录
         /// </summary>
