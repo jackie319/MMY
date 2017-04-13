@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -37,6 +38,7 @@ namespace MMY.PlatForm.WebUI
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             RegisterAutofac();
             InitLog4Net();
+            GetAppSetting();
         }
 
         public static void RegisterAutofac()
@@ -45,6 +47,12 @@ namespace MMY.PlatForm.WebUI
                 ConnectionStrings["MMYEntities"].ConnectionString;
 
             RegisterAutofacForJK.Register(connectionStr, AutoFacRegister.RegisterAutofacDelegate);
+        }
+
+        public void GetAppSetting()
+        {
+            string pictureUrl = WebConfigurationManager.AppSettings["PictureUrl"];
+            AppSetting.Instance().PictureUrl = pictureUrl;
         }
 
         private static void InitLog4Net()

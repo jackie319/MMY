@@ -29,6 +29,7 @@ namespace MMY.Services.IServices
         void AddPurchaseRecords(ProductPurchaseRecords records);
 
         Product FindProduct(Guid productGuid);
+        IList<Product> FindProducts(IList<Guid> productGuids);
         IList<ProductClassification> GetClassifications(Guid productGuid);
         IList<ProductAlbum> GetAlbums(Guid productGuid);
         IList<ProductV> HotList(int skip, int take, out int total);

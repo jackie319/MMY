@@ -23,7 +23,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// 新增订单
         /// </summary>
         /// <returns></returns>
-        public ActionResult Add()
+        public ActionResult Add(AddOrderViewModel model)
         {
             return this.ResultSuccess();
         }

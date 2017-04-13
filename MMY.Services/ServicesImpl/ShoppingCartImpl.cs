@@ -72,5 +72,10 @@ namespace MMY.Services.ServicesImpl
             entity.ClassificationGuid = classificationGuid;
             _userShoppingCartRepository.Update(entity);
         }
+
+        public IList<UserShoppingCart> FindList(IList<Guid> cartGuids)
+        {
+            return _userShoppingCartRepository.Table.Where(q => cartGuids.Contains(q.Guid)).ToList();
+        }
     }
 }

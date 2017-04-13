@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using MMY.Services.ServicesImpl;
 
 namespace MMY.FrontSite.WebUI.Models.ConfirmOrder
 {
@@ -36,6 +37,10 @@ namespace MMY.FrontSite.WebUI.Models.ConfirmOrder
         /// 商品优惠价格
         /// </summary>
         public decimal PromotionPrice { get; set; }
+        /// <summary>
+        /// 商品克数
+        /// </summary>
+        public int Grams { get; set; }
      
         /// <summary>
         /// 商品数量
@@ -53,7 +58,7 @@ namespace MMY.FrontSite.WebUI.Models.ConfirmOrder
             model.ProductGuid = product.Guid;
             model.SaleTitle = product.SaleTitle;
             model.SaleSubTitle = product.SaleSubTitle;
-            model.DefaultPic = product.DefaultPic;
+            model.DefaultPic = AppSetting.Instance().PictureUrl+product.DefaultPic;
             model.Price = Convert.ToDecimal(product.Price)/100;
             model.PromotionPrice = Convert.ToDecimal(product.PromotionPrice)/100;
             return model;

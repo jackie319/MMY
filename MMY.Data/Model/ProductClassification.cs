@@ -18,6 +18,7 @@ namespace MMY.Data.Model
         public System.Guid ProductGuid { get; set; }
         public string Name { get; set; }
         public int Number { get; set; }
+        public int Grams { get; set; }
         public int Price { get; set; }
         public int PromotionPrice { get; set; }
         public System.Guid AlbumGuid { get; set; }

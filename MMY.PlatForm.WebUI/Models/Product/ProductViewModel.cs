@@ -92,6 +92,10 @@ namespace MMY.PlatForm.WebUI.Models.Product
         [Required]
         public string Name { get; set; }
         public int Number { get; set; }
+        /// <summary>
+        /// 克数
+        /// </summary>
+        public int Grams { get; set; }
         [Required]
         public Decimal Price { get; set; }
         [Required]
@@ -109,6 +113,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
             viewModel.Price = Convert.ToDecimal(productClassification.Price) / 100;
             viewModel.PromotionPrice = Convert.ToDecimal(productClassification.PromotionPrice) / 100;
             viewModel.AlbumGuid = productClassification.AlbumGuid;
+            viewModel.Grams = productClassification.Grams;
             return viewModel;
         }
         public ProductClassification  CopyTo()
@@ -121,6 +126,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
             classification.Price = Convert.ToInt32(Price * 100);
             classification.PromotionPrice = Convert.ToInt32(PromotionPrice * 100);
             classification.AlbumGuid = AlbumGuid;
+            classification.Grams = Grams;
             return classification;
         }
 

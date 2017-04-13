@@ -44,7 +44,6 @@ namespace MMY.Data.Model
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductAlbum> ProductAlbum { get; set; }
         public virtual DbSet<ProductCategory> ProductCategory { get; set; }
-        public virtual DbSet<ProductClassification> ProductClassification { get; set; }
         public virtual DbSet<ProductPurchaseRecords> ProductPurchaseRecords { get; set; }
         public virtual DbSet<ProductQRCode> ProductQRCode { get; set; }
         public virtual DbSet<ProductSupplier> ProductSupplier { get; set; }
@@ -56,5 +55,6 @@ namespace MMY.Data.Model
         public virtual DbSet<OrderV> OrderV { get; set; }
         public virtual DbSet<ProductV> ProductV { get; set; }
         public virtual DbSet<UserShoppingCart> UserShoppingCart { get; set; }
+        public virtual DbSet<ProductClassification> ProductClassification { get; set; }
     }
 }

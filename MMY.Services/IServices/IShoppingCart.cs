@@ -12,6 +12,7 @@ namespace MMY.Services.IServices
         void Add(Guid userGuid, Guid productGuid,Guid classificationGuid,int num);
         IList<UserShoppingCart> GetList(Guid userGuid,int skip, int take, out int total);
         void Delete(Guid shoppingCartGuid);
+        IList<UserShoppingCart> FindList(IList<Guid> cartGuids);
 
         void UpdateShoppingCartNum(Guid shoppingCartGuid,int num);
 

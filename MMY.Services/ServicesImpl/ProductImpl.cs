@@ -260,7 +260,9 @@ namespace MMY.Services.ServicesImpl
             }
         }
 
-       
-
+        public IList<Product> FindProducts(IList<Guid> productGuids)
+        {
+            return _productRepository.Table.Where(q => productGuids.Contains(q.Guid)).ToList();
+        }
     }
 }

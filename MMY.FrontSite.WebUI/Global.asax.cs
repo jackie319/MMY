@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -10,6 +11,7 @@ using JK.Framework.Data;
 using log4net.Config;
 using MMY.FrontSite.Domain;
 using MMY.FrontSite.WebUI.App_Start;
+using MMY.Services.ServicesImpl;
 
 namespace MMY.FrontSite.WebUI
 {
@@ -27,6 +29,7 @@ namespace MMY.FrontSite.WebUI
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             RegisterAutofac();
             InitLog4Net();
+            GetAppSetting();
         }
 
 
@@ -38,6 +41,11 @@ namespace MMY.FrontSite.WebUI
             RegisterAutofacForJK.Register(connectionStr, AutoFacRegister.RegisterAutofacDelegate);
         }
 
+        public void GetAppSetting()
+        {
+            string pictureUrl = WebConfigurationManager.AppSettings["PictureUrl"];
+            AppSetting.Instance().PictureUrl = pictureUrl;
+        }
         private static void InitLog4Net()
         {
             var logCfg = new FileInfo(AppDomain.CurrentDomain.BaseDirectory + "log4net.config");

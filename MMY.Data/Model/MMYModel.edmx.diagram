@@ -24,7 +24,6 @@
         <EntityTypeShape EntityType="MMYModel.Product" Width="1.5" PointX="3" PointY="6.875" />
         <EntityTypeShape EntityType="MMYModel.ProductAlbum" Width="1.5" PointX="5.25" PointY="20" />
         <EntityTypeShape EntityType="MMYModel.ProductCategory" Width="1.5" PointX="0.75" PointY="8.875" />
-        <EntityTypeShape EntityType="MMYModel.ProductClassification" Width="1.5" PointX="5.25" PointY="16.375" />
         <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="5.25" PointY="7.875" />
         <EntityTypeShape EntityType="MMYModel.ProductQRCode" Width="1.5" PointX="5.25" PointY="13.5" />
         <EntityTypeShape EntityType="MMYModel.ProductSupplier" Width="1.5" PointX="3" PointY="3.875" />
@@ -43,7 +42,6 @@
         <AssociationConnector Association="MMYModel.FK_OrderPayRecords_Order" />
         <AssociationConnector Association="MMYModel.FK_Product_ProductCategory" />
         <AssociationConnector Association="MMYModel.FK_ProductAlbum_Product" />
-        <AssociationConnector Association="MMYModel.FK_ProductClassification_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductQRCode_Product" />
         <AssociationConnector Association="MMYModel.FK_UserFavorite_Product" />
@@ -54,6 +52,8 @@
         <EntityTypeShape EntityType="MMYModel.UserShoppingCart" Width="1.5" PointX="11.25" PointY="0.75" />
         <AssociationConnector Association="MMYModel.FK_UserShoppingCart_Product" />
         <AssociationConnector Association="MMYModel.FK_UserShoppingCart_UserAccount" />
+        <EntityTypeShape EntityType="MMYModel.ProductClassification" Width="1.5" PointX="5.25" PointY="23.5" />
+        <AssociationConnector Association="MMYModel.FK_ProductClassification_Product" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
