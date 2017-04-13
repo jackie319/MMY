@@ -117,4 +117,3 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Fra
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Web.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\log4net.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\MMY.Data.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Extensions.pdb

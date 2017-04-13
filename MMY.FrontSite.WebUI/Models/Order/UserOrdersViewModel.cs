@@ -37,10 +37,6 @@ namespace MMY.FrontSite.WebUI.Models.Order
         /// </summary>
         public string PaymentName { get; set; }
         /// <summary>
-        /// 批次号
-        /// </summary>
-        public string PayBatch { get; set; }
-        /// <summary>
         /// 配送方式
         /// </summary>
         public string DeliveryName { get; set; }
@@ -67,11 +63,10 @@ namespace MMY.FrontSite.WebUI.Models.Order
             model.ProductNumber = order.ProductNumber;
             model.UserNickName = order.UserNickName;
             model.DeliveryAddress = order.DeliveryAddress;
-            model.PaymentName = order.PaymentName;
-            model.PayBatch = order.PayBatch;
+            model.PaymentName = "";//TODO;
             model.DeliveryName = order.DeliveryName;
             model.OrderStatus = order.OrderStatus;
-            model.TimePaid = order.TimePaid;
+            model.TimePaid = DateTime.Now;//TODO
             model.TimeCreated = order.TimeCreated;
             return model;
         }

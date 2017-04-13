@@ -35,14 +35,9 @@ namespace MMY.Data.Model
         public string UserNickName { get; set; }
         public System.Guid DeliveryAddressGuid { get; set; }
         public string DeliveryAddress { get; set; }
-        public System.Guid PaymentGuid { get; set; }
-        public string PaymentName { get; set; }
-        public string PayBatch { get; set; }
         public System.Guid DeliveryGuid { get; set; }
         public string DeliveryName { get; set; }
-        public string TrackingNumber { get; set; }
         public string OrderStatus { get; set; }
-        public System.DateTime TimePaid { get; set; }
         public System.DateTime TimeCreated { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

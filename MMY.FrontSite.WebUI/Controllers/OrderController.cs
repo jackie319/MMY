@@ -25,6 +25,10 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// <returns></returns>
         public ActionResult Add(AddOrderViewModel model)
         {
+            //生成订单和支付前需检查 
+            //1.该商品状态（有没有被下架，删除等）
+            //2.商品价格有没有变动（如果后台修改了商品价格则需重新下单）
+            //3.商品库存（下单时检查是否还有库存，支付时扣除库存，同时检查是否还有库存）
             return this.ResultSuccess();
         }
         /// <summary>
@@ -49,6 +53,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// <returns></returns>
         public ActionResult Cancel(Guid orderGuid)
         {
+            _order.CancleOrder(orderGuid);
             return this.ResultSuccess();
         }
 
@@ -59,6 +64,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// <returns></returns>
         public ActionResult Refund(Guid orderGuid)
         {
+            //TODO:
             return this.ResultSuccess();
         }
     }

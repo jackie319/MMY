@@ -28,8 +28,6 @@ namespace MMY.Test
             order.ProductPrice = 123;
             order.UserGuid=Guid.Empty;
             order.UserName = string.Empty;
-            order.TimePaid=DateTime.Now;
-            order.TrackingNumber = string.Empty;
             order.UserNickName = string.Empty;
             _order.CreateOrder(order);
         }

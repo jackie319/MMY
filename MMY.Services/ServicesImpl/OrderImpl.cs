@@ -61,9 +61,6 @@ namespace MMY.Services.ServicesImpl
         {
             order.Guid=Guid.NewGuid();
             order.TimeCreated=DateTime.Now;
-            order.PayBatch = string.Empty;
-            order.PaymentGuid = Guid.Empty;
-            order.PaymentName = string.Empty;
             order.DeliveryGuid = Guid.Empty;
             order.DeliveryName = string.Empty;
             order.DeliveryAddressGuid = Guid.Empty;
@@ -89,6 +86,14 @@ namespace MMY.Services.ServicesImpl
             orderDelivery.Guid = Guid.NewGuid();
             orderDelivery.TimeCreated=DateTime.Now;
            _orderDeliveryRepository.Insert(orderDelivery);
+        }
+
+        public void CancleOrder(Guid orderGuid)
+        {
+            var order=_orderRepository.Table.FirstOrDefault(q => q.Guid == orderGuid);
+            if (order == null) return;
+            order.OrderStatus = OrderStatusEnum.Cancel.ToString();
+            _orderRepository.Update(order);
         }
     }
 }

@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="IServices\IAuthority.cs" />
     <Compile Include="IServices\IOrder.cs" />
+    <Compile Include="IServices\IPay.cs" />
     <Compile Include="IServices\IProduct.cs" />
     <Compile Include="IServices\IProductCategory.cs" />
     <Compile Include="IServices\IProductSupplier.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="ServicesImpl\AppSetting.cs" />
     <Compile Include="ServicesImpl\AuthorityImpl.cs" />
     <Compile Include="ServicesImpl\OrderImpl.cs" />
+    <Compile Include="ServicesImpl\PayImpl.cs" />
     <Compile Include="ServicesImpl\ProductCategoryImpl.cs" />
     <Compile Include="ServicesImpl\ProductImpl.cs" />
     <Compile Include="ServicesImpl\ProductSupplierImpl.cs" />

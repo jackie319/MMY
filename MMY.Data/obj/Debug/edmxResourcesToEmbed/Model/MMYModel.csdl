@@ -29,6 +29,7 @@
     <EntitySet Name="UserDeliveryAddress" EntityType="MMYModel.UserDeliveryAddress" />
     <EntitySet Name="UserFavorite" EntityType="MMYModel.UserFavorite" />
     <EntitySet Name="UserOperationRecords" EntityType="MMYModel.UserOperationRecords" />
+    <EntitySet Name="UserShoppingCart" EntityType="MMYModel.UserShoppingCart" />
     <EntitySet Name="OrderV" EntityType="MMYModel.OrderV" />
     <EntitySet Name="ProductV" EntityType="MMYModel.ProductV" />
     <AssociationSet Name="FK_RoleInFunction_Function" Association="MMYModel.FK_RoleInFunction_Function">
@@ -79,6 +80,10 @@
       <End Role="Product" EntitySet="Product" />
       <End Role="UserFavorite" EntitySet="UserFavorite" />
     </AssociationSet>
+    <AssociationSet Name="FK_UserShoppingCart_Product" Association="MMYModel.FK_UserShoppingCart_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
+    </AssociationSet>
     <AssociationSet Name="FK_ProductPurchaseRecords_ProductSupplier" Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier">
       <End Role="ProductSupplier" EntitySet="ProductSupplier" />
       <End Role="ProductPurchaseRecords" EntitySet="ProductPurchaseRecords" />
@@ -94,11 +99,6 @@
     <AssociationSet Name="FK_UserOperationRecords_UserAccount" Association="MMYModel.FK_UserOperationRecords_UserAccount">
       <End Role="UserAccount" EntitySet="UserAccount" />
       <End Role="UserOperationRecords" EntitySet="UserOperationRecords" />
-    </AssociationSet>
-    <EntitySet Name="UserShoppingCart" EntityType="MMYModel.UserShoppingCart" />
-    <AssociationSet Name="FK_UserShoppingCart_Product" Association="MMYModel.FK_UserShoppingCart_Product">
-      <End Role="Product" EntitySet="Product" />
-      <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
     </AssociationSet>
     <AssociationSet Name="FK_UserShoppingCart_UserAccount" Association="MMYModel.FK_UserShoppingCart_UserAccount">
       <End Role="UserAccount" EntitySet="UserAccount" />
@@ -201,14 +201,9 @@
     <Property Name="UserNickName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DeliveryAddressGuid" Type="Guid" Nullable="false" />
     <Property Name="DeliveryAddress" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="PaymentGuid" Type="Guid" Nullable="false" />
-    <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="PayBatch" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="DeliveryGuid" Type="Guid" Nullable="false" />
     <Property Name="DeliveryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TrackingNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="OrderStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="TimePaid" Type="DateTime" Nullable="false" Precision="7" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
     <NavigationProperty Name="OrderEvaluation" Relationship="MMYModel.FK_OrderEvaluation_Order" FromRole="Order" ToRole="OrderEvaluation" />
     <NavigationProperty Name="OrderPayRecords" Relationship="MMYModel.FK_OrderPayRecords_Order" FromRole="Order" ToRole="OrderPayRecords" />
@@ -236,6 +231,7 @@
     </Key>
     <Property Name="Guid" Type="Guid" Nullable="false" />
     <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
   </EntityType>
   <EntityType Name="OrderPayRecords">
@@ -244,6 +240,11 @@
     </Key>
     <Property Name="Guid" Type="Guid" Nullable="false" />
     <Property Name="OrderGuid" Type="Guid" Nullable="false" />
+    <Property Name="PaymentGuid" Type="Guid" Nullable="false" />
+    <Property Name="PayBatch" Type="Guid" Nullable="false" />
+    <Property Name="PayResult" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TimeUpdate" Type="DateTime" Nullable="false" Precision="7" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
     <NavigationProperty Name="Order" Relationship="MMYModel.FK_OrderPayRecords_Order" FromRole="OrderPayRecords" ToRole="Order" />
   </EntityType>
@@ -341,6 +342,7 @@
     <Property Name="ProductGuid" Type="Guid" Nullable="false" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="Grams" Type="Int32" Nullable="false" />
     <Property Name="Price" Type="Int32" Nullable="false" />
     <Property Name="PromotionPrice" Type="Int32" Nullable="false" />
     <Property Name="AlbumGuid" Type="Guid" Nullable="false" />
@@ -466,6 +468,21 @@
     <Property Name="UserGuid" Type="Guid" Nullable="false" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
     <NavigationProperty Name="UserAccount" Relationship="MMYModel.FK_UserOperationRecords_UserAccount" FromRole="UserOperationRecords" ToRole="UserAccount" />
+  </EntityType>
+  <EntityType Name="UserShoppingCart">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="Guid" Type="Guid" Nullable="false" />
+    <Property Name="UserGuid" Type="Guid" Nullable="false" />
+    <Property Name="ProductGuid" Type="Guid" Nullable="false" />
+    <Property Name="ClassificationGuid" Type="Guid" Nullable="false" />
+    <Property Name="ProductNum" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="Product" Relationship="MMYModel.FK_UserShoppingCart_Product" FromRole="UserShoppingCart" ToRole="Product" />
+    <NavigationProperty Name="UserAccount" Relationship="MMYModel.FK_UserShoppingCart_UserAccount" FromRole="UserShoppingCart" ToRole="UserAccount" />
   </EntityType>
   <EntityType Name="OrderV">
     <Key>
@@ -705,6 +722,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_UserShoppingCart_Product">
+    <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="MMYModel.UserShoppingCart" Role="UserShoppingCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="UserShoppingCart">
+        <PropertyRef Name="ProductGuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ProductPurchaseRecords_ProductSupplier">
     <End Type="MMYModel.ProductSupplier" Role="ProductSupplier" Multiplicity="1" />
     <End Type="MMYModel.ProductPurchaseRecords" Role="ProductPurchaseRecords" Multiplicity="*" />
@@ -750,33 +779,6 @@
       </Principal>
       <Dependent Role="UserOperationRecords">
         <PropertyRef Name="UserGuid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="UserShoppingCart">
-    <Key>
-      <PropertyRef Name="Guid" />
-    </Key>
-    <Property Name="Guid" Type="Guid" Nullable="false" />
-    <Property Name="UserGuid" Type="Guid" Nullable="false" />
-    <Property Name="ProductGuid" Type="Guid" Nullable="false" />
-    <Property Name="ClassificationGuid" Type="Guid" Nullable="false" />
-    <Property Name="ProductNum" Type="Int32" Nullable="false" />
-    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-    <NavigationProperty Name="Product" Relationship="MMYModel.FK_UserShoppingCart_Product" FromRole="UserShoppingCart" ToRole="Product" />
-    <NavigationProperty Name="UserAccount" Relationship="MMYModel.FK_UserShoppingCart_UserAccount" FromRole="UserShoppingCart" ToRole="UserAccount" />
-  </EntityType>
-  <Association Name="FK_UserShoppingCart_Product">
-    <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
-    <End Type="MMYModel.UserShoppingCart" Role="UserShoppingCart" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Product">
-        <PropertyRef Name="Guid" />
-      </Principal>
-      <Dependent Role="UserShoppingCart">
-        <PropertyRef Name="ProductGuid" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -82,14 +82,9 @@
       <EntityTypeMapping TypeName="MMYModel.Order">
         <MappingFragment StoreEntitySet="Order">
           <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-          <ScalarProperty Name="TimePaid" ColumnName="TimePaid" />
           <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
-          <ScalarProperty Name="TrackingNumber" ColumnName="TrackingNumber" />
           <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
           <ScalarProperty Name="DeliveryGuid" ColumnName="DeliveryGuid" />
-          <ScalarProperty Name="PayBatch" ColumnName="PayBatch" />
-          <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
-          <ScalarProperty Name="PaymentGuid" ColumnName="PaymentGuid" />
           <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
           <ScalarProperty Name="DeliveryAddressGuid" ColumnName="DeliveryAddressGuid" />
           <ScalarProperty Name="UserNickName" ColumnName="UserNickName" />
@@ -129,6 +124,7 @@
       <EntityTypeMapping TypeName="MMYModel.OrderPayment">
         <MappingFragment StoreEntitySet="OrderPayment">
           <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
           <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
         </MappingFragment>
@@ -138,6 +134,11 @@
       <EntityTypeMapping TypeName="MMYModel.OrderPayRecords">
         <MappingFragment StoreEntitySet="OrderPayRecords">
           <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="TimeUpdate" ColumnName="TimeUpdate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PayResult" ColumnName="PayResult" />
+          <ScalarProperty Name="PayBatch" ColumnName="PayBatch" />
+          <ScalarProperty Name="PaymentGuid" ColumnName="PaymentGuid" />
           <ScalarProperty Name="OrderGuid" ColumnName="OrderGuid" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
         </MappingFragment>
@@ -235,6 +236,7 @@
           <ScalarProperty Name="AlbumGuid" ColumnName="AlbumGuid" />
           <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
           <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Grams" ColumnName="Grams" />
           <ScalarProperty Name="Number" ColumnName="Number" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
@@ -357,6 +359,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="UserShoppingCart">
+      <EntityTypeMapping TypeName="MMYModel.UserShoppingCart">
+        <MappingFragment StoreEntitySet="UserShoppingCart">
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductNum" ColumnName="ProductNum" />
+          <ScalarProperty Name="ClassificationGuid" ColumnName="ClassificationGuid" />
+          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+          <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="OrderV">
       <EntityTypeMapping TypeName="MMYModel.OrderV">
         <MappingFragment StoreEntitySet="OrderV">
@@ -411,20 +427,6 @@
           <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="UserShoppingCart">
-      <EntityTypeMapping TypeName="MMYModel.UserShoppingCart">
-        <MappingFragment StoreEntitySet="UserShoppingCart">
-          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="ProductNum" ColumnName="ProductNum" />
-          <ScalarProperty Name="ClassificationGuid" ColumnName="ClassificationGuid" />
-          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
-          <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
-          <ScalarProperty Name="Guid" ColumnName="Guid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

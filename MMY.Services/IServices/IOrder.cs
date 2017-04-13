@@ -14,6 +14,7 @@ namespace MMY.Services.IServices
             DateTime? timeCreatedBegin, DateTime? timeCreatedEnd, int skip, int take, out int total);
 
         void CreateOrder(Order order);
+        void CancleOrder(Guid orderGuid);
 
         void CreateOrderPayment(OrderPayment orderPayment);
         void CreatedOrderDelivery(OrderDelivery orderDelivery);

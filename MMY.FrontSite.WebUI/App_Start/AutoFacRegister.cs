@@ -22,6 +22,7 @@ namespace MMY.FrontSite.WebUI.App_Start
             builder.RegisterType<OrderImpl>().As<IOrder>().InstancePerDependency();
             builder.RegisterType<UserFavoriteImpl>().As<IUserFavorite>().InstancePerDependency();
             builder.RegisterType<ShoppingCartImpl>().As<IShoppingCart>().InstancePerDependency();
+            builder.RegisterType<PayImpl>().As<IPay>().InstancePerDependency();
         }
     }
 }

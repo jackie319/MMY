@@ -16,6 +16,11 @@ namespace MMY.Data.Model
     {
         public System.Guid Guid { get; set; }
         public System.Guid OrderGuid { get; set; }
+        public System.Guid PaymentGuid { get; set; }
+        public System.Guid PayBatch { get; set; }
+        public string PayResult { get; set; }
+        public string Remark { get; set; }
+        public System.DateTime TimeUpdate { get; set; }
         public System.DateTime TimeCreated { get; set; }
     
         public virtual Order Order { get; set; }

@@ -16,6 +16,7 @@ namespace MMY.Data.Model
     {
         public System.Guid Guid { get; set; }
         public string PaymentName { get; set; }
+        public string PaymentType { get; set; }
         public System.DateTime TimeCreated { get; set; }
     }
 }
