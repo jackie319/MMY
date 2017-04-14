@@ -17,9 +17,17 @@ namespace MMY.Services.ServiceModel
         /// </summary>
         Cancel,
         /// <summary>
+        /// 支付中
+        /// </summary>
+        Paying,
+        /// <summary>
         /// 已支付
         /// </summary>
         Paid,
+        /// <summary>
+        /// 支付失败
+        /// </summary>
+        PayFailure,
         /// <summary>
         /// 已发货
         /// </summary>
