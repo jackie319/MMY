@@ -13,19 +13,27 @@ namespace MMY.FrontSite.WebUI.Controllers
     {
         private IOrder _order;
         private IPay _pay;
-        public PayController(IOrder order,IPay pay)
+        public PayController(IOrder order, IPay pay)
         {
             _order = order;
             _pay = pay;
         }
         [JKAuthorize]
-        public ActionResult WechatPay(IList<Guid> orderGuids)
+        public ActionResult WechatPayBatch(IList<Guid> orderGuids)
         {
             foreach (var orderGuid in orderGuids)
             {
                 _pay.WechatPay(orderGuid);
             }
-        
+
+            return this.ResultSuccess();
+        }
+
+        [JKAuthorize]
+        public ActionResult WechatPay(Guid orderGuid)
+        {
+            _pay.WechatPay(orderGuid);
+
             return this.ResultSuccess();
         }
     }

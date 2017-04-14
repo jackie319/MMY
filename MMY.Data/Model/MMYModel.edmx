@@ -121,6 +121,7 @@
           <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
           <Property Name="PaymentName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="PaymentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="OrderPayRecords">
@@ -833,7 +834,6 @@
           <EntitySet Name="Order" EntityType="MMYModel.Order" />
           <EntitySet Name="OrderDelivery" EntityType="MMYModel.OrderDelivery" />
           <EntitySet Name="OrderEvaluation" EntityType="MMYModel.OrderEvaluation" />
-          <EntitySet Name="OrderPayment" EntityType="MMYModel.OrderPayment" />
           <EntitySet Name="OrderPayRecords" EntityType="MMYModel.OrderPayRecords" />
           <EntitySet Name="PositionCity" EntityType="MMYModel.PositionCity" />
           <EntitySet Name="PositionDistrict" EntityType="MMYModel.PositionDistrict" />
@@ -926,6 +926,7 @@
             <End Role="UserAccount" EntitySet="UserAccount" />
             <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
           </AssociationSet>
+          <EntitySet Name="OrderPayment" EntityType="MMYModel.OrderPayment" />
         </EntityContainer>
         <EntityType Name="Activity">
           <Key>
@@ -1046,15 +1047,6 @@
           <Property Name="OrderGuid" Type="Guid" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
           <NavigationProperty Name="Order" Relationship="MMYModel.FK_OrderEvaluation_Order" FromRole="OrderEvaluation" ToRole="Order" />
-        </EntityType>
-        <EntityType Name="OrderPayment">
-          <Key>
-            <PropertyRef Name="Guid" />
-          </Key>
-          <Property Name="Guid" Type="Guid" Nullable="false" />
-          <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PaymentType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
         </EntityType>
         <EntityType Name="OrderPayRecords">
           <Key>
@@ -1616,6 +1608,16 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="OrderPayment">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Name="Guid" Type="Guid" Nullable="false" />
+          <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1737,16 +1739,6 @@
               <MappingFragment StoreEntitySet="OrderEvaluation">
                 <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
                 <ScalarProperty Name="OrderGuid" ColumnName="OrderGuid" />
-                <ScalarProperty Name="Guid" ColumnName="Guid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="OrderPayment">
-            <EntityTypeMapping TypeName="MMYModel.OrderPayment">
-              <MappingFragment StoreEntitySet="OrderPayment">
-                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-                <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
-                <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
                 <ScalarProperty Name="Guid" ColumnName="Guid" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -2048,6 +2040,17 @@
                 <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
                 <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderPayment">
+            <EntityTypeMapping TypeName="MMYModel.OrderPayment">
+              <MappingFragment StoreEntitySet="OrderPayment">
+                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+                <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

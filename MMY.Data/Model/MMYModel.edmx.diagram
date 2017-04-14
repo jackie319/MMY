@@ -15,7 +15,6 @@
         <EntityTypeShape EntityType="MMYModel.Order" Width="1.5" PointX="10.75" PointY="2.5" />
         <EntityTypeShape EntityType="MMYModel.OrderDelivery" Width="1.5" PointX="2.75" PointY="2" />
         <EntityTypeShape EntityType="MMYModel.OrderEvaluation" Width="1.5" PointX="13" PointY="2.25" />
-        <EntityTypeShape EntityType="MMYModel.OrderPayment" Width="1.5" PointX="15.75" PointY="5" />
         <EntityTypeShape EntityType="MMYModel.OrderPayRecords" Width="1.5" PointX="13" PointY="4.75" />
         <EntityTypeShape EntityType="MMYModel.PositionCity" Width="1.5" PointX="15.75" PointY="8" />
         <EntityTypeShape EntityType="MMYModel.PositionDistrict" Width="1.5" PointX="15.75" PointY="11" />
@@ -54,6 +53,7 @@
         <AssociationConnector Association="MMYModel.FK_UserFavorite_UserAccount" />
         <AssociationConnector Association="MMYModel.FK_UserOperationRecords_UserAccount" />
         <AssociationConnector Association="MMYModel.FK_UserShoppingCart_UserAccount" />
+        <EntityTypeShape EntityType="MMYModel.OrderPayment" Width="1.5" PointX="3.375" PointY="18.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
