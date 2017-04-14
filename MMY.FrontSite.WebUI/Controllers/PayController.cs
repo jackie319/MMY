@@ -19,9 +19,13 @@ namespace MMY.FrontSite.WebUI.Controllers
             _pay = pay;
         }
         [JKAuthorize]
-        public ActionResult WechatPay(Guid orderGuid,Guid paymentGuid)
+        public ActionResult WechatPay(IList<Guid> orderGuids)
         {
-            _pay.Pay(orderGuid,paymentGuid);
+            foreach (var orderGuid in orderGuids)
+            {
+                _pay.WechatPay(orderGuid);
+            }
+        
             return this.ResultSuccess();
         }
     }

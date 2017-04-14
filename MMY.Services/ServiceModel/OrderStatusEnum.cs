@@ -47,4 +47,10 @@ namespace MMY.Services.ServiceModel
         BeOrder
 
     }
+
+    public enum PaymentEnum
+    {
+        Alipay,
+        WechatPay
+    }
 }

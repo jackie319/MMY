@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using JK.Framework.Core;
 using JK.Framework.Web.Filter;
 using JK.Framework.Web.Model;
 using MMY.FrontSite.Domain;
 using MMY.FrontSite.WebUI.Models.Order;
 using MMY.Services.IServices;
+using MMY.Services.ServiceModel;
 
 namespace MMY.FrontSite.WebUI.Controllers
 {
@@ -31,29 +33,20 @@ namespace MMY.FrontSite.WebUI.Controllers
         public ActionResult Add(AddOrderViewModel model)
         {
             var mmyUser=(UserModel)HttpContext.User;
-            //生成订单和支付前需检查 
-            //1.该商品状态（有没有被下架，删除等）
-            //2.商品价格有没有变动（如果后台修改了商品价格则需重新下单）
-            //3.商品库存（下单时检查是否还有库存，支付时扣除库存，同时检查是否还有库存）
             var entity = model.CopyTo();
             //用户信息
             entity.UserGuid = mmyUser.UserGuid;
             entity.UserName = mmyUser.UserName;
             entity.UserNickName = mmyUser.NickName;
-
-            //商品信息
-            var product=_product.FindProduct(entity.ProductGuid);
-            var classification = product.ProductClassification.FirstOrDefault(q => q.Guid == entity.ClassificationGuid);
-            entity.ProductName = product.SaleTitle;
-            if (classification != null)
+            try
             {
-                entity.ClassificationName = classification.Name;
+                _order.CreateOrder(entity);
             }
-            //收货地址
-            var address=_userAccount.FinDeliveryAddress(entity.DeliveryAddressGuid);
-            string myAddress = string.Format("{0},{1},{2},{3}",address.ReceiverName,address.Phone,address.Address,address.ZipCode);
-            entity.DeliveryAddress = myAddress;
-            _order.CreateOrder(entity);
+            catch (CommonException ex)
+            {
+                return this.ResultError(ex.Message);
+            }
+      
             return this.ResultSuccess();
         }
         /// <summary>

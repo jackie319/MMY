@@ -151,6 +151,7 @@
     <Compile Include="partial\Order.partial.cs" />
     <Compile Include="partial\OrderDelivery.partial.cs" />
     <Compile Include="partial\OrderPayment.partial.cs" />
+    <Compile Include="partial\OrderPayRecords.partial.cs" />
     <Compile Include="partial\Product.partial.cs" />
     <Compile Include="partial\ProductAlbum.partial.cs" />
     <Compile Include="partial\ProductCategory.partial.cs" />

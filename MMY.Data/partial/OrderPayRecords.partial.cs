@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JK.Framework.Core;
 
-namespace MMY.Services.IServices
+namespace MMY.Data.Model
 {
-    public interface IPay
+   public partial class OrderPayRecords:BaseEntity
     {
-        void WechatPay(Guid orderGuid);
     }
 }
