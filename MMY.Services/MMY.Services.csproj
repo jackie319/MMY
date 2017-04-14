@@ -58,6 +58,7 @@
     <Compile Include="IServices\IProductCategory.cs" />
     <Compile Include="IServices\IProductSupplier.cs" />
     <Compile Include="IServices\IShoppingCart.cs" />
+    <Compile Include="IServices\ISms.cs" />
     <Compile Include="IServices\IUserAccount.cs" />
     <Compile Include="IServices\IUserFavorite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="ServicesImpl\ProductImpl.cs" />
     <Compile Include="ServicesImpl\ProductSupplierImpl.cs" />
     <Compile Include="ServicesImpl\ShoppingCartImpl.cs" />
+    <Compile Include="ServicesImpl\SmsImpl.cs" />
     <Compile Include="ServicesImpl\UserAccountImpl.cs" />
     <Compile Include="ServicesImpl\UserFavoriteImpl.cs" />
   </ItemGroup>

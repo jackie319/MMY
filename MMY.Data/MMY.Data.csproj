@@ -145,6 +145,9 @@
     <Compile Include="Model\ProductV.cs">
       <DependentUpon>MMYModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\SmsRecords.cs">
+      <DependentUpon>MMYModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="partial\Activity.partial.cs" />
     <Compile Include="partial\AuthorityFunction.partial.cs" />
     <Compile Include="partial\AuthrityRole.partial.cs" />
@@ -177,6 +180,7 @@
       <DependentUpon>MMYModel.tt</DependentUpon>
     </Compile>
     <Compile Include="partial\ProductV.partial.cs" />
+    <Compile Include="partial\SmsRecords.partial.cs" />
     <Compile Include="partial\UserAccount.partial.cs" />
     <Compile Include="partial\UserDeliveryAddress.partial.cs" />
     <Compile Include="partial\UserFavorite.partial.cs" />

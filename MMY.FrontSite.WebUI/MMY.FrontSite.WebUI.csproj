@@ -233,6 +233,7 @@
     <Compile Include="Controllers\PictureController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\SmsController.cs" />
     <Compile Include="Controllers\UserInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -315,6 +316,7 @@
     <Folder Include="Views\Picture\" />
     <Folder Include="Views\Product\" />
     <Folder Include="Views\ShoppingCart\" />
+    <Folder Include="Views\Sms\" />
     <Folder Include="Views\UserInfo\" />
   </ItemGroup>
   <ItemGroup>
