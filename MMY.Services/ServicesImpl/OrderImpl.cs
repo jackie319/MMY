@@ -60,18 +60,21 @@ namespace MMY.Services.ServicesImpl
         public void CreateOrder(Order order)
         {
             order.Guid=Guid.NewGuid();
+            order.OrderNo = CreateOrderNo();
+            order.OrderAmount = order.ProductNumber * order.ProductPrice;
             order.TimeCreated=DateTime.Now;
-            order.DeliveryGuid = Guid.Empty;
+            order.DeliveryGuid = Guid.Empty;//TODO:
             order.DeliveryName = string.Empty;
-            order.DeliveryAddressGuid = Guid.Empty;
-            order.DeliveryAddress = string.Empty;
             order.OrderStatus = OrderStatusEnum.Default.ToString();
             _orderRepository.Insert(order);
         }
 
         private string CreateOrderNo()
         {
-            return string.Empty;
+            string date = DateTime.Now.ToString("yyMMddHHmmss");
+            //种子精确到百纳秒级别
+            int ram =new Random(BitConverter.ToInt32(Guid.NewGuid().ToByteArray(),0)).Next(100000, 999999);
+            return string.Format(date+ram);
         }
 
         public void CreateOrderPayment(OrderPayment orderPayment)
