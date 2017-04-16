@@ -21,7 +21,7 @@ namespace MMY.Data.Model
         public int Grams { get; set; }
         public int Price { get; set; }
         public int PromotionPrice { get; set; }
-        public System.Guid AlbumGuid { get; set; }
+        public string PicUrl { get; set; }
         public bool IsDeleted { get; set; }
         public System.DateTime TimeCreated { get; set; }
     

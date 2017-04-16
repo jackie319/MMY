@@ -225,7 +225,7 @@
           <Property Name="Grams" Type="int" Nullable="false" />
           <Property Name="Price" Type="int" Nullable="false" />
           <Property Name="PromotionPrice" Type="int" Nullable="false" />
-          <Property Name="AlbumGuid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PicUrl" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
@@ -857,7 +857,6 @@
           <EntitySet Name="Product" EntityType="MMYModel.Product" />
           <EntitySet Name="ProductAlbum" EntityType="MMYModel.ProductAlbum" />
           <EntitySet Name="ProductCategory" EntityType="MMYModel.ProductCategory" />
-          <EntitySet Name="ProductClassification" EntityType="MMYModel.ProductClassification" />
           <EntitySet Name="ProductPurchaseRecords" EntityType="MMYModel.ProductPurchaseRecords" />
           <EntitySet Name="ProductQRCode" EntityType="MMYModel.ProductQRCode" />
           <EntitySet Name="ProductSupplier" EntityType="MMYModel.ProductSupplier" />
@@ -901,10 +900,6 @@
             <End Role="Product" EntitySet="Product" />
             <End Role="ProductAlbum" EntitySet="ProductAlbum" />
           </AssociationSet>
-          <AssociationSet Name="FK_ProductClassification_Product" Association="MMYModel.FK_ProductClassification_Product">
-            <End Role="Product" EntitySet="Product" />
-            <End Role="ProductClassification" EntitySet="ProductClassification" />
-          </AssociationSet>
           <AssociationSet Name="FK_ProductPurchaseRecords_Product" Association="MMYModel.FK_ProductPurchaseRecords_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="ProductPurchaseRecords" EntitySet="ProductPurchaseRecords" />
@@ -943,6 +938,11 @@
           </AssociationSet>
           <EntitySet Name="OrderPayment" EntityType="MMYModel.OrderPayment" />
           <EntitySet Name="SmsRecords" EntityType="MMYModel.SmsRecords" />
+          <EntitySet Name="ProductClassification" EntityType="MMYModel.ProductClassification" />
+          <AssociationSet Name="FK_ProductClassification_Product" Association="MMYModel.FK_ProductClassification_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductClassification" EntitySet="ProductClassification" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Activity">
           <Key>
@@ -1134,11 +1134,11 @@
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
           <NavigationProperty Name="ProductCategory" Relationship="MMYModel.FK_Product_ProductCategory" FromRole="Product" ToRole="ProductCategory" />
           <NavigationProperty Name="ProductAlbum" Relationship="MMYModel.FK_ProductAlbum_Product" FromRole="Product" ToRole="ProductAlbum" />
-          <NavigationProperty Name="ProductClassification" Relationship="MMYModel.FK_ProductClassification_Product" FromRole="Product" ToRole="ProductClassification" />
           <NavigationProperty Name="ProductPurchaseRecords" Relationship="MMYModel.FK_ProductPurchaseRecords_Product" FromRole="Product" ToRole="ProductPurchaseRecords" />
           <NavigationProperty Name="ProductQRCode" Relationship="MMYModel.FK_ProductQRCode_Product" FromRole="Product" ToRole="ProductQRCode" />
           <NavigationProperty Name="UserFavorite" Relationship="MMYModel.FK_UserFavorite_Product" FromRole="Product" ToRole="UserFavorite" />
           <NavigationProperty Name="UserShoppingCart" Relationship="MMYModel.FK_UserShoppingCart_Product" FromRole="Product" ToRole="UserShoppingCart" />
+          <NavigationProperty Name="ProductClassification" Relationship="MMYModel.FK_ProductClassification_Product" FromRole="Product" ToRole="ProductClassification" />
         </EntityType>
         <EntityType Name="ProductAlbum">
           <Key>
@@ -1163,22 +1163,6 @@
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
           <NavigationProperty Name="Product" Relationship="MMYModel.FK_Product_ProductCategory" FromRole="ProductCategory" ToRole="Product" />
-        </EntityType>
-        <EntityType Name="ProductClassification">
-          <Key>
-            <PropertyRef Name="Guid" />
-          </Key>
-          <Property Name="Guid" Type="Guid" Nullable="false" />
-          <Property Name="ProductGuid" Type="Guid" Nullable="false" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Number" Type="Int32" Nullable="false" />
-          <Property Name="Grams" Type="Int32" Nullable="false" />
-          <Property Name="Price" Type="Int32" Nullable="false" />
-          <Property Name="PromotionPrice" Type="Int32" Nullable="false" />
-          <Property Name="AlbumGuid" Type="Guid" Nullable="false" />
-          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Product" Relationship="MMYModel.FK_ProductClassification_Product" FromRole="ProductClassification" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductPurchaseRecords">
           <Key>
@@ -1504,18 +1488,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ProductClassification_Product">
-          <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
-          <End Type="MMYModel.ProductClassification" Role="ProductClassification" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="Guid" />
-            </Principal>
-            <Dependent Role="ProductClassification">
-              <PropertyRef Name="ProductGuid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ProductPurchaseRecords_Product">
           <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
           <End Type="MMYModel.ProductPurchaseRecords" Role="ProductPurchaseRecords" Multiplicity="*" />
@@ -1648,6 +1620,34 @@
           <Property Name="TimeUpdate" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
         </EntityType>
+        <EntityType Name="ProductClassification">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Name="Guid" Type="Guid" Nullable="false" />
+          <Property Name="ProductGuid" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="Grams" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="PromotionPrice" Type="Int32" Nullable="false" />
+          <Property Name="PicUrl" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+          <NavigationProperty Name="Product" Relationship="MMYModel.FK_ProductClassification_Product" FromRole="ProductClassification" ToRole="Product" />
+        </EntityType>
+        <Association Name="FK_ProductClassification_Product">
+          <End Type="MMYModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="MMYModel.ProductClassification" Role="ProductClassification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Guid" />
+            </Principal>
+            <Dependent Role="ProductClassification">
+              <PropertyRef Name="ProductGuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1871,22 +1871,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ProductClassification">
-            <EntityTypeMapping TypeName="MMYModel.ProductClassification">
-              <MappingFragment StoreEntitySet="ProductClassification">
-                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="AlbumGuid" ColumnName="AlbumGuid" />
-                <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="Grams" ColumnName="Grams" />
-                <ScalarProperty Name="Number" ColumnName="Number" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
-                <ScalarProperty Name="Guid" ColumnName="Guid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ProductPurchaseRecords">
             <EntityTypeMapping TypeName="MMYModel.ProductPurchaseRecords">
               <MappingFragment StoreEntitySet="ProductPurchaseRecords">
@@ -2096,6 +2080,22 @@
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Guid" ColumnName="Guid" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductClassification">
+            <EntityTypeMapping TypeName="MMYModel.ProductClassification">
+              <MappingFragment StoreEntitySet="ProductClassification">
+                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="PicUrl" ColumnName="PicUrl" />
+                <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Grams" ColumnName="Grams" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

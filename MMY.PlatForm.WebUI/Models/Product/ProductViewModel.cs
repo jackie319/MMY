@@ -101,7 +101,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
         [Required]
         public Decimal PromotionPrice { get; set; }
         [Required]
-        public System.Guid AlbumGuid { get; set; }
+        public string PicUrl { get; set; }
 
         public static ProductClassificationViewModel CopyFrom(ProductClassification productClassification)
         {
@@ -112,7 +112,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
             viewModel.Number = productClassification.Number;
             viewModel.Price = Convert.ToDecimal(productClassification.Price) / 100;
             viewModel.PromotionPrice = Convert.ToDecimal(productClassification.PromotionPrice) / 100;
-            viewModel.AlbumGuid = productClassification.AlbumGuid;
+            viewModel.PicUrl = productClassification.PicUrl;
             viewModel.Grams = productClassification.Grams;
             return viewModel;
         }
@@ -125,7 +125,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
             classification.Number = Number;
             classification.Price = Convert.ToInt32(Price * 100);
             classification.PromotionPrice = Convert.ToInt32(PromotionPrice * 100);
-            classification.AlbumGuid = AlbumGuid;
+            classification.PicUrl = PicUrl;
             classification.Grams = Grams;
             return classification;
         }

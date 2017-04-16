@@ -220,7 +220,7 @@
     <Property Name="Grams" Type="int" Nullable="false" />
     <Property Name="Price" Type="int" Nullable="false" />
     <Property Name="PromotionPrice" Type="int" Nullable="false" />
-    <Property Name="AlbumGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PicUrl" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
   </EntityType>
