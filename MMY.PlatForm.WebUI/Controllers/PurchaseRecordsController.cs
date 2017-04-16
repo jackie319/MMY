@@ -34,8 +34,6 @@ namespace MMY.PlatForm.WebUI.Controllers
         {
             var record = model.CopyTo();
             var user = (UserModel) HttpContext.User;
-            record.ProductName = string.Empty;//TODO:待完善
-            record.SupplierName = string.Empty;
             record.OperatorGuid = user.UserGuid;
             record.OperatorName = user.NickName;
             _product.AddPurchaseRecords(record);

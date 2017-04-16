@@ -20,14 +20,17 @@ namespace MMY.Services.ServicesImpl
 
         private IRepository<ProductClassification> _productClassificationrRepository;
         private IRepository<ProductAlbum> _productAlbumRepository;
+
+        private IRepository<ProductSupplier> _productSupplieRepository;
         public ProductImpl(IRepository<Product> productRepository, IRepository<ProductV> productVRepository, IRepository<ProductPurchaseRecords> purchaseRepository,
-            IRepository<ProductClassification> productClassificationRepository, IRepository<ProductAlbum> productAlbumRepository)
+            IRepository<ProductClassification> productClassificationRepository, IRepository<ProductAlbum> productAlbumRepository,IRepository<ProductSupplier> productSupplieRepository)
         {
             _productRepository = productRepository;
             _productVRepository = productVRepository;
             _productPurchaseRepository = purchaseRepository;
             _productClassificationrRepository = productClassificationRepository;
             _productAlbumRepository = productAlbumRepository;
+            _productSupplieRepository = productSupplieRepository;
         }
 
         public IList<ProductV> GetProductVs(string productName,Guid? categoryGuid, ProductStatusEnum? status,bool? isSpecialOffer,bool? isRecommended,
@@ -215,12 +218,25 @@ namespace MMY.Services.ServicesImpl
         /// <param name="records"></param>
         public void AddPurchaseRecords(ProductPurchaseRecords records)
         {
+            var product = FindProduct(records.ProductGuid);
             records.Guid = Guid.NewGuid();
             records.TimeCreated=DateTime.Now;
             records.IsDeleted = false;
+            records.ProductName = product.ProductName;
+            var supplier = _productSupplieRepository.Table.FirstOrDefault(q => q.Guid == records.SupplierGuid);
+            if (supplier != null)
+            {
+                records.SupplierName = supplier.SupplierName;
+            }
             _productPurchaseRepository.Insert(records);
-            var product=FindProduct(records.ProductGuid);
+           
             product.ProductNumber += records.Number;
+            //TODO:更新产品分类数量
+            var classification=product.ProductClassification.FirstOrDefault(q => q.Guid == records.ClassificationGuid);
+            if (classification != null)
+            {
+                classification.Number += records.Number;
+            }
             _productRepository.Update(product);//TODO:事务
         }
 

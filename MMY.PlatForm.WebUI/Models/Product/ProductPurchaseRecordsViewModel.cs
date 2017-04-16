@@ -37,20 +37,28 @@ namespace MMY.PlatForm.WebUI.Models.Product
     public class ProductPurchaseRecordsViewModel
     {
         public System.Guid ProductGuid { get; set; }
+
+        public Guid ClassificationGuid { get; set; }
         public System.Guid SupplierGuid { get; set; }
         [Required]
         public string Purchaser { get; set; }
         public int Number { get; set; }
         public string Remark { get; set; }
 
+        public int Grams { get; set; }
+        public decimal BuyingPrice { get; set; }
+       
         public ProductPurchaseRecords CopyTo()
         {
             ProductPurchaseRecords records=new ProductPurchaseRecords();
             records.ProductGuid = ProductGuid;
             records.SupplierGuid = SupplierGuid;
+            records.ClassificationGuid = ClassificationGuid;
             records.Purchaser = Purchaser;
             records.Number = Number;
             records.Remark = Remark??string.Empty;
+            records.BuyingPrice = Convert.ToInt32(BuyingPrice * 100);
+            records.Grams = Grams;
             return records;
         }
     }

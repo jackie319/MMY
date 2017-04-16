@@ -18,11 +18,11 @@ namespace MMY.Data.Model
         public Product()
         {
             this.ProductAlbum = new HashSet<ProductAlbum>();
-            this.ProductPurchaseRecords = new HashSet<ProductPurchaseRecords>();
             this.ProductQRCode = new HashSet<ProductQRCode>();
             this.UserFavorite = new HashSet<UserFavorite>();
             this.UserShoppingCart = new HashSet<UserShoppingCart>();
             this.ProductClassification = new HashSet<ProductClassification>();
+            this.ProductPurchaseRecords = new HashSet<ProductPurchaseRecords>();
         }
     
         public System.Guid Guid { get; set; }
@@ -52,8 +52,6 @@ namespace MMY.Data.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductAlbum> ProductAlbum { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductPurchaseRecords> ProductPurchaseRecords { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductQRCode> ProductQRCode { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserFavorite> UserFavorite { get; set; }
@@ -61,5 +59,7 @@ namespace MMY.Data.Model
         public virtual ICollection<UserShoppingCart> UserShoppingCart { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductClassification> ProductClassification { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductPurchaseRecords> ProductPurchaseRecords { get; set; }
     }
 }

@@ -23,7 +23,6 @@
         <EntityTypeShape EntityType="MMYModel.Product" Width="1.5" PointX="3" PointY="10.125" />
         <EntityTypeShape EntityType="MMYModel.ProductAlbum" Width="1.5" PointX="5.25" PointY="12.375" />
         <EntityTypeShape EntityType="MMYModel.ProductCategory" Width="1.5" PointX="0.75" PointY="12.125" />
-        <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="5.25" PointY="7.25" />
         <EntityTypeShape EntityType="MMYModel.ProductQRCode" Width="1.5" PointX="5.25" PointY="15.5" />
         <EntityTypeShape EntityType="MMYModel.ProductSupplier" Width="1.5" PointX="3" PointY="6.125" />
         <EntityTypeShape EntityType="MMYModel.sysdiagrams" Width="1.5" PointX="14.75" PointY="17" />
@@ -42,11 +41,9 @@
         <AssociationConnector Association="MMYModel.FK_OrderPayRecords_Order" />
         <AssociationConnector Association="MMYModel.FK_Product_ProductCategory" />
         <AssociationConnector Association="MMYModel.FK_ProductAlbum_Product" />
-        <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductQRCode_Product" />
         <AssociationConnector Association="MMYModel.FK_UserFavorite_Product" />
         <AssociationConnector Association="MMYModel.FK_UserShoppingCart_Product" />
-        <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier" />
         <AssociationConnector Association="MMYModel.FK_UserDeliveryAddress_UserAccount" />
         <AssociationConnector Association="MMYModel.FK_UserFavorite_UserAccount" />
         <AssociationConnector Association="MMYModel.FK_UserOperationRecords_UserAccount" />
@@ -55,6 +52,9 @@
         <EntityTypeShape EntityType="MMYModel.SmsRecords" Width="1.5" PointX="18.375" PointY="5.75" />
         <EntityTypeShape EntityType="MMYModel.ProductClassification" Width="1.5" PointX="5.25" PointY="21.75" />
         <AssociationConnector Association="MMYModel.FK_ProductClassification_Product" />
+        <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="5.25" PointY="7.125" />
+        <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" />
+        <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
