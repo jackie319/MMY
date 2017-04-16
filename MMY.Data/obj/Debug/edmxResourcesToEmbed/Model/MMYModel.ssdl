@@ -233,6 +233,7 @@
     <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="ClassificationGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ClassificationName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Grams" Type="int" Nullable="false" />
     <Property Name="BuyingPrice" Type="int" Nullable="false" />
     <Property Name="SupplierGuid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="SupplierName" Type="nvarchar" MaxLength="200" Nullable="false" />

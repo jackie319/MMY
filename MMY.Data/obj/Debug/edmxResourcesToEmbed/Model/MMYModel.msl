@@ -218,27 +218,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ProductPurchaseRecords">
-      <EntityTypeMapping TypeName="MMYModel.ProductPurchaseRecords">
-        <MappingFragment StoreEntitySet="ProductPurchaseRecords">
-          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-          <ScalarProperty Name="Number" ColumnName="Number" />
-          <ScalarProperty Name="Purchaser" ColumnName="Purchaser" />
-          <ScalarProperty Name="OperatorGuid" ColumnName="OperatorGuid" />
-          <ScalarProperty Name="OperatorName" ColumnName="OperatorName" />
-          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
-          <ScalarProperty Name="SupplierGuid" ColumnName="SupplierGuid" />
-          <ScalarProperty Name="BuyingPrice" ColumnName="BuyingPrice" />
-          <ScalarProperty Name="ClassificationName" ColumnName="ClassificationName" />
-          <ScalarProperty Name="ClassificationGuid" ColumnName="ClassificationGuid" />
-          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
-          <ScalarProperty Name="Guid" ColumnName="Guid" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ProductQRCode">
       <EntityTypeMapping TypeName="MMYModel.ProductQRCode">
         <MappingFragment StoreEntitySet="ProductQRCode">
@@ -441,6 +420,28 @@
           <ScalarProperty Name="Grams" ColumnName="Grams" />
           <ScalarProperty Name="Number" ColumnName="Number" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPurchaseRecords">
+      <EntityTypeMapping TypeName="MMYModel.ProductPurchaseRecords">
+        <MappingFragment StoreEntitySet="ProductPurchaseRecords">
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Purchaser" ColumnName="Purchaser" />
+          <ScalarProperty Name="OperatorGuid" ColumnName="OperatorGuid" />
+          <ScalarProperty Name="OperatorName" ColumnName="OperatorName" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierGuid" ColumnName="SupplierGuid" />
+          <ScalarProperty Name="BuyingPrice" ColumnName="BuyingPrice" />
+          <ScalarProperty Name="Grams" ColumnName="Grams" />
+          <ScalarProperty Name="ClassificationName" ColumnName="ClassificationName" />
+          <ScalarProperty Name="ClassificationGuid" ColumnName="ClassificationGuid" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
           <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
         </MappingFragment>

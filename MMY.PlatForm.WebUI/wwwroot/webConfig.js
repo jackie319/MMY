@@ -2,5 +2,6 @@
     debug: true,//是否调试
     systemName: "Element-Admin",
     urlPrefix:"/wwwroot",
-    apiServerAddress: ""
+    apiServerAddress: "",
+    resourceServerAddress: "/Upload/"
 };
