@@ -48,9 +48,16 @@
                     return {
                             isVisible: false,
                             title: "信息",
+                            model: {
+                                Guid: Guid.empty.toString(),
+                                SupplierName: '',
+                                SupplierPhone: '',
+                                SupplierAddress: '',
+                                TimeCreated: new Date()
+                            },
                             search: {
-                                ProductGuid : "",
-                                SupplierGuid : ""
+                                ProductGuid : null,
+                                SupplierGuid : null
                             },
                             list: {
                                 loading: false,
@@ -143,23 +150,22 @@
                     open: function (options) {
                         var me = this;
 
-                        me.search.ProductGuid = "";
-                        me.search.SupplierGuid = "";
-
                         if (typeof options === "object" && options !== null) {
                             for (var propertyName in options) {
                                 if (options.hasOwnProperty(propertyName)) {
-                                    me.search[propertyName]=options[propertyName];
+                                    me[propertyName] = options[propertyName];
                                 }
                             }
                         }
 
                         me.isVisible = true;
-                        me.loadData();
                     },
                     close: function () {
                         this.isVisible = false;
                     }
+                },
+                mounted: function () {
+                   this.loadData();
                 }
             });
         }

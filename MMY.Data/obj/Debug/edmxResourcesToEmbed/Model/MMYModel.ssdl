@@ -116,6 +116,7 @@
     <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="PaymentName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="PaymentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
   </EntityType>
   <EntityType Name="OrderPayRecords">
@@ -262,6 +263,20 @@
     <Property Name="SupplierPhone" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="SupplierAddress" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SmsRecords">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RadomCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ResultStatusCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="TimeUpdate" Type="datetime2" Precision="7" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
@@ -681,6 +696,7 @@
     <EntitySet Name="ProductPurchaseRecords" EntityType="Self.ProductPurchaseRecords" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductQRCode" EntityType="Self.ProductQRCode" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductSupplier" EntityType="Self.ProductSupplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SmsRecords" EntityType="Self.SmsRecords" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserAccount" EntityType="Self.UserAccount" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserDeliveryAddress" EntityType="Self.UserDeliveryAddress" Schema="dbo" store:Type="Tables" />

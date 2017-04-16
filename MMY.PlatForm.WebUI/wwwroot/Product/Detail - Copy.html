@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <title>加载器</title>
+    <script src="/wwwroot/webConfig.js"></script>
+    <script src="/wwwroot/scripts/referenceCss.js"></script>
+    <script src="/wwwroot/scripts/referenceJs.js"></script>
+</head>
+<body>
+    <div id="Detail" class="padding-xl form-width">
+        <style>
+            .avatar-uploader .el-upload {
+                border: 1px dashed #d9d9d9;
+                border-radius: 6px;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+            }
+
+                .avatar-uploader .el-upload:hover {
+                    border-color: #20a0ff;
+                }
+
+            .avatar-uploader-icon {
+                font-size: 28px;
+                color: #8c939d;
+                width: 178px;
+                height: 178px;
+                line-height: 178px;
+                text-align: center;
+            }
+
+            .avatar {
+                width: 178px;
+                height: 178px;
+                display: block;
+            }
+        </style>
+        <el-form :model="form" ref="form" label-width="100px" class="demo-form">
+            <el-form-item label="产品名称" prop="ProductName">
+                <el-input v-model="form.ProductName"></el-input>
+            </el-form-item>
+            <el-form-item label="商品标题" prop="SaleTitle">
+                <el-input v-model="form.SaleTitle"></el-input>
+            </el-form-item>
+            <el-form-item label="商品副标题" prop="SaleSubTitle">
+                <el-input v-model="form.SaleSubTitle"></el-input>
+            </el-form-item>
+            <el-form-item label="默认图片" prop="DefaultPic">
+                <el-upload class="avatar-uploader"
+                           action="https://jsonplaceholder.typicode.com/posts/"
+                           :show-file-list="false"
+                           :on-success="handleAvatarSuccess"
+                           :before-upload="beforeAvatarUpload">
+                    <img v-if="form.DefaultPic" :src="form.DefaultPic" class="avatar">
+                    <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+                </el-upload>
+            </el-form-item>
+            <el-form-item label="推荐">
+                <el-switch on-text="" off-text="" v-model="form.IsRecommended"></el-switch>
+            </el-form-item>
+            <el-form-item label="特价">
+                <el-switch on-text="" off-text="" v-model="form.IsSpecialOffer"></el-switch>
+            </el-form-item>
+            <el-form-item label="优惠价格" prop="PromotionPrice">
+                <el-input v-model="form.PromotionPrice"></el-input>
+            </el-form-item>
+            <el-form-item label="价格" prop="Price">
+                <el-input v-model="form.Price"></el-input>
+            </el-form-item>
+            <el-form-item label="数量" prop="ProductNumber">
+                <el-input-number v-model="form.ProductNumber"></el-input-number>
+            </el-form-item>
+            <el-form-item label="虚数" prop="ImaginaryNumber">
+                <el-input-number v-model="form.ImaginaryNumber"></el-input-number>
+            </el-form-item>
+            <el-form-item label="详情" prop="ProductNumber">
+                <el-input type="textarea"
+                          :autosize="{ minRows: 2, maxRows: 4}"
+                          placeholder="请输入"
+                          v-model="ProductDetail">
+                </el-input>
+            </el-form-item>
+            <el-form-item label="备注" prop="ProductRemark">
+                <el-input type="textarea"
+                          :autosize="{ minRows: 2, maxRows: 4}"
+                          placeholder="请输入"
+                          v-model="ProductRemark">
+                </el-input>
+            </el-form-item>
+            <el-form-item label="相册" prop="ProductRemark">
+                <el-upload action="https://jsonplaceholder.typicode.com/posts/"
+                           list-type="picture-card"
+                           :on-preview="handlePictureCardPreview"
+                           :on-remove="handleRemove">
+                    <i class="el-icon-plus"></i>
+                </el-upload>
+                <el-dialog v-model="dialogVisible" size="tiny">
+                    <img :style="width:100%;" :src="dialogImageUrl" alt="">
+                </el-dialog>
+            </el-form-item>
+           <div>
+               <h2>颜色分类</h2>
+               <el-button type="primary">添加</el-button>
+               <div v-for="item in form.Classifications">
+                   <el-form-item label="名称" prop="Name">
+                       <el-input v-model="item.Name"></el-input>
+                   </el-form-item>
+                   <el-form-item label="数量" prop="Number">
+                       <el-input-number v-model="item.Number"></el-input-number>
+                   </el-form-item>
+                   <el-form-item label="价格" prop="Price">
+                       <el-input v-model="item.Price"></el-input>
+                   </el-form-item>
+                   <el-form-item label="优惠价格" prop="PromotionPrice">
+                       <el-input v-model="item.PromotionPrice"></el-input>
+                   </el-form-item>
+                   <el-form-item>
+                       <el-button type="danger" icon="delete" v-on:click="submitForm('form')">删除</el-button>
+                   </el-form-item>
+               </div>
+           </div>
+            <el-form-item>
+                <el-button type="primary" v-on:click="submitForm('form')">保存</el-button>
+                <el-button v-on:click="resetForm('form')">返回列表</el-button>
+            </el-form-item>
+        </el-form>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#Detail",
+            compomets: $f.allCompomets,
+            data: {
+                form: {
+                    "Guid": "00000000-0000-0000-0000-000000000000",
+                    "ProductName": "南瓜",
+                    "PromotionPrice": 1.3,
+                    "Price": 2.4,
+                    "SaleSubTitle": "hello",
+                    "SaleTitle": "world",
+                    "DefaultPic": "/wwwroot/images/product.jpg",
+                    "ProductNumber": 10,
+                    "ProductDetail": "没有详情",
+                    "ProductRemark": "没有备注",
+                    "IsRecommended": true,
+                    "IsSpecialOffer": true,
+                    "DisplayOrder": 3,
+                    "ImaginaryNumber": 9,
+                    "Classifications": [
+                        {
+                            "Guid": "00000000-0000-0000-0000-000000000000",
+                            "ProductGuid": "00000000-0000-0000-0000-000000000000",
+                            "Name": "粉红色",
+                            "Number": 9,
+                            "Price": 3.14,
+                            "PromotionPrice": 1.24,
+                            "AlbumGuid": "00000000-0000-0000-0000-000000000000"
+                        }
+                    ],
+                    "Albums": [
+                        {
+                            "Guid": "00000000-0000-0000-0000-000000000000",
+                            "ProductGuid": "00000000-0000-0000-0000-000000000000",
+                            "ImageUrl": "/wwwroot/images/product.jpg",
+                            "DisplayOrder": 0
+                        }
+                    ]
+                },
+                rules: {
+                    name: [
+                      { required: true, message: '请输入活动名称', trigger: 'blur' },
+                      { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+                    ],
+                    region: [
+                      { required: true, message: '请选择活动区域', trigger: 'change' }
+                    ],
+                    date1: [
+                      { type: 'date', required: true, message: '请选择日期', trigger: 'change' }
+                    ],
+                    date2: [
+                      { type: 'date', required: true, message: '请选择时间', trigger: 'change' }
+                    ],
+                    type: [
+                      { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }
+                    ],
+                    resource: [
+                      { required: true, message: '请选择活动资源', trigger: 'change' }
+                    ],
+                    desc: [
+                      { required: true, message: '请填写活动形式', trigger: 'blur' }
+                    ]
+                }
+            },
+            methods: {
+                handleAvatarSuccess:function(res, file) {
+                    this.imageUrl = URL.createObjectURL(file.raw);
+                },
+                beforeAvatarUpload: function(file) {
+                    const isJPG = file.type === 'image/jpeg';
+                    const isLt2M = file.size / 1024 / 1024 < 2;
+
+                    if (!isJPG) {
+                        this.$message.error('Avatar picture must be JPG format!');
+                    }
+                    if (!isLt2M) {
+                        this.$message.error('Avatar picture size can not exceed 2MB!');
+                    }
+                    return isJPG && isLt2M;
+                },
+                handleRemove: function(file, fileList) {
+                    console.log(file, fileList);
+                },
+                handlePictureCardPreview: function(file) {
+                    this.dialogImageUrl = file.url;
+                    this.dialogVisible = true;
+                },
+                submitForm: function (formName) {
+                    this.$refs[formName].validate(function (valid) {
+                        if (valid) {
+                            alert('submit!');
+                            return true;
+                        } else {
+                            console.log('error submit!!');
+                            return false;
+                        }
+                    });
+                },
+                resetForm: function (formName) {
+                    this.$refs[formName].resetFields();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -290,6 +290,7 @@
     <Content Include="wwwroot\main.html" />
     <Content Include="wwwroot\Order\List.html" />
     <Content Include="wwwroot\Order\ListDetail.html" />
+    <Content Include="wwwroot\Product\Detail.html" />
     <Content Include="wwwroot\Product\List.html" />
     <Content Include="wwwroot\Purchase\List.html" />
     <Content Include="wwwroot\ReadMe.txt" />

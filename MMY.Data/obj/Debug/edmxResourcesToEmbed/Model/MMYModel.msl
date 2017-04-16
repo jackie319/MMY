@@ -120,16 +120,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="OrderPayment">
-      <EntityTypeMapping TypeName="MMYModel.OrderPayment">
-        <MappingFragment StoreEntitySet="OrderPayment">
-          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
-          <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
-          <ScalarProperty Name="Guid" ColumnName="Guid" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="OrderPayRecords">
       <EntityTypeMapping TypeName="MMYModel.OrderPayRecords">
         <MappingFragment StoreEntitySet="OrderPayRecords">
@@ -427,6 +417,32 @@
           <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderPayment">
+      <EntityTypeMapping TypeName="MMYModel.OrderPayment">
+        <MappingFragment StoreEntitySet="OrderPayment">
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SmsRecords">
+      <EntityTypeMapping TypeName="MMYModel.SmsRecords">
+        <MappingFragment StoreEntitySet="SmsRecords">
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="TimeUpdate" ColumnName="TimeUpdate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ResultStatusCode" ColumnName="ResultStatusCode" />
+          <ScalarProperty Name="RadomCode" ColumnName="RadomCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

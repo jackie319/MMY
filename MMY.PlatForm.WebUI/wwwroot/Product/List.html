@@ -219,13 +219,11 @@
                 },
                 onAdd: function () {
                     var me = this;
-                    me.detail.form = me.model;
-                    me.detail.isVisible = true;
+                    me.$parent.loadPage("/wwwroot/Product/Detail.html");
                 },
                 onEdit: function (i, m) {
                     var me = this;
-                    me.detail.form = m;
-                    me.detail.isVisible = true;
+                    me.$parent.loadPage("/wwwroot/Product/Detail.html?uid=" + m.Guid);
                 },
                 onDelete: function (i, m) {
                     var me = this;

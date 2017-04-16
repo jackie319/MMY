@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using MMY.Data.Model;
 using MMY.Services.ServiceModel;
+using MMY.Services.ServicesImpl;
 
 namespace MMY.PlatForm.WebUI.Models.Product
 {
@@ -70,7 +71,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
             list.Guid = productV.Guid;
             list.CategoryGuid = productV.Guid;
             list.CategoryName = productV.ProductName;
-            list.DefaultPic = productV.DefaultPic;
+            list.DefaultPic = AppSetting.Instance().PictureUrl+productV.DefaultPic;
             list.DisplayOrder = productV.DisplayOrder;
             list.ImaginaryNumber = productV.ImaginaryNumber;
             list.IsRecommended = productV.IsRecommended;

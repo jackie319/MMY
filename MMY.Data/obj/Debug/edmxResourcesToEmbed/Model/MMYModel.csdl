@@ -11,7 +11,6 @@
     <EntitySet Name="Order" EntityType="MMYModel.Order" />
     <EntitySet Name="OrderDelivery" EntityType="MMYModel.OrderDelivery" />
     <EntitySet Name="OrderEvaluation" EntityType="MMYModel.OrderEvaluation" />
-    <EntitySet Name="OrderPayment" EntityType="MMYModel.OrderPayment" />
     <EntitySet Name="OrderPayRecords" EntityType="MMYModel.OrderPayRecords" />
     <EntitySet Name="PositionCity" EntityType="MMYModel.PositionCity" />
     <EntitySet Name="PositionDistrict" EntityType="MMYModel.PositionDistrict" />
@@ -104,6 +103,8 @@
       <End Role="UserAccount" EntitySet="UserAccount" />
       <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
     </AssociationSet>
+    <EntitySet Name="OrderPayment" EntityType="MMYModel.OrderPayment" />
+    <EntitySet Name="SmsRecords" EntityType="MMYModel.SmsRecords" />
   </EntityContainer>
   <EntityType Name="Activity">
     <Key>
@@ -224,15 +225,6 @@
     <Property Name="OrderGuid" Type="Guid" Nullable="false" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
     <NavigationProperty Name="Order" Relationship="MMYModel.FK_OrderEvaluation_Order" FromRole="OrderEvaluation" ToRole="Order" />
-  </EntityType>
-  <EntityType Name="OrderPayment">
-    <Key>
-      <PropertyRef Name="Guid" />
-    </Key>
-    <Property Name="Guid" Type="Guid" Nullable="false" />
-    <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="PaymentType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
   </EntityType>
   <EntityType Name="OrderPayRecords">
     <Key>
@@ -794,4 +786,28 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="OrderPayment">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="Guid" Type="Guid" Nullable="false" />
+    <Property Name="PaymentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+  </EntityType>
+  <EntityType Name="SmsRecords">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Guid" Type="Guid" Nullable="false" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RadomCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ResultStatusCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TimeUpdate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+  </EntityType>
 </Schema>
