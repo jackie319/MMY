@@ -60,7 +60,7 @@ namespace MMY.FrontSite.WebUI.Models.Product
         public int Number { get; set; }
         public Decimal Price { get; set; }
         public Decimal PromotionPrice { get; set; }
-        public System.Guid AlbumGuid { get; set; }
+        public string PicUrl { get; set; }
 
         public static ProductClassificationViewModel CopyFrom(ProductClassification productClassification)
         {
@@ -71,7 +71,7 @@ namespace MMY.FrontSite.WebUI.Models.Product
             viewModel.Number = productClassification.Number;
             viewModel.Price = Convert.ToDecimal(productClassification.Price) / 100;
             viewModel.PromotionPrice = Convert.ToDecimal(productClassification.PromotionPrice) / 100;
-            viewModel.AlbumGuid = productClassification.AlbumGuid;
+            viewModel.PicUrl = productClassification.PicUrl;
             return viewModel;
         }
       

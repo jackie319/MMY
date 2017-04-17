@@ -50,7 +50,7 @@ namespace MMY.Test
             product.TimeOffShelf=DateTime.Now;
             IList<ProductClassification> classifications=new List<ProductClassification>();
             ProductClassification classification=new ProductClassification();
-            classification.AlbumGuid = Guid.Empty;//TODO
+            classification.PicUrl = "";//TODO
             classification.Name = "55克";
             classification.Number = 12;
             classification.Price = 190;
