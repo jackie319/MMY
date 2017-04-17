@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using JK.Framework.Core;
 using JK.Framework.Core.Data;
 using JK.Framework.Extensions;
+using log4net;
 using MMY.Data.Model;
 using MMY.Services.IServices;
 using MMY.Services.ServiceModel;
@@ -106,8 +107,8 @@ namespace MMY.Services.ServicesImpl
                 UpdateRegisteRecord(receord.Guid, model.code, model.obj??string.Empty, model.msg??string.Empty);
                 if (!model.code.Equals("200"))
                 {
-                    throw new CommonException("发送短信返回错误：" + model.code + ":" + model.msg??string.Empty);
-
+                    var logger = LogManager.GetLogger(typeof(SmsImpl));
+                    logger.Error("发送短信返回错误：" + model.code + ":" + model.msg ?? string.Empty);
                 }
             }
         }
