@@ -18,6 +18,8 @@ namespace MMY.FrontSite.WebUI.Models.UserAccount
         /// <summary>
         /// 短信验证码
         /// </summary>
+        [Required]
+        [MinLength(2)]
         public string SmsCode { get; set; }
     }
 }
