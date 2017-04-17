@@ -90,7 +90,6 @@
       <End Role="UserShoppingCart" EntitySet="UserShoppingCart" />
     </AssociationSet>
     <EntitySet Name="OrderPayment" EntityType="MMYModel.OrderPayment" />
-    <EntitySet Name="SmsRecords" EntityType="MMYModel.SmsRecords" />
     <EntitySet Name="ProductClassification" EntityType="MMYModel.ProductClassification" />
     <AssociationSet Name="FK_ProductClassification_Product" Association="MMYModel.FK_ProductClassification_Product">
       <End Role="Product" EntitySet="Product" />
@@ -105,6 +104,7 @@
       <End Role="ProductSupplier" EntitySet="ProductSupplier" />
       <End Role="ProductPurchaseRecords" EntitySet="ProductPurchaseRecords" />
     </AssociationSet>
+    <EntitySet Name="SmsRecords" EntityType="MMYModel.SmsRecords" />
   </EntityContainer>
   <EntityType Name="Activity">
     <Key>
@@ -722,20 +722,6 @@
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
     <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
   </EntityType>
-  <EntityType Name="SmsRecords">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Guid" Type="Guid" Nullable="false" />
-    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="RadomCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ResultStatusCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="TimeUpdate" Type="DateTime" Nullable="false" Precision="7" />
-    <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
-  </EntityType>
   <EntityType Name="ProductClassification">
     <Key>
       <PropertyRef Name="Guid" />
@@ -811,4 +797,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="SmsRecords">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Guid" Type="Guid" Nullable="false" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsValidated" Type="Boolean" Nullable="false" />
+    <Property Name="RadomCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ResultStatusCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SmsType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TimeUpdate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="TimeCreated" Type="DateTime" Nullable="false" Precision="7" />
+  </EntityType>
 </Schema>

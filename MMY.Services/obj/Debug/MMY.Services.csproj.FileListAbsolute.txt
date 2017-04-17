@@ -22,7 +22,6 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\EntityF
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\Autofac.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\Autofac.Integration.Mvc.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\System.Web.Mvc.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\Newtonsoft.Json.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\System.Web.Razor.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\System.Web.WebPages.Razor.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\System.Web.WebPages.xml

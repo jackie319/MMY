@@ -273,9 +273,10 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsValidated" Type="bit" Nullable="false" />
     <Property Name="RadomCode" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ResultStatusCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SmsType" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Remark" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="TimeUpdate" Type="datetime2" Precision="7" Nullable="false" />
     <Property Name="TimeCreated" Type="datetime2" Precision="7" Nullable="false" />

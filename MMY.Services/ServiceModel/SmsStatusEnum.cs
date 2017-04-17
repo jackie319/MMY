@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MMY.Services.IServices
+namespace MMY.Services.ServiceModel
 {
-    public interface ISms
+
+    public enum SmsTypeEnum
     {
-        void SendRegisteCode(string phone);
+        Registe,
+        GetBackPwd
     }
 }

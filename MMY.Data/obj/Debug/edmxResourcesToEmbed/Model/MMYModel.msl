@@ -394,21 +394,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SmsRecords">
-      <EntityTypeMapping TypeName="MMYModel.SmsRecords">
-        <MappingFragment StoreEntitySet="SmsRecords">
-          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
-          <ScalarProperty Name="TimeUpdate" ColumnName="TimeUpdate" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="ResultStatusCode" ColumnName="ResultStatusCode" />
-          <ScalarProperty Name="RadomCode" ColumnName="RadomCode" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Guid" ColumnName="Guid" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ProductClassification">
       <EntityTypeMapping TypeName="MMYModel.ProductClassification">
         <MappingFragment StoreEntitySet="ProductClassification">
@@ -444,6 +429,22 @@
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
           <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
           <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SmsRecords">
+      <EntityTypeMapping TypeName="MMYModel.SmsRecords">
+        <MappingFragment StoreEntitySet="SmsRecords">
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="TimeUpdate" ColumnName="TimeUpdate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SmsType" ColumnName="SmsType" />
+          <ScalarProperty Name="ResultStatusCode" ColumnName="ResultStatusCode" />
+          <ScalarProperty Name="RadomCode" ColumnName="RadomCode" />
+          <ScalarProperty Name="IsValidated" ColumnName="IsValidated" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -17,9 +17,10 @@ namespace MMY.Data.Model
         public int Id { get; set; }
         public System.Guid Guid { get; set; }
         public string Phone { get; set; }
-        public string Status { get; set; }
+        public bool IsValidated { get; set; }
         public string RadomCode { get; set; }
         public string ResultStatusCode { get; set; }
+        public string SmsType { get; set; }
         public string Remark { get; set; }
         public System.DateTime TimeUpdate { get; set; }
         public System.DateTime TimeCreated { get; set; }

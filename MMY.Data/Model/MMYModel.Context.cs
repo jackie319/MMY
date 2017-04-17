@@ -54,8 +54,8 @@ namespace MMY.Data.Model
         public virtual DbSet<OrderV> OrderV { get; set; }
         public virtual DbSet<ProductV> ProductV { get; set; }
         public virtual DbSet<OrderPayment> OrderPayment { get; set; }
-        public virtual DbSet<SmsRecords> SmsRecords { get; set; }
         public virtual DbSet<ProductClassification> ProductClassification { get; set; }
         public virtual DbSet<ProductPurchaseRecords> ProductPurchaseRecords { get; set; }
+        public virtual DbSet<SmsRecords> SmsRecords { get; set; }
     }
 }

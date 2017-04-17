@@ -49,12 +49,12 @@
         <AssociationConnector Association="MMYModel.FK_UserOperationRecords_UserAccount" />
         <AssociationConnector Association="MMYModel.FK_UserShoppingCart_UserAccount" />
         <EntityTypeShape EntityType="MMYModel.OrderPayment" Width="1.5" PointX="3.375" PointY="18.75" />
-        <EntityTypeShape EntityType="MMYModel.SmsRecords" Width="1.5" PointX="18.375" PointY="5.75" />
         <EntityTypeShape EntityType="MMYModel.ProductClassification" Width="1.5" PointX="5.25" PointY="21.75" />
         <AssociationConnector Association="MMYModel.FK_ProductClassification_Product" />
         <EntityTypeShape EntityType="MMYModel.ProductPurchaseRecords" Width="1.5" PointX="5.25" PointY="7.125" />
         <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_Product" />
         <AssociationConnector Association="MMYModel.FK_ProductPurchaseRecords_ProductSupplier" />
+        <EntityTypeShape EntityType="MMYModel.SmsRecords" Width="1.5" PointX="18.375" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
