@@ -12,5 +12,10 @@ namespace MMY.Services.IServices
         IList<ProductCategory> GetAllParentCategory();
 
         IList<ProductCategory> GetCategoriesByParent(Guid parentGuid);
+
+        void AddCategory(ProductCategory category);
+        void UpdateCategory(ProductCategory category);
+        ProductCategory FindCategory(Guid categoryGuid);
+        void DeleteCategory(Guid categoryGuid);
     }
 }
