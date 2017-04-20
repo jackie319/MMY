@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
-using JK.Framework.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MMY.Data.Model;
 using MMY.Services.IServices;

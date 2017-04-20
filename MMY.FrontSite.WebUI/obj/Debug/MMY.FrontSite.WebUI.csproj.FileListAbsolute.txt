@@ -21,7 +21,6 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\Autofa
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\EntityFramework.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\EntityFramework.SqlServer.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Core.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Data.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Web.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\log4net.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\Microsoft.AI.Agent.Intercept.dll
@@ -58,13 +57,18 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\System
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\System.Web.WebPages.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\System.Web.WebPages.Razor.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\WebGrease.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Sms.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\NPOI.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\NPOI.OOXML.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\ICSharpCode.SharpZipLib.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\NPOI.OpenXmlFormats.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\NPOI.OpenXml4Net.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\MMY.Data.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\MMY.FrontSite.Domain.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\MMY.Services.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\Autofac.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\Autofac.Integration.Mvc.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Core.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Data.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Web.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\log4net.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\Microsoft.AI.DependencyCollector.xml
@@ -96,6 +100,7 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\Micros
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\Microsoft.Owin.Security.Google.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Sms.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\zh-Hans\System.Web.Helpers.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\zh-Hans\System.Web.Mvc.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\zh-Hans\System.Web.Optimization.resources.dll
@@ -117,3 +122,5 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\zh-Han
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Data.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Data.pdb

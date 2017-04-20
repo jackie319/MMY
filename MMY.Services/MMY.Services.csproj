@@ -34,16 +34,15 @@
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="JK.Framework.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Core\bin\Debug\JK.Framework.Core.dll</HintPath>
+    <Reference Include="JK.Framework.Core">
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Core.dll</HintPath>
     </Reference>
-    <Reference Include="JK.Framework.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="JK.Framework.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Data\bin\Debug\JK.Framework.Data.dll</HintPath>
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="JK.Framework.Extensions">
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Extensions\bin\Debug\JK.Framework.Extensions.dll</HintPath>
+    <Reference Include="JK.Framework.Sms">
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Sms\bin\Debug\JK.Framework.Sms.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
@@ -81,7 +80,6 @@
     <Compile Include="ServiceModel\FunctionType.cs" />
     <Compile Include="ServiceModel\OrderStatusEnum.cs" />
     <Compile Include="ServiceModel\ProductStatusEnum.cs" />
-    <Compile Include="ServiceModel\SendRegisteCodeResult.cs" />
     <Compile Include="ServiceModel\SmsStatusEnum.cs" />
     <Compile Include="ServiceModel\UserMenuModel.cs" />
     <Compile Include="ServiceModel\UserTypeEnum.cs" />

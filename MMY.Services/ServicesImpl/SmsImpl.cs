@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using JK.Framework.Core;
 using JK.Framework.Core.Data;
 using JK.Framework.Extensions;
+using JK.Framework.Sms.Netease;
 using log4net;
 using MMY.Data.Model;
 using MMY.Services.IServices;
@@ -25,10 +26,11 @@ namespace MMY.Services.ServicesImpl
         private const string AppSecret = "7e68c58203ed";
         private const string RegisteCodeTemplateid = "3050311";
         private const string RegisteUrl = "https://api.netease.im/sms/sendcode.action";
-
+        private SmsCode smsCode;
         public SmsImpl(IRepository<SmsRecords> smsRecordsRepository)
         {
             _SmsRecordsRepository = smsRecordsRepository;
+            smsCode = new SmsCode(Appkey, AppSecret, RegisteCodeTemplateid, RegisteUrl);
         }
 
         public SmsRecords AddRegisteRecord(string phone)
@@ -84,32 +86,16 @@ namespace MMY.Services.ServicesImpl
             return entity;
         }
 
+
         public void SendRegisteCode(string phone)
         {
-            var receord=AddRegisteRecord(phone);
-            using (var webClient = new WebClient { Encoding = Encoding.UTF8 })
+            var receord = AddRegisteRecord(phone);
+            var model =smsCode.SendRegisteCode(phone) ;
+            UpdateRegisteRecord(receord.Guid, model.code, model.obj ?? string.Empty, model.msg ?? string.Empty);
+            if (!model.code.Equals("200"))
             {
-                string nonce = Guid.NewGuid().ToString("N");
-                DateTime dt = new DateTime(1970, 1, 1, 0, 0, 0);
-                DateTime now = DateTime.Now;
-                string curTime = (now - dt).TotalSeconds.ToString();
-                var str = AppSecret + nonce + curTime;
-                var sha1 = str.SHA1_Encrypt();
-                webClient.Headers.Add("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
-                webClient.Headers.Add("AppKey",Appkey);
-                webClient.Headers.Add("Nonce",nonce);
-                webClient.Headers.Add("CurTime",curTime);
-                webClient.Headers.Add("CheckSum",sha1);
-                string url = RegisteUrl;
-                string data = "mobile=" + phone + "&templateid =" + RegisteCodeTemplateid+ "&codeLen=4";
-                var result = webClient.UploadString(url, "POST", data);
-                SendRegisteCodeResult model = JsonConvert.DeserializeObject<SendRegisteCodeResult>(result);
-                UpdateRegisteRecord(receord.Guid, model.code, model.obj??string.Empty, model.msg??string.Empty);
-                if (!model.code.Equals("200"))
-                {
-                    var logger = LogManager.GetLogger(typeof(SmsImpl));
-                    logger.Error("发送短信返回错误：" + model.code + ":" + model.msg ?? string.Empty);
-                }
+                var logger = LogManager.GetLogger(typeof(SmsImpl));
+                logger.Error("发送短信返回错误：" + model.code + ":" + model.msg ?? string.Empty);
             }
         }
 

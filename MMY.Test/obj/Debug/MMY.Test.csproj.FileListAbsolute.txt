@@ -18,7 +18,6 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.Test.pd
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Autofac.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Autofac.Integration.Mvc.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\EntityFramework.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Core.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Data.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Extensions.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
@@ -33,6 +32,7 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.WebPages.Deployment.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.WebPages.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.WebPages.Razor.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Core.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Microsoft.Owin.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.Optimization.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Web.dll
@@ -41,8 +41,14 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Owin.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.FrontSite.Domain.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\WebGrease.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.PlatForm.Domain.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Sms.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\NPOI.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\NPOI.OOXML.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Newtonsoft.Json.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Antlr3.Runtime.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\NPOI.OpenXml4Net.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.Data.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.FrontSite.WebUI.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.PlatForm.WebUI.pdb
@@ -50,7 +56,6 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.Service
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Autofac.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Autofac.Integration.Mvc.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\EntityFramework.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Core.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Data.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Extensions.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.Helpers.xml
@@ -59,12 +64,15 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.WebPages.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.WebPages.Deployment.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.WebPages.Razor.xml
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Core.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Microsoft.Owin.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\System.Web.Optimization.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Web.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\log4net.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.FrontSite.Domain.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\MMY.PlatForm.Domain.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\JK.Framework.Sms.pdb
+E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\NPOI.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Newtonsoft.Json.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\Antlr3.Runtime.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Test\bin\Debug\zh-Hans\EntityFramework.resources.dll

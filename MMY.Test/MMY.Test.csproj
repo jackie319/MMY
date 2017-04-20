@@ -47,9 +47,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="JK.Framework.Core">
-      <HintPath>..\MMY.PlatForm.WebUI\Bin\JK.Framework.Core.dll</HintPath>
-    </Reference>
     <Reference Include="JK.Framework.Data">
       <HintPath>..\MMY.PlatForm.WebUI\Bin\JK.Framework.Data.dll</HintPath>
     </Reference>
