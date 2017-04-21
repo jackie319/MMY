@@ -41,6 +41,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="JK.Framework.Pay">
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Pay\bin\Debug\JK.Framework.Pay.dll</HintPath>
+    </Reference>
     <Reference Include="JK.Framework.Sms">
       <HintPath>..\..\..\..\JK.Framework\JK.Framework.Sms\bin\Debug\JK.Framework.Sms.dll</HintPath>
     </Reference>
@@ -51,6 +54,9 @@
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Senparc.Weixin.MP">
+      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Pay\bin\Debug\Senparc.Weixin.MP.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

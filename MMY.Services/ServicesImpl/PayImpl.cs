@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using JK.Framework.Core;
 using JK.Framework.Core.Data;
+using JK.Framework.Pay.Tencent;
 using MMY.Data.Model;
 using MMY.Services.IServices;
 using MMY.Services.ServiceModel;
+using Senparc.Weixin.MP.TenPayLibV3;
 
 namespace MMY.Services.ServicesImpl
 {
@@ -48,6 +50,8 @@ namespace MMY.Services.ServicesImpl
                 order.OrderStatus = OrderStatusEnum.Paying.ToString();
                 _orderRepository.Update(order);
             }
+            //TenPayV3UnifiedorderRequestData data=new TenPayV3UnifiedorderRequestData();
+            //var result=UnifiedOrder.Pay(data);
         }
 
         public IList<OrderPayment> GetPayments()
