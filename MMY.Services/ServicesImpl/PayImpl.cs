@@ -19,12 +19,14 @@ namespace MMY.Services.ServicesImpl
         private IRepository<OrderPayRecords> _payRecordsRepository;
         private IRepository<OrderPayment> _paymentRepository;
         private IRepository<Product> _productRepository;
+        private UnifiedOrderSetting _setting;
         public PayImpl(IRepository<Order> ordeRepository,IRepository<OrderPayRecords> payRecordsRepository,IRepository<OrderPayment> paymentRepository,IRepository<Product> productRepository  )
         {
             _orderRepository = ordeRepository;
             _payRecordsRepository = payRecordsRepository;
             _paymentRepository = paymentRepository;
             _productRepository = productRepository;
+            _setting=new UnifiedOrderSetting();
         }
         /// <summary>
         /// 支付前检查商品库存，支付成功后扣减库存
@@ -50,6 +52,7 @@ namespace MMY.Services.ServicesImpl
                 order.OrderStatus = OrderStatusEnum.Paying.ToString();
                 _orderRepository.Update(order);
             }
+            //var appid= _setting.AppId;
             //TenPayV3UnifiedorderRequestData data=new TenPayV3UnifiedorderRequestData();
             //var result=UnifiedOrder.Pay(data);
         }

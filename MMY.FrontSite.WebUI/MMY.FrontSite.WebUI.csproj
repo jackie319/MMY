@@ -229,7 +229,7 @@
     <Compile Include="Controllers\FavoriteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
-    <Compile Include="Controllers\PayController.cs" />
+    <Compile Include="Controllers\WechatPayController.cs" />
     <Compile Include="Controllers\PictureController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />

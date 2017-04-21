@@ -87,6 +87,7 @@
     <Compile Include="ServiceModel\OrderStatusEnum.cs" />
     <Compile Include="ServiceModel\ProductStatusEnum.cs" />
     <Compile Include="ServiceModel\SmsStatusEnum.cs" />
+    <Compile Include="ServiceModel\UnifiedOrderSetting.cs" />
     <Compile Include="ServiceModel\UserMenuModel.cs" />
     <Compile Include="ServiceModel\UserTypeEnum.cs" />
     <Compile Include="ServicesImpl\AppSetting.cs" />
