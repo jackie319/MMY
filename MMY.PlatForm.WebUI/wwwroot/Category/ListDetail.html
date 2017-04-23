@@ -166,7 +166,11 @@
                 },
                 onDelete: function (i, m) {
                     var me = this;
-                    me.$confirm("确定删除？", "确定");
+                    me.$confirm("确定删除？", "确定").then(function () {
+                        me.$http.post(apiConfig.category_delete, {
+                            categoryGuid:m.Guid
+                        })
+                    });
                 },
                 submitDetail: function () {
                     this.detail.isVisible = false;
