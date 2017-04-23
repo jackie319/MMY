@@ -28,7 +28,7 @@ namespace MMY.Test
             Assert.IsTrue(true);
         }
 
-        public void SumbitSource()
+        public void SubmitSource()
         {
 
         }
