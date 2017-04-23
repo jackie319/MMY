@@ -137,18 +137,27 @@
                              width="400">
                 <template scope="scope">
                     <el-button size="small"
-                               v-on:click="onPurchaseList(scope.$index, scope.row)">进货记录</el-button>
+                               v-on:click="onPurchase(scope.$index, scope.row)">
+                        进货
+                    </el-button>
+                    <el-button size="small"
+                               v-on:click="onPurchaseList(scope.$index, scope.row)">进货记录
+                    </el-button>
                     <el-button v-if="scope.row.Status==='已上架'"
                                size="small"
-                               v-on:click="onOffShelf(scope.$index, scope.row)">下架</el-button>
+                               v-on:click="onOffShelf(scope.$index, scope.row)">下架
+                    </el-button>
                     <el-button v-else
                                size="small"
-                               v-on:click="onOnShelf(scope.$index, scope.row)">上架</el-button>
+                               v-on:click="onOnShelf(scope.$index, scope.row)">上架
+                    </el-button>
                     <el-button size="small"
-                               v-on:click="onEdit(scope.$index, scope.row)">编辑</el-button>
+                               v-on:click="onEdit(scope.$index, scope.row)">编辑
+                    </el-button>
                     <el-button size="small"
                                type="danger"
-                               v-on:click="onDelete(scope.$index, scope.row)">删除</el-button>
+                               v-on:click="onDelete(scope.$index, scope.row)">删除
+                    </el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -232,6 +241,9 @@
                             me.loadData();
                         });
                     });
+                },
+                onPurchase: function (i, m) {
+                    this.$purchaserecord.open({ ProductGuid: m.Guid });
                 },
                 onPurchaseList:function(i,m){
                     this.$purchaselist.open({ ProductGuid: m.Guid });
