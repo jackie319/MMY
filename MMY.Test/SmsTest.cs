@@ -31,7 +31,7 @@ namespace MMY.Test
 
         public void Testss()
         {
-            
+            var a = 1;
         }
 
     }
