@@ -30,7 +30,7 @@ namespace MMY.Test
 
         public void SubmitSource()
         {
-
+            Console.WriteLine("Hello world");
         }
     }
 }
