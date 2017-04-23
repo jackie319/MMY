@@ -270,6 +270,7 @@
     <Content Include="log4net.config" />
     <Content Include="wwwroot\Account\ChangePassword.html" />
     <Content Include="wwwroot\apiConfig.js" />
+    <Content Include="wwwroot\Category\ListDetail.html" />
     <Content Include="wwwroot\css\app.css" />
     <Content Include="wwwroot\css\rich_media_content.css" />
     <Content Include="wwwroot\css\schema.default.css" />
@@ -322,6 +323,7 @@
     <Content Include="wwwroot\scripts\vue-plugins\loading\JavaScript.js" />
     <Content Include="wwwroot\scripts\vue-plugins\prompt\HtmlPage.html" />
     <Content Include="wwwroot\scripts\vue-plugins\prompt\JavaScript.js" />
+    <Content Include="wwwroot\scripts\vue-plugins\purchaserecord\JavaScript.js" />
     <Content Include="wwwroot\scripts\vue-plugins\purchaserlist\JavaScript.js" />
     <Content Include="wwwroot\scripts\vue-plugins\vue-resource\vue-resource.common.js" />
     <Content Include="wwwroot\scripts\vue-plugins\vue-resource\vue-resource.es2015.js" />
