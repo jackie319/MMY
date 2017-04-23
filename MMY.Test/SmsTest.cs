@@ -32,5 +32,12 @@ namespace MMY.Test
         {
             Console.WriteLine("Hello world");
         }
+
+
+        public void Testss()
+        {
+            var a = 1;
+        }
+
     }
 }
