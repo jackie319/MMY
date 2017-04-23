@@ -13,6 +13,7 @@
         "/scripts/vue-plugins/vue-resource/vue-resource.js",
         "/scripts/element-ui/lib/index.js",
         "/scripts/vue-plugins/purchaserlist/JavaScript.js",
+        "/scripts/vue-plugins/purchaserecord/JavaScript.js",
         "/scripts/framework.js"
     ];
 

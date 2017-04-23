@@ -22,6 +22,7 @@ namespace MMY.PlatForm.WebUI
             builder.RegisterType<OrderImpl>().As<IOrder>().InstancePerDependency();
             builder.RegisterType<ProductImpl>().As<IProduct>().InstancePerDependency();
             builder.RegisterType<SmsImpl>().As<ISms>().InstancePerDependency();
+            builder.RegisterType<ProductCategoryImpl>().As<IProductCategory>().InstancePerDependency();
         }
     }
 }

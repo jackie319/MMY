@@ -92,13 +92,13 @@
                 <el-form-item label="分类名称" prop="CategoryName ">
                     <el-input v-model="form.CategoryName"></el-input>
                 </el-form-item>
-                <el-form-item label="数量" prop="DisplayOrder">
-                    <el-input-number v-model="form.DisplayOrder" :disabled="true"></el-input-number>
+                <el-form-item label="排序" prop="DisplayOrder">
+                    <el-input-number :min="0" v-model="form.DisplayOrder" ></el-input-number>
                 </el-form-item>
             </el-form>
             <div slot="footer" class="dialog-footer">
                 <el-button @click="detail.isVisible = false">取 消</el-button>
-                <el-button type="primary" @click="submitDetail">确 定</el-button>
+                <el-button type="primary" @click="submit">确 定</el-button>
             </div>
         </el-dialog>
 
@@ -156,7 +156,7 @@
                 },
                 onAdd: function () {
                     var me = this;
-                    me.form = me.model;
+                    me.form = Object.assign({},me.model);
                     me.detail.isVisible = true;
                 },
                 onEdit: function (i, m) {
@@ -167,14 +167,21 @@
                 onDelete: function (i, m) {
                     var me = this;
                     me.$confirm("确定删除？", "确定").then(function () {
-                        me.$http.post(apiConfig.category_delete, {
-                            categoryGuid:m.Guid
-                        }).then(function () {
-                            me.loadData();
-                        })
+                        me.$http.post(apiConfig.category_delete,
+                            {
+                                categoryGuid: m.Guid
+                            }).then(function () {
+                                me.loadData();
+                            });
                     });
                 },
-                submitDetail: function () {
+                submit: function () {
+                    var me = this;
+                    me.$http.post(apiConfig.category_save,
+                        me.form
+                    ).then(function () {
+                        me.loadData();
+                    });
                     this.detail.isVisible = false;
                 },
                 getSkip: function () {
@@ -186,7 +193,8 @@
 
                     var queryModel = Object.assign({
                         skip: me.getSkip(),
-                        top: me.list.pageSize
+                        top: me.list.pageSize,
+                        _t:Date.now()
                     },
                         me.search
                     );

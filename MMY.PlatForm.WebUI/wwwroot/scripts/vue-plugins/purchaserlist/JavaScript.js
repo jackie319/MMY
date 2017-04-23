@@ -163,9 +163,6 @@
                     close: function () {
                         this.isVisible = false;
                     }
-                },
-                mounted: function () {
-                   this.loadData();
                 }
             });
         }

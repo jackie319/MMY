@@ -34,18 +34,24 @@
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="JK.Framework.Core">
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Core.dll</HintPath>
+    <Reference Include="JK.Framework.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\libs\JK.Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JK.Framework.Data">
+      <HintPath>..\Libs\libs\JK.Framework.Data.dll</HintPath>
     </Reference>
     <Reference Include="JK.Framework.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Extensions.dll</HintPath>
+      <HintPath>..\Libs\libs\JK.Framework.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="JK.Framework.Pay">
+    <Reference Include="JK.Framework.Pay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\libs\JK.Framework.Pay.dll</HintPath>
     </Reference>
-    <Reference Include="JK.Framework.Sms">
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Sms\bin\Debug\JK.Framework.Sms.dll</HintPath>
+    <Reference Include="JK.Framework.Sms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\libs\JK.Framework.Sms.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
@@ -55,10 +61,12 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Senparc.Weixin">
+    <Reference Include="Senparc.Weixin, Version=4.11.9.36181, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\libs\Senparc.Weixin.dll</HintPath>
     </Reference>
-    <Reference Include="Senparc.Weixin.MP">
+    <Reference Include="Senparc.Weixin.MP, Version=14.3.142.36182, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\libs\Senparc.Weixin.MP.dll</HintPath>
     </Reference>
     <Reference Include="System" />

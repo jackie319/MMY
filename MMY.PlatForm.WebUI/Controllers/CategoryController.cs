@@ -27,7 +27,7 @@ namespace MMY.PlatForm.WebUI.Controllers
             var model = category.Select(item=> ProductCategoryListViewModel.CopyFrom(item)).ToList();
             return this.ResultListModel(model.Count,model);
         }
-
+        [HttpPost]
         public ActionResult Save(ProductCategoryViewModel model)
         {
             if (model.Guid == Guid.Empty)
