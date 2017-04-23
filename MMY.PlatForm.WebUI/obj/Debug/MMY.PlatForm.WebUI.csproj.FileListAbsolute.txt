@@ -237,3 +237,5 @@ E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Mic
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Senparc.Weixin.MP.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Senparc.Weixin.dll

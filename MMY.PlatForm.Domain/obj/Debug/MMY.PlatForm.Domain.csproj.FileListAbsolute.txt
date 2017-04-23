@@ -54,3 +54,7 @@ E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\zh-H
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.MP.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.xml

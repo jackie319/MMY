@@ -182,11 +182,6 @@ E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\System.Web
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\System.Web.WebPages.Razor.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\WebGrease.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Sms.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\NPOI.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\NPOI.OOXML.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\ICSharpCode.SharpZipLib.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\NPOI.OpenXmlFormats.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\NPOI.OpenXml4Net.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\MMY.Data.pdb
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\MMY.Data.dll.config
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\MMY.FrontSite.Domain.pdb
@@ -194,8 +189,6 @@ E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\MMY.Servic
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\MMY.Services.dll.config
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\Autofac.xml
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\Autofac.Integration.Mvc.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Core.pdb
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Web.pdb
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\log4net.xml
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\Microsoft.AI.DependencyCollector.xml
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
@@ -249,3 +242,5 @@ E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\zh-Hans\Mi
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\Senparc.Weixin.MP.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.WebUI\bin\Senparc.Weixin.dll
