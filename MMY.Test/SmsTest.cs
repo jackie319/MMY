@@ -27,5 +27,10 @@ namespace MMY.Test
            _sms.SendRegisteCode("18288215197");
             Assert.IsTrue(true);
         }
+
+        public void SumbitSource()
+        {
+
+        }
     }
 }
