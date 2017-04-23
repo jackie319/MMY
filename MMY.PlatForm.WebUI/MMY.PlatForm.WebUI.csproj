@@ -243,6 +243,7 @@
     <Compile Include="Models\Order\OrderListViewModel.cs" />
     <Compile Include="Models\Order\OrderQueryModel.cs" />
     <Compile Include="Models\Product\ProductCategoryViewModel.cs" />
+    <Compile Include="Models\Product\ProductClassificationListViewModel.cs" />
     <Compile Include="Models\Product\ProductListViewModel.cs" />
     <Compile Include="Models\Product\ProductPurchaseRecordsViewModel.cs" />
     <Compile Include="Models\Product\ProductQueryModel.cs" />

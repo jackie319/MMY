@@ -39,6 +39,13 @@ namespace MMY.PlatForm.WebUI.Controllers
             return this.ResultModel(resultProduct);
         }
 
+        public ActionResult GetClassification(Guid productGuid)
+        {
+            var list = _product.GetClassifications(productGuid);
+            var resultList = list.Select(item => ProductClassificationListViewModel.CopyFrom(item)).ToList(); 
+            return this.ResultListModel(resultList.Count, resultList);
+        }
+
         //[ValidationFilter]
         //[HttpPost]
         //public ActionResult Add(ProductViewModel model)
