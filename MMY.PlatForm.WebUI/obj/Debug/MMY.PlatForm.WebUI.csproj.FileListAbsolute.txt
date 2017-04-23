@@ -58,12 +58,6 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Razor.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\WebGrease.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Sms.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\NPOI.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\NPOI.OOXML.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\ICSharpCode.SharpZipLib.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\NPOI.OpenXmlFormats.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\NPOI.OpenXml4Net.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.pdb
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.pdb
@@ -103,8 +97,6 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microso
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Google.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Sms.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\NPOI.xml
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Helpers.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Mvc.resources.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Optimization.resources.dll
