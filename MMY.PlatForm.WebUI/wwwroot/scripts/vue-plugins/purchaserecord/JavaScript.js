@@ -141,8 +141,7 @@
                         var me = this;
                         me.$http.get(apiConfig.classification_query, {
                             params: {
-                                skip: 0,
-                                top: 0
+                                productGuid: this.form.ProductGuid
                             }
                         }).then(function (response) {
                             me.classifications = response.data.Data;
@@ -159,11 +158,9 @@
                             me.suppliers = response.data.Data;
                         });
                     },
-                    open: function (productGuid) {
+                    open: function (options) {
                         var me = this;
-                        me.form = Object.assign({
-                            ProductGuid: productGuid
-                        }, me.model);
+                        me.form = Object.assign(options, me.model);
                         me.getSuppliers();
                         me.getClassifications();
                         me.isVisible = true;

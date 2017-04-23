@@ -37,6 +37,14 @@
             <el-form-item label="商品副标题" prop="SaleSubTitle">
                 <el-input v-model="form.SaleSubTitle"></el-input>
             </el-form-item>
+            <el-form-item label="商品分类" prop="SaleSubTitle">
+                <el-select label="商品分类" v-model="form.CategoryGuid" placeholder="Select">
+                    <el-option v-for="item in categories"
+                               :label="item.CategoryName"
+                               :value="item.Guid">
+                    </el-option>
+                </el-select>
+            </el-form-item>
             <el-form-item label="推荐">
                 <el-switch on-text="" off-text="" v-model="form.IsRecommended"></el-switch>
             </el-form-item>
@@ -86,8 +94,7 @@
                                    action="/Picture/Upload"
                                    :show-file-list="false"
                                    :show-upload-list="false"
-                                   :on-success="function(){handleImageUploadSuccess(arguments,item);}"
-                                   >
+                                   :on-success="function(){handleImageUploadSuccess(arguments,item);}">
                             <img v-if="item.PicUrl!==''" :src="resource(item.PicUrl)" class="image">
                             <i v-else class="el-icon-plus image-uploader-icon"></i>
                         </el-upload>
@@ -125,7 +132,8 @@
             data: {
                 dialogImageUrl: '',
                 dialogVisible: false,
-                imageList:[],
+                imageList: [],
+                categories: [],
                 form: {
                     "Guid": "00000000-0000-0000-0000-000000000000",
                     "ProductName": "产品名称",
@@ -154,7 +162,7 @@
                         }
                     ],
                     "Albums": [
-                       
+
                     ]
                 },
                 rules: {
@@ -206,8 +214,20 @@
                         });
                     }
                 },
+                getCategories: function () {
+                    var me = this;
+                    var queryModel = {
+                        skip: 0,
+                        top: 0
+                    };
+                    me.$http.get(apiConfig.category_query, {
+                        params: queryModel
+                    }).then(function (response) {
+                        me.categories = response.data.Data;
+                    });
+                },
                 canNotDelete: function () {
-                   return this.Classifications.length !== 1;
+                    return this.Classifications.length !== 1;
                 },
                 beforeImageUpload: function (file) {
                     var isJPG = file.type === 'image/jpeg';
@@ -273,6 +293,9 @@
                 resource: function (filename) {
                     return webConfig.resourceServerAddress + filename;
                 }
+            },
+            mounted: function () {
+                this.getCategories();
             }
         });
     </script>
