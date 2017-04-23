@@ -13,8 +13,8 @@
     product_save: "/Product/Save",
     product_detail: "/Product/Detail",
     image_upload: "",
-    category_query: "/Product/categorylist.json",
-    category_save: "",
-    category_delete: "",
-    classification_query: "/wwwroot/data/classificationlist.json"
+    category_query: "/Category/List",
+    category_save: "/Category/Save",
+    category_delete: "/Category/Delete",
+    classification_query: "/Product/GetClassification"
 };

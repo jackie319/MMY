@@ -141,8 +141,7 @@
                         var me = this;
                         me.$http.get(apiConfig.classification_query, {
                             params: {
-                                skip: 0,
-                                top: 0
+                                productGuid: this.form.ProductGuid
                             }
                         }).then(function (response) {
                             me.classifications = response.data.Data;
