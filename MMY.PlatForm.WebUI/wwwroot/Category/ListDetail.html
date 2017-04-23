@@ -169,6 +169,8 @@
                     me.$confirm("确定删除？", "确定").then(function () {
                         me.$http.post(apiConfig.category_delete, {
                             categoryGuid:m.Guid
+                        }).then(function () {
+                            me.loadData();
                         })
                     });
                 },
