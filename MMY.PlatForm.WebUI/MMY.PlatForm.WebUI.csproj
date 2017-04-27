@@ -240,6 +240,7 @@
     </Compile>
     <Compile Include="Models\Account\ChangePasswordViewModel.cs" />
     <Compile Include="Models\Account\LogInViewModel.cs" />
+    <Compile Include="Models\Order\ChangePriceViewModel.cs" />
     <Compile Include="Models\Order\OrderListViewModel.cs" />
     <Compile Include="Models\Order\OrderQueryModel.cs" />
     <Compile Include="Models\Product\ProductCategoryViewModel.cs" />
