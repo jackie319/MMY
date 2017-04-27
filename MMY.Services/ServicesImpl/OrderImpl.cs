@@ -138,5 +138,14 @@ namespace MMY.Services.ServicesImpl
             order.OrderStatus = OrderStatusEnum.Cancel.ToString();
             _orderRepository.Update(order);
         }
+
+        public void ChangeOrderPrice(Guid orderGuid, int price)
+        {
+            var order = _orderRepository.Table.FirstOrDefault(q => q.Guid == orderGuid);
+            if (order.OrderStatus.Equals(OrderStatusEnum.Default.ToString())) {
+                order.OrderAmount = price;
+                _orderRepository.Update(order);
+            }
+        }
     }
 }
