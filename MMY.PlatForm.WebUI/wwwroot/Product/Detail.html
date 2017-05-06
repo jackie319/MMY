@@ -124,6 +124,7 @@
                 "ckeditor": vueCkeditor
             },
             data: {
+                uid: $f.getQueryString("uid"),
                 dialogImageUrl: '',
                 dialogVisible: false,
                 imageList: [],
@@ -272,7 +273,7 @@
                     });
                 },
                 getData: function () {
-                    this.$http.get(apiConfig.product_detail, $f.getQueryString("uid")).then(function (response) {
+                    this.$http.get(apiConfig.product_detail, this.uid ).then(function (response) {
                         this.form = response.data.Data;
                         this.setImageList();
                     });
@@ -296,6 +297,9 @@
             },
             mounted: function () {
                 this.getCategories();
+                if (this.uid && this.uid !==Guid.empty.toString()) {
+                    this.getData();
+                }
             }
         });
     </script>
