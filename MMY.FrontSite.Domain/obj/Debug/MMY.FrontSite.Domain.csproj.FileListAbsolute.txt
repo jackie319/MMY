@@ -26,3 +26,25 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\bin\Debug
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.FrontSite.Domain.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.FrontSite.Domain.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\bin\Debug\EntityFramework.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.dll.config
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\bin\Debug\EntityFramework.xml
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.csprojResolveAssemblyReference.cache
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.pdb
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.FrontSite.Domain.dll
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.FrontSite.Domain.pdb
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.dll
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\EntityFramework.dll
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.pdb
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.dll.config
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\EntityFramework.xml
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.csprojResolveAssemblyReference.cache
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.dll
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.pdb

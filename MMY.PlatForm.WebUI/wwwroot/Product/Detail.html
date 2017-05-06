@@ -58,22 +58,14 @@
                 <el-input-number v-model="form.ImaginaryNumber"></el-input-number>
             </el-form-item>
             <el-form-item label="详情" prop="ProductNumber">
-                <el-input type="textarea"
-                          :autosize="{ minRows: 2, maxRows: 4}"
-                          placeholder="请输入"
-                          v-model="form.ProductDetail">
-                </el-input>
+                <ckeditor v-model="form.ProductDetail"></ckeditor>
             </el-form-item>
             <el-form-item label="备注" prop="ProductRemark">
-                <el-input type="textarea"
-                          :autosize="{ minRows: 2, maxRows: 4}"
-                          placeholder="请输入"
-                          v-model="form.ProductRemark">
-                </el-input>
+                <ckeditor v-model="form.ProductRemark"></ckeditor>
             </el-form-item>
             <el-form-item label="相册" prop="dialogImageUrl">
-                <el-upload action="/Picture/Upload/"
-                           :list-file="imageList"
+                <el-upload action="/Picture/Upload" ref="images"
+                           :file-list="imageList"
                            list-type="picture-card"
                            :on-preview="handlePictureCardPreview"
                            :on-success="handleAlbumsImageUploadSuccess"
@@ -95,7 +87,7 @@
                                    :show-file-list="false"
                                    :show-upload-list="false"
                                    :on-success="function(){handleImageUploadSuccess(arguments,item);}">
-                            <img v-if="item.PicUrl!==''" :src="resource(item.PicUrl)" class="image">
+                            <img v-if="item.PicUrl!==''" :src="item.PicUrl|image" class="image">
                             <i v-else class="el-icon-plus image-uploader-icon"></i>
                         </el-upload>
                     </el-form-item>
@@ -128,7 +120,9 @@
     <script>
         var vm = new Vue({
             el: "#Detail",
-            compomets: $f.allCompomets,
+            components: {
+                "ckeditor": vueCkeditor
+            },
             data: {
                 dialogImageUrl: '',
                 dialogVisible: false,
@@ -136,6 +130,7 @@
                 categories: [],
                 form: {
                     "Guid": "00000000-0000-0000-0000-000000000000",
+                    "CategoryGuid": "00000000-0000-0000-0000-000000000000",
                     "ProductName": "产品名称",
                     "PromotionPrice": 1.3,
                     "Price": 2.4,
@@ -153,11 +148,11 @@
                         {
                             "Guid": "00000000-0000-0000-0000-000000000000",
                             "ProductGuid": "00000000-0000-0000-0000-000000000000",
-                            "Name": "粉红色",
-                            "Grams": 1,
-                            "Number": 9,
-                            "Price": 3.14,
-                            "PromotionPrice": 1.24,
+                            "Name": "",
+                            "Grams": 0,
+                            "Number": 0,
+                            "Price": 0,
+                            "PromotionPrice": 0,
                             "PicUrl": ""
                         }
                     ],
@@ -205,7 +200,6 @@
                     this.setImageList();
                 },
                 setImageList: function () {
-
                     this.imageList = [];
                     for (var i = 0, item; item = this.form.Albums[i]; i++) {
                         this.imageList.push({
@@ -225,9 +219,6 @@
                     }).then(function (response) {
                         me.categories = response.data.Data;
                     });
-                },
-                canNotDelete: function () {
-                    return this.Classifications.length !== 1;
                 },
                 beforeImageUpload: function (file) {
                     var isJPG = file.type === 'image/jpeg';
@@ -249,11 +240,12 @@
                     this.form.Classifications.push({
                         "Guid": "00000000-0000-0000-0000-000000000000",
                         "ProductGuid": "00000000-0000-0000-0000-000000000000",
-                        "Name": "粉红色",
-                        "Number": 9,
-                        "Price": 3.14,
-                        "PromotionPrice": 1.24,
-                        "AlbumGuid": "00000000-0000-0000-0000-000000000000"
+                        "Name": "",
+                        "Grams": 0,
+                        "Number": 0,
+                        "Price": 0,
+                        "PromotionPrice": 0,
+                        "PicUrl": ""
                     });
                 },
                 onDeleteClassification: function (item, index) {
@@ -282,6 +274,7 @@
                 getData: function () {
                     this.$http.get(apiConfig.product_detail, $f.getQueryString("uid")).then(function (response) {
                         this.form = response.data.Data;
+                        this.setImageList();
                     });
                 },
                 backToList: function () {
@@ -289,8 +282,15 @@
                 },
                 resetForm: function (formName) {
                     this.$refs[formName].resetFields();
-                },
-                resource: function (filename) {
+                }
+            },
+            computed: {
+                canNotDelete: function () {
+                    return this.form.Classifications.length === 1;
+                }
+            },
+            filters: {
+                image: function (filename) {
                     return webConfig.resourceServerAddress + filename;
                 }
             },

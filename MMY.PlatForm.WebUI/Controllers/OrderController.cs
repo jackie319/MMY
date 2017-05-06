@@ -24,17 +24,5 @@ namespace MMY.PlatForm.WebUI.Controllers
             var resultList = list.Select(q => OrderListViewModel.CopyFrom(q)).ToList();
             return this.ResultListModel(total,resultList);
         }
-
-        /// <summary>
-        /// 未支付的订单可修改
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        [HttpPost]
-        public ActionResult ChangePrice(ChangePriceViewModel model)
-        {
-            _order.ChangeOrderPrice(model.OrderGuid,model.Price);
-            return this.ResultSuccess();
-        }
     }
 }
