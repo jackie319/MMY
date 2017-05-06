@@ -104,3 +104,5 @@ D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\zh-Hans\EntityFramework.resources.d
 D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.csprojResolveAssemblyReference.cache
 D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.dll
 D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.Services\bin\Debug\Microsoft.Web.Infrastructure.xml
