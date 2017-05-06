@@ -36,7 +36,7 @@
                     "el-form": ELEMENT.Form,
                     "el-form-item": ELEMENT.FormItem,
                     "el-input": ELEMENT.Input,
-                    "el-input-number": ELEMENT.InputNumber,
+                    "el-input": ELEMENT.InputNumber,
                     "el-button": ELEMENT.Button,
                     "el-dialog": ELEMENT.Dialog
                 },
@@ -120,20 +120,22 @@
                 methods: {
                     submit: function () {
                         var me = this;
-                        me.$refs.form.validate(function (valid) {
+                        //me.$http.post(apiConfig.purchase_save,me.form).then(function (response) {
+                        //    me.$message({
+                        //        type: 'success',
+                        //        message: '保存成功!'
+                        //    });
+                        //});
+                        this.$refs.form.validate(function (valid) {
                             if (valid) {
-                                me.$http.post(apiConfig.purchase_save, me.form).then(function (response) {
-                                    me.$message({
-                                        type: 'success',
-                                        message: '保存成功!'
-                                    });
-                                });
+                                console.log(me.form);
                                 return true;
                             } else {
                                 console.log('error submit!!');
                                 return false;
                             }
                         });
+                       
                     },
                     getClassifications: function () {
                         var me = this;

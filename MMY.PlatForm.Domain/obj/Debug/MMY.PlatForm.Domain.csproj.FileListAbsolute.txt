@@ -36,17 +36,54 @@ E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Services.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\EntityFramework.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Sms.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.MP.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Extensions.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\NPOI.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\NPOI.OOXML.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\NPOI.OpenXml4Net.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Data.pdb
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Data.dll.config
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Services.pdb
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Services.dll.config
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\EntityFramework.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.xml
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Sms.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Extensions.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\NPOI.xml
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.MP.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.PlatForm.Domain.dll.config
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.PlatForm.Domain.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.PlatForm.Domain.pdb
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Data.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Services.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\EntityFramework.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Sms.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.MP.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Extensions.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\NPOI.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\NPOI.OOXML.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\NPOI.OpenXml4Net.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Data.pdb
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Data.dll.config
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Services.pdb
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Services.dll.config
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\EntityFramework.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Sms.pdb
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Extensions.pdb
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\NPOI.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.csprojResolveAssemblyReference.cache
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.pdb
