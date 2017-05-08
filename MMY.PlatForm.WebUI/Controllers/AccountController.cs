@@ -32,7 +32,9 @@ namespace MMY.PlatForm.WebUI.Controllers
         [AllowAnonymous]
         public ActionResult Login()
         {
-            return View();
+            return Redirect("/wwwroot/Index.html");
+            //1de1147b8a2aff1220048db54e8128b(12345678) 
+            //return View();
         }
         [AllowAnonymous]
         [HttpPost]
