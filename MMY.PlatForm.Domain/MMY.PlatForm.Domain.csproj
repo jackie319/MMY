@@ -31,10 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="JK.Framework.Core">
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Core.dll</HintPath>
+      <HintPath>..\Libs\libs\JK.Framework.Core.dll</HintPath>
     </Reference>
     <Reference Include="JK.Framework.Web">
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Web.dll</HintPath>
+      <HintPath>..\Libs\libs\JK.Framework.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
