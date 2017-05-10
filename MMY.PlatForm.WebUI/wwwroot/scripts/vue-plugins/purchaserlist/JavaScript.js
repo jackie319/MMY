@@ -27,9 +27,7 @@
                 created: function () {
                     var me = this;
                     window.addEventListener("load", function () {
-                        var div= toElement("<div></div>");
-                        document.body.appendChild(div);
-                        me.$mount(div);
+                        document.body.appendChild(me.$mount().$el);
                     });
                 },
                 compomets: {

@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html data-dpr="3" style="font-size: 55.2px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="baidu-site-verification" content="t7oDT96Amk">
+    <title>唯品会手机版</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="sogou_site_verification" content="G7nmLR75yc">
+    <meta name="baidu-tc-cerfication" content="0a8c6d28b570b218f78510c29be4529b">
+    <meta name="360-site-verification" content="8b6121969d78afda8caeb69053fa29d9">
+    <link href="//m.vip.com/view/touch/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- 根据视口宽度动态调整 html 元素的 font－size -->
+    <script>
+    (function(win, doc) {
+        var isMobile = (function(userAgent) {
+            'use strict';
+
+            return !!userAgent.match(/android|webos|ip(hone|ad|od)|opera (mini|mobi|tablet)|iemobile|windows.+(phone|touch)|mobile|fennec|kindle (Fire)|Silk|maemo|blackberry|playbook|bb10\; (touch|kbd)|Symbian(OS)|Ubuntu Touch/i);
+        }(navigator.userAgent));
+
+        // 前提条件 ip6 的高清视觉稿
+        var fixScreen = function() {
+            var rootFootsize;
+            var dpr;
+            var docEl;
+            var width;
+
+            docEl = doc.documentElement;
+            dpr = win.devicePixelRatio || 1;
+
+            // 设置 html dpr值，用于 css hack
+            docEl.setAttribute('data-dpr', dpr);
+
+            var page = doc.querySelector('.ui-page');
+            var pageContent = doc.querySelector('.ui-page-content');
+
+            var refreshRem = function() {
+                // 适配屏幕宽度为 320px - 540px
+                width = Math.min(docEl.clientWidth, 540);
+                width = width < 320 ? 320 : width;
+
+                if (page) {
+                    // 设置page的最大最小宽度
+                    page.style.minWidth = 320 + 'px';
+                    page.style.maxWidth = 540 + 'px';
+
+                    // 设置 page 宽度
+                    page.style.width = width + 'px';
+                    pageContent.style.width = width + 'px';
+                }
+
+                // 将 ip6 视觉稿 rem 的值设置为 50，其他按比例处理
+                rootFootsize = width * 2 / 750 * 50;
+
+                // 设置 html 元素的字体大小基准值
+                docEl.style.fontSize = rootFootsize + "px";
+            };
+
+            // 在页面调整时更新 rem
+            win.addEventListener('resize', function(e) {
+                refreshRem();
+            }, false);
+
+            // 在页面显示时更新 rem
+            win.addEventListener('pageshow', function(e) {
+                refreshRem();
+            }, false);
+
+            refreshRem();
+
+            // 给js调用的，某一屏幕宽度下 rem 和 px 之间的转换函数
+            window.px2rem = function(px) {
+                return px / rootFootsize;
+            };
+            window.rem2px = function(rem) {
+                return rem * rootFootsize;
+            };
+
+            window.rootFootsize = rootFootsize;
+        };
+
+        if (isMobile) {
+            doc.addEventListener('DOMContentLoaded', fixScreen, false);
+        } else {
+            doc.addEventListener('DOMContentLoaded', function(e) {
+                doc.documentElement.style.fontSize = '50px';
+            }, false);
+        }
+    })(window, document);
+    </script>
+    <script>
+(function wapStart() {
+    var now = Date.now();
+    var win = this;
+    var phpData = document.documentElement.getAttribute('data-php');
+    var special = /m=special/.test(location.search);
+    var _onCompleted = function() {__STATS.add('dom_ready');};
+    var _onLoad = function() {
+        __STATS.add('onload');
+        win.removeEventListener('DOMContentLoaded', _onCompleted);
+        win.removeEventListener('load', _onLoad);
+    };
+
+    if (phpData) {
+        try {
+            phpData = JSON.parse(phpData);
+        } catch (e) {}
+    }
+
+    win.__STATS = {
+        start: now,
+        points: {},
+        add: function(point, time) {
+            __STATS.points[point] = time ? time : (Date.now() - __STATS.start);
+        }
+    };
+    win.addEventListener('DOMContentLoaded', _onCompleted, false);
+    win.addEventListener('load', _onLoad, false);
+    win.onerror = function(msg, url, line, col) {
+        var u = '//mstats.vip.com/v1/jslog/m?';
+        u += '_t=' + Date.now();
+        u += '&msg=' + encodeURIComponent([msg, url, line, col || 0].join('|'));
+        (new Image()).src = u;
+    };
+
+    // need remove
+    win.ui = 'touch';
+    win.vipConfig = {
+        priceImageSwitch: parseInt('', 10),
+        ipLocation: {
+            result: "",
+            province: ""
+        }
+    };
+
+    // all data from php stored here
+    win.__locals = phpData || {};
+}.call(window));
+    </script>
+
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+
+
+
+    <script>__STATS.add('head_load');</script>
+
+    <noscript>&lt;div class="ui-top-note"&gt;您的浏览器已禁用javascript,为了您能正常浏览网站,请在浏览器里面启用javascript!&lt;/div&gt;</noscript>
+
+</head>
+
+<body style="padding-bottom: 168px;">
+
+    <script src="//ms2-m.vipstatic.com/js/lib/e7c2a69b8f.jquery-2.1.0.min.js"></script>
+
+
+
+    <!-- 顶部app导流下载 2016-03-04 -->
+    <!-- 档期列表页&预热 旧版本导流不在顶部 -->
+    <!-- 顶部app导流下载end -->
+
+    <header id="header" class="u-header clearfix">
+        <!--返回按钮根据程序判断来源，返回上一级-->
+        <!-- 非微信扫码进入的用户 -->
+        <div class="u-hd-left f-left">
+            <a href="javascript:void(0)" class="J_backToPrev"><span class="u-icon-px i-hd-back"></span></a>
+        </div>
+        <div class="u-hd-tit"><span>购物车历史</span></div>
+    </header>
+
+    <div class="u-cart-wrapper u-module">
+        <div class="animate-loading" style="display: none;"></div>
+        <div class="u-cart-history" style="">
+
+
+
+            <div class="u-module"><p class="u-cart-tit e-border-b">购物车空空如也，以下宝贝可重新加入哦~</p></div>
+
+
+
+            <div class="item saling">
+                <div class="u-carted-pic">
+                    <a href="product-1216069-189386605.html" class="clearfix">
+                        <img src="//a.vimage1.com/upload/merchandise/pdc/624/759/86770693387759624/2/MEN-1F52430-88-5_235x297_80.jpg" data-onerror="//a.vimage1.com/upload/merchandise/pdc/624/759/86770693387759624/2/MEN-1F52430-88-5.jpg" data-original="//a.vimage1.com/upload/merchandise/pdc/624/759/86770693387759624/2/MEN-1F52430-88-5_235x297_80.jpg" class="cart-history-photos" style="display: inline;">
+
+                    </a>
+                </div>
+                <div class="u-carted-detail">
+                    <a href="product-1216069-189386605.html"><p class="u-name">休闲简约单排扣单西</p></a>
+                    <p class="u-place">罗蒙ROMON男装专场</p>
+                    <p class="u-size">尺码：175/92A</p>
+                </div>
+                <div class="u-carted-pricemsg">
+                    <p class="u-price">¥299</p>
+                    <p class="u-original_price">¥1599</p>
+                </div>
+                <div class="u-cart-rebuy  ">
+
+                    <a href="javascript:;" mars_sead="add-cart-history_btn" data-action="addCart" data-animate="true" data-product_name="休闲简约单排扣单西" data-product_id="189386605" data-brand_id="1216069" data-sku_id="483500409" data-small_image="//a.vimage1.com/upload/merchandise/pdc/624/759/86770693387759624/2/MEN-1F52430-88-5.jpg">重新购买</a>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script id="cart-history-tpl" type="text/template">
+        #%if(data.re.data && data.re.data.length){%#
+        #%if(data.re.isEmptyCart == 1){%#
+        <div class="u-module"><p class="u-cart-tit e-border-b">购物车空空如也，以下宝贝可重新加入哦~</p></div>
+        #%}%#
+        #% _.each(data.re.data, function(item) { %#
+        #% var url = "product-" + item.brand_id + "-" + item.product_id + ".html" %#
+        <div class="item saling#%if(item.stocksale){%# saleout#%}%#">
+            <div class="u-carted-pic">
+                <a href="#%- url %#" class="clearfix">
+                    <img src="//ms2-m.vipstatic.com/images/common/46730e1014.loading_goods.png" data-onerror="#%- item.image%#" data-original="#%- item.image2%#" class="cart-history-photos">
+                    #%if(item.stocksale){%#
+                    <span class="seldout">已抢光</span>
+                    #%}%#
+                </a>
+            </div>
+            <div class="u-carted-detail">
+                <a href="#%- url %#"><p class="u-name">#%- item.product_name %#</p></a>
+                <p class="u-place">#%= item.brand_name%#</p>
+                <p class="u-size">尺码：#%- item.size_name%#</p>
+            </div>
+            <div class="u-carted-pricemsg">
+                <p class="u-price">¥#%- item.vipshop_price%#</p>
+                <p class="u-original_price">¥#%- item.market_price%#</p>
+            </div>
+            <div class="u-cart-rebuy#%if(item.stocksale){%# saleout#%}%#  ">
+                #%if(item.stocksale){%#
+                <a href="javascript:;" class="disabled">重新购买</a>
+                #%}else{%#
+                <a href="javascript:;" mars_sead="add-cart-history_btn" data-action="addCart" data-animate="true" data-product_name="#%- item.product_name%#" data-product_id="#%- item.product_id%#" data-brand_id="#%- item.brand_id%#" data-sku_id="#%- item.size_id%#" data-small_image="#%- item.image%#">重新购买</a>
+                #%}%#
+            </div>
+        </div>
+        #%})%#
+        #%}else{%#
+        <div class="u-module u-default-page">
+            <div class="u-default-logo"><span class="u-d-icon i-d-cart"></span></div>
+            <p class="u-default-text">购物车历史没发现商品哦</p>
+            <a href="#%- data.re.back_act%#" class="u-default-btn" mars_sead="let-us-shopping_btn">先去首页逛逛吧</a>
+        </div>
+        #%}%#
+    </script>
+
+
+    <!-- 微信环境隐藏 -->
+    <div class="footer footer-new clearfix" id="J_footer">
+        <div mars_sead="footer_client_download_btn" class="footer-download J_downloadApp clearfix">
+            <div class="pull-left download-text">
+                <i class="u-icon-px i-vip"></i>
+                <p class="single-line">唯品会客户端，特卖抢不停</p>
+            </div>
+            <div class="download-button">
+                <span class="ui-button ui-button-border">下载</span>
+            </div>
+        </div>
+        <div class="footer-nav clearfix">
+            <!-- new footer begin -->
+            <a href="index.html" mars_sead="footer-index_btn" class="pull-left">唯品会首页</a>
+            <a href="user.html" mars_sead="footer-users_btn">个人中心</a>
+            <!-- <a href="user-logout.html" mars_sead="footer-logout_btn">退出登录</a> -->
+            <!-- new footer end -->
+
+        </div>
+        <p class="copyright">Copyright © 2008-2017m.vip.com <br> 粤ICP备08114786号</p>
+    </div>
+
+
+    <a href="#top" class="u-backtop" mars_sead="home_foot_top_btn" style="right: 10px; bottom: 68px;">
+        <span class="u-icon-px i-backtop"></span>
+    </a>
+
+
+
+</body>
+</html>

@@ -21,7 +21,6 @@ namespace MMY.PlatForm.WebUI.Controllers
         /// 所有一级分类
         /// </summary>
         /// <returns></returns>
-        [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult List()
         {
             var category=_productCategory.GetAllParentCategory();

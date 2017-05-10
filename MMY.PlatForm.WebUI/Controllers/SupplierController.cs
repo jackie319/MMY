@@ -19,7 +19,6 @@ namespace MMY.PlatForm.WebUI.Controllers
             _Supplier = supplier;
         }
         // GET: Supplier
-        [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult List(SupplierQueryModel query)
         {
             int total;

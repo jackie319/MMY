@@ -238,7 +238,6 @@ D:\代码\git\MMY\MMY\MMY.Test\bin\Debug\log4net.xml
 D:\代码\git\MMY\MMY\MMY.Test\bin\Debug\MMY.FrontSite.Domain.pdb
 D:\代码\git\MMY\MMY\MMY.Test\bin\Debug\MMY.PlatForm.Domain.pdb
 D:\代码\git\MMY\MMY\MMY.Test\bin\Debug\MMY.PlatForm.Domain.dll.config
-D:\代码\git\MMY\MMY\MMY.Test\bin\Debug\JK.Framework.Sms.pdb
 D:\代码\git\MMY\MMY\MMY.Test\bin\Debug\Antlr3.Runtime.pdb
 D:\代码\git\MMY\MMY\MMY.Test\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\代码\git\MMY\MMY\MMY.Test\bin\Debug\zh-Hans\System.Web.Helpers.resources.dll

@@ -273,7 +273,7 @@
                     });
                 },
                 getData: function () {
-                    this.$http.get(apiConfig.product_detail, this.uid ).then(function (response) {
+                    this.$http.get(apiConfig.product_detail, { params: { "productGuid": this.uid } }).then(function (response) {
                         this.form = response.data.Data;
                         this.setImageList();
                     });
@@ -297,7 +297,7 @@
             },
             mounted: function () {
                 this.getCategories();
-                if (this.uid && this.uid !==Guid.empty.toString()) {
+                if (this.uid && this.uid !== Guid.empty.toString()) {
                     this.getData();
                 }
             }

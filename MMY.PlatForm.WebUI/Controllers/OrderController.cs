@@ -16,7 +16,6 @@ namespace MMY.PlatForm.WebUI.Controllers
         {
             _order = order;
         }
-        [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult List(OrderQueryModel model)
         {
             int total;

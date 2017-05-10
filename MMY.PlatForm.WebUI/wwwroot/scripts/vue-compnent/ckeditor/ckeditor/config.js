@@ -22,7 +22,7 @@ CKEDITOR.editorConfig = function (config) {
         { name: 'document', groups: ['mode', 'document', 'doctools'] }
     ];
 
-    config.removeButtons = 'Save,NewPage,Preview,Print,Templates,Cut,Paste,Copy,PasteText,PasteFromWord,Scayt,Form,Checkbox,Radio,TextField,Textarea,Select,Button,HiddenField,Superscript,BulletedList,Blockquote,CreateDiv,BidiLtr,BidiRtl,Language,Unlink,Flash,Table,HorizontalRule,SpecialChar,Iframe,PageBreak,ShowBlocks,About,NumberedList,Indent,Outdent';
+    config.removeButtons = 'Save,NewPage,Preview,Print,Templates,Cut,Paste,Copy,PasteText,PasteFromWord,Scayt,Form,Checkbox,Radio,TextField,Textarea,Image,Select,Button,HiddenField,Superscript,BulletedList,Blockquote,CreateDiv,BidiLtr,BidiRtl,Language,Unlink,Flash,Table,HorizontalRule,SpecialChar,Iframe,PageBreak,ShowBlocks,About,NumberedList,Indent,Outdent';
     config.line_height = "1;1.5;1.75;2;3;4;5";
     config.pasteFilter = null;
     //config.allowedContent = {

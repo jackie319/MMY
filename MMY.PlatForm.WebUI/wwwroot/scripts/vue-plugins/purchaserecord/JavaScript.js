@@ -27,16 +27,14 @@
                 created: function () {
                     var me = this;
                     window.addEventListener("load", function () {
-                        var div = toElement("<div></div>");
-                        document.body.appendChild(div);
-                        me.$mount(div);
+                        document.body.appendChild(me.$mount().$el);
                     });
                 },
                 compomets: {
                     "el-form": ELEMENT.Form,
                     "el-form-item": ELEMENT.FormItem,
                     "el-input": ELEMENT.Input,
-                    "el-input": ELEMENT.InputNumber,
+                    "el-input-number": ELEMENT.InputNumber,
                     "el-button": ELEMENT.Button,
                     "el-dialog": ELEMENT.Dialog
                 },
@@ -81,7 +79,7 @@
                 '</el-dialog>',
                 data: function () {
                     return {
-                        title:"进货",
+                        title: "进货",
                         isVisible: false,
                         classifications: [],
                         suppliers: [],
@@ -135,7 +133,7 @@
                                 return false;
                             }
                         });
-                       
+
                     },
                     getClassifications: function () {
                         var me = this;
