@@ -1,0 +1,5 @@
+E:\tools\development tools\GItHub\mmy\New\MMY\Libs\bin\Release\Libs.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\Libs\bin\Release\Libs.pdb
+E:\tools\development tools\GItHub\mmy\New\MMY\Libs\obj\Release\Libs.csprojResolveAssemblyReference.cache
+E:\tools\development tools\GItHub\mmy\New\MMY\Libs\obj\Release\Libs.dll
+E:\tools\development tools\GItHub\mmy\New\MMY\Libs\obj\Release\Libs.pdb

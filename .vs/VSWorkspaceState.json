@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MMY.PlatForm.WebUI\\wwwroot",
+    "\\MMY.PlatForm.WebUI\\wwwroot\\wwwroot",
+    "\\MMY.Test"
   ],
-  "SelectedNode": "\\MMY.sln",
+  "SelectedNode": "\\MMY.PlatForm.WebUI",
   "PreviewInSolutionExplorer": false
 }

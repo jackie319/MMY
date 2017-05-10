@@ -341,6 +341,7 @@ D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\Microsoft.Owin.Security.OAuth.xml
 D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\Microsoft.Owin.Security.Google.xml
 D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
 D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Sms.pdb
 D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\zh-Hans\System.Web.Helpers.resources.dll
 D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\zh-Hans\System.Web.Mvc.resources.dll
 D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\zh-Hans\System.Web.Optimization.resources.dll
