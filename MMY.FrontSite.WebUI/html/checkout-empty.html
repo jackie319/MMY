@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html style="font-size: 41.4px;">
+<head>
+    <meta charset="UTF-8">
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>购物车</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="baidu-site-verification" content="qYMZZ5kMNb">
+    <meta name="sogou_site_verification" content="G7nmLR75yc">
+    <meta name="baidu-tc-cerfication" content="0a8c6d28b570b218f78510c29be4529b">
+    <meta name="360-site-verification" content="8b6121969d78afda8caeb69053fa29d9">
+    <!-- Standard iPhone -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/touch-icon-iphone-57.png">
+    <!-- Retina iPhone -->
+    <link rel="apple-touch-icon" sizes="114x114" href="/touch-icon-iphone-114.png">
+    <!-- Standard iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/touch-icon-ipad-72.png">
+    <!-- Retina iPad -->
+    <link rel="apple-touch-icon" sizes="144x144" href="/touch-icon-ipad-144.png">
+
+
+    <script type="text/javascript">
+    //检查特定域名调整响应式布局 start
+    /**
+     * 检查是否是包含指定的域名
+     * @return {Boolean} true/false
+     */
+    function checkHost(){
+        var hostArr = ['mst.vip.com', 'viva.vip.com', 'click.union.vip.com', 'mdlp.vip.com'];
+        var docReferrer = document.referrer;
+        var dlp_tag = location.search;
+        for(var i=0, len=hostArr.length; i < len; i++){
+            if(docReferrer.indexOf(hostArr[i]) >= 0 && dlp_tag.indexOf('dlp_tag') >= 0){
+                document.domain='vip.com';
+                return true;
+            }
+        }
+    }
+    //检查特定域名调整响应式布局 end
+
+    /*响应式布局 start*/
+    function _set_font_size_750() {
+        //先留着这个方法，不要删，要给专题调用
+    }
+    function setRootFontSize() {
+        var width = document.documentElement.clientWidth, fontSize;
+        if (width > 540 && !checkHost()) {
+            width = 540;
+        }
+        fontSize = (width / 10);
+        document.getElementsByTagName('html')[0].style['font-size'] = fontSize + 'px';
+    }
+    setRootFontSize();
+    window.addEventListener('resize', function() {
+        setRootFontSize();
+    }, false);
+    /*响应式布局 end*/
+    </script>
+
+    <script type="text/javascript">
+     var _WARE_HOUSE_VERSION = 0;
+    //var _WARE_HOUSE_VERSION = 0;
+    var _WAP_PAGE_CACHE = null;
+    </script>
+
+    <link rel="stylesheet" href="css/vendors..css">
+    <link rel="stylesheet" href="css/cart-empty.css">
+</head>
+<body>
+
+    <div id="J-checkout-header">
+        <header class="header checkout-header">
+            <div class="header-left J-history-back">
+                <a href="javascript:;" class="header-left-button">
+                    <i class="icon-back"></i>
+                </a>
+            </div>
+            <div class="header-title">
+                <h1>购物车</h1>
+                <div class="countdown J-countdown" data-remaining-time=""></div>
+            </div>
+        </header>
+
+    </div>
+
+    <div id="J-shopping-cart-empty">
+        <!-- 购物车页 -->
+        <div class="shopping-cart-empty">
+            <div class="bg"></div>
+            <div class="cart"></div>
+            <h2>购物车空空如也</h2>
+            <p></p>
+            <a href="//m.vip.com" class="button button-primary" mars_sead="cart_empty_home_btn">
+                去抢购
+            </a>
+        </div>
+
+    </div>
+    <!--<script type="text/javascript" src="//ms2-m.vipstatic.com/static/page/vendors/js/vendors.8f7aa208.js"></script>
+    <script type="text/javascript" src="//ms2-m.vipstatic.com/static/page/cart-empty/js/cart-empty.1a1d6b10.js"></script>
+    <script type="text/javascript" src="//3rd.vipstatic.com/mars_wap/mars_wap.js"></script>-->
+
+
+
+</body>
+</html>

@@ -1,0 +1,935 @@
+﻿<!DOCTYPE html>
+<html data-dpr="3" style="font-size: 55.2px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="baidu-site-verification" content="t7oDT96Amk">
+    <title>唯品会手机版</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="sogou_site_verification" content="G7nmLR75yc">
+    <meta name="baidu-tc-cerfication" content="0a8c6d28b570b218f78510c29be4529b">
+    <meta name="360-site-verification" content="8b6121969d78afda8caeb69053fa29d9">
+    <link href="//m.vip.com/view/touch/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- 根据视口宽度动态调整 html 元素的 font－size -->
+    <script>
+        (function (win, doc) {
+            var isMobile = (function (userAgent) {
+                'use strict';
+
+                return !!userAgent.match(/android|webos|ip(hone|ad|od)|opera (mini|mobi|tablet)|iemobile|windows.+(phone|touch)|mobile|fennec|kindle (Fire)|Silk|maemo|blackberry|playbook|bb10\; (touch|kbd)|Symbian(OS)|Ubuntu Touch/i);
+            }(navigator.userAgent));
+
+            // 前提条件 ip6 的高清视觉稿
+            var fixScreen = function () {
+                var rootFootsize;
+                var dpr;
+                var docEl;
+                var width;
+
+                docEl = doc.documentElement;
+                dpr = win.devicePixelRatio || 1;
+
+                // 设置 html dpr值，用于 css hack
+                docEl.setAttribute('data-dpr', dpr);
+
+                var page = doc.querySelector('.ui-page');
+                var pageContent = doc.querySelector('.ui-page-content');
+
+                var refreshRem = function () {
+                    // 适配屏幕宽度为 320px - 540px
+                    width = Math.min(docEl.clientWidth, 540);
+                    width = width < 320 ? 320 : width;
+
+                    if (page) {
+                        // 设置page的最大最小宽度
+                        page.style.minWidth = 320 + 'px';
+                        page.style.maxWidth = 540 + 'px';
+
+                        // 设置 page 宽度
+                        page.style.width = width + 'px';
+                        pageContent.style.width = width + 'px';
+                    }
+
+                    // 将 ip6 视觉稿 rem 的值设置为 50，其他按比例处理
+                    rootFootsize = width * 2 / 750 * 50;
+
+                    // 设置 html 元素的字体大小基准值
+                    docEl.style.fontSize = rootFootsize + "px";
+                };
+
+                // 在页面调整时更新 rem
+                win.addEventListener('resize', function (e) {
+                    refreshRem();
+                }, false);
+
+                // 在页面显示时更新 rem
+                win.addEventListener('pageshow', function (e) {
+                    refreshRem();
+                }, false);
+
+                refreshRem();
+
+                // 给js调用的，某一屏幕宽度下 rem 和 px 之间的转换函数
+                window.px2rem = function (px) {
+                    return px / rootFootsize;
+                };
+                window.rem2px = function (rem) {
+                    return rem * rootFootsize;
+                };
+
+                window.rootFootsize = rootFootsize;
+            };
+
+            if (isMobile) {
+                doc.addEventListener('DOMContentLoaded', fixScreen, false);
+            } else {
+                doc.addEventListener('DOMContentLoaded', function (e) {
+                    doc.documentElement.style.fontSize = '50px';
+                }, false);
+            }
+        })(window, document);
+    </script>
+    <script>
+        (function wapStart() {
+            var now = Date.now();
+            var win = this;
+            var phpData = document.documentElement.getAttribute('data-php');
+            var special = /m=special/.test(location.search);
+            var _onCompleted = function () { __STATS.add('dom_ready'); };
+            var _onLoad = function () {
+                __STATS.add('onload');
+                win.removeEventListener('DOMContentLoaded', _onCompleted);
+                win.removeEventListener('load', _onLoad);
+            };
+
+            if (phpData) {
+                try {
+                    phpData = JSON.parse(phpData);
+                } catch (e) { }
+            }
+
+            win.__STATS = {
+                start: now,
+                points: {},
+                add: function (point, time) {
+                    __STATS.points[point] = time ? time : (Date.now() - __STATS.start);
+                }
+            };
+            win.addEventListener('DOMContentLoaded', _onCompleted, false);
+            win.addEventListener('load', _onLoad, false);
+            win.onerror = function (msg, url, line, col) {
+                var u = '//mstats.vip.com/v1/jslog/m?';
+                u += '_t=' + Date.now();
+                u += '&msg=' + encodeURIComponent([msg, url, line, col || 0].join('|'));
+                (new Image()).src = u;
+            };
+
+            // need remove
+            win.ui = 'touch';
+            win.vipConfig = {
+                priceImageSwitch: parseInt('', 10),
+                ipLocation: {
+                    result: "",
+                    province: ""
+                }
+            };
+
+            // all data from php stored here
+            win.__locals = phpData || {};
+        }.call(window));
+    </script>
+
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+
+
+
+    <script>__STATS.add('head_load');</script>
+
+    <noscript>&lt;div class="ui-top-note"&gt;您的浏览器已禁用javascript,为了您能正常浏览网站,请在浏览器里面启用javascript!&lt;/div&gt;</noscript>
+
+</head>
+
+<body style="border-bottom: 84px solid transparent;" class="">
+
+
+
+
+    <!-- 顶部app导流下载 2016-03-04 -->
+    <!-- 档期列表页&预热 旧版本导流不在顶部 -->
+    <!-- 顶部app导流下载end -->
+
+    <header id="header" class="u-header clearfix">
+        <!--返回按钮根据程序判断来源，返回上一级-->
+        <!-- 非微信扫码进入的用户 -->
+        <div class="u-hd-left f-left">
+            <a href="javascript:void(0)" class="J_backToPrev"><span class="u-icon-px i-hd-back"></span></a>
+        </div>
+        <div class="u-hd-tit"><span>添加收货地址</span></div>
+    </header>
+
+    <style type="text/css">
+        .footer {
+            display: none;
+        }
+    </style>
+    <div id="addressForm" class="ui-page ui-page-edit-address" style="min-width: 320px; max-width: 540px; width: 414px;">
+        <div class="ui-page-content" style="width: 414px;">
+            <div class="ui-form">
+                <div class="error-info single-line J_error_info hide">
+                    <i class="iconfont iconfont-roundclosefill"></i>
+                    <span>输入错误</span>
+                </div>
+                <form action="index.php?m=user&amp;act=address&amp;step=save&amp;filter=update" method="POST">
+                    <div class="ui-form-item ui-border-b">
+                        <label>收货人</label>
+                        <input name="consignee" type="text" value="" maxlength="50" emptymsg="请输入您的姓名" errormsg="请填写1~16位中文姓名" datatype="c16" data-clean="true" class="J_username">
+                        <div class="close J_address_cleaninput hide" style="display: none;">
+                            <i class="iconfont iconfont-roundclosefill"></i>
+                        </div>
+                    </div>
+                    <div class="ui-form-item ui-border-b">
+                        <label>手机号</label>
+                        <input name="mobile" type="tel" value="" maxlength="11" emptymsg="手机号码不能为空" errormsg="手机号码格式错误" datatype="m" class="ipt-phone" data-clean="true">
+                        <div class="close J_address_cleaninput hide">
+                            <i class="iconfont iconfont-roundclosefill"></i>
+                        </div>
+                    </div>
+                    <div class="ui-form-item time">
+                        <label>收货时间</label>
+                        <div class="ui-select">
+                            <select id="transport_day" name="transport_day" emptymsg="请选择收货时间" datatype="*">
+                                <option value="1">收货时间不限</option>
+                                <option value="2">周六日/节假日收货</option>
+                                <option value="3">周一至周五收货</option>
+                            </select>
+                        </div>
+                        <div class="more">
+                            <i class="iconfont iconfont-more"></i>
+                        </div>
+                    </div>
+                    <div class="ui-form-item ui-border-b area focus">
+                        <label>所在地区</label>
+                        <div class="area-list J_trigger_wherebox" mars_sead="addAddress_addLocation_btn"><span>云南省</span> <span>昆明市</span> <span>官渡区</span> <span>吴井街道</span></div>
+                        <div class="more">
+                            <i class="iconfont iconfont-more"></i>
+                        </div>
+                        <input type="hidden" class="J_where_box_save" id="province" name="province" save-data-level="0" value="105103" emptymsg="请选择省市区" datatype="*">
+                        <input type="hidden" class="J_where_box_save" id="city" name="city" save-data-level="1" value="105103101" emptymsg="请选择省市区" datatype="*">
+                        <input type="hidden" class="J_where_box_save" id="district" name="district" save-data-level="2" value="105103101111" emptymsg="请选择省市区" datatype="*">
+                        <input type="hidden" class="J_where_box_save" id="street" name="street" save-data-level="3" value="953101111103">
+                    </div>
+                    <div class="ui-form-item ui-border-b hide">
+                        <label>邮编</label>
+                        <input id="postcode" name="postcode" type="text" value="" maxlength="6" placeholder="邮政编码" emptymsg="邮编错误" datatype="*">
+                    </div>
+                    <div class="ui-form-item ui-form-item-textarea">
+                        <label>详细地址</label>
+                        <textarea name="address" rows="5" emptymsg="请填写详细地址" datatype="*" data-clean="true" class="J_street"></textarea>
+                        <div class="close J_address_cleaninput hide">
+                            <i class="iconfont iconfont-roundclosefill"></i>
+                        </div>
+                    </div>
+                    <input type="hidden" name="address_id" value="">
+                    <input type="hidden" name="filter" value="add">
+                    <input type="hidden" name="flag" value="0">
+                    <input type="hidden" name="mk" value="">
+                    <input type="hidden" name="key" value="">
+                    <input type="hidden" name="refererParam" value="https%3A%2F%2Fmcheckout.vip.com%2Fcheckout.html">
+                    <input type="hidden" name="_csrf" value="cbe59953dc0d539b6460ae3b292ae41e1492092336">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-bottom">
+        <input id="addressSub" type="button" class="add-address-submit ui-button ui-button-primary ui-button-large" data-istempuser="false" data-loading-text="正在提交..." value="确定">
+    </div>
+
+    <div class="drawer J_where_box" style="display: none;">
+        <div class="drawer-backdrop"></div>
+        <div class="drawer-content" style="margin-left: 100%;">
+            <div class="drawer-header ui-border-b">
+                <a href="javascript:;" class="back J_where_box_goback" data-level="0">
+                    <i class="iconfont iconfont-back"></i>
+                </a>
+                <strong class="J_where_box_title">选择省份</strong>
+            </div>
+            <div class="drawer-body">
+                <!-- 为啥要4个box，不用1个box 呵呵,请求数啊！-->
+                <ul class="J_where_box_list" data-level="0" style="display: block;">
+                    <li class="ui-border-b single-line" data-value="101101"><span>北京市</span></li>
+                    <li class="ui-border-b single-line" data-value="101102"><span>天津市</span></li>
+                    <li class="ui-border-b single-line" data-value="101103"><span>河北省</span></li>
+                    <li class="ui-border-b single-line" data-value="101104"><span>山西省</span></li>
+                    <li class="ui-border-b single-line" data-value="101105"><span>内蒙古自治区</span></li>
+                    <li class="ui-border-b single-line" data-value="102101"><span>辽宁省</span></li>
+                    <li class="ui-border-b single-line" data-value="102102"><span>吉林省</span></li>
+                    <li class="ui-border-b single-line" data-value="102103"><span>黑龙江省</span></li>
+                    <li class="ui-border-b single-line" data-value="103101"><span>上海市</span></li>
+                    <li class="ui-border-b single-line" data-value="103102"><span>江苏省</span></li>
+                    <li class="ui-border-b single-line" data-value="103103"><span>浙江省</span></li>
+                    <li class="ui-border-b single-line" data-value="103104"><span>安徽省</span></li>
+                    <li class="ui-border-b single-line" data-value="103105"><span>福建省</span></li>
+                    <li class="ui-border-b single-line" data-value="103106"><span>江西省</span></li>
+                    <li class="ui-border-b single-line" data-value="103107"><span>山东省</span></li>
+                    <li class="ui-border-b single-line" data-value="104101"><span>河南省</span></li>
+                    <li class="ui-border-b single-line" data-value="104102"><span>湖北省</span></li>
+                    <li class="ui-border-b single-line" data-value="104103"><span>湖南省</span></li>
+                    <li class="ui-border-b single-line" data-value="104104"><span>广东省</span></li>
+                    <li class="ui-border-b single-line" data-value="104105"><span>广西壮族自治区</span></li>
+                    <li class="ui-border-b single-line" data-value="104106"><span>海南省</span></li>
+                    <li class="ui-border-b single-line" data-value="105100"><span>重庆市</span></li>
+                    <li class="ui-border-b single-line" data-value="105101"><span>四川省</span></li>
+                    <li class="ui-border-b single-line" data-value="105102"><span>贵州省</span></li>
+                    <li class="ui-border-b single-line" data-value="105103"><span>云南省</span><i class="iconfont iconfont-roundcheckfill"></i></li>
+                    <li class="ui-border-b single-line" data-value="105104"><span>西藏自治区</span></li>
+                    <li class="ui-border-b single-line" data-value="106101"><span>陕西省</span></li>
+                    <li class="ui-border-b single-line" data-value="106102"><span>甘肃省</span></li>
+                    <li class="ui-border-b single-line" data-value="106103"><span>青海省</span></li>
+                    <li class="ui-border-b single-line" data-value="106104"><span>宁夏回族自治区</span></li>
+                    <li class="ui-border-b single-line" data-value="106105"><span>新疆维吾尔自治区</span></li>
+                </ul>
+                <ul class="J_where_box_list hide" data-level="1" style="display: none;"></ul>
+                <ul class="J_where_box_list hide" data-level="2" style="display: none;"></ul>
+                <ul class="J_where_box_list hide" data-level="3" style="display: none;"></ul>
+            </div>
+        </div>
+        <div class="modal-backdrop2 J_where_box_shadow hide" style="display: none;"></div>
+    </div>
+
+    <!-- 微信环境隐藏 -->
+    <div class="footer footer-new clearfix" id="J_footer">
+        <div mars_sead="footer_client_download_btn" class="footer-download J_downloadApp clearfix">
+            <div class="pull-left download-text">
+                <i class="u-icon-px i-vip"></i>
+                <p class="single-line">唯品会客户端，特卖抢不停</p>
+            </div>
+            <div class="download-button">
+                <span class="ui-button ui-button-border">下载</span>
+            </div>
+        </div>
+        <div class="footer-nav clearfix">
+            <!-- new footer begin -->
+            <a href="index.html" mars_sead="footer-index_btn" class="pull-left">唯品会首页</a>
+            <a href="user.html" mars_sead="footer-users_btn">个人中心</a>
+            <!-- <a href="user-logout.html" mars_sead="footer-logout_btn">退出登录</a> -->
+            <!-- new footer end -->
+
+        </div>
+        <p class="copyright">Copyright © 2008-2017m.vip.com <br> 粤ICP备08114786号</p>
+    </div>
+
+
+    <a href="#top" class="u-backtop" mars_sead="home_foot_top_btn">
+        <span class="u-icon-px i-backtop"></span>
+    </a>
+
+    <!--以下是浮于显示屏左下角的购物袋-->
+
+
+    <script type="text/javascript">
+
+        //$(function () {
+        //    $("#reddot").on("click", function () {
+        //        $.cookie('WAP[redDot]', '430966be76a0665059550209053d9bcb', { expires: 7, path: '/', domain: 'vip.com' });
+        //    });
+        //});
+        function associateUser() {
+            var detect = {};
+            detect.bindUser = '';
+            return detect;
+        };
+    </script>
+
+    <!-- 登录验证 start -->
+    <!-- 登录验证 end -->
+    <!-- 有货提醒20150528. -->
+    <!--<script type="text/javascript">
+        ; (function (win) {
+            $(function () {
+                var isRemindAlert = false, //站内信弹框出来否
+                    loopId,
+                    status = {
+                        errorCls: 'ui-note-error',
+                        disabled: 'disabled',
+                        events: {
+                            btnCode: 'click.action.addCart.refreshBtnCode',
+                            imgCode: 'click.action.addCart.refreshImgCode',
+                        },
+                    },
+                    uIDom = {
+                        input: {
+                            captcha: 'input[name^="captcha"]',
+                            img: 'img#captcha',
+                        }
+                    },
+                    isVerify = {
+                        triggerEventFocus: ["focus", "blur"],
+                        triggerEventKeyDown: ["keyup", "change"],
+                        config: {
+                            tiptype: 2,
+                            tipSweep: false,
+                            showAllError: false,
+                            postonce: true,
+                            ajaxPost: false
+                        },
+                        action: {
+                            refreshCode: function (e) {
+                                refCode($(this));
+                            },
+                        },
+                        initConfig: function (itemGroup) {
+                            var config = $.extend(true, isVerify.config, hawk.validate.util.tipmsg, itemGroup || {});
+                            return config;
+                        },
+                        checkCaptcha: function (e) {
+                            var t = $(this),
+                                dom = {
+                                    elem: t,
+                                    curform: t.parents('.modal'),
+                                    onShow: "请输入验证码",
+                                    onFocus: "请输入验证码，填写有效的验证码",
+                                    onCorrect: "",
+                                    onEmpty: "请输入验证码",
+                                    onError: "请输入有效的验证码",
+                                    evType: e.type
+                                };
+                            isVerify.checkValid(dom, 'blurValidator', function (status) { }, false);
+                        },
+                        checkValid: function (item, type, callback, bool) {
+                            var curform = item.curform,
+                                elem = item.elem[0];
+                            focusTxt = item.elem.attr('placeholder'),
+                                returnObj = isVerify.initConfig(item);
+                            switch (type) {
+                                case "blurValidator":
+                                    var val = hawk.validate.util.getValue.call(curform, item.elem),
+                                        status = true;
+                                    if (!item.elem.attr("datatype")) return false;
+                                    switch (returnObj.evType) {
+                                        case 'focus':
+                                            (focusTxt.length) && item.elem.attr('placeholder', '');
+                                            break;
+                                        case 'blur':
+                                            (item.elem.attr('type') == 'password' && !focusTxt.length) ? item.elem.attr('placeholder', returnObj.onError) : item.elem.attr('placeholder', returnObj.onEmpty);
+                                            break;
+                                    }
+                                    status = hawk.validate.util.regcheck.call(curform, item.elem.attr("datatype"), val, item.elem, returnObj);
+                                    if (!status.passed) {
+                                        //(returnObj.evType == 'focus') ? (item.elem.parents('li').hasClass("error") && item.elem.parents('li').removeClass("error")) : item.elem.parents('li').addClass("error");
+                                        item.elem.parents('li').addClass("error");
+                                        //当tiptype=1的情况下，传入"hide"则让提示框不弹出,tiptype=2、3的情况下附加参数"hide"不起作用;
+                                        hawk.validate.util.showMessage.call(curform, status.info, returnObj.tiptype, { dom: item.elem, type: status.type, sweep: returnObj.tipSweep }, "hide");
+                                        callback(status);
+                                        return false;
+                                    } else {
+                                        hawk.validate.util.showMessage.call(curform, status.info, returnObj.tiptype, { dom: item.elem, type: status.type, sweep: returnObj.tipSweep }, "hide");
+                                        item.elem.parents('li').removeClass("error");
+                                        callback(status);
+                                        return true;
+                                    }
+                                    break;
+                                default:
+                                    return false;
+                            }
+                        },
+                        formValid: function (item, pass, callback) {
+                            var curform = item.curform,
+                                status = true,
+                                itemStatus,
+                                returnObj = isVerify.initConfig(item);
+                            //如果pass为true 则不校验直接通过
+                            if (curform[0].status === "posting") { return false; }
+                            if (returnObj.postonce && curform[0].status === "posted") { return false; }
+                            curform.find("[datatype]").each(function () {
+                                if (pass) return false;
+                                if ($(this).is(":hidden") || $(this).data("dataIgnore") === "dataIgnore") return true;
+                                if (!$(this).attr("datatype")) return false;
+                                var val = hawk.validate.util.getValue.call(curform, $(this)),
+                                    _this = $(this);
+                                itemStatus = hawk.validate.util.regcheck.call(curform, $(this).attr("datatype"), val, $(this), returnObj);
+                                if (!itemStatus.passed) {
+                                    if (!returnObj.showAllError) {
+                                        _this.focus();
+                                        status = false;
+                                        return false;
+                                    }
+                                    status && (status = false);
+                                    return true;
+                                }
+                            });
+                            if (status) {
+                                curform[0].status = "posting";
+                                return callback(curform);
+                            }
+                            return false;
+                        }
+                    };
+
+                function antiBrush(callback) {
+                    var model = hawk.showDialog('<h1>输入校验码</h1>\
+                <ul class="nav nav-list form form-horizontal">\
+                  <li class="control-group control-captcha">\
+                    <span><input type="text" name="captcha" size="5" maxlength="4" datatype="*" placeholder="" value=""></span>\
+                    <img id="captcha" alt="captcha" src="//m.vip.com/captcha.html?'+ Math.random() + '&type=5" style="width:65px;cursor: pointer;">\
+                    <a href="javascript:void(0)" class="btn-refresh">&nbsp;换一张</a>\
+                  </li>\
+                  <li class="control-text validform-tips"></li>\
+                </ul>', {
+                            width: 300,
+                            setClass: 'ui-model-double',
+                            top: 20,
+                            isCenter: false,
+                            setResize: false,
+                            overClose: false,
+                            buttons: true,
+                            type: 'defined',
+                            onCloseCallBack: true,
+                            buttonsCus: [{ name: "取消", attribute: false }, { name: "确定", attribute: true }],
+                            onDoComplete: function (t, c) {
+                                c.oncomplete(false);
+                                startLoop();
+                            },
+                            onDoCompleteTo: function (t, c) {
+                                var dom = {
+                                    elem: t,
+                                    curform: t.parents('.modal'),
+                                    onCorrect: null,
+                                    captcha: captcha,
+                                    errorText: captcha.parents('li').next(".validform-tips")
+                                };
+                                isVerify.formValid(dom, false, function (curform) {
+                                    dom.elem.addClass(status.disabled).attr(status.disabled, true);
+                                    callback(dom, c);
+                                })
+                            }
+                        }),
+                        captcha = model.message.find(uIDom.input.captcha);
+                    captcha.off(isVerify.triggerEventFocus[0]).on(isVerify.triggerEventFocus[0], isVerify.checkCaptcha).off(isVerify.triggerEventFocus[1]).on(isVerify.triggerEventFocus[1], isVerify.checkCaptcha);
+                    captcha.off(isVerify.triggerEventKeyDown[0]).on(isVerify.triggerEventKeyDown[0], isVerify.checkCaptcha).off(isVerify.triggerEventKeyDown[1]).on(isVerify.triggerEventKeyDown[1], isVerify.checkCaptcha);
+                    model.message.off(status.events.btnCode, 'a.btn-refresh').on(status.events.btnCode, 'a.btn-refresh', isVerify.action.refreshCode).off(status.events.imgCode, uIDom.input.img).on(status.events.imgCode, uIDom.input.img, isVerify.action.refreshCode);
+                }
+
+                function refCode(This) {
+                    var dom = {
+                        imgCode: This.parents('.modal').find(uIDom.input.img),
+                    };
+                    (dom.imgCode.length && dom.imgCode.prev().children(uIDom.input.captcha).length) && (dom.imgCode.attr('src', 'captcha.html?t=' + Math.random() + '&type=5'), dom.imgCode.prev().children(uIDom.input.captcha).val(''));
+                }
+
+                function doAddCart(_data) {
+                    var bool,
+                        result,
+                        cb;
+
+                    var ajax_options = {
+                        url: 'index.php',
+                        data: {
+                            "m": "flow",
+                            "act": "addtocart",
+                            num: 1, //default one
+                            product_id: _data.goodsid,
+                            size: _data.skuid
+                        },
+                        dataType: "json",
+                        type: "GET"
+                    };
+
+                    ajax_options.error = function () {
+                        hawk.dialogBlack('网络加载异常，请刷新页面重试!');
+                    };
+                    ajax_options.success = function (data) {
+                        (bool) && (result.curform[0].status = "normal", result.elem.removeClass(status.disabled).attr(status.disabled, false));
+                        if (data.is_fastcheckout == 1) { //海淘一键购
+                            (bool) && cb.oncomplete(false);
+                            location.href = data.url;
+                        } else if (data.code == 0 && data.add_num > 0) { //成功
+                            (bool) && cb.oncomplete(false);
+                            self.location.href = self.location.href;
+                            Cookie.Set('footer_remind_showtip', 1);
+                        } else if (data.code == 111 && data.url.length > 1) { //未登录
+                            (bool) && cb.oncomplete(false);
+                            location.href = data.url;
+                        } else if (data.code == 112) { //切换站点
+                            (bool) && cb.oncomplete(false);
+                            hawk.showDialog(data.msg, {
+                                setClass: 'ui-modal-doubleBtn',
+                                overClose: false,
+                                buttons: true,
+                                type: 'defined',
+                                buttonsCus: [{ name: "取消", attribute: false }, { name: "切换站点", attribute: true }],
+                                onDoComplete: function (t, c) {
+                                    c.oncomplete(false);
+                                },
+                                onDoCompleteTo: function (t, c) {
+                                    c.oncomplete(false);
+                                    hawk.showDialog('<h3><img src="//ms2-m.vipstatic.com/images/common/b8ab6c1fcd.loading-big.gif" alt="loading" /></h3><p class="c-red">正在切换</p>', {
+                                        setClass: 'ui-white-loading',
+                                        overClose: false,
+                                        closeBtn: false,
+                                        width: 80,
+                                        overZindex: 1050,
+                                        autoCall: true,
+                                        onAutoComplete: function (cal) {
+                                            var ajax_warehouse = {
+                                                url: 'index.php?',
+                                                data: {
+                                                    m: "ajax",
+                                                    act: "change_warehouse",
+                                                    wh: data.pwarehouse
+                                                },
+                                                dataType: "json",
+                                                type: 'POST'
+                                            };
+                                            ajax_warehouse.error = function () {
+                                                cal.callback(false);
+                                                hawk.dialogBlack('网络延时，提交订单失败！')
+                                            };
+                                            ajax_warehouse.success = function (re) {
+                                                cal.callback(false);
+                                                if (re && re != null && re != undefined && re.code == 1 && re.url) {
+                                                    location.href = re.url;
+                                                } else {
+                                                    location.href = 'index.html';
+                                                }
+                                            };
+                                            $.ajax(ajax_warehouse);
+                                        }
+                                    });
+                                }
+                            });
+                        } else if (data.code > 0) {
+                            switch (data.code) {
+                                case 5003:
+                                    (bool) ? (refCode(result.captcha), result.errorText.addClass('error').html('校验出错，请重试')) : (antiBrush(function (item, c) {
+                                        ajax_options.data.captcha = item.captcha.val();
+                                        $.ajax(ajax_options, bool = true, result = item, cb = c);
+                                    }));
+                                    break;
+                                case 5004:
+                                    refCode(result.captcha);
+                                    result.errorText.addClass('error').html('校验出错，请重试');
+                                    break;
+                                case 5005:
+                                    refCode(result.captcha);
+                                    result.errorText.addClass('error').html('校验出错，请重试');
+                                    break;
+                                case 5006:
+                                    refCode(result.captcha);
+                                    result.errorText.addClass('error').html('校验码输入错误');
+                                    break;
+                                default:
+                                    (bool) && cb.oncomplete(false);
+                                    (data.msg.length) && hawk.dialogBlack(data.msg);
+                                    startLoop();
+                                    break;
+                            };
+                            return false
+                        }
+                    }
+
+                    $.ajax(ajax_options, bool = false, null, null);
+                }
+
+                function getRemind() {
+                    stopLoop();
+                    //请求站内信
+                    var ajaxOption = {
+                        url: '//m.vip.com/ajaxapi-remind.html',
+                        data: {
+                            's': Date.now(),
+                            'action': 'get'
+                        },
+                        dataType: "json",
+                        type: "GET"
+                    };
+
+                    ajaxOption.error = function () {
+                        //hawk.dialogBlack('网络加载异常，请刷新页面重试!');
+                    };
+                    ajaxOption.success = function (re) {
+
+                        if (re.code == 10001) {
+                            delRemind(re.data);
+                            //var _data = {"msgid": 56703372,"goodsid":  56703372,"skuid":  146757247,'brand_id' : '430279',"content":  '韩版时尚 女款西瓜红短袖T恤 舒适透气',image:'//a.vimage1.com/upload/merchandise/424214/Paul-PDZ52CE6233R2-1_473x598_80.jpg',imageUrl:'//a.vimage1.com/upload/merchandise/424214/Paul-PDZ52CE6233R2-1_473x598_80.jpg'}//test//
+                            var _data = re.data;
+                            var Img = new Image;
+                            Img.onload = function () {
+                                Mar.Seed.request("button", "click", 'vip_remind_popup'); //mar
+                                hawk.showDialog('<div class="u-remindpop-bd"><a class="u-pic" href="product-' + _data.brand_id + '-' + _data.goodsid + '.html"><img src="' + _data.image + '"></a><p class="u-name">' + _data.content + '</p><p class="u-tips">有货啦，立即拥有它！</p></div>', {
+                                    setClass: 'ui-model-double u-remindpop',
+                                    width: 280,
+                                    //isCenter: false,
+                                    overClose: false,
+                                    buttons: true,
+                                    setResize: false,
+                                    type: 'defined',
+                                    buttonsCus: [{ name: "错过", attribute: false, mars_sead: 'vip_remind_popup_no' }, { name: "加入购物车", attribute: true, mars_sead: 'vip_remind_popup_yes' }],
+                                    onDoComplete: function (t, c) {
+                                        c.oncomplete(false);
+                                        startLoop();
+                                    },
+                                    onDoCompleteTo: function (t, c) {
+                                        c.oncomplete(false);
+
+                                        doAddCart(_data);
+                                    }
+                                });
+                            }
+                            Img.src = _data.image;
+                        } else {
+                            startLoop();
+                        }
+                    }
+
+                    $.ajax(ajaxOption);
+                }
+
+                function delRemind(_data) {
+                    var ajaxOption = {
+                        url: '//m.vip.com/ajaxapi-remind.html',
+                        data: {
+                            's': Date.now(),
+                            'action': 'del',
+                            'skuId': _data.skuid,
+                            'productId': _data.goodsid
+                        },
+                        dataType: "json",
+                        type: "GET"
+                    };
+                    ajaxOption.error = function () {
+                        //hawk.dialogBlack('网络加载异常，请刷新页面重试!');
+                    };
+                    ajaxOption.success = function (re) { }
+
+                    $.ajax(ajaxOption);
+                }
+
+                function stopLoop() {
+                    isRemindAlert = true;
+                    loopId && clearInterval(loopId);
+                }
+
+                function startLoop(isFirst) {
+                    isRemindAlert = !!isFirst;
+
+                    loopId && clearInterval(loopId);
+                    loopId = setInterval(function () {
+                        isRemindAlert || getRemind();
+                    }, 30000); //30s test
+                }
+
+                function init() {
+                    if (Cookie.Get('footer_remind_showtip') == 1) {
+                        hawk.dialogBlack('商品已加入购物车，请尽快结算');
+                        Cookie.Del('footer_remind_showtip');
+                    }
+                    getRemind();
+                    startLoop(true);
+                }
+
+                init();
+            });
+        }(window));
+    </script>-->
+    <!-- dis 获取网速20150723. -->
+    <script type="text/javascript">
+        //; (function (win) {
+        //    $(function () {
+        //        //Cookie.Set('getnetspeed','2015-7-16-1', 2*24); //test
+
+        //        //start get net speed
+        //        var ajaxUrl = {
+        //            'getSpeed': '//m.vip.com/public/getnetspeed/200k',
+        //            'upSpeed': '//m.vip.com/ajaxapi-dis.html'
+        //        };
+        //        var fileSize = 200; //k
+        //        var nowTime = new Date();
+        //        var cookieVal = getCookieVal();
+
+        //        if (nowTime.getHours() == 10 || nowTime.getHours() == 20) {
+        //            if (!cookieVal || compareTime(cookieVal, nowTime)) {
+        //                getSpeed();
+        //            }
+        //        }
+
+        //        function getSpeed() {
+        //            var _speed;
+        //            var upTime;
+        //            var _time = Date.now();
+        //            return;
+        //            $.ajax({
+        //                url: ajaxUrl['getSpeed'],
+        //                success: function () {
+        //                    _upTime = new Date();
+        //                    _time = Date.now() - _time;
+        //                    _speed = ~~(fileSize / _time * 1000);
+
+        //                    _speed && $.ajax({
+        //                        url: ajaxUrl['upSpeed'],
+        //                        data: {
+        //                            's': Date.now(),
+        //                            'action': 'speedPush',
+        //                            'speed': _speed
+        //                        },
+        //                        success: function (re) {
+        //                            if (re.code >= 0) {
+        //                                setCookieVal(_upTime);
+        //                            }
+        //                        },
+        //                        error: function () { },
+        //                        dataType: 'json',
+        //                        type: "GET"
+        //                    });
+        //                },
+        //                error: function () { },
+        //                dataType: 'text',
+        //                type: "GET"
+        //            });
+        //        }
+
+        //        function compareTime(cookieVal, nowTime) {
+
+        //            var nYear = nowTime.getFullYear(),
+        //                nMonth = +nowTime.getMonth() + 1,
+        //                nDay = nowTime.getDate(),
+        //                nHour = nowTime.getHours();
+
+        //            if (!cookieVal) { return false; }
+
+        //            cookieVal = cookieVal.split('-');
+
+        //            //同一天早十晚八是否发过
+        //            if (cookieVal[0] == nYear &&
+        //                cookieVal[1] == nMonth &&
+        //                cookieVal[2] == nDay
+        //            ) {
+        //                if (cookieVal[3] == 1 && nHour == 10) { //早十
+        //                    return false;
+        //                } else if (cookieVal[3] == 2 && nHour == 20) {//晚八
+        //                    return false;
+        //                }
+        //            }
+
+        //            return true;
+        //        }
+
+        //        function getCookieVal() {
+        //            return Cookie.Get('getnetspeed');
+        //        }
+
+        //        function setCookieVal(date) {
+        //            //WhichTime 早十晚8
+        //            //1 10:00
+        //            //2 20:00
+        //            if (!date) { return; }
+
+        //            Cookie.Set('getnetspeed',
+        //                date.getFullYear() + '-' + (+date.getMonth() + 1) + '-' + date.getDate() + '-' +
+        //                (date.getHours() == 10 ? 1 : 2),
+        //                2 * 24);
+        //        }
+        //    });
+        //}(window));
+    </script>
+    <noscript>
+        &lt;img src="//mar.vip.com/n" height="1" width="1" border="0" alt="" /&gt;
+    </noscript>
+
+
+    <!-- ADMaster -->
+    <script>
+        //; (function admaster() {
+        //    if ('mlogin.vip.com' == location.hostname) return;
+        //    var _smq = _smq || [];
+        //    _smq.push(['_setAccount', '63e2363', new Date()]);
+        //    _smq.push(['pageview']);
+        //    window._smq = _smq;
+        //    var script = document.createElement('script');
+        //    script.type = 'text/javascript';
+        //    script.async = true;
+        //    script.src = '//ms.vipstatic.com/vtm/vtm_config_res/prod/1415348575740_js_core.js';
+        //    var s = document.getElementsByTagName('script')[0];
+        //    s.parentNode.insertBefore(script, s);
+        //}());
+    </script>
+
+    <script>
+        // 下载 APP 所需的配置数据
+        var downloadAppConfig = {
+            cls: 'kqlbhbGm',
+            url: '//m.vip.com/service-download.html',
+            page: ''
+        };
+
+        // ios9＋ safari 浏览器下发送埋点 app_download_ios9-btn
+        // 用于统计新客转化率参考
+        (function (doc) {
+            doc.addEventListener('DOMContentLoaded', function (e) {
+                var ua = navigator.userAgent;
+                var isIPhone = /iPhone/.test(ua);
+                var isSafari = ua.indexOf("Safari") > -1 && ua.indexOf("Chrome") < 1; //判断是否Safari浏览器
+                var iPhoneVersion = ua.match(/OS ([5-9])_\d[_\d]* like Mac OS X/i);
+                var downloadApp = doc.querySelectorAll('.J_downloadApp');
+
+                for (var i = 0; i < downloadApp.length; i++) {
+                    (function (j) {
+                        downloadApp[j].addEventListener('click', function (e) {
+                            if (isIPhone && isSafari && iPhoneVersion[1] >= 9) {
+                                Mar.Seed.request("link", "click", "app_download_ios9-btn");
+                            }
+
+                            // 如果是顶部下载条则直接返回
+                            if (this.id === 'J_topDownloadBar') {
+                                return false;
+                            } else {
+                                // 非链接
+                                if (this.nodeName.toLowerCase() !== 'a') {
+                                    location.href = downloadAppConfig.url;
+                                }
+                            }
+                        });
+                    })(i);
+                }
+            });
+        })(document);
+    </script>
+
+    <script>
+        function adjustBodyPadding() {
+            //var $footer = $('#J_footer:not(:hidden)');
+            //var $fixedBottom = $('.fixed-bottom:not(:hidden), .navbar-fixed-bottom');
+            //var footerHeight = 0;
+            //var fixBottomHeight = 0;
+            //var bodyPaddingBottom = 0;
+
+            //if ($footer.length > 0) {
+            //    footerHeight = $footer.outerHeight();
+
+            //    $('body').css('paddingBottom', footerHeight + 'px');
+            //}
+
+            //if ($fixedBottom.length > 0) {
+            //    fixBottomHeight = $fixedBottom.outerHeight();
+
+            //    $('body').css('borderBottom', fixBottomHeight + 'px solid transparent');
+            //}
+        }
+
+        adjustBodyPadding();
+    </script>
+
+    <!-- 唯享客项目分享记录js  -->
+
+
+    <!--<script src="//ms2-m.vipstatic.com/js/touch/e5593e0ef7.page.address.min.js"></script>-->
+
+
+
+</body>
+</html>

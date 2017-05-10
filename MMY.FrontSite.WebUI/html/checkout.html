@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+<html style="font-size: 41.4px;">
+<head>
+    <meta charset="UTF-8">
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>结算</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="baidu-site-verification" content="qYMZZ5kMNb">
+    <meta name="sogou_site_verification" content="G7nmLR75yc">
+    <meta name="baidu-tc-cerfication" content="0a8c6d28b570b218f78510c29be4529b">
+    <meta name="360-site-verification" content="8b6121969d78afda8caeb69053fa29d9">
+    <!-- Standard iPhone -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/touch-icon-iphone-57.png">
+    <!-- Retina iPhone -->
+    <link rel="apple-touch-icon" sizes="114x114" href="/touch-icon-iphone-114.png">
+    <!-- Standard iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/touch-icon-ipad-72.png">
+    <!-- Retina iPad -->
+    <link rel="apple-touch-icon" sizes="144x144" href="/touch-icon-ipad-144.png">
+
+
+    <script type="text/javascript">
+        //检查特定域名调整响应式布局 start
+        /**
+         * 检查是否是包含指定的域名
+         * @return {Boolean} true/false
+         */
+        function checkHost() {
+            var hostArr = ['mst.vip.com', 'viva.vip.com', 'click.union.vip.com', 'mdlp.vip.com'];
+            var docReferrer = document.referrer;
+            var dlp_tag = location.search;
+            for (var i = 0, len = hostArr.length; i < len; i++) {
+                if (docReferrer.indexOf(hostArr[i]) >= 0 && dlp_tag.indexOf('dlp_tag') >= 0) {
+                    document.domain = 'vip.com';
+                    return true;
+                }
+            }
+        }
+        //检查特定域名调整响应式布局 end
+
+        /*响应式布局 start*/
+        function _set_font_size_750() {
+            //先留着这个方法，不要删，要给专题调用
+        }
+        function setRootFontSize() {
+            var width = document.documentElement.clientWidth, fontSize;
+            if (width > 540 && !checkHost()) {
+                width = 540;
+            }
+            fontSize = (width / 10);
+            document.getElementsByTagName('html')[0].style['font-size'] = fontSize + 'px';
+        }
+        setRootFontSize();
+        window.addEventListener('resize', function () {
+            setRootFontSize();
+        }, false);
+    /*响应式布局 end*/
+    </script>
+
+    <script type="text/javascript">
+        var _WARE_HOUSE_VERSION = 0;
+        //var _WARE_HOUSE_VERSION = 0;
+        var _WAP_PAGE_CACHE = null;
+    </script>
+
+    <link rel="stylesheet" href="css/vendors.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <div class="page" id="J-page">
+
+        <div id="J-checkout-header">
+            <header class="header checkout-header">
+                <div class="header-left J-history-back">
+                    <a href="javascript:;" class="header-left-button">
+                        <i class="icon-back"></i>
+                    </a>
+                </div>
+                <div class="header-title">
+                    <h1>结算</h1>
+                    <div class="countdown J-countdown" data-remaining-time="1190"><span>19</span><span>:</span><span>35</span><span></span></div>
+                </div>
+            </header>
+
+        </div>
+
+        <div id="J-safety-tips">
+            <div class="safety-tips">
+                <div class="safe">
+                    <i class="icon-safe"></i>
+                    <i class="icon-rmb2"></i>
+                </div>
+                你正在安全购物环境中，请放心购买
+            </div>
+        </div>
+
+        <div id="J-receiving-info">
+            <div class="receiving-info">
+                <div class="list" data-is-login="1" id="J-list">
+                    <a href="javascript:;" class="list-item media more J-address-empty">
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">
+                                        设置收货地址
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="icon-back"></i>
+                        </div>
+                    </a>
+
+                    <a href="javascript:;" class="list-item media more J-receiving-address" data-wh="VIP_CD" data-area-id="953101111103">
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">
+                                        <span class="username">张宇</span>
+                                        <span class="phone-number">136*****707</span>
+                                    </div>
+                                </div>
+                                <div class="item-subtitle">云南省昆明市官渡区吴井街道董家湾路77号7幢1单元7号</div>
+                                <div class="item-text">
+                                    收货时间不限
+                                </div>
+                            </div>
+                            <i class="icon-back"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="J-identify-card">
+
+        </div>
+
+        <div id="J-cart-info">
+            <div class="shopping-cart-info-box" id="J-shopping-cart-info-box">
+                <!--特卖会非一键购订单-->
+                <!-- 购物车不为空 -->
+                <div class="section section-cart-order ui-list" id="J-goods-count" data-goods-count="1">
+                    <div class="ui-list-header-item ui-border-b">
+                        <h2 class="single-line">唯品会发货 </h2>
+                    </div>
+
+                    <ul>
+                        <li class="shopping-cart-info">
+                            <i class="iconfont icon-punctuation"></i>
+                            <p>再购40元可享受满159减20，上不封顶</p>
+                        </li>
+
+                        <li class="ui-list-item">
+                            <div class="ui-list-item-inner">
+                                <a href="//m.vip.com/product-1215855-189986080.html?rbc=url_cart" class="ui-list-item-thumb">
+                                    <img src="//a1.vimage1.com/upload/merchandise/pdcvis/2017/02/20/24/93c970d3-fc3f-47a2-bae1-48f00066910e.jpg">
+
+                                </a>
+
+                                <div class="ui-list-item-info">
+                                    <a href="//m.vip.com/product-1215855-189986080.html?rbc=url_cart" class="meta">
+                                        <h4 class="title">男款净色休闲百搭长袖衬衫牛仔浅蓝</h4>
+                                        <p class="single-line">
+                                            <span>森马男装专场</span>
+                                        </p>
+                                        <p>L</p>
+                                    </a>
+
+
+                                    <div class="stock clearfix" data-product_id="189986080" data-size_id="485154320">
+                                        <a href="javascript:;" class="ui-button ui-button-border ui-button-border-gray ui-button-border-small  disabled" mars_sead="cart_edit_btn" data_mars="prd_id:189986080">
+                                            <i class="iconfont icon-minus"></i>
+                                        </a>
+                                        <span>1</span>
+                                        <input class="amount-num J-amount-num" type="text" readonly="readonly" data-brand-id="1215855" data-product_id="189986080" data-size_id="485154320" data-id="" value="1" name="num">
+                                        <a href="javascript:;" class="ui-button ui-button-border ui-button-border-gray ui-button-border-small J-cart-info-plus" mars_sead="cart_edit_btn" data_mars="prd_id:189986080">
+                                            <i class="iconfont icon-plus"></i>
+                                        </a>
+                                        <a href="javascript:;" class="close J-cart-info-delete" data-usecoupon="0" mars_sead="cart_delect_btn" data_mars="prd_id:189986080">
+                                            <i class="iconfont icon-close"></i>
+                                        </a>
+                                    </div>
+                                    <a href="//m.vip.com/product-1215855-189986080.html?rbc=url_cart" class="price">
+                                        <span class="original-price">￥119</span>
+                                        <del>￥199</del>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="shopping-cart-info">
+                            <i class="iconfont icon-punctuation"></i>
+                            <p>再购2件可享受购物满3件免1件</p>
+                        </li>
+
+                        <li class="ui-list-item">
+                            <div class="ui-list-item-inner">
+                                <a href="//m.vip.com/product-1208817-188122150.html?rbc=url_cart" class="ui-list-item-thumb">
+                                    <img src="//a1.vimage1.com/upload/merchandise/pdcvis/2017/03/09/48/4b81cc42-b08e-4991-ab88-5132a46e794e.jpg">
+
+                                </a>
+
+                                <div class="ui-list-item-info">
+                                    <a href="//m.vip.com/product-1208817-188122150.html?rbc=url_cart" class="meta">
+                                        <h4 class="title">男款时尚休闲衬衫蓝色</h4>
+                                        <p class="single-line">
+                                            <span>蓝色天空MBSKY男装专场</span>
+                                        </p>
+                                        <p>L</p>
+                                    </a>
+
+
+                                    <div class="stock clearfix" data-product_id="188122150" data-size_id="479570223">
+                                        <a href="javascript:;" class="ui-button ui-button-border ui-button-border-gray ui-button-border-small  disabled" mars_sead="cart_edit_btn" data_mars="prd_id:188122150">
+                                            <i class="iconfont icon-minus"></i>
+                                        </a>
+                                        <span>1</span>
+                                        <input class="amount-num J-amount-num" type="text" readonly="readonly" data-brand-id="1208817" data-product_id="188122150" data-size_id="479570223" data-id="" value="1" name="num">
+                                        <a href="javascript:;" class="ui-button ui-button-border ui-button-border-gray ui-button-border-small J-cart-info-plus" mars_sead="cart_edit_btn" data_mars="prd_id:188122150">
+                                            <i class="iconfont icon-plus"></i>
+                                        </a>
+                                        <a href="javascript:;" class="close J-cart-info-delete" data-usecoupon="0" mars_sead="cart_delect_btn" data_mars="prd_id:188122150">
+                                            <i class="iconfont icon-close"></i>
+                                        </a>
+                                    </div>
+                                    <a href="//m.vip.com/product-1208817-188122150.html?rbc=url_cart" class="price">
+                                        <span class="original-price">￥169</span>
+                                        <del>￥569</del>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="section-footer">
+                        <div class="total-price clearfix">
+                            ¥169
+                        </div>
+
+                        <!-- 免邮信息 -->
+                        <div class="shopping-cart-info clearfix">
+                            <i class="iconfont icon-punctuation"></i>
+                            <p>本单已免运费</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="J-checkout-money">
+            <div class="J-checkout-money-wrap">
+                <ul class="u-checkout-money">
+                    <li class="title ui-border-b">订单金额 <span>¥&nbsp;159</span></li>
+                    <li class="item-money">商品总金额 <span>¥&nbsp;169</span></li>
+                    <li class="item-money">唯品会发货运费 <span>¥&nbsp;0</span></li>
+                    <li class="item-money">礼券折扣 <span>-¥&nbsp;10</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="favourable-item-wrap">
+
+            <div id="J-vip-coin" class="favourable-item">
+
+            </div>
+
+            <div id="J-vip-card" class="favourable-item">
+
+            </div>
+
+            <div id="J-vip-wallet" class="favourable-item">
+
+            </div>
+        </div>
+
+        <div id="J-checkout-invoice">
+            <!-- 登录了并且没有海淘商品才展示下面逻辑 -->
+            <div class="u-checkout-invoice">
+                <div class="invoice-head J-invoice-head">
+                    开具发票
+                    <div class="tip" id="J-invoice-tip">不开发票</div>
+                    <i class="icon-back J-choice-icon"></i>
+                </div>
+            </div>
+
+            <input id="J-special-goods" type="hidden" value="0">
+            <input id="J-support-electronic" type="hidden" value="0">
+            <input id="J-support-print-electronic" type="hidden" value="0">
+            <input id="J-support-paper" type="hidden" value="1">
+            <input id="J-top-msg" type="hidden" value="">
+            <input id="J-all-vipcard-pay" type="hidden" value="">
+
+        </div>
+
+        <div id="J-cart-coupon">
+            <div class="J-cart-coupon-wrap">
+                <div class="cart-coupon-menu-wrap  ">
+                    <div class="cart-coupon-menu J-cart-coupon-menu ui-border-b" mars_sead="active_te_use_coupon_giftcard_cart">
+                        已选择1张礼券
+                        <i class="icon-back"></i>
+                    </div>
+                    <div class="cart-coupon-select">
+                        <div class="cart-coupon-select-left">
+                            <label>优惠券</label>
+                            -¥10
+                        </div>
+                        满100元减10元[新会员专享券]
+                    </div>
+                    <input type="hidden" class="J-used-code-bonus" value="0">
+                </div>
+            </div>
+            <div class="u-cart-coupon-wrap J-cart-coupon-dialog">
+                <div class="u-cart-coupon J-cart-coupon-body">
+                    <div class="cart-coupon-head ui-border-b">
+                        使用礼券
+                        <i class="icon-close J-btn-close"></i>
+                    </div>
+                    <div class="cart-coupon-body J-cart-coupon-list-wrap">
+                        <div class="J-cart-coupon-list"></div>
+                    </div>
+                    <div class="cart-coupon-footer">
+                        <button type="button" class="btn-submit J-btn-submit">确定</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="J-cart-bonus">
+            <div class="list list-bonus J-cart-bonus">
+                <ul>
+                    <!-- 默认 -->
+                    <li class="list-item more usabled J-use-bonus" mars_sead="active_te_use_coupon_password_cart" data-use-coupon="1">
+                        <a href="javascript:;" class="item-content">
+                            <div class="item-inner">
+                                <p class="item-title">使用口令</p>
+                            </div>
+                            <i class="icon-back"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="J-pay-tip">
+            <div class="haitao-pay-tip" id="J-haitao-pay-tip" style="display: none;">
+                本人承诺所购商品系个人合理自用，<br>
+                现委托商家代理申报、代缴税款等通关事宜
+            </div>
+
+        </div>
+
+        <div id="J-foot-toolbar">
+
+        </div>
+
+        <div id="J-foot-download">
+
+        </div>
+
+        <div id="J-page-footer">
+
+        </div>
+    </div>
+
+
+    <div id="J-checkout-pay">
+        <div class="J-checkout-pay-wrap">
+            <div class="u-checkout-pay checkout-pay">
+                <div class="pay-content J-pay-content border-t">
+                    <div class="total-money">还需支付:<span>¥&nbsp;159</span></div>
+                    <!-- 接收银台 -->
+                    <div class="btn-group clearfix">
+                        <button type="button" class="btn btn-right btn-pay-online J-online-pay">在线支付</button>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="J-is-login" value="1">
+            <input type="hidden" id="J-has-haitao" value="0">
+            <input type="hidden" id="J-need-paypassword" value="">
+            <input type="hidden" id="J-join-token" value="">
+            <input type="hidden" id="J-manage-paypassword-switch" value="1">
+        </div>
+
+    </div>
+
+    <!--<script type="text/javascript" src="//ms2-m.vipstatic.com/static/page/vendors/js/vendors.8f7aa208.js"></script>
+    <script type="text/javascript" src="//ms2-m.vipstatic.com/static/page/checkout/js/checkout.f9b260ad.js"></script>-->
+    <div id="J-toast" class="toast"></div><div id="J-dialog1492091965290" class="popup dialog none">
+        <h3 class="dialog-title"></h3>
+        <section class="dialog-body"></section>
+        <section class="dialog-foot border-t"></section>
+    </div><div id="mask1492091965290" class="mask" style="z-index: 1349; opacity: 1; display: none;"></div><div id="J-modal1492091965290" class="modal modal-bonus from-bottom" style="position: absolute;">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>使用优惠口令</h3>
+                <a href="javascript:;" class="close J-modal-close">
+                    <i class="icon-close"></i>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div class="modal-main">
+                    <div class="form-bonus">
+                        <h4>优惠口令：</h4>
+                        <div class="border-radius ipt-bonus-box">
+                            <input type="text" class="ipt-bonus J-ipt-bonus" placeholder="输入口令立享优惠">
+                        </div>
+                        <div class="bonus-msg J-bonus-msg">
+                            <i class="icon-warning"></i>
+                            <span>口令不存在</span>
+                        </div>
+                        <a href="javascript:;" class="button button-primary button-big button-fill submit J-bonus-submit">使用</a>
+                    </div>
+
+                    <div class="rule">
+                        <h4>使用规则<a href="//viva.vip.com/act/m/coupon_help_desc_20160706?wapid=vivac_347">帮助</a></h4>
+                        <ul>
+                            <li>
+                                1.在唯品会站内外的运营活动中可获得优惠口令；
+                            </li>
+                            <li>
+                                2.优惠口令先到先得，购物车超时，口令立即失效；
+                            </li>
+                            <li>
+                                3.优惠口令不可与优惠券同时使用；
+                            </li>
+                            <li>
+                                4.优惠口令暂不支持品牌商家直发专场。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><div id="J-dialog1492091965291" class="popup dialog none">
+        <h3 class="dialog-title"></h3>
+        <section class="dialog-body"></section>
+        <section class="dialog-foot border-t"></section>
+    </div><div id="J-dialog1492091965292" class="popup dialog none">
+        <h3 class="dialog-title"></h3>
+        <section class="dialog-body"></section>
+        <section class="dialog-foot border-t"></section>
+    </div><div id="J-dialog1492091965293" class="popup dialog none" style="opacity: 0; display: none;">
+        <h3 class="dialog-title none"></h3>
+        <section class="dialog-body">你还未设置收货地址，请设置地址</section>
+        <section class="dialog-foot border-t"><button data-index="0">取消</button><button data-index="1">设置地址</button></section>
+    </div><div id="J-modal1492091965291" class="modal modal-address from-bottom" style="position: fixed;">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3></h3>
+                <a href="javascript:;" class="close J-modal-close">
+                    <i class="icon-close"></i>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div class="modal-main">
+
+                </div>
+            </div>
+        </div>
+    </div><div id="J-popup1492091965334" class="popup popup-pay-delivery from-bottom J-popup-pay-delivery"></div><div id="J-dialog1492091965294" class="popup dialog none">
+        <h3 class="dialog-title"></h3>
+        <section class="dialog-body"></section>
+        <section class="dialog-foot border-t"></section>
+    </div><div id="J-modal1492091965292" class="modal J-modal-invoice modal-invoice from-bottom" style="position: absolute;">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>开具发票</h3>
+                <a href="javascript:;" class="close J-modal-close">
+                    <i class="icon-close"></i>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div class="modal-main">
+                    <div class="form-invoice">
+
+                        <ul class="invoice-type border-b clearfix">
+                            <li class="J-invoice-type-li f-left disabled "><i class=""></i>电子发票</li>
+
+                            <li class="J-invoice-type-li f-left  "><i class=""></i>纸质发票</li>
+
+                            <li class="J-invoice-type-li f-left selected"><i class="selected icon-filter-checked"></i>不开发票</li>
+                        </ul>
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="wrap-submit-btn">
+                        <button class="invoice-submit-btn abled" id="J-invoice-submit-btn" type="button">确认</button>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div><a href="#top" class="backtop J-gotop none" mars_sead="home_foot_top_btn" style="display: none; bottom: 5px;">
+        <i class="icon-up"></i>
+    </a>
+    <!--<script type="text/javascript" src="//3rd.vipstatic.com/mars_wap/mars_wap.js"></script>-->
+
+</body>
+</html>
