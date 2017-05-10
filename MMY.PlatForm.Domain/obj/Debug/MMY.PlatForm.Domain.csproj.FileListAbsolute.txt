@@ -58,3 +58,41 @@ E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\log4
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.MP.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.PlatForm.Domain.dll.config
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.PlatForm.Domain.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.PlatForm.Domain.pdb
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Data.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Services.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\EntityFramework.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Sms.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.MP.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Extensions.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.Mvc.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.Razor.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.WebPages.Razor.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.WebPages.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Data.pdb
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Data.dll.config
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Services.pdb
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Services.dll.config
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\EntityFramework.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.Mvc.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.Razor.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.WebPages.Razor.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.WebPages.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\Microsoft.Web.Infrastructure.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\zh-Hans\System.Web.Razor.resources.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\zh-Hans\System.Web.WebPages.Razor.resources.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\zh-Hans\System.Web.WebPages.resources.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.csprojResolveAssemblyReference.cache
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.dll
+D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.pdb
