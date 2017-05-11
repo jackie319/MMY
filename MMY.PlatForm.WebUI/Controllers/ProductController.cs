@@ -23,6 +23,7 @@ namespace MMY.PlatForm.WebUI.Controllers
             return View();
         }
 
+        [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult List(ProductQueryModel query)
         {
             int total;

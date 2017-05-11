@@ -20,6 +20,8 @@ namespace MMY.PlatForm.WebUI.Controllers
             _product = product;
         }
 
+
+        [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult List(PurchaseRecordsQueryModel model)
         {
             int total;
