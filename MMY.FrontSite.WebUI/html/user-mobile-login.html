@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>个人中心</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Standard iPhone -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/touch-icon-iphone-57.png">
+    <!-- Retina iPhone -->
+    <link rel="apple-touch-icon" sizes="114x114" href="/touch-icon-iphone-114.png">
+    <!-- Standard iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/touch-icon-ipad-72.png">
+    <!-- Retina iPad -->
+    <link rel="apple-touch-icon" sizes="144x144" href="/touch-icon-ipad-144.png">
+    <script type="text/javascript">
+        //检查特定域名调整响应式布局 start
+        /**
+         * 检查是否是包含指定的域名
+         * @return {Boolean} true/false
+         */
+        function checkHost() {
+            var hostArr = ['mst.vip.com', 'viva.vip.com', 'click.union.vip.com', 'mdlp.vip.com'];
+            var docReferrer = document.referrer;
+            var dlp_tag = location.search;
+            for (var i = 0, len = hostArr.length; i < len; i++) {
+                if (docReferrer.indexOf(hostArr[i]) >= 0 && dlp_tag.indexOf('dlp_tag') >= 0) {
+                    document.domain = 'vip.com';
+                    return true;
+                }
+            }
+        }
+        //检查特定域名调整响应式布局 end
+
+        /*响应式布局 start*/
+        function _set_font_size_750() {
+            //先留着这个方法，不要删，要给专题调用
+        }
+        function setRootFontSize() {
+            var width = document.documentElement.clientWidth, fontSize;
+            if (width > 540 && !checkHost()) {
+                width = 540;
+            }
+            fontSize = (width / 10);
+            document.getElementsByTagName('html')[0].style['font-size'] = fontSize + 'px';
+        }
+        setRootFontSize();
+        window.addEventListener('resize', function () {
+            setRootFontSize();
+        }, false);
+    /*响应式布局 end*/
+    </script>
+
+    <script type="text/javascript">
+        var _WARE_HOUSE_VERSION = 0;
+        //var _WARE_HOUSE_VERSION = 1;
+        var _WAP_PAGE_CACHE = { "serverTime": 1492076152, "vtm": { "isWeixin": false, "f": "", "enable": true, "hash": "37b10a31" }, "refer": { "url": "javascript:void(0)", "marsSead": "", "hash": "a037fff4" }, "recommendAddress": { "parent_code": "105103", "warehouse": "VIP_CD", "province": "\u4e91\u5357", "p_wh": "VIP_CD", "p_area": "\u4e91\u5357", "enable": true, "hash": "e1465952" }, "footer": { "user": { "type": "B", "isOld": 0, "loginKey": "430966be76a0665059550209053d9bcb", "isLogin": true, "isTemp": false, "loginUrl": "https:\/\/mlogin.vip.com\/user-login.html?f=shop_wap_m&back_act=http%3A%2F%2Fm.vip.com%2Fuser.html", "registUrl": "https:\/\/mlogin.vip.com\/user-register.html?f=shop_wap_m&back_act=http%3A%2F%2Fm.vip.com%2Fuser.html" }, "f": "", "isWeixin": false, "showCopyright": true, "showAppMenu": 1, "hash": "8e248973" }, "footerToolbar": { "f": "", "isWeixin": false, "showToolbar": false, "hash": "a14f122e" }, "flag": { "onlyStatic": false, "hash": "28529f19" }, "appDownload": { "topText": "<p class=\"text\">\u65b0\u4f1a\u5458\u6ee1\uffe588\u5143\u5305\u90ae<\/p> <p class=\"sub-text\">\u73b0\u5728\u4e0b\u8f7dapp\uff0c\u7acb\u4eab\u4f18\u60e0<\/p>", "bottomText": "\u4e0b\u8f7d\u624b\u673aapp<br \/>\u7279\u5356\u60ca\u559c\u62a2\u4e0d\u505c\uff01", "showTop": true, "showBottom": true, "topMarsSead": "user_top_client_download_btn", "bottomMarsSead": "user_footer_client_download_btn", "isWeixin": false, "hash": "0c32338c" }, "simpleHeader": { "f": "", "isWeixin": false, "title": "\u4e2a\u4eba\u4e2d\u5fc3", "returnMarsSead": "", "hash": "51043f4b" }, "info": { "isLogin": true, "degree_desc": "\u94c1\u724c\u4f1a\u5458", "degree_icon": "\/\/b.vimage1.com\/2016\/02\/24\/8881\/1456308173711.png", "avatar": "\/\/b.vimage1.com\/2016\/03\/16\/3996\/14581158913884.png", "avatarSetted": false, "loginId": "136*****707", "isWeixin": false }, "order": { "unpay": 0, "unverify": 0, "unsend": 0, "sended": 0, "canReturn": 0, "unreceive": 0, "order_sn_unpay": "", "order_sn_unreceive": "", "order_sn_canReturn": "", "isLogin": true, "isWeixin": false }, "menus": { "order": { "unpay": 0, "unverify": 0, "unsend": 0, "sended": 0, "canReturn": 0, "unreceive": 0, "order_sn_unpay": "", "order_sn_unreceive": "", "order_sn_canReturn": "", "isLogin": true, "isWeixin": false }, "showMyWallet": 1, "showBankCard": 1, "showVipCard": 0, "showRedPacket": 1, "showRealNameAuth": 1, "showPayPassword": 1, "showMyFav": true, "showBrowserHistory": "1", "showCartHistory": "1", "showBindPhone": false, "showShare": 0, "shareCommission": 0, "isWeixin": false, "isLogin": true }, "logout": { "isLogin": true, "isWeixin": false, "f": "" } };
+    </script>
+
+    <link rel="stylesheet" href="css/vendors.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <div class="models-login" id="J-models-login-wrap" marsseadclick="">
+        <div class="models-header J-mobile-fast-login-header" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+
+            <h2>手机号快捷登录</h2>
+
+            <a href="javascript:;" class="iconfont iconfont-close2 close J-mlogin-close" style="display: none;"></a>
+            <a href="javascript:;" class="m-login-back-btn J-mlogin-back"></a>
+        </div>
+        <div class="models-logo J-models-login-logo" style="display: none;">
+            <div class="icon-login-logo"></div>
+            <a data-dismiss="closemodels" class="iconfont iconfont-close2 close J-mlogin-close" href="javascript:;" style="display: none;"><span class="close-in"></span></a>
+        </div>
+        <div class="models-body">
+
+            <form class="ui-form">
+                <div class="J-login-wrap" style="display: none;">
+                    <div class="ui-form-item ui-form-item-bd">
+                        <label for="username">账号</label>
+                        <input type="text" name="username" placeholder="请输入手机号或邮箱" class="J-mlogin-ipt J-mlogin-ipt-username" marsseadinput="">
+                        <a href="#" class="m-mlogin-clear J-mlogin-clear" style="display:none">
+                            <span class="clear_wrap">
+                                <span class="clear"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="ui-form-item">
+                        <label for="password">密码</label>
+                        <input type="password" name="password" onpaste="return false;" placeholder="请输入密码" class="J-mlogin-ipt J-mlogin-ipt-password" marsseadinput="">
+                        <a href="#" class="icon-show-password J-mlogin-show-password"></a>
+                        <a href="#" class="show-password-position m-mlogin-clear J-mlogin-clear" style="display:none">
+                            <span class="clear_wrap">
+                                <span class="clear"></span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="submit-box J-mlogin-submit-box">
+                        <a href="javascript:void(0);" class="J-mlogin-submit ui-button ui-button-primary submit disabled">登录</a>
+                    </div>
+
+
+                </div>
+                <div class="J-mobile-fast-login" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+                    <div class="ui-form-item">
+                        <label for="mobile">手机号</label>
+                        <input name="mobile" type="tel" placeholder="请输入手机号" maxlength="11" class="J-mlogin-ipt J-mlogin-ipt-mobile" marsseadinput="">
+                        <a href="#" class="m-mlogin-clear J-mlogin-clear" style="display:none">
+                            <span class="clear_wrap">
+                                <span class="clear"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="ui-form-item ui-form-item-r">
+                        <label for="authcode">验证码</label>
+                        <input class="J-mlogin-ipt J-mlogin-ipt-authcode" name="authcode" type="tel" placeholder="请输入验证码" maxlength="6" marsseadinput="">
+                        <a href="#" class="m-mlogin-clear show-btn-position J-mlogin-clear" style="display:none">
+                            <span class="clear_wrap">
+                                <span class="clear"></span>
+                            </span>
+                        </a>
+                        <button class="J-mlogin-get-login-authcode disabled" type="button">获取验证码</button>
+                    </div>
+                    <div class="submit-box">
+
+                        <a href="javascript:;" class="J-login-models-submit ui-button ui-button-primary submitFast disabled">登录</a>
+
+                    </div>
+                </div>
+                <div class="J-password-step" style="display:none">
+                    <div class="ui-form-item-top">
+                        <label>为了确保账号安全，请设置登录密码。</label>
+                    </div>
+                    <div class="ui-form-item">
+                        <label for="password">登录密码</label>
+                        <input name="password" onpaste="return false;" type="text" placeholder="6-20位字母、数字组合" class="J-mlogin-ipt J-login-password" marsseadinput="">
+                        <a href="#" class="m-mlogin-clear J-mlogin-clear" style="display:none">
+                            <span class="clear_wrap">
+                                <span class="clear"></span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="submit-box">
+                        <a href="javascript:;" class="J-mlogin-password-btn ui-button ui-button-primary submitFast disabled">登录</a>
+                    </div>
+                </div>
+                <div class="J-second-step" style="display:none">
+                    <div class="ui-form-item-top">
+                        <label>为了确保账号安全，请设置登录密码。</label>
+                    </div>
+                    <div class="ui-form-item">
+                        <label for="password">登录密码</label>
+                        <input name="password" onpaste="return false;" type="text" placeholder="6-20位字母、数字组合" class="J-mlogin-ipt J-mlogin-ipt-password-second" marsseadinput="">
+                        <a href="#" class="m-mlogin-clear J-mlogin-clear" style="display:none">
+                            <span class="clear_wrap">
+                                <span class="clear"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="submit-box">
+                        <a href="javascript:;" class="J-register-btn ui-button ui-button-primary submitFast disabled">注册</a>
+                    </div>
+                </div>
+                <div class="error-msg hide J-error-msg" style="display: none;">
+                    <i class="icon-err-tips">
+                        <span class="icon-err-tips-in"></span>
+                    </i>
+                    <span></span>
+                </div>
+            </form>
+        </div>
+        <div class="models-footer J-models-login-footer" style="display: none;">
+
+            <a href="https://mlogin.vip.com/retrieve-password.html" class="frogot-pwd" mars_sead="H5_forgetpwd" data_mars="{&quot;isviva&quot;:&quot;0&quot;,&quot;enter&quot;:&quot;4&quot;}">忘记密码？</a>
+
+            <fieldset class="J-login-models-m">
+                <legend>或</legend>
+
+                <a mars_sead="H5_pwdlogin" data_mars="{&quot;isviva&quot;:&quot;0&quot;,&quot;enter&quot;:&quot;4&quot;}" href="javascript:;" class="login-pop-mobile J-mlogin-mobile-login">手机号快捷登录</a>
+
+
+                <div class="without-account">
+
+                    <span class="without-account-tips J-mlogin-login-weixin">微信账号登录 | </span>
+                    <a href="javascript:;" mars_sead="H5_register" data_mars="{&quot;isviva&quot;:&quot;0&quot;,&quot;enter&quot;:&quot;2&quot;}" class="J-mlogin-toggle">免费注册</a>
+
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>
