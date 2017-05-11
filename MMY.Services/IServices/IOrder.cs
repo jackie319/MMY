@@ -19,5 +19,7 @@ namespace MMY.Services.IServices
         void CreateOrderPayment(OrderPayment orderPayment);
         void CreatedOrderDelivery(OrderDelivery orderDelivery);
         IList<Order> GetUserOrders(Guid userGuid, int skip, int take, out int total);
+
+        void UpdateAmount(Guid orderGuid,int amount);
     }
 }

@@ -62,6 +62,17 @@ namespace MMY.Services.ServicesImpl
             return query.OrderByDescending(q => q.TimeCreated).Skip(skip).Take(take).ToList();
         }
 
+        public void UpdateAmount(Guid orderGuid, int amount)
+        {
+            var entity = _orderRepository.Table.FirstOrDefault(q => q.Guid == orderGuid);
+            if (entity != null)
+            {
+                entity.OrderAmount = amount;
+                _orderRepository.Update(entity);
+            }
+    
+        }
+
         /// <summary>
         /// 创建订单
         /// </summary>
