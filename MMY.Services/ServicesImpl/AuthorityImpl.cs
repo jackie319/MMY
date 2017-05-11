@@ -43,7 +43,7 @@ namespace MMY.Services.ServicesImpl
         private IList<AuthorityFunction> GetRoleFunctionsByParentGuid(Guid roleGuid, Guid parentGuid)
         {
             //TODO：暂时取出系统所有权限
-            var resultList = _AuthorityRepository.Table.Where(q => q.Enable && q.ParentGuid==parentGuid).ToList();
+            var resultList = _AuthorityRepository.Table.Where(q => q.Enable && q.ParentGuid == parentGuid).OrderBy(q => q.DisplayOrder).ToList();
             return resultList;
         }
     }
