@@ -52,18 +52,21 @@
       <HintPath>..\packages\Autofac.Mvc5.4.0.1\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="JK.Framework.Core">
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Data\bin\Debug\JK.Framework.Core.dll</HintPath>
+    <Reference Include="JK.Framework.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\libs\JK.Framework.Core.dll</HintPath>
     </Reference>
-    <Reference Include="JK.Framework.Data">
-      <HintPath>..\MMY.PlatForm.WebUI\Bin\JK.Framework.Data.dll</HintPath>
+    <Reference Include="JK.Framework.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\libs\JK.Framework.Data.dll</HintPath>
     </Reference>
     <Reference Include="JK.Framework.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Bin\JK.Framework.Extensions.dll</HintPath>
+      <HintPath>..\Libs\libs\JK.Framework.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="JK.Framework.Web">
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Web.dll</HintPath>
+    <Reference Include="JK.Framework.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\libs\JK.Framework.Web.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
@@ -358,6 +361,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="log4net.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
