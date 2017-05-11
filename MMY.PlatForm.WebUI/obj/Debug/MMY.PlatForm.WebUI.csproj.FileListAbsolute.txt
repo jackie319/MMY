@@ -214,7 +214,6 @@ E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.O
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Google.xml
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Sms.pdb
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Helpers.resources.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Mvc.resources.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Optimization.resources.dll
