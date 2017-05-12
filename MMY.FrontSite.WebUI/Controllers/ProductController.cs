@@ -17,14 +17,19 @@ namespace MMY.FrontSite.WebUI.Controllers
             _product = product;
         }
         // GET: Product
-        public ActionResult Index()
+        public ActionResult ProductClassify()
         {
             return this.HtmlContent("~/html/classify.html");
         }
 
-        public ActionResult List()
+        public ActionResult ProductList()
         {
             return this.HtmlContent("~/html/classify-list.html");
+        }
+
+        public ActionResult ProductDetail()
+        {
+            return this.HtmlContent("~/html/product-detail.html");
         }
 
         /// <summary>
