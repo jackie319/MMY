@@ -457,6 +457,10 @@
     <Content Include="Views\Activity\Index.cshtml" />
     <Content Include="Views\Account\UserLogin.cshtml" />
     <Content Include="Views\Account\UserRegister.cshtml" />
+    <Content Include="Views\Order\OrderList.cshtml" />
+    <Content Include="Views\Product\ProductClassify.cshtml" />
+    <Content Include="Views\Product\ProductList.cshtml" />
+    <Content Include="Views\Product\ProductDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -466,10 +470,8 @@
     <Folder Include="Views\ConfirmOrder\" />
     <Folder Include="Views\DeliverAddress\" />
     <Folder Include="Views\Favorite\" />
-    <Folder Include="Views\Order\" />
     <Folder Include="Views\Pay\" />
     <Folder Include="Views\Picture\" />
-    <Folder Include="Views\Product\" />
     <Folder Include="Views\ShoppingCart\" />
     <Folder Include="Views\Sms\" />
     <Folder Include="Views\UserInfo\" />

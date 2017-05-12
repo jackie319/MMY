@@ -27,7 +27,7 @@ namespace MMY.FrontSite.WebUI.Controllers
 
         public ActionResult OrderList()
         {
-            return this.HtmlContent("~/html/user-order-list.html");
+            return View();
         }
 
         /// <summary>
