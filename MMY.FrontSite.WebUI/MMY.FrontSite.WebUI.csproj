@@ -218,6 +218,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\RMUtility.cs" />
     <Compile Include="App_Start\AutoFacRegister.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -225,6 +226,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActivityController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ConfirmOrderController.cs" />
     <Compile Include="Controllers\DeliverAddressController.cs" />
@@ -261,8 +263,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -295,7 +295,13 @@
     <Content Include="html\css\user.css" />
     <Content Include="html\css\vendors.css" />
     <Content Include="html\font\iconmoon.svg" />
+    <Content Include="html\image\05574d58.mlogin-icon-refresh.gif" />
+    <Content Include="html\image\441a0c3e.showpassword.png" />
+    <Content Include="html\image\6f8201f0.close.png" />
+    <Content Include="html\image\e8f1c37c.back.png" />
+    <Content Include="html\image\efd965eb.login_bg.png" />
     <Content Include="html\image\fa3c03d252.nullicon.png" />
+    <Content Include="html\image\fe24f3c7.hidepassword.png" />
     <Content Include="html\image\touch-icon-ipad-144.png" />
     <Content Include="html\image\touch-icon-ipad-72.png" />
     <Content Include="html\image\touch-icon-iphone-114.png" />
@@ -349,6 +355,7 @@
     <Content Include="html\ui\login.png" />
     <Content Include="html\ui\pay.png" />
     <Content Include="html\ui\regiest.png" />
+    <Content Include="html\user-mobile-register.html" />
     <Content Include="html\user-mobile-login.html" />
     <Content Include="html\user-address-list.html" />
     <Content Include="html\user-mobile-bind.html" />
@@ -402,6 +409,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\Pay\" />
+    <Folder Include="Views\Cart\" />
     <Folder Include="Views\Category\" />
     <Folder Include="Views\ConfirmOrder\" />
     <Folder Include="Views\DeliverAddress\" />

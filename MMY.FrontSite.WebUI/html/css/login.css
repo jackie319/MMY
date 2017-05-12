@@ -356,12 +356,12 @@
 }
 
 .m-login-back-btn {
-    background: url(../img/e8f1c37c.back.png) no-repeat 50%;
+    background: url(../image/e8f1c37c.back.png) no-repeat 50%;
     background-size: 50% auto
 }
 
 .icon-register-close {
-    background: url(../img/6f8201f0.close.png) no-repeat 50%;
+    background: url(../image/6f8201f0.close.png) no-repeat 50%;
     background-size: 40% auto
 }
 
@@ -409,7 +409,7 @@
 }
 
     .mlogin-captcha-freshen .mlogin-btn-refresh {
-        background: url(../img/05574d58.mlogin-icon-refresh.gif) no-repeat 0 0;
+        background: url(../image/05574d58.mlogin-icon-refresh.gif) no-repeat 0 0;
         width: 16px;
         height: 16px;
         position: absolute;
@@ -448,7 +448,7 @@
 }
 
     .models-login .captcha .mlogin-refresh {
-        background: url(../img/05574d58.mlogin-icon-refresh.gif) no-repeat 0 0;
+        background: url(../image/05574d58.mlogin-icon-refresh.gif) no-repeat 0 0;
         width: 16px;
         height: 16px;
         position: absolute;
@@ -695,7 +695,7 @@
 .models-login .ui-form-item .icon-show-password {
     width: 50px;
     height: 52px;
-    background: url(../img/fe24f3c7.hidepassword.png) no-repeat 50%;
+    background: url(../image/fe24f3c7.hidepassword.png) no-repeat 50%;
     background-size: 50% auto;
     position: absolute;
     top: 0;
@@ -703,14 +703,14 @@
 }
 
 .models-login .ui-form-item .mlogin-ipt-show {
-    background: url(../img/441a0c3e.showpassword.png) no-repeat 50%;
+    background: url(../image/441a0c3e.showpassword.png) no-repeat 50%;
     background-size: 50% auto
 }
 
 .models-login .icon-login-logo {
     width: 134px;
     height: 65px;
-    background: url(../img/4db8eb5c.logo.png) no-repeat 0 0;
+    background: url(../image/4db8eb5c.logo.png) no-repeat 0 0;
     background-size: 100% auto
 }
 
@@ -767,7 +767,7 @@
     }
 
 .models-login .models-logo {
-    background: #f6f6f6 url(../img/efd965eb.login_bg.png) no-repeat 0 0;
+    background: #f6f6f6 url(../image/efd965eb.login_bg.png) no-repeat 0 0;
     height: 170px;
     display: box;
     display: -webkit-box;
@@ -1068,7 +1068,7 @@
         top: 0;
         width: 40px;
         height: 40px;
-        background: url(../img/5784f415.password-icons.png) no-repeat;
+        background: url(../image/5784f415.password-icons.png) no-repeat;
         background-size: 100%
     }
 

@@ -65,3 +65,6 @@ D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\zh-Hans\System.Web.WebPages
 D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.csprojResolveAssemblyReference.cache
 D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.dll
 D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.pdb
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Core.dll
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Web.dll
+D:\代码\git\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Extensions.dll

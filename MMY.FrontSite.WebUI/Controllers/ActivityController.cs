@@ -11,7 +11,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         // GET: Activity
         public ActionResult Index()
         {
-            return View();
+            return this.HtmlContent("~/html/index.html");
         }
     }
 }

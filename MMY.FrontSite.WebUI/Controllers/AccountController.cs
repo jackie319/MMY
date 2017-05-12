@@ -22,16 +22,22 @@ namespace MMY.FrontSite.WebUI.Controllers
     {
         private IUserAccount _userAccount;
         private ISms _sms;
-        public AccountController(IUserAccount userAccount,ISms sms)
+        public AccountController(IUserAccount userAccount, ISms sms)
         {
             _userAccount = userAccount;
             _sms = sms;
         }
 
-        public ActionResult Index()
+        public ActionResult UserLogin()
         {
-            return View();
+            return this.HtmlContent("~/html/user-login.html");
         }
+
+        public ActionResult UserRegister()
+        {
+            return this.HtmlContent("~/html/user-mobile-register.html");
+        }
+
         /// <summary>
         /// 登录
         /// </summary>
@@ -99,6 +105,6 @@ namespace MMY.FrontSite.WebUI.Controllers
             return this.ResultSuccess();
         }
 
-     
+
     }
 }

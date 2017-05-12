@@ -19,13 +19,14 @@ namespace MMY.FrontSite.WebUI.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            return View();
+            return this.HtmlContent("~/html/classify.html");
         }
 
         public ActionResult List()
         {
-            return null;
+            return this.HtmlContent("~/html/classify-list.html");
         }
+
         /// <summary>
         /// 某分类下的商品
         /// </summary>
