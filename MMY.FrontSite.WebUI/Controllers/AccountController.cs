@@ -30,12 +30,12 @@ namespace MMY.FrontSite.WebUI.Controllers
 
         public ActionResult UserLogin()
         {
-            return this.HtmlContent("~/html/user-login.html");
+            return View();
         }
 
         public ActionResult UserRegister()
         {
-            return this.HtmlContent("~/html/user-mobile-register.html");
+            return View();
         }
 
         /// <summary>
