@@ -31,7 +31,7 @@ namespace MMY.PlatForm.WebUI
             }
 
             var logger = LogManager.GetLogger(typeof(FilterConfig));
-            logger.Error("出错了！错误信息："+ errorMsg + "访问路径："+url+"堆栈："+exception.StackTrace);
+            logger.Error($"出错了！错误信息：{errorMsg}, 访问路径：{url},堆栈：{exception.StackTrace}");
             var result = new JKResultModel(false, errorMsg, 0,url, type, redirectUrl, null) {};
             return result;
         }

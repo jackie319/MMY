@@ -27,10 +27,10 @@ namespace MMY.PlatForm.WebUI.Controllers
         public ActionResult List(ProductQueryModel query)
         {
             int total;
-            var list=_product.GetProductVs(query.ProductName, query.CategoryGuid, query.Status, query.IsSpecialOffer,
+            var list = _product.GetAdminProductVs(query.ProductName, query.CategoryGuid, query.Status, query.IsSpecialOffer,
                 query.IsRecommended, query.TimeCreatedBegin, query.TimeCreatedEnd, query.Skip, query.Take, out total);
             var resultList = list.Select(q => ProductListViewModel.CopyFrom(q)).ToList();
-            return this.ResultListModel(total,resultList);
+            return this.ResultListModel(total, resultList);
         }
 
         public ActionResult Detail(Guid productGuid)
@@ -43,7 +43,7 @@ namespace MMY.PlatForm.WebUI.Controllers
         public ActionResult GetClassification(Guid productGuid)
         {
             var list = _product.GetClassifications(productGuid);
-            var resultList = list.Select(item => ProductClassificationListViewModel.CopyFrom(item)).ToList(); 
+            var resultList = list.Select(item => ProductClassificationListViewModel.CopyFrom(item)).ToList();
             return this.ResultListModel(resultList.Count, resultList);
         }
 
@@ -67,6 +67,12 @@ namespace MMY.PlatForm.WebUI.Controllers
         //    return this.ResultSuccess();
         //}
 
+        /// <summary>
+        /// 第一个颜色分类的价格赋值给产品价格
+        /// 相册第一张赋值给产品默认图片
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [ValidationFilter]
         [HttpPost]
         public ActionResult Save(ProductViewModel model)
@@ -75,7 +81,7 @@ namespace MMY.PlatForm.WebUI.Controllers
             var classifications = model.Classifications.Select(item => item.CopyTo()).ToList();
             if (model.Guid == Guid.Empty)
             {
-              
+
                 _product.CreatedProduct(model.CopyTo(), classifications, albums);
             }
             else

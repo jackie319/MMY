@@ -73,6 +73,43 @@ namespace MMY.Services.ServicesImpl
                 ThenByDescending(q => q.TimeCreated).Skip(skip).Take(take).ToList();
         }
 
+        public IList<ProductV> GetAdminProductVs(string productName, Guid? categoryGuid, ProductStatusEnum? status, bool? isSpecialOffer,
+            bool? isRecommended, DateTime? timeCreatedBegin, DateTime? timeCreatedEnd, int skip, int take, out int total)
+        {
+            var query = _productVRepository.Table.Where(q => !q.IsDeleted);
+            if (!string.IsNullOrEmpty(productName))
+            {
+                query = query.Where(q => q.ProductName.Contains(productName) || q.SaleTitle.Contains(productName) || q.SaleSubTitle.Contains(productName));
+            }
+            if (categoryGuid != null && categoryGuid != Guid.Empty)
+            {
+                query = query.Where(q => q.CategoryGuid == categoryGuid);
+            }
+            if (status != null)
+            {
+                string statusStr = status.ToString();
+                query = query.Where(q => q.Status.Equals(statusStr));
+            }
+            if (isSpecialOffer != null)
+            {
+                query = query.Where(q => q.IsSpecialOffer == isSpecialOffer);
+            }
+            if (isRecommended != null)
+            {
+                query = query.Where(q => q.IsRecommended == isRecommended);
+            }
+            if (timeCreatedBegin != null && timeCreatedBegin != DateTime.MinValue)
+            {
+                query = query.Where(q => q.TimeCreated >= timeCreatedBegin);
+            }
+            if (timeCreatedEnd != null && timeCreatedEnd != DateTime.MinValue)
+            {
+                query = query.Where(q => q.TimeCreated < timeCreatedEnd);
+            }
+            total = query.Count();
+            return query.OrderByDescending (q => q.TimeCreated).Skip(skip).Take(take).ToList();
+        }
+
         public IList<ProductV> HotList(int skip, int take, out int total)
         {
             var query = _productVRepository.Table.Where(q=>q.SoldTotal>0);
