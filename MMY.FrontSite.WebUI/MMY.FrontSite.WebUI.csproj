@@ -263,7 +263,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="html\address.html" />
@@ -394,8 +393,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="fonts\" />
     <Folder Include="Models\Pay\" />
-    <Folder Include="Views\Cart\" />
     <Folder Include="Views\Category\" />
     <Folder Include="Views\ConfirmOrder\" />
     <Folder Include="Views\DeliverAddress\" />
@@ -409,9 +408,6 @@
     <Folder Include="Views\UserInfo\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
