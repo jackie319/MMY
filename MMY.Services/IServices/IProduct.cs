@@ -14,6 +14,9 @@ namespace MMY.Services.IServices
             bool? isSpecialOffer, bool? isRecommended,
             DateTime? timeCreatedBegin, DateTime? timeCreatedEnd, int skip, int take, out int total);
 
+        IList<ProductV> GetAdminProductVs(string productName, Guid? categoryGuid, ProductStatusEnum? status,
+            bool? isSpecialOffer, bool? isRecommended,
+            DateTime? timeCreatedBegin, DateTime? timeCreatedEnd, int skip, int take, out int total);
         void  CreatedProduct(Product product, IList<ProductClassification> classifications, IList<ProductAlbum> albums);
 
         void UpdateProduct(Product product, IList<ProductClassification> classifications, IList<ProductAlbum> albums);
