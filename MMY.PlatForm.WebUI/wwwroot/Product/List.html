@@ -243,7 +243,10 @@
                     });
                 },
                 onPurchase: function (i, m) {
-                    this.$purchaserecord.open({ ProductGuid: m.Guid });
+                    var me = this;
+                    me.$purchaserecord.open({ ProductGuid: m.Guid }).then(function () {
+                        me.loadData();
+                    });
                 },
                 onPurchaseList:function(i,m){
                     this.$purchaselist.open({ ProductGuid: m.Guid });

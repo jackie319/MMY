@@ -156,7 +156,7 @@
                 },
                 onAdd: function () {
                     var me = this;
-                    me.form = me.model;
+                    me.form = Object.assign({}, me.model);
                     me.detail.isVisible = true;
                 },
                 onEdit: function (i, m) {
@@ -168,14 +168,18 @@
                     var me = this;
                     me.$confirm("确定删除？", "确定").then(function () {
                         me.$http.post(apiConfig.category_delete, {
-                            categoryGuid:m.Guid
+                            categoryGuid: m.Guid
                         }).then(function () {
                             me.loadData();
                         })
                     });
                 },
                 submitDetail: function () {
-                    this.detail.isVisible = false;
+                    var me = this;
+                    me.$http.post(apiConfig.category_save, me.form).then(function () {
+                        this.detail.isVisible = false;
+                        me.loadData();
+                    })
                 },
                 getSkip: function () {
                     var me = this;
@@ -197,12 +201,11 @@
                         me.list.total = response.data.Total;
                         me.list.tableData = response.data.Data;
                     });
-
                 }
             },
             mounted: function () {
                 var me = this;
-                //me.loadData();
+                me.loadData();
             }
         });
     </script>

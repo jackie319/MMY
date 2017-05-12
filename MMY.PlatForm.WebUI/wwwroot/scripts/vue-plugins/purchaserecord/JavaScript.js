@@ -83,6 +83,7 @@
                         isVisible: false,
                         classifications: [],
                         suppliers: [],
+                        fnCallBack: null,
                         model: {
                             ProductGuid: "00000000-0000-0000-0000-000000000000",
                             ClassificationGuid: "",
@@ -118,22 +119,22 @@
                 methods: {
                     submit: function () {
                         var me = this;
-                        //me.$http.post(apiConfig.purchase_save,me.form).then(function (response) {
-                        //    me.$message({
-                        //        type: 'success',
-                        //        message: '保存成功!'
-                        //    });
-                        //});
                         this.$refs.form.validate(function (valid) {
                             if (valid) {
-                                console.log(me.form);
+                                me.$http.post(apiConfig.purchase_save, me.form).then(function (response) {
+                                    me.fnCallBack();
+                                    me.close();
+                                    me.$message({
+                                        type: 'success',
+                                        message: '保存成功!'
+                                    });
+                                });
                                 return true;
                             } else {
                                 console.log('error submit!!');
                                 return false;
                             }
                         });
-
                     },
                     getClassifications: function () {
                         var me = this;
@@ -158,13 +159,19 @@
                     },
                     open: function (options) {
                         var me = this;
-                        me.form = Object.assign(options, me.model);
+                        me.form = Object.assign(me.model, options);
                         me.getSuppliers();
                         me.getClassifications();
                         me.isVisible = true;
                     },
                     close: function () {
                         this.isVisible = false;
+                    },
+                    then: function (fn) {
+                        this.fnCallBack = fn;
+                    },
+                    catch: function () {
+
                     }
                 }
             });
