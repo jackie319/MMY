@@ -239,7 +239,7 @@
                 onDelete: function (i, m) {
                     var me = this;
                     me.$confirm("确定删除？", "确定").then(function() {
-                        me.$http.post(apiConfig.product_delete, { guid:m.Guid}).then(function () {
+                        me.$http.post(apiConfig.product_delete, { productGuid:m.Guid}).then(function () {
                             me.loadData();
                         });
                     });
