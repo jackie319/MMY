@@ -30,15 +30,16 @@ namespace MMY.PlatForm.WebUI.Controllers
             {
                 return this.ResultError(ex.Message);
             }
-
+        
         }
 
-        public ActionResult CkEditorUpload(HttpPostedFileBase file)
+        public ActionResult CkEditorUpload(HttpPostedFileBase file, string CKEditorFuncNum)
         {
 
             var name = UploadManager.SavePicture(file, "Product");
             var url = AppSetting.Instance().PictureUrl + name;
-            string num = HttpContext.Request.QueryString["CKEditorFuncNum"];
+            // string num = HttpContext.Request.QueryString["CKEditorFuncNum"];
+            string num = CKEditorFuncNum;
             string content = string.Format("<script type=\"text/javascript\">window.parent.CKEDITOR.tools.callFunction({0},\"{1}\",\"\");</script>", num, url);
             return Content(content, "text/html");
 
@@ -52,19 +53,19 @@ namespace MMY.PlatForm.WebUI.Controllers
         [HttpPost]
         public ActionResult UploadList(IList<HttpPostedFileBase> files)
         {
-            IList<UploadListViewModel> list = new List<UploadListViewModel>();
+            IList< UploadListViewModel > list=new List<UploadListViewModel>();
             try
             {
                 foreach (var item in files)
                 {
-                    UploadListViewModel model = new UploadListViewModel();
+                    UploadListViewModel model=new UploadListViewModel();
                     var url = UploadManager.SavePicture(item, "Product");
                     model.AlbumGuid = Guid.NewGuid();
                     model.Url = url;
                     list.Add(model);
                 }
                 int total = list.Count;
-                return this.ResultListModel(total, list);
+                return this.ResultListModel(total,list);
             }
             catch (CommonException ex)
             {

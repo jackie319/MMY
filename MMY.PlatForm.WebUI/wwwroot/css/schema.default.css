@@ -263,6 +263,10 @@ table, tr {
     flex: auto;
 }
 
+.vertical-align-top {
+    vertical-align: top;
+}
+
 .horizontal-vertical-center {
     position: absolute;
     top: 50%;
@@ -513,6 +517,7 @@ table, tr {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
 .margin-top-bottom-m {
     margin-top: 5px;
     margin-bottom: 5px;

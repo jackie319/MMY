@@ -16,7 +16,8 @@
 <body>
     <div id="index" class="page">
         <header class="background-color-main">
-            <span class="color-white font-size-xxl padding-xl menu-width">{{systemName}}</span>
+            <img :src="logo" class="logo"/>
+            <span class="color-white font-size-xxl padding-xl menu-width vertical-align-top" v-text="systemName"></span>
             <nav class="color-white user-info">
                 <div class="padding-left-right-xl">
                     <el-dropdown @command="handleCommand">
@@ -56,6 +57,7 @@
             el: "#index",
             data: {
                 systemName: webConfig.systemName,
+                logo: webConfig.logo,
                 userName: "",
                 menus: [],
                 currentView: null,
@@ -63,7 +65,7 @@
                 selectChildMenu: null,
                 history: []
             },
-            mounted:function() {
+            mounted: function () {
                 this.loadMenu();
             },
             methods: {

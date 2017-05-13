@@ -12,9 +12,6 @@ namespace MMY.PlatForm.WebUI.Models.Product
         public System.Guid Guid { get; set; }
         public string ProductName { get; set; }
         public string SupplierName { get; set; }
-
-        public string ClassificationName { get; set; }
-        public decimal BuyingPrice { get; set; }
         public string OperatorName { get; set; }
         public string Purchaser { get; set; }
         public int Number { get; set; }
@@ -23,7 +20,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
 
         public static ProductPurchaseRecordsListViewModel CopyFrom(ProductPurchaseRecords records)
         {
-            ProductPurchaseRecordsListViewModel result = new ProductPurchaseRecordsListViewModel();
+            ProductPurchaseRecordsListViewModel result =new ProductPurchaseRecordsListViewModel();
             result.Guid = records.Guid;
             result.ProductName = records.ProductName;
             result.SupplierName = records.SupplierName;
@@ -31,8 +28,6 @@ namespace MMY.PlatForm.WebUI.Models.Product
             result.Purchaser = records.Purchaser;
             result.Number = records.Number;
             result.Remark = records.Remark;
-            result.BuyingPrice = Convert.ToDecimal(records.BuyingPrice) / 100;
-            result.ClassificationName = records.ClassificationName;//TODO：冗余的字段，有可能不是最新的。
             result.TimeCreated = records.TimeCreated;
             return result;
         }
@@ -50,20 +45,20 @@ namespace MMY.PlatForm.WebUI.Models.Product
         public int Number { get; set; }
         public string Remark { get; set; }
 
-       // public int Grams { get; set; }
+        public int Grams { get; set; }
         public decimal BuyingPrice { get; set; }
-
+       
         public ProductPurchaseRecords CopyTo()
         {
-            ProductPurchaseRecords records = new ProductPurchaseRecords();
+            ProductPurchaseRecords records=new ProductPurchaseRecords();
             records.ProductGuid = ProductGuid;
             records.SupplierGuid = SupplierGuid;
             records.ClassificationGuid = ClassificationGuid;
             records.Purchaser = Purchaser;
             records.Number = Number;
-            records.Remark = Remark ?? string.Empty;
+            records.Remark = Remark??string.Empty;
             records.BuyingPrice = Convert.ToInt32(BuyingPrice * 100);
-            records.Grams = 0;//进货记录不需要填写克数
+            records.Grams = Grams;
             return records;
         }
     }
