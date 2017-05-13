@@ -68,9 +68,6 @@
                         '<el-form-item label="进货价格" prop="BuyingPrice">' +
                             '<el-input v-model="form.BuyingPrice"></el-input>' +
                         '</el-form-item>' +
-                        '<el-form-item label="克" prop="Grams">' +
-                            '<el-input v-model="form.Grams"></el-input>' +
-                        '</el-form-item>' +
                         '<el-form-item label="数量" prop="Number">' +
                             '<el-input-number :min=1 v-model="form.Number"></el-input-number>' +
                         '</el-form-item>' +
@@ -98,7 +95,6 @@
                             Number: 1,
                             Remark: "",
                             BuyingPrice: 0,
-                            Grams: 0,
                             TimeCreated: new Date()
                         },
                         form: {
@@ -109,7 +105,6 @@
                             Number: 1,
                             Remark: "",
                             BuyingPrice: 0,
-                            Grams: 0,
                             TimeCreated: new Date()
                         },
                         rules: {
@@ -124,16 +119,10 @@
                                 { min: 2, max: 5, message: '长度在 2 到 10 个字符', trigger: 'blur' }
                             ],
                             BuyingPrice: [
-                                { required: true, message: '请输进货价格', trigger: 'blur' },
-                                { min: 1, message: '最少1元', trigger: 'blur' }
-                            ],
-                            Number: [
-                                { required: true, message: '请输入数量', trigger: 'blur' },
-                                { min: 1, message: '最少1个', trigger: 'blur' }
+                                { required: true, message: '请输进货价格', trigger: 'blur' }
                             ],
                             Grams: [
-                                { required: true, message: '请输入克数', trigger: 'blur' },
-                                { min: 1, message: '最少1克', trigger: 'blur' }
+                                { required: true, message: '请输入克数', trigger: 'blur' }
                             ]
                         }
                     };
