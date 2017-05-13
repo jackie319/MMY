@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using JK.Framework.Web.Model;
 using MMY.FrontSite.WebUI.Models.Product;
 using MMY.Services.IServices;
+using MMY.Services.ServiceModel;
 
 namespace MMY.FrontSite.WebUI.Controllers
 {
@@ -41,7 +42,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         {
             var query=new QueryBase();
             int total;
-            var list=_product.GetProductVs("", categoryGuid, null, false, false, null, null, query.Skip, query.Take, out total);
+            var list=_product.GetProductVs("", categoryGuid, ProductStatusEnum.OffShelf, false, false, null, null, query.Skip, query.Take, out total);
             var reusltList = list.Select(item => ProductListViewModel.CopyFrom(item));
             return this.ResultListModel(total, reusltList);
         }
@@ -54,7 +55,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         {
             var query = new QueryBase();
             int total;
-            var list = _product.GetProductVs(searchName, null, null, false, false, null, null, query.Skip, query.Take, out total);
+            var list = _product.GetProductVs(searchName, null, ProductStatusEnum.OffShelf, false, false, null, null, query.Skip, query.Take, out total);
             var reusltList = list.Select(item => ProductListViewModel.CopyFrom(item));
             return this.ResultListModel(total, reusltList);
         }
@@ -66,7 +67,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         {
             var query = new QueryBase();
             int total;
-            var list = _product.GetProductVs(null,null, null,false,true, null, null, query.Skip, query.Take, out total);
+            var list = _product.GetProductVs(null,null, ProductStatusEnum.OffShelf, false,true, null, null, query.Skip, query.Take, out total);
             var reusltList = list.Select(item => ProductListViewModel.CopyFrom(item));
             return this.ResultListModel(total, reusltList);
         }
@@ -79,7 +80,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         {
             var query = new QueryBase();
             int total;
-            var list = _product.GetProductVs(null, null, null, true, false, null, null, query.Skip, query.Take, out total);
+            var list = _product.GetProductVs(null, null, ProductStatusEnum.OffShelf, true, false, null, null, query.Skip, query.Take, out total);
             var reusltList = list.Select(item => ProductListViewModel.CopyFrom(item));
             return this.ResultListModel(total, reusltList);
         }

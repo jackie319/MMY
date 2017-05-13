@@ -7,6 +7,7 @@ using JK.Framework.Core;
 using JK.Framework.Extensions;
 using JK.Framework.Web.Model;
 using MMY.PlatForm.WebUI.Models.Product;
+using MMY.Services.ServicesImpl;
 
 namespace MMY.PlatForm.WebUI.Controllers
 {
@@ -30,6 +31,18 @@ namespace MMY.PlatForm.WebUI.Controllers
                 return this.ResultError(ex.Message);
             }
         
+        }
+
+        public ActionResult CkEditorUpload(HttpPostedFileBase file, string CKEditorFuncNum)
+        {
+
+            var name = UploadManager.SavePicture(file, "Product");
+            var url = AppSetting.Instance().PictureUrl + name;
+            // string num = HttpContext.Request.QueryString["CKEditorFuncNum"];
+            string num = CKEditorFuncNum;
+            string content = string.Format("<script type=\"text/javascript\">window.parent.CKEDITOR.tools.callFunction({0},\"{1}\",\"\");</script>", num, url);
+            return Content(content, "text/html");
+
         }
 
         /// <summary>

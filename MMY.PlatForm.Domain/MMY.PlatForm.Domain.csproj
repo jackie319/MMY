@@ -33,11 +33,23 @@
     <Reference Include="JK.Framework.Core">
       <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Core.dll</HintPath>
     </Reference>
+    <Reference Include="JK.Framework.Pay">
+      <HintPath>..\..\..\New\MMY\Libs\libs\JK.Framework.Pay.dll</HintPath>
+    </Reference>
     <Reference Include="JK.Framework.Web">
       <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Web.dll</HintPath>
     </Reference>
+    <Reference Include="Senparc.Weixin">
+      <HintPath>..\..\..\New\MMY\Libs\libs\Senparc.Weixin.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.Weixin.MP">
+      <HintPath>..\..\..\New\MMY\Libs\libs\Senparc.Weixin.MP.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\..\..\New\MMY\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,10 +62,6 @@
     <Compile Include="UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MMY.Data\MMY.Data.csproj">
-      <Project>{E5D91290-E87D-4097-A316-92AEFD8329EA}</Project>
-      <Name>MMY.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MMY.Services\MMY.Services.csproj">
       <Project>{6465A8E9-EACC-4876-8E33-5D8E2EEE841A}</Project>
       <Name>MMY.Services</Name>

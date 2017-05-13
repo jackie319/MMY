@@ -15,7 +15,7 @@ namespace MMY.PlatForm.WebUI.Models.Order
         /// <summary>
         /// 订单金额
         /// </summary>
-        public int OrderAmount { get; set; }
+        public decimal OrderAmount { get; set; }
         /// <summary>
         /// 产品名称
         /// </summary>
@@ -58,7 +58,7 @@ namespace MMY.PlatForm.WebUI.Models.Order
             OrderListViewModel model=new OrderListViewModel();
             model.Guid = order.Guid;
             model.OrderNo = order.OrderNo;
-            model.OrderAmount = order.OrderAmount;
+            model.OrderAmount = Convert.ToDecimal(order.OrderAmount)/100;
             model.ProductName = order.ProductName;
             model.ProductNumber = order.ProductNumber;
             model.UserNickName = order.UserNickName;

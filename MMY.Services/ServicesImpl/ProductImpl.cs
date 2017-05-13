@@ -208,6 +208,7 @@ namespace MMY.Services.ServicesImpl
             var entity = _productRepository.Table.FirstOrDefault(q => q.Guid == productGuid && !q.IsDeleted);
             if (entity == null) return;
             entity.Status = ProductStatusEnum.OnShelf.ToString();
+            entity.TimeOnShelf=DateTime.Now;
             _productRepository.Update(entity);
         }
 
@@ -216,6 +217,7 @@ namespace MMY.Services.ServicesImpl
             var entity = _productRepository.Table.FirstOrDefault(q => q.Guid == productGuid && !q.IsDeleted);
             if (entity == null) return;
             entity.Status = ProductStatusEnum.OffShelf.ToString();
+            entity.TimeOffShelf=DateTime.Now;
             _productRepository.Update(entity);
         }
 
