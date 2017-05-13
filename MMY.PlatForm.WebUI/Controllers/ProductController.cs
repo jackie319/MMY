@@ -40,6 +40,7 @@ namespace MMY.PlatForm.WebUI.Controllers
             return this.ResultModel(resultProduct);
         }
 
+        [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult GetClassification(Guid productGuid)
         {
             var list = _product.GetClassifications(productGuid);
