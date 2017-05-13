@@ -1,6 +1,7 @@
 ﻿var webConfig = {
     debug: true,//是否调试
-    systemName: "Element-Admin",
+    logo:"/wwwroot/logo.png",
+    systemName: '麦麦银O+O平台管理系统',
     urlPrefix:"/wwwroot",
     apiServerAddress: "",
     resourceServerAddress: "/Upload/"

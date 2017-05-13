@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.API.测试\obj\Debug\MMY.FrontSite.API.测试.csprojResolveAssemblyReference.cache
+=======
+D:\代码\git\MMY\MMY\MMY.FrontSite.API.测试\obj\Debug\MMY.FrontSite.API.测试.csprojResolveAssemblyReference.cache
+>>>>>>> 4fa0f4a976ac77226591477512a46fa1fada6e7d
