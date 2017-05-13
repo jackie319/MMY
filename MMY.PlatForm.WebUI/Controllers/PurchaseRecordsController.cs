@@ -30,6 +30,11 @@ namespace MMY.PlatForm.WebUI.Controllers
             return this.ResultListModel(total, resultList);
         }
 
+        /// <summary>
+        /// 进货记录不需要填写克数
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [ValidationFilter]
         [HttpPost]
         public ActionResult Save(ProductPurchaseRecordsViewModel model)

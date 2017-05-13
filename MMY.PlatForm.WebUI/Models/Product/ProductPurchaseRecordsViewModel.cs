@@ -58,7 +58,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
             records.Number = Number;
             records.Remark = Remark??string.Empty;
             records.BuyingPrice = Convert.ToInt32(BuyingPrice * 100);
-            records.Grams = Grams;
+            records.Grams = 0;//进货记录不需要填写克数
             return records;
         }
     }
