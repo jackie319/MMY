@@ -240,7 +240,7 @@
                     me.search
                     );
 
-                    me.$http.get("/Supplier/List", {
+                    me.$http.get(apiConfig.supplier_query, {
                         params: queryModel
                     })
                     .then(function (response) {

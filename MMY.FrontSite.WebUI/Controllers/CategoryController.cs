@@ -17,6 +17,11 @@ namespace MMY.FrontSite.WebUI.Controllers
             _productCategory = productCategory;
         }
 
+        public ActionResult Index()
+        {
+            return this.HtmlContent("~/html/classify.html");
+        }
+
         public ActionResult List()
         {
            var categories= _productCategory.GetAllParentCategory();

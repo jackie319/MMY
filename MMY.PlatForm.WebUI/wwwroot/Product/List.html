@@ -145,10 +145,12 @@
                     </el-button>
                     <el-button v-if="scope.row.Status==='已上架'"
                                size="small"
+                               type="danger"
                                v-on:click="onOffShelf(scope.$index, scope.row)">下架
                     </el-button>
                     <el-button v-else
                                size="small"
+                               type="success"
                                v-on:click="onOnShelf(scope.$index, scope.row)">上架
                     </el-button>
                     <el-button size="small"
@@ -237,26 +239,29 @@
                 onDelete: function (i, m) {
                     var me = this;
                     me.$confirm("确定删除？", "确定").then(function() {
-                        me.$http.post(apiConfig.product_delete, { guid:m.Guid}).then(function () {
+                        me.$http.post(apiConfig.product_delete, { productGuid:m.Guid}).then(function () {
                             me.loadData();
                         });
                     });
                 },
                 onPurchase: function (i, m) {
-                    this.$purchaserecord.open({ ProductGuid: m.Guid });
+                    var me = this;
+                    me.$purchaserecord.open({ ProductGuid: m.Guid }).then(function () {
+                        me.loadData();
+                    });
                 },
                 onPurchaseList:function(i,m){
                     this.$purchaselist.open({ ProductGuid: m.Guid });
                 },
                 onOnShelf:function(i,m){
                     var me=this;
-                    me.$http.post(apiConfig.product_onshelf, { guid:m.Guid}).then(function () {
+                    me.$http.post(apiConfig.product_onshelf, { productGuid:m.Guid}).then(function () {
                             me.loadData();
                         });
                 },
                 onOffShelf:function(i,m){
                     var me=this;
-                    me.$http.post(apiConfig.product_offshelf, { guid:m.Guid}).then(function () {
+                    me.$http.post(apiConfig.product_offshelf, { productGuid:m.Guid}).then(function () {
                             me.loadData();
                         });
                 },

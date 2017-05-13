@@ -25,6 +25,11 @@ namespace MMY.FrontSite.WebUI.Controllers
             _userAccount = userAccount;
         }
 
+        public ActionResult OrderList()
+        {
+            return View();
+        }
+
         /// <summary>
         /// 新增订单
         /// </summary>

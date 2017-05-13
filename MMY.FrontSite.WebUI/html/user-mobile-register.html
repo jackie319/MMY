@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html data-dpr="3" style="font-size: 55.2px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <title>唯品会手机版</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- 根据视口宽度动态调整 html 元素的 font－size -->
+    <script>
+        (function (win, doc) {
+            var isMobile = (function (userAgent) {
+                'use strict';
+
+                return !!userAgent.match(/android|webos|ip(hone|ad|od)|opera (mini|mobi|tablet)|iemobile|windows.+(phone|touch)|mobile|fennec|kindle (Fire)|Silk|maemo|blackberry|playbook|bb10\; (touch|kbd)|Symbian(OS)|Ubuntu Touch/i);
+            }(navigator.userAgent));
+
+            // 前提条件 ip6 的高清视觉稿
+            var fixScreen = function () {
+                var rootFootsize;
+                var dpr;
+                var docEl;
+                var width;
+
+                docEl = doc.documentElement;
+                dpr = win.devicePixelRatio || 1;
+
+                // 设置 html dpr值，用于 css hack
+                docEl.setAttribute('data-dpr', dpr);
+
+                var page = doc.querySelector('.ui-page');
+                var pageContent = doc.querySelector('.ui-page-content');
+
+                var refreshRem = function () {
+                    // 适配屏幕宽度为 320px - 540px
+                    width = Math.min(docEl.clientWidth, 540);
+                    width = width < 320 ? 320 : width;
+
+                    if (page) {
+                        // 设置page的最大最小宽度
+                        page.style.minWidth = 320 + 'px';
+                        page.style.maxWidth = 540 + 'px';
+
+                        // 设置 page 宽度
+                        page.style.width = width + 'px';
+                        pageContent.style.width = width + 'px';
+                    }
+
+                    // 将 ip6 视觉稿 rem 的值设置为 50，其他按比例处理
+                    rootFootsize = width * 2 / 750 * 50;
+
+                    // 设置 html 元素的字体大小基准值
+                    docEl.style.fontSize = rootFootsize + "px";
+                };
+
+                // 在页面调整时更新 rem
+                win.addEventListener('resize', function (e) {
+                    refreshRem();
+                }, false);
+
+                // 在页面显示时更新 rem
+                win.addEventListener('pageshow', function (e) {
+                    refreshRem();
+                }, false);
+
+                refreshRem();
+
+                // 给js调用的，某一屏幕宽度下 rem 和 px 之间的转换函数
+                window.px2rem = function (px) {
+                    return px / rootFootsize;
+                };
+                window.rem2px = function (rem) {
+                    return rem * rootFootsize;
+                };
+
+                window.rootFootsize = rootFootsize;
+            };
+
+            if (isMobile) {
+                doc.addEventListener('DOMContentLoaded', fixScreen, false);
+            } else {
+                doc.addEventListener('DOMContentLoaded', function (e) {
+                    doc.documentElement.style.fontSize = '50px';
+                }, false);
+            }
+        })(window, document);
+    </script>
+    <script>
+        (function wapStart() {
+            var now = Date.now();
+            var win = this;
+            var phpData = document.documentElement.getAttribute('data-php');
+            var special = /m=special/.test(location.search);
+            var _onCompleted = function () { __STATS.add('dom_ready'); };
+            var _onLoad = function () {
+                __STATS.add('onload');
+                win.removeEventListener('DOMContentLoaded', _onCompleted);
+                win.removeEventListener('load', _onLoad);
+            };
+
+            if (phpData) {
+                try {
+                    phpData = JSON.parse(phpData);
+                } catch (e) { }
+            }
+
+            win.__STATS = {
+                start: now,
+                points: {},
+                add: function (point, time) {
+                    __STATS.points[point] = time ? time : (Date.now() - __STATS.start);
+                }
+            };
+            win.addEventListener('DOMContentLoaded', _onCompleted, false);
+            win.addEventListener('load', _onLoad, false);
+            win.onerror = function (msg, url, line, col) {
+                var u = '//mstats.vip.com/v1/jslog/m?';
+                u += '_t=' + Date.now();
+                u += '&msg=' + encodeURIComponent([msg, url, line, col || 0].join('|'));
+                (new Image()).src = u;
+            };
+
+            // need remove
+            win.ui = 'touch';
+            win.vipConfig = {
+                priceImageSwitch: parseInt('', 10),
+                ipLocation: {
+                    result: "",
+                    province: ""
+                }
+            };
+
+            // all data from php stored here
+            win.__locals = phpData || {};
+        }.call(window));
+    </script>
+    <link href="css/login.css" rel="stylesheet" />
+</head>
+<body style="padding-bottom: 168px;">
+    <script src="//ms2-m.vipstatic.com/js/lib/e7c2a69b8f.jquery-2.1.0.min.js"></script>
+    <div class="models-register" marsseadclick="">
+        <div class="models-header">
+            <h2>注 册</h2>
+            <a href="javascript:;" class="m-login-back-btn J-mlogin-back icon-register-close"></a>
+        </div>
+        <div class="models-body">
+
+
+            <form class="ui-form">
+                <div class="J-first-step" style="display: block">
+                    <div class="ui-form-item">
+                        <label for="mobile">手机号</label>
+                        <input name="mobile" type="tel" placeholder="请输入手机号" maxlength="11" class="J-mlogin-ipt J-mlogin-ipt-mobile" marsseadinput="">
+                        <a href="#" class="m-mlogin-clear J-mlogin-clear" style="display:none">
+                            <span class="clear_wrap">
+                                <span class="clear"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="ui-form-item ui-form-item-r">
+                        <label for="authcode">验证码</label>
+                        <input class="J-mlogin-ipt J-mlogin-ipt-authcode" name="authcode" type="tel" placeholder="请输入验证码" maxlength="6" marsseadinput="">
+                        <a href="#" class="m-mlogin-clear show-btn-position J-mlogin-clear" style="display:none">
+                            <span class="clear_wrap">
+                                <span class="clear"></span>
+                            </span>
+                        </a>
+                        <button class="J-mlogin-get-authcode disabled" type="button">获取验证码</button>
+
+                    </div>
+
+
+                    <div class="submit-box">
+                        <a href="javascript:;" class="J-mlogin-submit ui-button ui-button-primary  submitFast disabled">
+
+                            下一步
+
+                        </a>
+                    </div>
+                    <div class="models-footer">
+                        <div class="had-account">
+                            已有账号？
+                            <a href="javascript:;" class="m-mlogin-toggle J-mlogin-toggle">登录</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="J-password-step" style="display:none">
+                    <div class="ui-form-item-top">
+                        <label>为了确保账号安全，请设置登录密码。</label>
+                    </div>
+                    <div class="ui-form-item">
+                        <label for="password">登录密码</label>
+                        <input name="password" onpaste="return false;" type="text" placeholder="6-20位字母、数字组合" class="J-mlogin-ipt J-login-password-second" marsseadinput="">
+                        <a href="#" class="m-mlogin-clear J-mlogin-clear" style="display:none">
+                            <span class="clear_wrap">
+                                <span class="clear"></span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="submit-box">
+                        <a href="javascript:;" class="J-mlogin-password-btn ui-button ui-button-primary submitFast disabled">登录</a>
+                    </div>
+                </div>
+                <div class="J-second-step" style="display:none">
+                    <div class="ui-form-item-top">
+                        <label>为了确保账号安全，请设置登录密码。</label>
+                    </div>
+                    <div class="ui-form-item">
+                        <label for="password">登录密码</label>
+                        <input name="password" onpaste="return false;" type="text" placeholder="6-20位字母、数字组合" class="J-mlogin-ipt J-mlogin-ipt-password" marsseadinput="">
+                        <a href="#" class="m-mlogin-clear J-mlogin-clear" style="display:none">
+                            <span class="clear_wrap">
+                                <span class="clear"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="submit-box">
+                        <a href="javascript:;" class="J-register-btn ui-button ui-button-primary submitFast disabled">注册</a>
+                    </div>
+                </div>
+                <div class="error-msg hide J-error-msg">
+                    <i class="icon-err-tips">
+                        <span class="icon-err-tips-in"></span>
+                    </i>
+                    <span></span>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

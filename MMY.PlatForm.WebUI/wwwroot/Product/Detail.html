@@ -110,7 +110,7 @@
             </div>
             <el-form-item>
                 <el-button type="primary" @click="submitForm('form')">保存</el-button>
-                <el-button @click="resetForm('form')">返回列表</el-button>
+                <el-button @click="backToList">返回列表</el-button>
             </el-form-item>
         </el-form>
         <el-dialog v-model="dialogVisible" size="tiny">
@@ -131,7 +131,7 @@
                 categories: [],
                 form: {
                     "Guid": "00000000-0000-0000-0000-000000000000",
-                    "CategoryGuid": "00000000-0000-0000-0000-000000000000",
+                    "CategoryGuid": "",
                     "ProductName": "产品名称",
                     "PromotionPrice": 1.3,
                     "Price": 2.4,
@@ -279,7 +279,7 @@
                     });
                 },
                 backToList: function () {
-                    this.$parent().loadPage("/wwwroot/Product/List.html");
+                    this.$parent.loadPage("/wwwroot/Product/List.html");
                 },
                 resetForm: function (formName) {
                     this.$refs[formName].resetFields();

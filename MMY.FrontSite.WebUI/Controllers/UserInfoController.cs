@@ -19,6 +19,12 @@ namespace MMY.FrontSite.WebUI.Controllers
         {
             _UserAccount = userAccount;
         }
+
+        public ActionResult Center()
+        {
+            return View();
+        }
+
         /// <summary>
         /// 获取用户信息(实时)
         /// </summary>

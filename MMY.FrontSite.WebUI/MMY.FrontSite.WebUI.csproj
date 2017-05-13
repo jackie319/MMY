@@ -218,6 +218,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\RMUtility.cs" />
     <Compile Include="App_Start\AutoFacRegister.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -261,10 +262,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="html\address.html" />
@@ -274,6 +272,26 @@
     <Content Include="html\checkout.html" />
     <Content Include="html\classify-list.html" />
     <Content Include="html\classify.html" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\app.css" />
+    <Content Include="css\cart-empty.css" />
+    <Content Include="css\checkout.css" />
+    <Content Include="css\classify-list.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\list-classify.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\npay.styles.css" />
+    <Content Include="css\product-detail.css" />
+    <Content Include="css\rich_media_content.css" />
+    <Content Include="css\schema.default.css" />
+    <Content Include="css\style.min.css" />
+    <Content Include="css\theme\default.css" />
+    <Content Include="css\theme\default\good.png" />
+    <Content Include="css\theme\default\search.png" />
+    <Content Include="css\theme\default\u279.png" />
+    <Content Include="css\user.css" />
+    <Content Include="css\vendors.css" />
     <Content Include="html\css\animate.css" />
     <Content Include="html\css\animate.min.css" />
     <Content Include="html\css\app.css" />
@@ -294,8 +312,14 @@
     <Content Include="html\css\theme\default\u279.png" />
     <Content Include="html\css\user.css" />
     <Content Include="html\css\vendors.css" />
-    <Content Include="html\font\iconmoon.svg" />
+    <Content Include="font\iconmoon.svg" />
+    <Content Include="html\image\05574d58.mlogin-icon-refresh.gif" />
+    <Content Include="html\image\441a0c3e.showpassword.png" />
+    <Content Include="html\image\6f8201f0.close.png" />
+    <Content Include="html\image\e8f1c37c.back.png" />
+    <Content Include="html\image\efd965eb.login_bg.png" />
     <Content Include="html\image\fa3c03d252.nullicon.png" />
+    <Content Include="html\image\fe24f3c7.hidepassword.png" />
     <Content Include="html\image\touch-icon-ipad-144.png" />
     <Content Include="html\image\touch-icon-ipad-72.png" />
     <Content Include="html\image\touch-icon-iphone-114.png" />
@@ -349,6 +373,7 @@
     <Content Include="html\ui\login.png" />
     <Content Include="html\ui\pay.png" />
     <Content Include="html\ui\regiest.png" />
+    <Content Include="html\user-mobile-register.html" />
     <Content Include="html\user-mobile-login.html" />
     <Content Include="html\user-address-list.html" />
     <Content Include="html\user-mobile-bind.html" />
@@ -357,26 +382,60 @@
     <Content Include="html\user-order-list-unreceive.html" />
     <Content Include="html\user-updatepwd.html" />
     <Content Include="html\user.html" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="image\05574d58.mlogin-icon-refresh.gif" />
+    <Content Include="image\441a0c3e.showpassword.png" />
+    <Content Include="image\6f8201f0.close.png" />
+    <Content Include="image\e8f1c37c.back.png" />
+    <Content Include="image\efd965eb.login_bg.png" />
+    <Content Include="image\fa3c03d252.nullicon.png" />
+    <Content Include="image\fe24f3c7.hidepassword.png" />
+    <Content Include="image\touch-icon-ipad-144.png" />
+    <Content Include="image\touch-icon-ipad-72.png" />
+    <Content Include="image\touch-icon-iphone-114.png" />
+    <Content Include="image\touch-icon-iphone-57.png" />
     <Content Include="log4net.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="html\user-login.html" />
+    <None Include="script\_references.js" />
+    <Content Include="script\containerBridge.min.js" />
+    <Content Include="script\containerBridgeConfig.js" />
+    <Content Include="script\cookies.js" />
+    <Content Include="script\dateformat.js" />
+    <Content Include="script\framework.js" />
+    <Content Include="script\guid.js" />
+    <Content Include="script\JavaScript.js" />
+    <Content Include="script\jszip.js" />
+    <Content Include="script\linq.js" />
+    <Content Include="script\md5.js" />
+    <Content Include="script\mint-ui\lib\index.js" />
+    <Content Include="script\mint-ui\lib\style.css" />
+    <Content Include="script\mint-ui\lib\style.min.css" />
+    <Content Include="script\polyfill\DOMParser.parseFromString.js" />
+    <Content Include="script\polyfill\Object.assign.js" />
+    <Content Include="script\referenceCss.js" />
+    <Content Include="script\referenceJs.js" />
+    <Content Include="script\stringformat.js" />
+    <Content Include="script\vue-plugins\actionsheet\HtmlPage.html" />
+    <Content Include="script\vue-plugins\actionsheet\JavaScript.js" />
+    <Content Include="script\vue-plugins\alert\HtmlPage.html" />
+    <Content Include="script\vue-plugins\alert\JavaScript.js" />
+    <Content Include="script\vue-plugins\confirm\HtmlPage.html" />
+    <Content Include="script\vue-plugins\confirm\JavaScript.js" />
+    <Content Include="script\vue-plugins\loading\HtmlPage.html" />
+    <Content Include="script\vue-plugins\loading\JavaScript.js" />
+    <Content Include="script\vue-plugins\prompt\HtmlPage.html" />
+    <Content Include="script\vue-plugins\prompt\JavaScript.js" />
+    <Content Include="script\vue-plugins\vue-resource\vue-resource.common.js" />
+    <Content Include="script\vue-plugins\vue-resource\vue-resource.es2015.js" />
+    <Content Include="script\vue-plugins\vue-resource\vue-resource.js" />
+    <Content Include="script\vue-plugins\vue-resource\vue-resource.min.js" />
+    <Content Include="script\vue-plugins\vue-router\vue-router.js" />
+    <Content Include="script\vue-plugins\vue-router\vue-router.min.js" />
+    <Content Include="script\vue.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -391,36 +450,35 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
-    <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Activity\Index.cshtml" />
+    <Content Include="Views\Account\UserLogin.cshtml" />
+    <Content Include="Views\Account\UserRegister.cshtml" />
+    <Content Include="Views\Order\OrderList.cshtml" />
+    <Content Include="Views\Product\ProductClassify.cshtml" />
+    <Content Include="Views\Product\ProductList.cshtml" />
+    <Content Include="Views\Product\ProductDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="html\font\" />
     <Folder Include="Models\Pay\" />
     <Folder Include="Views\Category\" />
     <Folder Include="Views\ConfirmOrder\" />
     <Folder Include="Views\DeliverAddress\" />
     <Folder Include="Views\Favorite\" />
-    <Folder Include="Views\Order\" />
     <Folder Include="Views\Pay\" />
     <Folder Include="Views\Picture\" />
-    <Folder Include="Views\Product\" />
     <Folder Include="Views\ShoppingCart\" />
     <Folder Include="Views\Sms\" />
     <Folder Include="Views\UserInfo\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MMY.Data\MMY.Data.csproj">

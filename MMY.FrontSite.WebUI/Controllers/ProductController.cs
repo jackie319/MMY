@@ -17,15 +17,21 @@ namespace MMY.FrontSite.WebUI.Controllers
             _product = product;
         }
         // GET: Product
-        public ActionResult Index()
+        public ActionResult ProductClassify()
         {
             return View();
         }
 
-        public ActionResult List()
+        public ActionResult ProductList()
         {
-            return null;
+            return View();
         }
+
+        public ActionResult ProductDetail()
+        {
+            return View();
+        }
+
         /// <summary>
         /// 某分类下的商品
         /// </summary>

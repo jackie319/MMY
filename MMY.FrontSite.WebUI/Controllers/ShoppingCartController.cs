@@ -18,6 +18,12 @@ namespace MMY.FrontSite.WebUI.Controllers
         {
             _shoppingCart = shoppingCart;
         }
+
+        public ActionResult Cart()
+        {
+            return View();
+        }
+
         /// <summary>
         /// 加入购物车
         /// </summary>
