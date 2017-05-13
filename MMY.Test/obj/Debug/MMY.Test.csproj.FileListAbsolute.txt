@@ -250,3 +250,4 @@ E:\tools\development tools\GItHub\mmy\New\MMY\MMY.Test\bin\Debug\zh-Hans\System.
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.Test\obj\Debug\MMY.Test.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.Test\obj\Debug\MMY.Test.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.Test\obj\Debug\MMY.Test.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\obj\Debug\MMY.Test.csprojResolveAssemblyReference.cache

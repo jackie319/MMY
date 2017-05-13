@@ -8,3 +8,7 @@ E:\tools\development tools\GItHub\mmy\New\MMY\Libs\bin\Debug\Libs.pdb
 E:\tools\development tools\GItHub\mmy\New\MMY\Libs\obj\Debug\Libs.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\New\MMY\Libs\obj\Debug\Libs.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\Libs\obj\Debug\Libs.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\Libs\bin\Debug\Libs.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\Libs\bin\Debug\Libs.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\Libs\obj\Debug\Libs.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\Libs\obj\Debug\Libs.pdb

@@ -1,359 +1,119 @@
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\ApplicationInsights.config
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\csc.exe
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CSharp.Core.targets
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\System.Collections.Immutable.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\System.Reflection.Metadata.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\vbc.exe
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\VBCSCompiler.exe
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\roslyn\VBCSCompiler.exe.config
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.dll.config
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Antlr3.Runtime.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Autofac.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Autofac.Integration.Mvc.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.SqlServer.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Core.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Data.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Extensions.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Web.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\log4net.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Agent.Intercept.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.DependencyCollector.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.PerfCounterCollector.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Web.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.WindowsServer.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.ApplicationInsights.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Core.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Cookies.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Facebook.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Google.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.OAuth.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Twitter.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Web.Infrastructure.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Newtonsoft.Json.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Owin.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.Helpers.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.Mvc.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.Optimization.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.Razor.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Deployment.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Razor.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\WebGrease.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Autofac.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Autofac.Integration.Mvc.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Core.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Data.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Extensions.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Web.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\log4net.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.DependencyCollector.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Web.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.WindowsServer.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.ApplicationInsights.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.Helpers.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.Mvc.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.Optimization.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.Razor.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Deployment.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Razor.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Antlr3.Runtime.pdb
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Newtonsoft.Json.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.SqlServer.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Core.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Facebook.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Cookies.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.OAuth.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Google.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Helpers.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Mvc.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Optimization.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Razor.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\EntityFramework.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Facebook.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.csprojResolveAssemblyReference.cache
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.dll
-E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.pdb
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.csprojResolveAssemblyReference.cache
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\ApplicationInsights.config
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\csc.exe
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\System.Collections.Immutable.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\System.Reflection.Metadata.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\vbc.exe
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\VBCSCompiler.exe
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\VBCSCompiler.exe.config
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.dll.config
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.pdb
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Antlr3.Runtime.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Autofac.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Autofac.Integration.Mvc.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.SqlServer.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\log4net.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Agent.Intercept.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.DependencyCollector.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.PerfCounterCollector.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Web.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.WindowsServer.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.ApplicationInsights.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Core.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Cookies.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Facebook.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Google.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.OAuth.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Twitter.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Web.Infrastructure.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Newtonsoft.Json.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Owin.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Helpers.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Mvc.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Optimization.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Razor.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Deployment.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Razor.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\WebGrease.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Sms.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Senparc.Weixin.MP.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Senparc.Weixin.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.pdb
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.dll.config
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.pdb
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.dll.config
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.pdb
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.dll.config
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Autofac.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Autofac.Integration.Mvc.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\log4net.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.DependencyCollector.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Web.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.WindowsServer.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.ApplicationInsights.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Helpers.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Mvc.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Optimization.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Razor.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Deployment.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Razor.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Antlr3.Runtime.pdb
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Newtonsoft.Json.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.SqlServer.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Core.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Facebook.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Cookies.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.OAuth.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Google.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Helpers.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Mvc.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Optimization.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Razor.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\EntityFramework.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Facebook.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.pdb
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\ApplicationInsights.config
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\csc.exe
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CSharp.Core.targets
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\System.Collections.Immutable.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\System.Reflection.Metadata.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\vbc.exe
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\VBCSCompiler.exe
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\roslyn\VBCSCompiler.exe.config
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.dll.config
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.pdb
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Antlr3.Runtime.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Autofac.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Autofac.Integration.Mvc.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.SqlServer.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\log4net.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Agent.Intercept.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.DependencyCollector.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.PerfCounterCollector.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Web.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.WindowsServer.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.ApplicationInsights.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Core.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Cookies.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Facebook.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Google.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.OAuth.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Twitter.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Web.Infrastructure.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Newtonsoft.Json.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Owin.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.Helpers.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.Mvc.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.Optimization.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.Razor.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Deployment.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Razor.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\WebGrease.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Sms.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Senparc.Weixin.MP.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Senparc.Weixin.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.pdb
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.dll.config
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.pdb
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.dll.config
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.pdb
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.dll.config
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Autofac.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Autofac.Integration.Mvc.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\log4net.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.DependencyCollector.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Web.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.WindowsServer.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.ApplicationInsights.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.Helpers.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.Mvc.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.Optimization.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.Razor.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Deployment.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Razor.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Antlr3.Runtime.pdb
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Newtonsoft.Json.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.SqlServer.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Core.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Facebook.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Cookies.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.OAuth.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Google.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Helpers.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Mvc.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Optimization.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Razor.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\EntityFramework.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Facebook.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.csprojResolveAssemblyReference.cache
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.dll
-E:\tools\development tools\GItHub\mmy\New\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.csprojResolveAssemblyReference.cache
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\ApplicationInsights.config
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\csc.exe
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\System.Collections.Immutable.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\System.Reflection.Metadata.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\vbc.exe
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\VBCSCompiler.exe
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\roslyn\VBCSCompiler.exe.config
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.dll.config
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.WebUI.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Antlr3.Runtime.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Autofac.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Autofac.Integration.Mvc.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.SqlServer.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\log4net.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.DependencyCollector.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Web.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.WindowsServer.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.ApplicationInsights.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Core.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Cookies.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Facebook.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Google.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.OAuth.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Twitter.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Web.Infrastructure.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Newtonsoft.Json.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Owin.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Helpers.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Mvc.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Optimization.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Razor.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Deployment.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Razor.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\WebGrease.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Sms.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Senparc.Weixin.MP.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Senparc.Weixin.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Data.dll.config
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.PlatForm.Domain.dll.config
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\MMY.Services.dll.config
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Autofac.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Autofac.Integration.Mvc.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\log4net.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.DependencyCollector.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.Web.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AI.WindowsServer.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.ApplicationInsights.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Helpers.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Mvc.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Optimization.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.Razor.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Deployment.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\System.Web.WebPages.Razor.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Antlr3.Runtime.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Newtonsoft.Json.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\EntityFramework.SqlServer.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Core.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Facebook.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Cookies.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.OAuth.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Google.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Helpers.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Mvc.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Optimization.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.Razor.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\EntityFramework.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Facebook.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.pdb

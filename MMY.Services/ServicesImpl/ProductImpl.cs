@@ -267,11 +267,12 @@ namespace MMY.Services.ServicesImpl
             {
                 records.SupplierName = supplier.SupplierName;
             }
+            var classification = product.ProductClassification.FirstOrDefault(q => q.Guid == records.ClassificationGuid);
+            records.ClassificationName = classification.Name;
             _productPurchaseRepository.Insert(records);
            
-            product.ProductNumber += records.Number;
             //TODO:更新产品分类数量
-            var classification=product.ProductClassification.FirstOrDefault(q => q.Guid == records.ClassificationGuid);
+          
             if (classification != null)
             {
                 classification.Number += records.Number;
@@ -299,7 +300,7 @@ namespace MMY.Services.ServicesImpl
 
         private void CreateProductAlbum(ProductAlbum album)
         {
-            album.Guid = album.Guid == Guid.Empty ? Guid.NewGuid() : album.Guid;
+            album.Guid = Guid.NewGuid();
             album.TimeCreated=DateTime.Now;
             album.IsDeleted = false;
             _productAlbumRepository.Insert(album);
