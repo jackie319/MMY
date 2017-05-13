@@ -487,3 +487,6 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\zh-Hans\Mi
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\obj\Debug\MMY.FrontSite.WebUI.pdb
+D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Core.dll
+D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Extensions.dll
+D:\代码\git\MMY\MMY\MMY.FrontSite.WebUI\bin\JK.Framework.Web.dll
