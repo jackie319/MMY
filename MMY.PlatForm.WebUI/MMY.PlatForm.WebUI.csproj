@@ -795,6 +795,7 @@
     <Content Include="wwwroot\scripts\vue-compnent\ckeditor\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="wwwroot\scripts\vue-compnent\ckeditor\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="wwwroot\scripts\vue-compnent\ckeditor\ckeditor\skins\moono-lisa\readme.md" />
+    <Content Include="wwwroot\scripts\element-ui\lib\theme-default\index.css.8rmx7y1.partial" />
     <None Include="wwwroot\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

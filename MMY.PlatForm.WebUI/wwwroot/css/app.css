@@ -65,3 +65,58 @@
     clear: both;
     overflow-y: auto;
 }
+
+.image-uploader .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+    .image-uploader .el-upload:hover {
+        border-color: #20a0ff;
+    }
+
+.image-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 178px;
+    height: 178px;
+    line-height: 178px;
+    text-align: center;
+}
+
+.image {
+    width: 178px;
+    height: 178px;
+    display: block;
+}
+
+.demo-block {
+    border: 1px solid #eaeefb;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+[list-type=picture-card] {
+    background-color: #fbfdff;
+    border: 1px dashed #c0ccda;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 148px;
+    height: 148px;
+    cursor: pointer;
+    line-height: 146px;
+    vertical-align: top;
+    text-align: center;
+}
+
+    [list-type=picture-card] i {
+        font-size: 28px;
+        color: #8c939d;
+    }
+
+    [list-type=picture-card] .el-upload__inner {
+        width: 100%;
+    }
