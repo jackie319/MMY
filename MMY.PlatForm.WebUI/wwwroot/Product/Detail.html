@@ -265,8 +265,10 @@
                     //        return false;
                     //    }
                     //});
-                    this.$http.post(apiConfig.product_save, this.form).then(function (response) {
-                        this.$message({
+                    var me = this;
+                    me.$http.post(apiConfig.product_save, this.form).then(function (response) {
+                        me.backToList();
+                        me.$message({
                             type: 'success',
                             message: "保存成功"
                         });

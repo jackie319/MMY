@@ -85,7 +85,6 @@
                        layout="total, sizes, prev, pager, next, jumper"
                        v-bind:total="list.total">
         </el-pagination>
-
         <!--详情-->
         <el-dialog title="分类详情" v-model="detail.isVisible">
             <el-form v-bind:model="form" v-bind:rules="rules" ref="form" label-width="100px" class="demo-form">
@@ -101,7 +100,6 @@
                 <el-button type="primary" @click="submitDetail">确 定</el-button>
             </div>
         </el-dialog>
-
     </div>
     <script>
         var vm = new Vue({

@@ -164,3 +164,117 @@
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2d.<BeginInvokeAction>b__1d()
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
 
+[05-13 11:05:34 捕获全局异常：]
+用户未通过认证
+
+/PurchaseRecords/List?skip=0&top=10&ProductGuid=&SupplierGuid=
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[05-13 11:05:34 捕获全局异常：]
+此请求已被阻止，因为当用在 GET 请求中时，会将敏感信息透漏给第三方网站。若要允许 GET 请求，请将 JsonRequestBehavior 设置为 AllowGet。
+
+/PurchaseRecords/List?skip=0&top=10&ProductGuid=&SupplierGuid=
+
+   在 System.Web.Mvc.JsonResult.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2d.<BeginInvokeAction>b__1d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+
+[05-13 11:38:50 捕获全局异常：]
+用户未通过认证
+
+/PurchaseRecords/List?skip=0&top=10&ProductGuid=&SupplierGuid=
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[05-13 11:38:50 捕获全局异常：]
+此请求已被阻止，因为当用在 GET 请求中时，会将敏感信息透漏给第三方网站。若要允许 GET 请求，请将 JsonRequestBehavior 设置为 AllowGet。
+
+/PurchaseRecords/List?skip=0&top=10&ProductGuid=&SupplierGuid=
+
+   在 System.Web.Mvc.JsonResult.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2d.<BeginInvokeAction>b__1d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+
+[05-13 13:52:42 捕获全局异常：]
+用户未通过认证
+
+/Order/List?skip=0&top=10&TimeCreatedBegin=&TimeCreatedEnd=&OrderNo=&UserNickName=&Status=Default&StatusList%5B0%5D%5Bvalue%5D=Default&StatusList%5B0%5D%5Blabel%5D=%E6%9C%AA%E6%94%AF%E4%BB%98&StatusList%5B1%5D%5Bvalue%5D=Cancel&StatusList%5B1%5D%5Blabel%5D=%E5%B7%B2%E5%8F%96%E6%B6%88&StatusList%5B2%5D%5Bvalue%5D=Paid&StatusList%5B2%5D%5Blabel%5D=%E5%B7%B2%E6%94%AF%E4%BB%98&StatusList%5B3%5D%5Bvalue%5D=Delivered&StatusList%5B3%5D%5Blabel%5D=%E5%B7%B2%E5%8F%91%E8%B4%A7&StatusList%5B4%5D%5Bvalue%5D=Finished&StatusList%5B4%5D%5Blabel%5D=%E5%B7%B2%E5%AE%8C%E6%88%90&StatusList%5B5%5D%5Bvalue%5D=Refund&StatusList%5B5%5D%5Blabel%5D=%E5%B7%B2%E9%80%80%E6%AC%BE
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[05-13 13:52:42 捕获全局异常：]
+此请求已被阻止，因为当用在 GET 请求中时，会将敏感信息透漏给第三方网站。若要允许 GET 请求，请将 JsonRequestBehavior 设置为 AllowGet。
+
+/Order/List?skip=0&top=10&TimeCreatedBegin=&TimeCreatedEnd=&OrderNo=&UserNickName=&Status=Default&StatusList%5B0%5D%5Bvalue%5D=Default&StatusList%5B0%5D%5Blabel%5D=%E6%9C%AA%E6%94%AF%E4%BB%98&StatusList%5B1%5D%5Bvalue%5D=Cancel&StatusList%5B1%5D%5Blabel%5D=%E5%B7%B2%E5%8F%96%E6%B6%88&StatusList%5B2%5D%5Bvalue%5D=Paid&StatusList%5B2%5D%5Blabel%5D=%E5%B7%B2%E6%94%AF%E4%BB%98&StatusList%5B3%5D%5Bvalue%5D=Delivered&StatusList%5B3%5D%5Blabel%5D=%E5%B7%B2%E5%8F%91%E8%B4%A7&StatusList%5B4%5D%5Bvalue%5D=Finished&StatusList%5B4%5D%5Blabel%5D=%E5%B7%B2%E5%AE%8C%E6%88%90&StatusList%5B5%5D%5Bvalue%5D=Refund&StatusList%5B5%5D%5Blabel%5D=%E5%B7%B2%E9%80%80%E6%AC%BE
+
+   在 System.Web.Mvc.JsonResult.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2d.<BeginInvokeAction>b__1d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+
+[05-13 13:56:21 捕获全局异常：]
+用户未通过认证
+
+/PurchaseRecords/List?skip=0&top=10&ProductGuid=&SupplierGuid=
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[05-13 13:56:21 捕获全局异常：]
+此请求已被阻止，因为当用在 GET 请求中时，会将敏感信息透漏给第三方网站。若要允许 GET 请求，请将 JsonRequestBehavior 设置为 AllowGet。
+
+/PurchaseRecords/List?skip=0&top=10&ProductGuid=&SupplierGuid=
+
+   在 System.Web.Mvc.JsonResult.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2d.<BeginInvokeAction>b__1d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+
+[05-13 13:56:55 捕获全局异常：]
+用户未通过认证
+
+/PurchaseRecords/List?skip=0&top=10&ProductGuid=&SupplierGuid=
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[05-13 13:56:55 捕获全局异常：]
+此请求已被阻止，因为当用在 GET 请求中时，会将敏感信息透漏给第三方网站。若要允许 GET 请求，请将 JsonRequestBehavior 设置为 AllowGet。
+
+/PurchaseRecords/List?skip=0&top=10&ProductGuid=&SupplierGuid=
+
+   在 System.Web.Mvc.JsonResult.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2d.<BeginInvokeAction>b__1d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+
+[05-13 14:32:06 捕获全局异常：]
+用户未通过认证
+
+/PurchaseRecords/List?skip=0&top=10&ProductGuid=&SupplierGuid=
+
+   在 JK.Framework.Web.Filter.JKAuthorizeAttribute.OnAuthorization(AuthorizationContext filterContext)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+[05-13 14:32:06 捕获全局异常：]
+此请求已被阻止，因为当用在 GET 请求中时，会将敏感信息透漏给第三方网站。若要允许 GET 请求，请将 JsonRequestBehavior 设置为 AllowGet。
+
+/PurchaseRecords/List?skip=0&top=10&ProductGuid=&SupplierGuid=
+
+   在 System.Web.Mvc.JsonResult.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2d.<BeginInvokeAction>b__1d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+

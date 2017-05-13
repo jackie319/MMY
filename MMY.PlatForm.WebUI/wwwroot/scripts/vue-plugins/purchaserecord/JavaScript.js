@@ -45,37 +45,43 @@
                 },
                 template:
                 '<el-dialog :title="title" v-model="isVisible">' +
-                '<el-form v-bind:model="form" v-bind:rules="rules" ref="form" label-width="100px" class="demo-form">' +
-                '<el-form-item label="商品颜色分类" prop="SaleSubTitle">' +
-                '<el-select label="商品颜色分类" v-model="form.ClassificationGuid" placeholder="Select">' +
-                '<el-option v-for="item in classifications"' +
-                ':label="item.Name"' +
-                ':value="item.Guid">' +
-                '</el-option>' +
-                '</el-select>' +
-                '</el-form-item >' +
-                '<el-form-item label="供货商" prop="SaleSubTitle">' +
-                '<el-select label="供货商" v-model="form.SupplierGuid" placeholder="Select">' +
-                '<el-option v-for="item in suppliers"' +
-                ':label="item.SupplierName"' +
-                ':value="item.Guid">' +
-                '</el-option>' +
-                '</el-select>' +
-                '</el-form-item >' +
-                '<el-form-item label="进货人" prop="Purchaser">' +
-                '<el-input v-model="form.Purchaser"></el-input>' +
-                '</el-form-item>' +
-                '<el-form-item label="数量" prop="Number">' +
-                '<el-input-number :min=1 v-model="form.Number"></el-input-number>' +
-                '</el-form-item>' +
-                '<el-form-item label="备注" prop="Remark">' +
-                '<el-input type="textarea" autosize v-model="form.Remark"></el-input-number>' +
-                '</el-form-item>' +
-                '</el-form>' +
-                '<div slot="footer" class="dialog-footer">' +
-                '<el-button @click="isVisible = false">取 消</el-button>' +
-                '<el-button type="primary" @click="submit"> 确 定</el-button >' +
-                '</div >' +
+                    '<el-form v-bind:model="form" v-bind:rules="rules" ref="form" label-width="100px" class="demo-form">' +
+                        '<el-form-item label="商品颜色分类" prop="SaleSubTitle">' +
+                            '<el-select label="商品颜色分类" v-model="form.ClassificationGuid" placeholder="Select">' +
+                                '<el-option v-for="item in classifications"' +
+                                ':label="item.Name"' +
+                                ':value="item.Guid">' +
+                                '</el-option>' +
+                            '</el-select>' +
+                        '</el-form-item >' +
+                        '<el-form-item label="供货商" prop="SaleSubTitle">' +
+                            '<el-select label="供货商" v-model="form.SupplierGuid" placeholder="Select">' +
+                            '<el-option v-for="item in suppliers"' +
+                            ':label="item.SupplierName"' +
+                            ':value="item.Guid">' +
+                            '</el-option>' +
+                        '</el-select>' +
+                        '</el-form-item >' +
+                        '<el-form-item label="进货人" prop="Purchaser">' +
+                            '<el-input v-model="form.Purchaser"></el-input>' +
+                        '</el-form-item>' +
+                        '<el-form-item label="进货价格" prop="BuyingPrice">' +
+                            '<el-input v-model="form.BuyingPrice"></el-input>' +
+                        '</el-form-item>' +
+                        '<el-form-item label="克" prop="Grams">' +
+                            '<el-input v-model="form.Grams"></el-input>' +
+                        '</el-form-item>' +
+                        '<el-form-item label="数量" prop="Number">' +
+                            '<el-input-number :min=1 v-model="form.Number"></el-input-number>' +
+                        '</el-form-item>' +
+                        '<el-form-item label="备注" prop="Remark">' +
+                            '<el-input type="textarea" autosize v-model="form.Remark"></el-input-number>' +
+                        '</el-form-item>' +
+                        '</el-form>' +
+                        '<div slot="footer" class="dialog-footer">' +
+                            '<el-button @click="isVisible = false">取 消</el-button>' +
+                            '<el-button type="primary" @click="submit"> 确 定</el-button >' +
+                        '</div >' +
                 '</el-dialog>',
                 data: function () {
                     return {
@@ -91,6 +97,8 @@
                             Purchaser: "",
                             Number: 1,
                             Remark: "",
+                            BuyingPrice: 0,
+                            Grams: 0,
                             TimeCreated: new Date()
                         },
                         form: {
@@ -100,6 +108,8 @@
                             Purchaser: "",
                             Number: 1,
                             Remark: "",
+                            BuyingPrice: 0,
+                            Grams: 0,
                             TimeCreated: new Date()
                         },
                         rules: {
@@ -112,6 +122,18 @@
                             Purchaser: [
                                 { required: true, message: '请输入进货人', trigger: 'blur' },
                                 { min: 2, max: 5, message: '长度在 2 到 10 个字符', trigger: 'blur' }
+                            ],
+                            BuyingPrice: [
+                                { required: true, message: '请输进货价格', trigger: 'blur' },
+                                { min: 1, message: '最少1元', trigger: 'blur' }
+                            ],
+                            Number: [
+                                { required: true, message: '请输入数量', trigger: 'blur' },
+                                { min: 1, message: '最少1个', trigger: 'blur' }
+                            ],
+                            Grams: [
+                                { required: true, message: '请输入克数', trigger: 'blur' },
+                                { min: 1, message: '最少1克', trigger: 'blur' }
                             ]
                         }
                     };

@@ -4,6 +4,7 @@
     user_changepassword: "/Account/ChangePassword",
     supplier_query: "/Supplier/List",
     order_query: "/Order/List",
+    order_modify_price:"/Order/UpdateAmount",
     purchase_query: "/PurchaseRecords/List",
     purchase_save: "/PurchaseRecords/Save",
     product_query: "/Product/List",

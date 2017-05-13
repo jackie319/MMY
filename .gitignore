@@ -2,8 +2,11 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 /.vs/
-/*.dll
-/*.pdb
+*.suo
+*.sqlite
+*.dll
+*.pdb
+*.cache
 
 /MMY.PlatForm.Domain/bin/Debug
 /MMY.PlatForm.WebUI/bin/MMY.Data.dll.config
