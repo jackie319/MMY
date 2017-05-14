@@ -33,7 +33,7 @@ namespace MMY.PlatForm.WebUI.Controllers
         
         }
 
-        public ActionResult CkEditorUpload(HttpPostedFileBase file)
+        public ActionResult CkEditorUpload()
         {
 
             var file = HttpContext.Request.Files[0];
