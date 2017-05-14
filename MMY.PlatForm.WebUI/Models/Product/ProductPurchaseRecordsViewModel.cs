@@ -11,6 +11,8 @@ namespace MMY.PlatForm.WebUI.Models.Product
     {
         public System.Guid Guid { get; set; }
         public string ProductName { get; set; }
+        public string ClassificationName { get; set; }
+        public decimal BuyingPrice { get; set; }
         public string SupplierName { get; set; }
         public string OperatorName { get; set; }
         public string Purchaser { get; set; }
@@ -28,6 +30,8 @@ namespace MMY.PlatForm.WebUI.Models.Product
             result.Purchaser = records.Purchaser;
             result.Number = records.Number;
             result.Remark = records.Remark;
+            result.BuyingPrice = Convert.ToDecimal(records.BuyingPrice) / 100;
+            result.ClassificationName = records.ClassificationName;//TODO：冗余的字段，有可能不是最新的。
             result.TimeCreated = records.TimeCreated;
             return result;
         }
