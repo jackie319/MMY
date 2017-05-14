@@ -79,7 +79,17 @@
                         '</el-table-column>'+
                         '<el-table-column prop="SupplierName"'+
                                          'label="供货商名称"'+
-                                         '>'+
+                        '>' +
+                        '</el-table-column>' +
+                        '<el-table-column prop="ClassificationName"'+
+                            'label="颜色分类 "'+
+                            'sortable'+
+                            'width="160">'+
+                        '</el-table-column>'+
+                        '<el-table-column prop="BuyingPrice"'+
+                            'label="进货价格 "'+
+                            'sortable'+
+                            'width="160">'+
                         '</el-table-column>'+
                         '<el-table-column prop="OperatorName"'+
                                          'label="操作员"'+
@@ -147,19 +157,23 @@
                     },
                     open: function (options) {
                         var me = this;
+
                         if (typeof options === "object" && options !== null) {
                             for (var propertyName in options) {
                                 if (options.hasOwnProperty(propertyName)) {
-                                    me.search[propertyName] = options[propertyName];
+                                    me[propertyName] = options[propertyName];
                                 }
                             }
                         }
+
                         me.isVisible = true;
-                        me.loadData();
                     },
                     close: function () {
                         this.isVisible = false;
                     }
+                },
+                mounted: function () {
+                   this.loadData();
                 }
             });
         }
