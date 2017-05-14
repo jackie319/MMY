@@ -73,8 +73,13 @@
             <el-table-column prop="ProductName"
                              label="产品名称">
                 <template scope="scope">                    
-                    <a href="#">{{ scope.row.ProductName}}</a>
+                    <a href="#" @click="goProductDetail(scope.row)">>{{ scope.row.ProductName}}</a>
                 </template>
+            </el-table-column>
+            <el-table-column prop="ClassificationName"
+                    label="颜色分类 "
+                    sortable
+                    width="160">
             </el-table-column>
             <el-table-column prop="ProductNumber"
                              label="产品数量">
