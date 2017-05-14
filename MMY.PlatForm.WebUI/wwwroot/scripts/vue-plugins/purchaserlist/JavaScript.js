@@ -132,6 +132,7 @@
                     handleCurrentChange: function (val) {
                         this.list.currentPage = val;
                         this.loadData();
+
                     },
                     getSkip: function () {
                         var me = this;
