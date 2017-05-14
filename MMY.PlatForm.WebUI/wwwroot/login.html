@@ -28,7 +28,7 @@
                         <el-input type="password" v-model="form.passwords" auto-complete="off"></el-input>
                     </el-form-item>
                     <el-form-item>
-                        <el-checkbox v-model="form.isRemember">记住密码</el-checkbox>
+                        <el-checkbox v-model="form.isRemember">记住我</el-checkbox>
                     </el-form-item>
                     <el-form-item>
                         <el-button type="primary" v-on:click="login" class="col-12" :loading="loading">登录</el-button>
@@ -38,24 +38,24 @@
         </div>
     </div>
     <script>
-       var vm= new Vue({
+        var vm = new Vue({
             el: "#login",
             compomets: $f.formCompomets,
             data: {
                 loading: false,
                 rules: {
                     username: [
-                      { required: true, message: '请输入账号', trigger: 'blur' },
-                      { min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur' }
+                        { required: true, message: '请输入账号', trigger: 'blur' },
+                        { min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur' }
                     ],
                     passwords: [
-                      { required: true, message: '请输入密码', trigger: 'blur' },
-                      { min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur' }
+                        { required: true, message: '请输入密码', trigger: 'blur' },
+                        { min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur' }
                     ]
                 },
                 form: {
-                    username: "jackie",
-                    passwords: "12345678",
+                    username: "",
+                    passwords: "",
                     isRemember: true
                 }
             },
@@ -77,8 +77,22 @@
                         userName: me.form.username,
                         passwordMd5: md5(me.form.passwords)
                     };
+                    if (me.form.isRemember) {
+                        docCookies.setItem("username", me.form.username);
+                        docCookies.setItem("passwords", me.form.passwords);
+                    }
+                    docCookies.setItem("isRemember", me.form.isRemember);
                     me.$http.post(apiConfig.user_login, postData).then(function (response) { $f.ui.loadPage("/wwwroot/main.html"); });
                 }
+            },
+            mounted: function () {
+                var me = this;
+                var isRemember = docCookies.getItem("isRemember") === "true";
+                if (isRemember) {
+                    me.form.username = docCookies.getItem("username");
+                    me.form.passwords = docCookies.getItem("passwords");
+                }
+                me.form.isRemember = isRemember;
             }
         });
     </script>
