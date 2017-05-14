@@ -116,7 +116,7 @@
                             ],
                             Purchaser: [
                                 { required: true, message: '请输入进货人', trigger: 'blur' },
-                                { min: 2, max: 5, message: '长度在 2 到 10 个字符', trigger: 'blur' }
+                                { min: 2, max: 20, message: '长度在 2 到 20 个字符', trigger: 'blur' }
                             ],
                             BuyingPrice: [
                                 { required: true, message: '请输进货价格', trigger: 'blur' }
