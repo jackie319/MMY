@@ -98,3 +98,6 @@ D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\zh-Hans\EntityFramework.resources.d
 D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.csprojResolveAssemblyReference.cache
 D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.dll
 D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\bin\Debug\JK.Framework.Core.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\bin\Debug\JK.Framework.Extensions.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\bin\Debug\JK.Framework.Sms.dll

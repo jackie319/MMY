@@ -37,11 +37,12 @@ namespace MMY.PlatForm.WebUI.Controllers
         [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult Detail(Guid productGuid)
         {
-            var product = _product.FindProduct(productGuid);
+            var product = _product.FindProduct(productGuid);//TODO:未过滤子表被删数据
             var resultProduct = ProductViewModel.CopyFrom(product);
             return this.ResultModel(resultProduct);
         }
 
+        [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult GetClassification(Guid productGuid)
         {
             var list = _product.GetClassifications(productGuid);
@@ -72,6 +73,7 @@ namespace MMY.PlatForm.WebUI.Controllers
         /// <summary>
         /// 第一个颜色分类的价格赋值给产品价格
         /// 相册第一张赋值给产品默认图片
+        /// 产品库存以颜色分类数量为主. 
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>

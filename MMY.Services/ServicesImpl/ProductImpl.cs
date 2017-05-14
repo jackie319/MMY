@@ -191,12 +191,22 @@ namespace MMY.Services.ServicesImpl
             DeleteProductClassification(product.Guid);
             foreach (var item in classifications)
             {
-                CreateProductClassification(item);
+                if (item.Guid == Guid.Empty)
+                {
+                    item.ProductGuid = entity.Guid;
+                    CreateProductClassification(item);
+                }
+                else
+                {
+                    UpdateProductClassification(item);
+                }
+              
             }
 
             DeleteProductAlbum(product.Guid);
             foreach (var item in albums)
             {
+                item.ProductGuid = entity.Guid;
                 CreateProductAlbum(item);
             }
         }
@@ -279,6 +289,7 @@ namespace MMY.Services.ServicesImpl
             if (classification != null)
             {
                 classification.Number += records.Number;
+
             }
             product.ProductNumber += records.Number;
             _productRepository.Update(product);//TODO:事务
@@ -292,13 +303,41 @@ namespace MMY.Services.ServicesImpl
             _productClassificationrRepository.Insert(classification);
         }
 
+
+        private void UpdateProductClassification(ProductClassification classification)
+        {
+            var entity = _productClassificationrRepository.Table.FirstOrDefault(q => q.Guid == classification.Guid);
+            if (entity == null) return;
+            entity.Name = classification.Name;
+            entity.PicUrl = classification.PicUrl;
+            entity.Grams = classification.Grams;
+            entity.Price = classification.Price;
+            entity.PromotionPrice = classification.PromotionPrice;
+            entity.IsDeleted = false;
+            var product = _productRepository.Table.FirstOrDefault(q => q.Guid == classification.ProductGuid);
+            _productClassificationrRepository.Update(entity);
+
+            if (product != null)
+            {
+                product.ProductNumber += entity.Number;
+            }
+        }
+
         private void DeleteProductClassification(Guid productGuid)
         {
-            var entities=_productClassificationrRepository.Table.Where(q => q.ProductGuid == productGuid).ToList();
+            var entities=_productClassificationrRepository.Table.Where(q => q.ProductGuid == productGuid && !q.IsDeleted).ToList();
+            var product = _productRepository.Table.FirstOrDefault(q => q.Guid == productGuid);
             foreach (var item in entities)
             {
                 item.IsDeleted = true;
                 _productClassificationrRepository.Update(item);
+
+                if (product != null)
+                {
+                    product.ProductNumber -= item.Number;
+                }
+           
+
             }
         }
 

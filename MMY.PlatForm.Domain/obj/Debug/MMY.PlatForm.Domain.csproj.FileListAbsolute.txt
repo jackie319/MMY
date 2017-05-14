@@ -111,3 +111,4 @@ D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\zh-Hans\System.Web.WebPages.
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.csprojResolveAssemblyReference.cache
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.dll
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Web.dll
