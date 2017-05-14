@@ -71,7 +71,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
             list.Guid = productV.Guid;
             list.CategoryGuid = productV.Guid;
             list.CategoryName = productV.ProductName;
-            list.DefaultPic = AppSetting.Instance().PictureUrl+productV.DefaultPic;
+            list.DefaultPic = productV.DefaultPic;
             list.DisplayOrder = productV.DisplayOrder;
             list.ImaginaryNumber = productV.ImaginaryNumber;
             list.IsRecommended = productV.IsRecommended;

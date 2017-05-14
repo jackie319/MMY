@@ -119,16 +119,16 @@
       <publishTime>05/13/2017 15:38:04</publishTime>
     </File>
     <File Include="bin/MMY.PlatForm.Domain.dll">
-      <publishTime>05/14/2017 13:47:07</publishTime>
+      <publishTime>05/14/2017 14:06:33</publishTime>
     </File>
     <File Include="bin/MMY.PlatForm.Domain.dll.config">
       <publishTime>05/13/2017 15:38:12</publishTime>
     </File>
     <File Include="bin/MMY.PlatForm.WebUI.dll">
-      <publishTime>05/14/2017 14:00:12</publishTime>
+      <publishTime>05/14/2017 14:06:36</publishTime>
     </File>
     <File Include="bin/MMY.Services.dll">
-      <publishTime>05/14/2017 13:47:06</publishTime>
+      <publishTime>05/14/2017 14:06:32</publishTime>
     </File>
     <File Include="bin/MMY.Services.dll.config">
       <publishTime>05/13/2017 15:38:20</publishTime>
