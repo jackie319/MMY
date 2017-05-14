@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JK.Framework.Core;
 using JK.Framework.Core.Data;
 using MMY.Data.Model;
 using MMY.Services.IServices;
@@ -206,7 +207,9 @@ namespace MMY.Services.ServicesImpl
         public void OnShelf(Guid productGuid)
         {
             var entity = _productRepository.Table.FirstOrDefault(q => q.Guid == productGuid && !q.IsDeleted);
-            if (entity == null) return;
+            if (entity == null) throw new CommonException("找不到改产品");
+            if (entity.ProductNumber==0)throw new CommonException("库存不足，不能上架，请先添加库存");
+ 
             entity.Status = ProductStatusEnum.OnShelf.ToString();
             entity.TimeOnShelf=DateTime.Now;
             _productRepository.Update(entity);
@@ -277,6 +280,7 @@ namespace MMY.Services.ServicesImpl
             {
                 classification.Number += records.Number;
             }
+            product.ProductNumber += records.Number;
             _productRepository.Update(product);//TODO:事务
         }
 

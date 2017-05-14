@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using JK.Framework.Core;
 using JK.Framework.Web.Filter;
 using JK.Framework.Web.Model;
 using MMY.PlatForm.WebUI.Models.Product;
@@ -33,6 +34,7 @@ namespace MMY.PlatForm.WebUI.Controllers
             return this.ResultListModel(total, resultList);
         }
 
+        [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult Detail(Guid productGuid)
         {
             var product = _product.FindProduct(productGuid);
@@ -79,6 +81,7 @@ namespace MMY.PlatForm.WebUI.Controllers
         {
             var albums = model.Albums.Select(item => item.CopyTo()).ToList();
             var classifications = model.Classifications.Select(item => item.CopyTo()).ToList();
+            //产品默认价格
             var product = model.CopyTo();
             product.Price = classifications[0].Price;
             product.PromotionPrice = classifications[0].PromotionPrice;
@@ -106,7 +109,15 @@ namespace MMY.PlatForm.WebUI.Controllers
         [HttpPost]
         public ActionResult OnShelf(Guid productGuid)
         {
-            _product.OnShelf(productGuid);
+            try
+            {
+                _product.OnShelf(productGuid);
+            }
+            catch (CommonException ce)
+            {
+                return this.ResultError(ce.Message);
+            }
+           
             return this.ResultSuccess();
         }
 

@@ -8,6 +8,7 @@
 /*.pdb
 /*.cache
 *.txt
+*.suo
 /MMY.PlatForm.Domain/bin/Debug
 /MMY.PlatForm.WebUI/bin/MMY.Data.dll.config
 /MMY.PlatForm.WebUI/bin/MMY.PlatForm.Domain.dll.config

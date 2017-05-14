@@ -69,9 +69,9 @@ namespace MMY.PlatForm.WebUI.Models.Product
             product.Guid = Guid??System.Guid.Empty;
             product.CategoryGuid = CategoryGuid;
             product.DefaultPic = DefaultPic;
-            product.ImaginaryNumber = product.ImaginaryNumber;
-            product.IsRecommended = product.IsRecommended;
-            product.IsSpecialOffer = product.IsSpecialOffer;
+            product.ImaginaryNumber = ImaginaryNumber;
+            product.IsRecommended = IsRecommended;
+            product.IsSpecialOffer = IsSpecialOffer;
             product.Price = Convert.ToInt32(Price * 100);
             product.PromotionPrice = Convert.ToInt32(PromotionPrice * 100);
             product.ProductDetail = ProductDetail;
