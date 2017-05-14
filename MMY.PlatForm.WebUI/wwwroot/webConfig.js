@@ -4,5 +4,5 @@
     systemName: '麦麦银O+O平台管理系统',
     urlPrefix:"/wwwroot",
     apiServerAddress: "",
-    resourceServerAddress: "/Upload/"
+    resourceServerAddress: "http://r.maimaiyin.cn/product/"
 };

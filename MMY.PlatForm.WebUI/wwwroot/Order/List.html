@@ -73,7 +73,7 @@
             <el-table-column prop="ProductName"
                              label="产品名称">
                 <template scope="scope">                    
-                    <a href="#" @click="goProductDetail(scope.row)">>{{ scope.row.ProductName}}</a>
+                    <a href="#" @click="goProductDetail(scope.row)">{{scope.row.ProductName}}</a>
                 </template>
             </el-table-column>
             <el-table-column prop="ClassificationName"
@@ -110,7 +110,7 @@
                              width="240">
                 <template scope="scope">
                     <el-icon name="time"></el-icon>
-                    <span>{{ scope.row.TimePaid|dataFromat}}</span>
+                    <span>{{scope.row.TimePaid|dataFromat}}</span>
                 </template>
             </el-table-column>
             <el-table-column prop="TimeCreated"
@@ -118,7 +118,7 @@
                              width="240">
                 <template scope="scope">
                     <el-icon name="time"></el-icon>
-                    <span>{{ scope.row.TimeCreated|dataFromat}}</span>
+                    <span>{{scope.row.TimeCreated|dataFromat}}</span>
                 </template>
             </el-table-column>
             <el-table-column label="操作"
