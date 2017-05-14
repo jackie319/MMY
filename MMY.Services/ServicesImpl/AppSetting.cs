@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MMY.Services.ServicesImpl
 {
-    public class AppSetting
+    public  class AppSetting
     {
         private static AppSetting _AppSetting;
 
@@ -16,9 +16,12 @@ namespace MMY.Services.ServicesImpl
 
         public static AppSetting Instance()
         {
-            if (_AppSetting == null) return new AppSetting();
+            if (_AppSetting == null)
+            {
+                _AppSetting= new AppSetting();
+            }
             return _AppSetting;
         }
-        public string PictureUrl { get; set; }
+        public   string PictureUrl { get; set; }
     }
 }
