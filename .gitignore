@@ -252,3 +252,4 @@
 /MMY.Test/bin/Debug/Autofac.Integration.Mvc.xml
 /MMY.Test/bin/Debug/ApplicationInsights.config
 /MMY.Test/obj/Debug/MMY.Test.csprojResolveAssemblyReference.cache
+*.cache

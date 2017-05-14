@@ -266,7 +266,8 @@
                     //    }
                     //});
                     var me = this;
-                    me.$http.post(apiConfig.product_save, this.form).then(function (response) {
+                    me.form.DefaultPic = me.form.Albums[0].Guid;
+                    me.$http.post(apiConfig.product_save, me.form).then(function (response) {
                         me.backToList();
                         me.$message({
                             type: 'success',
