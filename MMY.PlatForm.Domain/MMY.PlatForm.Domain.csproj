@@ -37,7 +37,7 @@
       <HintPath>..\..\..\New\MMY\Libs\libs\JK.Framework.Pay.dll</HintPath>
     </Reference>
     <Reference Include="JK.Framework.Web">
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Web.dll</HintPath>
+      <HintPath>..\Libs\libs\JK.Framework.Web.dll</HintPath>
     </Reference>
     <Reference Include="Senparc.Weixin">
       <HintPath>..\..\..\New\MMY\Libs\libs\Senparc.Weixin.dll</HintPath>
