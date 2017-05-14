@@ -33,12 +33,13 @@ namespace MMY.PlatForm.WebUI.Controllers
         
         }
 
-        public ActionResult CkEditorUpload()
+        public ActionResult CkEditorUpload(HttpPostedFileBase file)
         {
+
             var file = HttpContext.Request.Files[0];
             var name = UploadManager.SavePicture(file, "Product");
             var picurl = AppSetting.Instance().PictureUrl;
-            var url = picurl+ name;
+            var url = picurl + name;
             string num = HttpContext.Request.QueryString["CKEditorFuncNum"];
             string content = string.Format("<script type=\"text/javascript\">window.parent.CKEDITOR.tools.callFunction({0},\"{1}\",\"\");</script>", num, url);
             return Content(content, "text/html");
