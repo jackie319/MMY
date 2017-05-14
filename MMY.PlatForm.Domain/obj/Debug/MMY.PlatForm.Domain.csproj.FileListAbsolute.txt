@@ -37,10 +37,8 @@ D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\MMY.Services.dll
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\EntityFramework.dll
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Sms.dll
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\log4net.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.MP.dll
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Extensions.dll
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.Mvc.dll
-D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\Senparc.Weixin.dll
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.Razor.dll
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.WebPages.Razor.dll
 D:\代码\git\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\System.Web.WebPages.dll

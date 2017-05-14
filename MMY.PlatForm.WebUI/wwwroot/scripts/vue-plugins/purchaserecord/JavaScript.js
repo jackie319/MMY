@@ -45,40 +45,40 @@
                 },
                 template:
                 '<el-dialog :title="title" v-model="isVisible">' +
-                    '<el-form v-bind:model="form" v-bind:rules="rules" ref="form" label-width="100px" class="demo-form">' +
-                        '<el-form-item label="商品颜色分类" prop="SaleSubTitle">' +
-                            '<el-select label="商品颜色分类" v-model="form.ClassificationGuid" placeholder="Select">' +
-                                '<el-option v-for="item in classifications"' +
-                                ':label="item.Name"' +
-                                ':value="item.Guid">' +
-                                '</el-option>' +
-                            '</el-select>' +
-                        '</el-form-item >' +
-                        '<el-form-item label="供货商" prop="SaleSubTitle">' +
-                            '<el-select label="供货商" v-model="form.SupplierGuid" placeholder="Select">' +
-                            '<el-option v-for="item in suppliers"' +
-                            ':label="item.SupplierName"' +
-                            ':value="item.Guid">' +
-                            '</el-option>' +
-                        '</el-select>' +
-                        '</el-form-item >' +
-                        '<el-form-item label="进货人" prop="Purchaser">' +
-                            '<el-input v-model="form.Purchaser"></el-input>' +
-                        '</el-form-item>' +
-                        '<el-form-item label="进货价格" prop="BuyingPrice">' +
-                            '<el-input v-model="form.BuyingPrice"></el-input>' +
-                        '</el-form-item>' +
-                        '<el-form-item label="数量" prop="Number">' +
-                            '<el-input-number :min=1 v-model="form.Number"></el-input-number>' +
-                        '</el-form-item>' +
-                        '<el-form-item label="备注" prop="Remark">' +
-                            '<el-input type="textarea" autosize v-model="form.Remark"></el-input-number>' +
-                        '</el-form-item>' +
-                        '</el-form>' +
-                        '<div slot="footer" class="dialog-footer">' +
-                            '<el-button @click="isVisible = false">取 消</el-button>' +
-                            '<el-button type="primary" @click="submit"> 确 定</el-button >' +
-                        '</div >' +
+                '<el-form v-bind:model="form" v-bind:rules="rules" ref="form" label-width="100px" class="demo-form">' +
+                '<el-form-item label="商品颜色分类" prop="SaleSubTitle">' +
+                '<el-select label="商品颜色分类" v-model="form.ClassificationGuid" placeholder="Select">' +
+                '<el-option v-for="item in classifications"' +
+                ':label="item.Name"' +
+                ':value="item.Guid">' +
+                '</el-option>' +
+                '</el-select>' +
+                '</el-form-item >' +
+                '<el-form-item label="供货商" prop="SaleSubTitle">' +
+                '<el-select label="供货商" v-model="form.SupplierGuid" placeholder="Select">' +
+                '<el-option v-for="item in suppliers"' +
+                ':label="item.SupplierName"' +
+                ':value="item.Guid">' +
+                '</el-option>' +
+                '</el-select>' +
+                '</el-form-item >' +
+                '<el-form-item label="进货人" prop="Purchaser">' +
+                '<el-input v-model="form.Purchaser"></el-input>' +
+                '</el-form-item>' +
+                '<el-form-item label="进货价格" prop="BuyingPrice">' +
+                '<el-input v-model="form.BuyingPrice"></el-input>' +
+                '</el-form-item>' +
+                '<el-form-item label="数量" prop="Number">' +
+                '<el-input-number :min=1 v-model="form.Number"></el-input-number>' +
+                '</el-form-item>' +
+                '<el-form-item label="备注" prop="Remark">' +
+                '<el-input type="textarea" autosize v-model="form.Remark"></el-input-number>' +
+                '</el-form-item>' +
+                '</el-form>' +
+                '<div slot="footer" class="dialog-footer">' +
+                '<el-button @click="isVisible = false">取 消</el-button>' +
+                '<el-button type="primary" @click="submit"> 确 定</el-button >' +
+                '</div >' +
                 '</el-dialog>',
                 data: function () {
                     return {
@@ -174,6 +174,7 @@
                         me.getSuppliers();
                         me.getClassifications();
                         me.isVisible = true;
+                        return me;
                     },
                     close: function () {
                         this.isVisible = false;

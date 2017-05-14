@@ -147,23 +147,19 @@
                     },
                     open: function (options) {
                         var me = this;
-
                         if (typeof options === "object" && options !== null) {
                             for (var propertyName in options) {
                                 if (options.hasOwnProperty(propertyName)) {
-                                    me[propertyName] = options[propertyName];
+                                    me.search[propertyName] = options[propertyName];
                                 }
                             }
                         }
-
                         me.isVisible = true;
+                        me.loadData();
                     },
                     close: function () {
                         this.isVisible = false;
                     }
-                },
-                mounted: function () {
-                   this.loadData();
                 }
             });
         }
