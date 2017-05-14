@@ -79,14 +79,17 @@ namespace MMY.PlatForm.WebUI.Controllers
         {
             var albums = model.Albums.Select(item => item.CopyTo()).ToList();
             var classifications = model.Classifications.Select(item => item.CopyTo()).ToList();
+            var product = model.CopyTo();
+            product.Price = classifications[0].Price;
+            product.PromotionPrice = classifications[0].PromotionPrice;
             if (model.Guid == Guid.Empty)
             {
 
-                _product.CreatedProduct(model.CopyTo(), classifications, albums);
+                _product.CreatedProduct(product, classifications, albums);
             }
             else
             {
-                _product.UpdateProduct(model.CopyTo(), classifications, albums);
+                _product.UpdateProduct(product, classifications, albums);
             }
             return this.ResultSuccess();
         }
