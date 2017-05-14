@@ -162,7 +162,7 @@
                         if (typeof options === "object" && options !== null) {
                             for (var propertyName in options) {
                                 if (options.hasOwnProperty(propertyName)) {
-                                    me[propertyName] = options[propertyName];
+                                    me.search[propertyName] = options[propertyName];
                                 }
                             }
                         }
