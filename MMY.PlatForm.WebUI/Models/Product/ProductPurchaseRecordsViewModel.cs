@@ -10,6 +10,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
     public class ProductPurchaseRecordsListViewModel
     {
         public System.Guid Guid { get; set; }
+        public Guid ProductGuid { get; set; }
         public string ProductName { get; set; }
         public string ClassificationName { get; set; }
         public decimal BuyingPrice { get; set; }
@@ -24,6 +25,7 @@ namespace MMY.PlatForm.WebUI.Models.Product
         {
             ProductPurchaseRecordsListViewModel result =new ProductPurchaseRecordsListViewModel();
             result.Guid = records.Guid;
+            result.ProductGuid = records.ProductGuid;
             result.ProductName = records.ProductName;
             result.SupplierName = records.SupplierName;
             result.OperatorName = records.OperatorName;
