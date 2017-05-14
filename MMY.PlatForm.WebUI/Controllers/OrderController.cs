@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using JK.Framework.Core;
 using JK.Framework.Web.Filter;
 using JK.Framework.Web.Model;
 using MMY.PlatForm.WebUI.Models.Order;
@@ -31,7 +32,15 @@ namespace MMY.PlatForm.WebUI.Controllers
         [ValidationFilter]
         public ActionResult UpdateAmount(OrderUpdatePriceViewModel model)
         {
-            _order.UpdateAmount(model.OrderGuid,Convert.ToInt32(model.Amount*100));
+            try
+            {
+                _order.UpdateAmount(model.OrderGuid, Convert.ToInt32(model.Amount * 100));
+            }
+            catch (CommonException ce)
+            {
+                return this.ResultError(ce.Message);
+            }
+          
             return this.ResultSuccess();
         }
     }

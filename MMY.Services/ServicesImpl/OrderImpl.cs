@@ -67,6 +67,10 @@ namespace MMY.Services.ServicesImpl
             var entity = _orderRepository.Table.FirstOrDefault(q => q.Guid == orderGuid);
             if (entity != null)
             {
+                if (!entity.OrderStatus.Equals(OrderStatusEnum.Default.ToString()))
+                {
+                    throw new CommonException("未支付的订单才可以修改订单金额");
+                }
                 entity.OrderAmount = amount;
                 _orderRepository.Update(entity);
             }

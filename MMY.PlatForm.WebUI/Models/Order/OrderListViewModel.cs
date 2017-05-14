@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using MMY.Services.ServiceModel;
 
 namespace MMY.PlatForm.WebUI.Models.Order
 {
@@ -55,20 +56,57 @@ namespace MMY.PlatForm.WebUI.Models.Order
 
         public static OrderListViewModel CopyFrom(Data.Model.Order order)
         {
-            OrderListViewModel model=new OrderListViewModel();
+            OrderListViewModel model = new OrderListViewModel();
             model.Guid = order.Guid;
             model.OrderNo = order.OrderNo;
-            model.OrderAmount = Convert.ToDecimal(order.OrderAmount)/100;
+            model.OrderAmount = Convert.ToDecimal(order.OrderAmount) / 100;
             model.ProductName = order.ProductName;
             model.ProductNumber = order.ProductNumber;
             model.UserNickName = order.UserNickName;
             model.DeliveryAddress = order.DeliveryAddress;
             model.PaymentName = "";//TODO;
             model.DeliveryName = order.DeliveryName;
-            model.OrderStatus = order.OrderStatus;
+            model.OrderStatus = ConvertOrderStatus(order.OrderStatus);
             model.TimePaid = DateTime.Now;//TODO
             model.TimeCreated = order.TimeCreated;
             return model;
         }
+        public static string ConvertOrderStatus(string orderStatus)
+        {
+            string result = string.Empty;
+            OrderStatusEnum type;
+            OrderStatusEnum.TryParse(orderStatus, out type);
+            switch (type)
+            {
+                case OrderStatusEnum.Default:
+                    result = "未支付";
+                    break;
+                case OrderStatusEnum.Cancel:
+                    result = "已取消";
+                    break;
+                case OrderStatusEnum.Delivered:
+                    result = "已发货";
+                    break;
+                case OrderStatusEnum.Finished:
+                    result = "已完成";
+                    break;
+                case OrderStatusEnum.Paid:
+                    result = "已支付";
+                    break;
+                case OrderStatusEnum.PayFailure:
+                    result = "支付失败";
+                    break;
+                case OrderStatusEnum.Paying:
+                    result = "支付中";
+                    break;
+                case OrderStatusEnum.Refund:
+                    result = "已退货";
+                    break;
+
+            }
+            return result;
+        }
     }
+
+
 }
