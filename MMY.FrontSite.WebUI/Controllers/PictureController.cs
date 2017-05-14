@@ -21,7 +21,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         {
             try
             {
-                var url = UploadManager.SavePicture(file, "Product");
+                var url = UploadManager.SavePicture(file, "User");
                 return this.ResultModel(url);
             }
             catch (CommonException ex)
