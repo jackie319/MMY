@@ -62,6 +62,9 @@
                              label="产品名称 "
                              sortable
                              width="160">
+                <template scope="scope">
+                    <a href="#" @click="goProductDetail(scope.row)">{{scope.row.ProductName}}</a>
+                </template>
             </el-table-column>
             <el-table-column prop="ClassificationName"
                              label="颜色分类 "
@@ -176,6 +179,10 @@
                 getSkip: function () {
                     var me = this;
                     return (me.list.currentPage - 1) * me.list.pageSize;
+                },
+                goProductDetail: function (m) {
+                    var me = this;
+                    me.$parent.loadPage("/wwwroot/Product/Detail.html?uid=" + m.ProductGuid + "&fromPageUrl=/wwwroot/Purchase/List.html");
                 },
                 loadData: function () {
                     var me = this;

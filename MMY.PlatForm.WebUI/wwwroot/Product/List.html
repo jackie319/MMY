@@ -234,7 +234,7 @@
                 },
                 onEdit: function (i, m) {
                     var me = this;
-                    me.$parent.loadPage("/wwwroot/Product/Detail.html?uid=" + m.Guid);
+                    me.$parent.loadPage("/wwwroot/Product/Detail.html?uid=" + m.Guid +"&fromPageUrl=/wwwroot/Product/List.html");
                 },
                 onDelete: function (i, m) {
                     var me = this;

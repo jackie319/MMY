@@ -72,6 +72,9 @@
             </el-table-column>
             <el-table-column prop="ProductName"
                              label="产品名称">
+                <template scope="scope">                    
+                    <a href="#">{{ scope.row.ProductName}}</a>
+                </template>
             </el-table-column>
             <el-table-column prop="ProductNumber"
                              label="产品数量">
@@ -271,6 +274,10 @@
                             me.list.total = response.data.Total;
                             me.list.tableData = response.data.Data;
                         });
+                },
+                goProductDetail: function (m) {
+                    var me = this;
+                    me.$parent.loadPage("/wwwroot/Product/Detail.html?uid=" + m.ProductGuid + "&fromPageUrl=/wwwroot/Order/List.html");
                 },
                 onModifyPrice: function (i, m) {
                     var me = this;

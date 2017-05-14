@@ -27,7 +27,7 @@
                 </el-breadcrumb>
             </el-col>
         </el-row>
-        <el-form :model="form" ref="form" label-width="100px" class="form-width">
+        <el-form :model="form" label-width="100px" class="form-width">
             <el-form-item label="产品名称" prop="ProductName">
                 <el-input v-model="form.ProductName"></el-input>
             </el-form-item>
@@ -125,11 +125,45 @@
             },
             data: {
                 uid: $f.getQueryString("uid"),
+                fromPageUrl: $f.getQueryString("fromPageUrl"),
                 dialogImageUrl: '',
                 dialogVisible: false,
                 imageList: [],
                 categories: [],
-                form: {
+                model: {
+                    "Guid": "00000000-0000-0000-0000-000000000000",
+                    "CategoryGuid": "",
+                    "ProductName": "产品名称",
+                    "PromotionPrice": 1.3,
+                    "Price": 2.4,
+                    "SaleSubTitle": "副标题",
+                    "SaleTitle": "标题",
+                    "DefaultPic": "product.jpg",
+                    "ProductNumber": 0,
+                    "ProductDetail": "没有详情",
+                    "ProductRemark": "没有备注",
+                    "IsRecommended": true,
+                    "IsSpecialOffer": true,
+                    "DisplayOrder": 0,
+                    "ImaginaryNumber": 0,
+                    "Classifications": [
+                        {
+                            "Guid": "00000000-0000-0000-0000-000000000000",
+                            "ProductGuid": "00000000-0000-0000-0000-000000000000",
+                            "Name": "",
+                            "Grams": 0,
+                            "Number": 0,
+                            "Price": 0,
+                            "PromotionPrice": 0,
+                            "PicUrl": ""
+                        }
+                    ],
+                    "Albums": [
+
+                    ]
+                },
+                form:
+                {
                     "Guid": "00000000-0000-0000-0000-000000000000",
                     "CategoryGuid": "",
                     "ProductName": "产品名称",
@@ -282,7 +316,8 @@
                     });
                 },
                 backToList: function () {
-                    this.$parent.loadPage("/wwwroot/Product/List.html");
+                    var me = this;
+                    me.$parent.loadPage(me.fromPageUrl);
                 },
                 resetForm: function (formName) {
                     this.$refs[formName].resetFields();
@@ -299,9 +334,13 @@
                 }
             },
             mounted: function () {
-                this.getCategories();
-                if (this.uid && this.uid !== Guid.empty.toString()) {
-                    this.getData();
+                var me = this;
+                me.getCategories();
+                if (me.uid && me.uid !== Guid.empty.toString()) {
+                    me.getData();
+                }
+                else {
+                    me.form = Object.assign({}, me.model);
                 }
             }
         });
