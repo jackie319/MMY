@@ -32,28 +32,6 @@ E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\bin\Debug\zh-Hans
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\obj\Debug\MMY.Services.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\obj\Debug\MMY.Services.dll
 E:\tools\development tools\GItHub\mmy\mmy\mmy\MMY\MMY.Services\obj\Debug\MMY.Services.pdb
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Services.dll.config
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Services.dll
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Services.pdb
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Antlr3.Runtime.dll
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\JK.Framework.Pay.dll
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\log4net.dll
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Data.dll
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Newtonsoft.Json.dll
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Senparc.Weixin.dll
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Senparc.Weixin.MP.dll
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\WebGrease.dll
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\EntityFramework.dll
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Data.pdb
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Data.dll.config
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Antlr3.Runtime.pdb
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\log4net.xml
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Newtonsoft.Json.xml
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\EntityFramework.xml
-D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\zh-Hans\EntityFramework.resources.dll
-D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.csprojResolveAssemblyReference.cache
-D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.dll
-D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.pdb
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.Services\bin\Debug\MMY.Services.dll.config
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.Services\bin\Debug\MMY.Services.dll
 E:\tools\development tools\GItHub\mmy\New\MMY\MMY.Services\bin\Debug\MMY.Services.pdb
@@ -98,3 +76,25 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\bin\Debug\zh-Hans\Ent
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.pdb
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Services.dll.config
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Services.dll
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Services.pdb
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Antlr3.Runtime.dll
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\JK.Framework.Pay.dll
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\log4net.dll
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Data.dll
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Newtonsoft.Json.dll
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Senparc.Weixin.dll
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Senparc.Weixin.MP.dll
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\WebGrease.dll
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\EntityFramework.dll
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Data.pdb
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\MMY.Data.dll.config
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Antlr3.Runtime.pdb
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\log4net.xml
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\Newtonsoft.Json.xml
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\EntityFramework.xml
+D:\代码\git\MMY\MMY\MMY.Services\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.csprojResolveAssemblyReference.cache
+D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.dll
+D:\代码\git\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.pdb
