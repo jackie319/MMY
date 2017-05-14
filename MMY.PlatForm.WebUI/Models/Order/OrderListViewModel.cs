@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Web;
 using MMY.Services.ServiceModel;
 
@@ -17,10 +18,17 @@ namespace MMY.PlatForm.WebUI.Models.Order
         /// 订单金额
         /// </summary>
         public decimal OrderAmount { get; set; }
+
+        public Guid ProductGuid { get; set; }
         /// <summary>
         /// 产品名称
         /// </summary>
         public string ProductName { get; set; }
+
+        /// <summary>
+        /// 颜色分类
+        /// </summary>
+        public string ClassificationName { get; set; }
         /// <summary>
         /// 产品数量
         /// </summary>
@@ -60,6 +68,8 @@ namespace MMY.PlatForm.WebUI.Models.Order
             model.Guid = order.Guid;
             model.OrderNo = order.OrderNo;
             model.OrderAmount = Convert.ToDecimal(order.OrderAmount) / 100;
+            model.ProductGuid = order.ProductGuid;
+            model.ClassificationName = order.ClassificationName;
             model.ProductName = order.ProductName;
             model.ProductNumber = order.ProductNumber;
             model.UserNickName = order.UserNickName;
