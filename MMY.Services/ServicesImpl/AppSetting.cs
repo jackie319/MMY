@@ -16,7 +16,7 @@ namespace MMY.Services.ServicesImpl
 
         public static AppSetting Instance()
         {
-            if (_AppSetting == null) return new AppSetting();
+            if (_AppSetting == null) _AppSetting= new AppSetting();
             return _AppSetting;
         }
         public string PictureUrl { get; set; }

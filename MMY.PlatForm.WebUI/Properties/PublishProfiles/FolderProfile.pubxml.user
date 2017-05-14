@@ -125,7 +125,7 @@
       <publishTime>05/13/2017 15:38:12</publishTime>
     </File>
     <File Include="bin/MMY.PlatForm.WebUI.dll">
-      <publishTime>05/14/2017 13:47:10</publishTime>
+      <publishTime>05/14/2017 14:00:12</publishTime>
     </File>
     <File Include="bin/MMY.Services.dll">
       <publishTime>05/14/2017 13:47:06</publishTime>
@@ -335,7 +335,7 @@
       <publishTime>05/13/2017 15:38:12</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>05/13/2017 18:25:50</publishTime>
+      <publishTime>05/14/2017 13:58:13</publishTime>
     </File>
     <File Include="Views/Error/Index.cshtml">
       <publishTime>05/13/2017 15:38:12</publishTime>
@@ -1814,7 +1814,7 @@
       <publishTime>05/14/2017 11:04:08</publishTime>
     </File>
     <File Include="wwwroot/scripts/vue-plugins/purchaserlist/JavaScript.js">
-      <publishTime>05/14/2017 11:41:47</publishTime>
+      <publishTime>05/14/2017 14:00:06</publishTime>
     </File>
     <File Include="wwwroot/scripts/vue-plugins/vue-resource/vue-resource.common.js">
       <publishTime>05/13/2017 15:38:20</publishTime>
