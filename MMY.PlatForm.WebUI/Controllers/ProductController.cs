@@ -94,7 +94,15 @@ namespace MMY.PlatForm.WebUI.Controllers
             }
             else
             {
-                _product.UpdateProduct(product, classifications, albums);
+                try
+                {
+                    _product.UpdateProduct(product, classifications, albums);
+                }
+                catch (CommonException ce)
+                {
+                    return this.ResultError(ce.Message);
+                }
+              
             }
             return this.ResultSuccess();
         }

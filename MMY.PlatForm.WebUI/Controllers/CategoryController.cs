@@ -12,10 +12,11 @@ namespace MMY.PlatForm.WebUI.Controllers
     public class CategoryController : Controller
     {
         private IProductCategory _productCategory;
-
-        public CategoryController(IProductCategory productCategory)
+        private IProduct _product;
+        public CategoryController(IProductCategory productCategory,IProduct product)
         {
             _productCategory = productCategory;
+            _product = product;
         }
         /// <summary>
         /// 所有一级分类
@@ -53,6 +54,10 @@ namespace MMY.PlatForm.WebUI.Controllers
 
         public ActionResult Delete(Guid categoryGuid)
         {
+            int total;
+            var query = new QueryBase();
+            _product.GetAdminProductVs("", categoryGuid,null,null,null,null,null, query.Skip, query.Take,out total);
+            if (total > 0) return this.ResultError("该分类下还有商品，不能删除");
             _productCategory.DeleteCategory(categoryGuid);
             return this.ResultSuccess();
         }

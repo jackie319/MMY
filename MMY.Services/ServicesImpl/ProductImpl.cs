@@ -171,8 +171,12 @@ namespace MMY.Services.ServicesImpl
         public void UpdateProduct(Product product, IList<ProductClassification> classifications, IList<ProductAlbum> albums)
         {
             var entity = _productRepository.Table.FirstOrDefault(q => q.Guid == product.Guid && !q.IsDeleted);
+
             if (entity == null) return;
-           
+            if (entity.Status == ProductStatusEnum.OnShelf.ToString())
+            {
+                throw new CommonException("编辑产品前请先下架该产品");
+            }
             entity.CategoryGuid = product.CategoryGuid;
             entity.DefaultPic = product.DefaultPic;
             entity.DisplayOrder = product.DisplayOrder;
@@ -238,6 +242,10 @@ namespace MMY.Services.ServicesImpl
         {
             var entity = _productRepository.Table.FirstOrDefault(q => q.Guid == productGuid && !q.IsDeleted);
             if (entity == null) return;
+            if (entity.Status == ProductStatusEnum.OnShelf.ToString())
+            {
+                throw new CommonException("删除产品前请先下架该产品");
+            }
             entity.IsDeleted = true;
             _productRepository.Update(entity);
         }

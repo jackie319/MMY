@@ -14,9 +14,11 @@ namespace MMY.PlatForm.WebUI.Controllers
     public class SupplierController : Controller
     {
         private IProductSupplier _Supplier;
-        public SupplierController(IProductSupplier supplier)
+        private IProduct _product;
+        public SupplierController(IProductSupplier supplier,IProduct product)
         {
             _Supplier = supplier;
+            _product = product;
         }
         // GET: Supplier
         [OutputCache(NoStore = true, Duration = 0)]
@@ -73,6 +75,10 @@ namespace MMY.PlatForm.WebUI.Controllers
         [HttpPost]
         public ActionResult Delete(Guid guid)
         {
+            var query=new QueryBase();
+            int total;
+            _product.GetProductPurchaseRecords(null, guid, query.Skip, query.Take, out total);
+            if (total > 0) return this.ResultError("平台与该供货商有进货记录，不能删除");
             _Supplier.Delete(guid);
             //JsonRequestBehavior.DenyGet 不允许get
             //但其实已经删除了，只是return 时报错，加httpPost不让进方法
