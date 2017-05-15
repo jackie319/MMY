@@ -2,14 +2,15 @@
 *检查用户是否跳出框架
 */
 (function (w) {
-    if (webConfig.debug) {
-        if (w.$f.ui) w.$f.ui.loadPage("/Home/Login");
-        return;
-    }
+    var sitePath = "/wwwroot/";
+    var pageLoaderPage = "index.html";
+    var mainPage = "main.html";
+    var loginPage = "login.html";
+
 
     //没有加载器
     if (!w.$f.ui) {
-        location.href = "/?returnUrl=" + location.pathname;
+        location.href = sitePath + pageLoaderPage + "?returnUrl=" + location.pathname;
         return;
     }
 
@@ -19,13 +20,13 @@
      * @returns {} 
      */
     function isNeedMenu(url) {
-        if (/^Home\/Index/i.test(url)) {
+        if (url.indexOf(pageLoaderPage) > -1) {
             return false;
         }
-        else if (/^Home\/Login/i.test(url)) {
+        else if (url.indexOf(mainPage) > -1) {
             return false;
         }
-        else if (/^Home\/PageLoader/i.test(url)) {
+        else if (url.indexOf(loginPage) > -1) {
             return false;
         }
         return true;
@@ -36,9 +37,7 @@
     if (w.$f.ui && returnUrl) {
         if (isNeedMenu(returnUrl)) {
             //需要菜单
-            w.$f.ui.loadPage("/Home/Index", function () {
-                w.$f.setUrl(returnUrl);
-                w.$f.ui.$children[0].selectMenuByUrl();
+            w.$f.ui.loadPage(sitePath + mainPage + "?returnUrl=" + returnUrl, function () {
             });
         } else {
             //不需要菜单
@@ -46,6 +45,6 @@
         }
     } else {
         //默认加载登录页面
-        w.$f.ui.loadPage("/Home/Login");
+        w.$f.ui.loadPage(sitePath + loginPage);
     }
 })(window)

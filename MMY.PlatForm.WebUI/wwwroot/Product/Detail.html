@@ -265,7 +265,13 @@
                     return isLt2M;
                 },
                 handleRemove: function (file, fileList) {
-                    console.log(file, fileList);
+                    var me = this;
+                    for (var i = 0, item; item = me.form.Albums[i]; i++) {
+                        if (item.ImageUrl === file.name) {
+                            me.form.Albums.splice(i, 1);
+                            break;
+                        }
+                    }
                 },
                 handlePictureCardPreview: function (file) {
                     this.dialogImageUrl = file.url;
@@ -300,6 +306,10 @@
                     //    }
                     //});
                     var me = this;
+                    if (!me.form.Albums[0]) {
+                        me.$alert("请上传产品相册");
+                        return;
+                    }
                     me.form.DefaultPic = me.form.Albums[0].ImageUrl;
                     me.$http.post(apiConfig.product_save, me.form).then(function (response) {
                         me.backToList();
@@ -317,7 +327,13 @@
                 },
                 backToList: function () {
                     var me = this;
-                    me.$parent.loadPage(me.fromPageUrl);
+                    if (me.fromPageUrl) {
+                        me.$parent.loadPage(me.fromPageUrl);
+                    }
+                    else {
+                        me.$parent.loadPage("/wwwroot/Product/List.html");
+                    }
+                    
                 },
                 resetForm: function (formName) {
                     this.$refs[formName].resetFields();
@@ -345,5 +361,6 @@
             }
         });
     </script>
+    <script src="/wwwroot/scripts/checkinframework.js"></script>
 </body>
 </html>

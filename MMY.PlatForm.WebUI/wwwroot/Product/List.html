@@ -233,7 +233,7 @@
                 },
                 onAdd: function () {
                     var me = this;
-                    me.$parent.loadPage("/wwwroot/Product/Detail.html");
+                    me.$parent.loadPage("/wwwroot/Product/Detail.html?&fromPageUrl=/wwwroot/Product/List.html");
                 },
                 onEdit: function (i, m) {
                     var me = this;
@@ -301,5 +301,6 @@
             }
         });
     </script>
+    <script src="/wwwroot/scripts/checkinframework.js"></script>
 </body>
 </html>

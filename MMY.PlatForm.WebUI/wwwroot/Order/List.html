@@ -125,7 +125,7 @@
                              fixed="right"
                              width="120">
                 <template scope="scope">
-                    <el-button size="small" v-show="scope.row.OrderStatus==='未支付'" v-on:click="onModifyPrice(scope.$index, scope.row)">
+                    <el-button size="small" v-show="scope.row.OrderStatus==='Default'" v-on:click="onModifyPrice(scope.$index, scope.row)">
                         改价格
                     </el-button>
                 </template>
@@ -303,5 +303,6 @@
             }
         });
     </script>
+    <script src="/wwwroot/scripts/checkinframework.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
 <body>
     <div id="index" class="page">
         <header class="background-color-main">
-            <img :src="logo" class="logo"/>
+            <img :src="logo" class="logo" />
             <span class="color-white font-size-xxl padding-xl menu-width vertical-align-top" v-text="systemName"></span>
             <nav class="color-white user-info">
                 <div class="padding-left-right-xl">
@@ -34,7 +34,7 @@
         </header>
         <aside class="menu">
             <el-col span="24">
-                <el-menu default-active="2" @select="onSelectMenu">
+                <el-menu @select="onSelectMenu" ref="menu">
                     <template v-if="menus.length" v-for="(menu,i) in menus">
                         <el-submenu v-if="menu.ChildrenModels.length" :index="i">
                             <template slot="title">
@@ -61,8 +61,6 @@
                 userName: "",
                 menus: [],
                 currentView: null,
-                selectMenu: null,
-                selectChildMenu: null,
                 history: []
             },
             mounted: function () {
@@ -70,11 +68,12 @@
             },
             methods: {
                 loadMenu: function () {
-                    var me = this;
+                    var me = this;                    
                     me.$http.post("/Account/UserInfo").then(function (response) {
                         $f.login(response.data.Data);
                         me.userName = $f.getUser().NickName;
                         me.menus = $f.getMenu();
+                        me.selectMenuByUrl();
                     });
                 },
                 loadPage: function (url, fnCallBack) {
@@ -136,26 +135,29 @@
                     me.history = [menu];
                     if (menu.path !== "") me.loadPage(menu.ActionUrl);
                 },
-                getCurrentPathMenu: function (url, menus) {
+                getCurrentPathMenu: function (url, menus, level, path) {
                     var me = this;
-                    for (var i = 0, m; m = menus[i++];) {
-                        if (url.indexOf(m.path) > 0) return { menu: m, subMenu: null };
-                        if (m.children.length) {
-                            var result = me.getCurrentPathMenu(url, m.children);
+                    for (var i = 0, m; m = menus[i];i++) {
+                        var p = path.length === 0 ? i.toString() : (path + "-" + i.toString());
+                        if (url.indexOf(m.ActionUrl) > -1) return { menu: m, subMenu: null, level: level, path: p };
+                        if (m.ChildrenModels.length) {
+                            var result = me.getCurrentPathMenu(url, m.ChildrenModels, ++level, p);
                             if (result) {
-                                return { menu: m, subMenu: result.menu };
+                                return result;
                             }
                         }
                     }
                     return null;
                 },
                 selectMenuByUrl: function () {
-                    var result = this.getCurrentPathMenu(location.href, this.menus);
-                    if (result) {
-                        this.selectMenu = result.menu;
-                        this.selectChildMenu = result.subMenu;
-                    } else {
-                        this.onClickMenu(this.menus[0]);
+                    var me = this;
+                    var menu = me.$refs.menu;
+                    var returnUrl = $f.getQueryString("returnUrl");
+                    if (returnUrl) {
+                        var result = me.getCurrentPathMenu(returnUrl, me.menus, 0, "");
+                        menu.activedIndex = result.path;//选中菜单
+                        menu.openMenu(parseInt(result.path.split("-")[0]));
+                        me.loadPage(result.menu.ActionUrl);
                     }
                 },
                 handleCommand: function (command) {

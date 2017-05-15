@@ -9,7 +9,7 @@
         },
         isHtmlEncode: {
             type: Boolean,
-            default: false
+            default: true
         },
         bodyClass: {
             type: String,
