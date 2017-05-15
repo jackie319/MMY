@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
-CKEDITOR.editorConfig = function (config) {
+CKEDITOR.editorConfig = function( config ) {
     config.language = 'zh-cn';
     //config.uiColor = '#AADC6E';
     config.toolbarGroups = [
@@ -22,7 +22,7 @@ CKEDITOR.editorConfig = function (config) {
         { name: 'document', groups: ['mode', 'document', 'doctools'] }
     ];
 
-    config.removeButtons = 'Save,NewPage,Preview,Print,Templates,Cut,Paste,Copy,PasteText,PasteFromWord,Scayt,Form,Checkbox,ImageButton,Radio,TextField,Textarea,Select,Button,HiddenField,Superscript,BulletedList,Blockquote,CreateDiv,BidiLtr,BidiRtl,Language,Unlink,Flash,Table,HorizontalRule,SpecialChar,Iframe,PageBreak,ShowBlocks,About,NumberedList,Indent,Outdent';
+    config.removeButtons = 'Save,NewPage,Preview,Print,Templates,Cut,Paste,Copy,PasteText,PasteFromWord,Scayt,Form,Checkbox,Radio,TextField,Textarea,Select,Button,HiddenField,Superscript,BulletedList,Blockquote,CreateDiv,BidiLtr,BidiRtl,Language,Unlink,Flash,Table,HorizontalRule,SpecialChar,Iframe,PageBreak,ShowBlocks,About,NumberedList,Indent,Outdent';
     config.line_height = "1;1.5;1.75;2;3;4;5";
     config.pasteFilter = null;
     //config.allowedContent = {
@@ -36,7 +36,7 @@ CKEDITOR.editorConfig = function (config) {
     //};
     config.disallowedContent = "class;lang;width;height;onmousedown;href;script;*[on*]";
     //http://docs.ckeditor.com/#!/guide/dev_file_browse_upload
-    config.filebrowserUploadUrl = apiConfig.image_CKEditor_upload;
+    config.filebrowserUploadUrl = '/wwwroot/CKUpload.ashx';
 
     config.contentsCss = "/wwwroot/css/rich_media_content.css";
     config.bodyClass = "rich_media_content";

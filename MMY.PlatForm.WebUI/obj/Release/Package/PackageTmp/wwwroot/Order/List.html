@@ -72,6 +72,14 @@
             </el-table-column>
             <el-table-column prop="ProductName"
                              label="产品名称">
+                <template scope="scope">                    
+                    <a href="#" @click="goProductDetail(scope.row)">{{scope.row.ProductName}}</a>
+                </template>
+            </el-table-column>
+            <el-table-column prop="ClassificationName"
+                    label="颜色分类 "
+                    sortable
+                    width="160">
             </el-table-column>
             <el-table-column prop="ProductNumber"
                              label="产品数量">
@@ -102,7 +110,7 @@
                              width="240">
                 <template scope="scope">
                     <el-icon name="time"></el-icon>
-                    <span>{{ scope.row.TimePaid|dataFromat}}</span>
+                    <span>{{scope.row.TimePaid|dataFromat}}</span>
                 </template>
             </el-table-column>
             <el-table-column prop="TimeCreated"
@@ -110,7 +118,7 @@
                              width="240">
                 <template scope="scope">
                     <el-icon name="time"></el-icon>
-                    <span>{{ scope.row.TimeCreated|dataFromat}}</span>
+                    <span>{{scope.row.TimeCreated|dataFromat}}</span>
                 </template>
             </el-table-column>
             <el-table-column label="操作"
@@ -272,6 +280,10 @@
                             me.list.tableData = response.data.Data;
                         });
                 },
+                goProductDetail: function (m) {
+                    var me = this;
+                    me.$parent.loadPage("/wwwroot/Product/Detail.html?uid=" + m.ProductGuid + "&fromPageUrl=/wwwroot/Order/List.html");
+                },
                 onModifyPrice: function (i, m) {
                     var me = this;
                     me.modifyPrice.form.OrderGuid = m.Guid;
@@ -291,5 +303,6 @@
             }
         });
     </script>
+    <script src="/wwwroot/scripts/checkinframework.js"></script>
 </body>
 </html>

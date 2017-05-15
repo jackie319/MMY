@@ -90,7 +90,7 @@
                              label="图片"
                              width="160">
                 <template scope="scope">
-                    <img :width="160" :height="160" :src="scope.row.DefaultPic" :alt="scope.row.ProductName" />
+                    <img :width="160" :height="160" :src="scope.row.DefaultPic|image" :alt="scope.row.ProductName" />
                 </template>
             </el-table-column>
             <el-table-column prop="ProductName"
@@ -217,6 +217,9 @@
             filters: {
               dataFromat:function(v) {
                   return MSJsonDateToDate(v).Format("yyyy-MM-dd HH:mm:ss");
+              },
+              image:function(val){
+                  return webConfig.resourceServerAddress+val;
               }
             },
             methods: {
@@ -230,11 +233,11 @@
                 },
                 onAdd: function () {
                     var me = this;
-                    me.$parent.loadPage("/wwwroot/Product/Detail.html");
+                    me.$parent.loadPage("/wwwroot/Product/Detail.html?&fromPageUrl=/wwwroot/Product/List.html");
                 },
                 onEdit: function (i, m) {
                     var me = this;
-                    me.$parent.loadPage("/wwwroot/Product/Detail.html?uid=" + m.Guid);
+                    me.$parent.loadPage("/wwwroot/Product/Detail.html?uid=" + m.Guid +"&fromPageUrl=/wwwroot/Product/List.html");
                 },
                 onDelete: function (i, m) {
                     var me = this;
@@ -298,5 +301,6 @@
             }
         });
     </script>
+    <script src="/wwwroot/scripts/checkinframework.js"></script>
 </body>
 </html>
