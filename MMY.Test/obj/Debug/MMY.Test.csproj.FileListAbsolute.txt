@@ -296,13 +296,9 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\Senparc.Weixin.
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\Antlr3.Runtime.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\Senparc.Weixin.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.Data.pdb
-E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.Data.dll.config
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.FrontSite.WebUI.pdb
-E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.FrontSite.WebUI.dll.config
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.PlatForm.WebUI.pdb
-E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.PlatForm.WebUI.dll.config
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.Services.pdb
-E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.Services.dll.config
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\Autofac.xml
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\Autofac.Integration.Mvc.xml
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\EntityFramework.xml
@@ -317,7 +313,6 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\System.Web.Opti
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\log4net.xml
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.FrontSite.Domain.pdb
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.PlatForm.Domain.pdb
-E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\MMY.PlatForm.Domain.dll.config
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\Antlr3.Runtime.pdb
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Test\bin\Debug\zh-Hans\System.Web.Helpers.resources.dll

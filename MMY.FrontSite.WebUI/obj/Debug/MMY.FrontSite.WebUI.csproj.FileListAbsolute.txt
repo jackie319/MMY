@@ -432,10 +432,8 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\JK.Framewo
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\Senparc.Weixin.MP.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\Senparc.Weixin.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\MMY.Data.pdb
-E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\MMY.Data.dll.config
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\MMY.FrontSite.Domain.pdb
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\MMY.Services.pdb
-E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\MMY.Services.dll.config
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\Autofac.xml
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\Autofac.Integration.Mvc.xml
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.WebUI\bin\log4net.xml

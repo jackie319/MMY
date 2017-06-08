@@ -79,7 +79,6 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\MMY
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\EntityFramework.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Extensions.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.pdb
-E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.dll.config
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\EntityFramework.xml
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.csprojResolveAssemblyReference.cache
