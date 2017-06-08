@@ -23,6 +23,7 @@ namespace MMY.FrontSite.WebApi.Controllers
         /// 推荐
         /// </summary>
         /// <returns></returns>
+        [System.Web.Http.HttpGet]
         public IList<ProductListViewModel> Recommended()
         {
             var query = new QueryBase();
