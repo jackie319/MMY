@@ -53,8 +53,7 @@
     <Reference Include="JK.Framework.Core">
       <HintPath>..\Libs\libs\JK.Framework.Core.dll</HintPath>
     </Reference>
-    <Reference Include="JK.Framework.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="JK.Framework.Data">
       <HintPath>..\MMY.PlatForm.WebUI\bin\JK.Framework.Data.dll</HintPath>
     </Reference>
     <Reference Include="JK.Framework.Web">
