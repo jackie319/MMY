@@ -12,17 +12,12 @@ namespace MMY.FrontSite.WebApi.Models.Product
         /// 分类名称
         /// </summary>
         public string CategoryName { get; set; }
-        /// <summary>
-        /// 显示顺序
-        /// </summary>
-        public int DisplayOrder { get; set; }
 
         public static CategoryListViewModel CopyFrom(ProductCategory category)
         {
             CategoryListViewModel model=new CategoryListViewModel();
             model.Guid = category.Guid;
             model.CategoryName = category.CategoryName;
-            model.DisplayOrder = category.DisplayOrder;
             return model;
         }
     }

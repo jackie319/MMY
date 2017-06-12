@@ -1,6 +1,7 @@
 ﻿using JK.Framework.Core;
 using JK.Framework.Web.Model;
 using MMY.FrontSite.WebApi.Models.Product;
+using MMY.FrontSite.WebApi.Models.Query;
 using MMY.Services.IServices;
 using MMY.Services.ServiceModel;
 using System;
@@ -43,11 +44,11 @@ namespace MMY.FrontSite.WebApi.Controllers
         /// </summary>
         /// <param name="categoryGuid"></param>
         /// <returns></returns>
-        [System.Web.Http.Route("~/api/categorys/{categoryGuid}/products")]
+         [System.Web.Http.Route("~/api/categorys/{categoryGuid}/products")]
         [System.Web.Http.HttpGet]
-        public IList<ProductListViewModel> ListOfCategory(Guid categoryGuid)
+        public IList<ProductListViewModel> ListOfCategory(Guid categoryGuid, [FromUri] QueryBase query)
         {
-            var query = new QueryBase();
+            //var query = new QueryBase();
             int total;
             var list = _product.GetProductVs("", categoryGuid, ProductStatusEnum.OffShelf, false, false, null, null, query.Skip, query.Take, out total);
             var resultList = list.Select(item => ProductListViewModel.CopyFrom(item)).ToList();

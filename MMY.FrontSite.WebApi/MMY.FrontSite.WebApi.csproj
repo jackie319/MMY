@@ -282,6 +282,7 @@
     <Compile Include="Models\Product\CategoryListViewModel.cs" />
     <Compile Include="Models\Product\ProductListViewModel.cs" />
     <Compile Include="Models\Product\ProductViewModel.cs" />
+    <Compile Include="Models\Query\QueryBaseApi.cs" />
     <Compile Include="Models\ShoppingCart\AddShoppingCartViewModel.cs" />
     <Compile Include="Models\ShoppingCart\ShoppingCartViewModel.cs" />
     <Compile Include="Models\UserAccount\ChangePasswordViewModel.cs" />
