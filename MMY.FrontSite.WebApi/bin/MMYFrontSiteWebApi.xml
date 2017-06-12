@@ -481,10 +481,16 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:MMY.FrontSite.WebApi.Controllers.ProductController.Recommended">
+        <member name="T:MMY.FrontSite.WebApi.Controllers.ProductController">
             <summary>
-            推荐
+            商品详情
             </summary>
+        </member>
+        <member name="M:MMY.FrontSite.WebApi.Controllers.ProductController.Detail(System.Guid)">
+            <summary>
+            商品详情
+            </summary>
+            <param name="productGuid"></param>
             <returns></returns>
         </member>
         <member name="P:MMY.FrontSite.WebApi.Models.ConfirmOrder.ConfirmOrderViewModel.ProductGuid">
@@ -670,6 +676,101 @@
         <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.SoldTotal">
             <summary>
             销售数
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.ProductNumber">
+            <summary>
+            库存
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.DefaultPic">
+            <summary>
+            封面图片
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.SaleTitle">
+            <summary>
+            商品标题
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.SaleSubTitle">
+            <summary>
+            商品副标题
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.PromotionPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.ProductDetail">
+            <summary>
+            商品详情
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.ProductRemark">
+            <summary>
+            商品备注
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.IsSpecialOffer">
+            <summary>
+            是否特卖
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.IsRecommended">
+            <summary>
+            是否推荐
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.Classifications">
+            <summary>
+            颜色分类
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductViewModel.Albums">
+            <summary>
+            商品相册
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductClassificationViewModel.Name">
+            <summary>
+            颜色分类名称
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductClassificationViewModel.Number">
+            <summary>
+            库存
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductClassificationViewModel.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductClassificationViewModel.PromotionPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductClassificationViewModel.PicUrl">
+            <summary>
+            颜色分类图片
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductAlbumViewModel.ImageUrl">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductAlbumViewModel.DisplayOrder">
+            <summary>
+            显示顺序
             </summary>
         </member>
         <member name="P:MMY.FrontSite.WebApi.Models.ShoppingCart.AddShoppingCartViewModel.ProductGuid">

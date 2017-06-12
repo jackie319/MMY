@@ -37,7 +37,7 @@ namespace MMY.FrontSite.WebApi
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("v1", "MMY.FrontSite.WebApi");
+                        c.SingleApiVersion("v1", "MMY API  V1");
 
                         // If your API has multiple versions, use "MultipleApiVersions" instead of "SingleApiVersion".
                         // In this case, you must provide a lambda that tells Swashbuckle which actions should be
@@ -171,7 +171,7 @@ namespace MMY.FrontSite.WebApi
                         // with the same path (sans query string) and HTTP method. You can workaround this by providing a
                         // custom strategy to pick a winner or merge the descriptions for the purposes of the Swagger docs 
                         //
-                        //c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                       // c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 
                         // Wrap the default SwaggerGenerator with additional behavior (e.g. caching) or provide an
                         // alternative implementation for ISwaggerProvider with the CustomProvider option.
@@ -190,7 +190,7 @@ namespace MMY.FrontSite.WebApi
                         // has loaded. The file must be included in your project as an "Embedded Resource", and then the resource's
                         // "Logical Name" is passed to the method as shown above.
                         //
-                        //c.InjectJavaScript(thisAssembly, "Swashbuckle.Dummy.SwaggerExtensions.testScript1.js");
+                        c.InjectJavaScript(thisAssembly, "MMY.FrontSite.WebApi.Scripts.swaggerui.swagger_lang.js");
 
                         // The swagger-ui renders boolean data types as a dropdown. By default, it provides "true" and "false"
                         // strings as the possible choices. You can use this option to change these to something else,

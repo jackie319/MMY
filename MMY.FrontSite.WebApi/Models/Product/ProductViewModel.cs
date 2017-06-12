@@ -9,20 +9,57 @@ namespace MMY.FrontSite.WebApi.Models.Product
     {
         public System.Guid Guid { get; set; }
         public System.Guid CategoryGuid { get; set; }
+        /// <summary>
+        /// 库存
+        /// </summary>
         public int ProductNumber { get; set; }
+        /// <summary>
+        /// 封面图片
+        /// </summary>
         public string DefaultPic { get; set; }
+        /// <summary>
+        /// 商品标题
+        /// </summary>
         public string SaleTitle { get; set; }
+        /// <summary>
+        /// 商品副标题
+        /// </summary>
         public string SaleSubTitle { get; set; }
+        /// <summary>
+        /// 价格
+        /// </summary>
         public Decimal Price { get; set; }
+        /// <summary>
+        /// 优惠价格
+        /// </summary>
         public Decimal PromotionPrice { get; set; }
+        /// <summary>
+        /// 商品详情
+        /// </summary>
         public string ProductDetail { get; set; }
+        /// <summary>
+        /// 商品备注
+        /// </summary>
         public string ProductRemark { get; set; }
+        /// <summary>
+        /// 是否特卖
+        /// </summary>
         public bool IsSpecialOffer { get; set; }
+
+        /// <summary>
+        /// 是否推荐
+        /// </summary>
         public bool IsRecommended { get; set; }
         //  public int DisplayOrder { get; set; }
 
+        /// <summary>
+        /// 颜色分类
+        /// </summary>
         public IList<ProductClassificationViewModel> Classifications { set; get; }
 
+        /// <summary>
+        /// 商品相册
+        /// </summary>
         public IList<ProductAlbumViewModel> Albums { set; get; }
 
         public static ProductViewModel CopyFrom(Data.Model.Product product)
@@ -55,10 +92,25 @@ namespace MMY.FrontSite.WebApi.Models.Product
     {
         public System.Guid Guid { get; set; }
         public System.Guid ProductGuid { get; set; }
+        /// <summary>
+        /// 颜色分类名称
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// 库存
+        /// </summary>
         public int Number { get; set; }
+        /// <summary>
+        /// 价格
+        /// </summary>
         public Decimal Price { get; set; }
+        /// <summary>
+        /// 优惠价格
+        /// </summary>
         public Decimal PromotionPrice { get; set; }
+        /// <summary>
+        /// 颜色分类图片
+        /// </summary>
         public string PicUrl { get; set; }
 
         public static ProductClassificationViewModel CopyFrom(ProductClassification productClassification)
@@ -81,7 +133,13 @@ namespace MMY.FrontSite.WebApi.Models.Product
     {
         public System.Guid Guid { get; set; }
         public System.Guid ProductGuid { get; set; }
+        /// <summary>
+        /// 图片地址
+        /// </summary>
         public string ImageUrl { get; set; }
+        /// <summary>
+        /// 显示顺序
+        /// </summary>
         public int DisplayOrder { get; set; }
 
         public static ProductAlbumViewModel CopyFrom(ProductAlbum album)
