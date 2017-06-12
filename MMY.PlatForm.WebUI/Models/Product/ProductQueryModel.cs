@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using JK.Framework.Web.Model;
 using MMY.Services.ServiceModel;
+using JK.Framework.Core;
 
 namespace MMY.PlatForm.WebUI.Models.Product
 {

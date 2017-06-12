@@ -236,3 +236,7 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\zh-Hans\Mic
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\obj\Debug\MMY.PlatForm.WebUI.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Core.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Data.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Extensions.dll
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.WebUI\bin\JK.Framework.Web.dll

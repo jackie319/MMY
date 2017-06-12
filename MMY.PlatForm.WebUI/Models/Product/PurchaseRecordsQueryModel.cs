@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using JK.Framework.Web.Model;
+using JK.Framework.Core;
 
 namespace MMY.PlatForm.WebUI.Models.Product
 {

@@ -1,4 +1,5 @@
-﻿using JK.Framework.Web.Model;
+﻿using JK.Framework.Core;
+using JK.Framework.Web.Model;
 using MMY.FrontSite.WebApi.Models.Product;
 using MMY.Services.IServices;
 using MMY.Services.ServiceModel;
