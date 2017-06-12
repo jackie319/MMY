@@ -43,8 +43,8 @@ namespace MMY.FrontSite.WebUI.Controllers
             var query=new QueryBase();
             int total;
             var list=_product.GetProductVs("", categoryGuid, ProductStatusEnum.OffShelf, false, false, null, null, query.Skip, query.Take, out total);
-            var reusltList = list.Select(item => ProductListViewModel.CopyFrom(item));
-            return this.ResultListModel(total, reusltList);
+            var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
+            return this.ResultListModel(total, resultList);
         }
         /// <summary>
         /// 首页搜索
@@ -56,8 +56,8 @@ namespace MMY.FrontSite.WebUI.Controllers
             var query = new QueryBase();
             int total;
             var list = _product.GetProductVs(searchName, null, ProductStatusEnum.OffShelf, false, false, null, null, query.Skip, query.Take, out total);
-            var reusltList = list.Select(item => ProductListViewModel.CopyFrom(item));
-            return this.ResultListModel(total, reusltList);
+            var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
+            return this.ResultListModel(total, resultList);
         }
         /// <summary>
         /// 推荐
@@ -68,8 +68,8 @@ namespace MMY.FrontSite.WebUI.Controllers
             var query = new QueryBase();
             int total;
             var list = _product.GetProductVs(null,null, ProductStatusEnum.OffShelf, false,true, null, null, query.Skip, query.Take, out total);
-            var reusltList = list.Select(item => ProductListViewModel.CopyFrom(item));
-            return this.ResultListModel(total, reusltList);
+            var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
+            return this.ResultListModel(total, resultList);
         }
 
         /// <summary>
@@ -81,8 +81,8 @@ namespace MMY.FrontSite.WebUI.Controllers
             var query = new QueryBase();
             int total;
             var list = _product.GetProductVs(null, null, ProductStatusEnum.OffShelf, true, false, null, null, query.Skip, query.Take, out total);
-            var reusltList = list.Select(item => ProductListViewModel.CopyFrom(item));
-            return this.ResultListModel(total, reusltList);
+            var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
+            return this.ResultListModel(total, resultList);
         }
 
         /// <summary>
@@ -94,8 +94,8 @@ namespace MMY.FrontSite.WebUI.Controllers
             var query = new QueryBase();
             int total;
             var list=_product.HotList(query.Skip,query.Take,out total);
-            var reusltList = list.Select(item => ProductListViewModel.CopyFrom(item));
-            return this.ResultListModel(total, reusltList);
+            var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
+            return this.ResultListModel(total, resultList);
         }
 
         /// <summary>
@@ -107,8 +107,8 @@ namespace MMY.FrontSite.WebUI.Controllers
             var query = new QueryBase();
             int total;
             var list = _product.NewList(query.Skip, query.Take, out total);
-            var reusltList = list.Select(item => ProductListViewModel.CopyFrom(item));
-            return this.ResultListModel(total, reusltList);
+            var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
+            return this.ResultListModel(total, resultList);
         }
 
         /// <summary>

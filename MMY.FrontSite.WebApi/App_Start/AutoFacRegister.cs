@@ -15,6 +15,7 @@ namespace MMY.FrontSite.WebApi
             builder.RegisterType<AuthorityImpl>().As<IAuthority>().InstancePerRequest();
             builder.RegisterType<UserAccountImpl>().As<IUserAccount>().InstancePerDependency();
             builder.RegisterType<ProductImpl>().As<IProduct>().InstancePerDependency();
+            builder.RegisterType<ProductCategoryImpl>().As<IProductCategory>().InstancePerDependency();
             builder.RegisterType<OrderImpl>().As<IOrder>().InstancePerDependency();
             builder.RegisterType<UserFavoriteImpl>().As<IUserFavorite>().InstancePerDependency();
             builder.RegisterType<ShoppingCartImpl>().As<IShoppingCart>().InstancePerDependency();

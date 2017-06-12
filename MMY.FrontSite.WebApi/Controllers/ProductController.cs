@@ -37,20 +37,7 @@ namespace MMY.FrontSite.WebApi.Controllers
         //    return resultList;
         //}
 
-        ///// <summary>
-        ///// 某分类下的商品
-        ///// </summary>
-        ///// <param name="categoryGuid"></param>
-        ///// <returns></returns>
-        //[System.Web.Http.HttpGet]
-        //public IList<ProductListViewModel> ListOfCategory(Guid categoryGuid)
-        //{
-        //    var query = new QueryBase();
-        //    int total;
-        //    var list = _product.GetProductVs("", categoryGuid, ProductStatusEnum.OffShelf, false, false, null, null, query.Skip, query.Take, out total);
-        //    var resultList = list.Select(item => ProductListViewModel.CopyFrom(item)).ToList();
-        //    return resultList;
-        //}
+      
         ///// <summary>
         ///// 推荐
         ///// </summary>

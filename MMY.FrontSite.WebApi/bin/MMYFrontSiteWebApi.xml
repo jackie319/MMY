@@ -481,6 +481,24 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:MMY.FrontSite.WebApi.Controllers.CategorysController">
+            <summary>
+            商品分类
+            </summary>
+        </member>
+        <member name="M:MMY.FrontSite.WebApi.Controllers.CategorysController.List">
+            <summary>
+            所有商品分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MMY.FrontSite.WebApi.Controllers.CategorysController.ListOfCategory(System.Guid)">
+            <summary>
+            某分类下的商品
+            </summary>
+            <param name="categoryGuid"></param>
+            <returns></returns>
+        </member>
         <member name="T:MMY.FrontSite.WebApi.Controllers.ProductController">
             <summary>
             商品详情
