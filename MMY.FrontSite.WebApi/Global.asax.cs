@@ -33,7 +33,7 @@ namespace MMY.FrontSite.WebApi
             string connectionStr = System.Web.Configuration.WebConfigurationManager.
                 ConnectionStrings["MMYEntities"].ConnectionString;
 
-            RegisterAutofacForJK.Register(connectionStr, AutoFacRegister.RegisterAutofacDelegate);
+            RegisterAutofacForJK.RegisterApi(connectionStr, AutoFacRegister.RegisterAutofacDelegate);
         }
 
         public void GetAppSetting()
