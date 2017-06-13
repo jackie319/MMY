@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JK.Framework.Web.Filter;
+using JK.Framework.Core;
 using MMY.Services.IServices;
 using MMY.Services.ServiceModel;
 

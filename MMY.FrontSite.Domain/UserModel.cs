@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using JK.Framework.Web.Filter;
 using MMY.Data.Model;
+using JK.Framework.Core;
 
 namespace MMY.FrontSite.Domain
 {

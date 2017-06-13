@@ -26,7 +26,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         public ActionResult List()
         {
             var mmyUser = (UserModel)HttpContext.User;
-            QueryBase query = new QueryBase();
+            JK.Framework.Core.QueryBase query = new JK.Framework.Core.QueryBase();
             int total;
             var list = _UserAccount.GetList(mmyUser.UserGuid,query.Skip, query.Take, out total);
             var resultList = list.Select(item => UserDeliveryAddressViewModel.CopyTo(item)).ToList();

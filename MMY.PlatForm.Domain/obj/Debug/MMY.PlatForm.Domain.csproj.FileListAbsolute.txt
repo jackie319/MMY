@@ -112,3 +112,4 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\zh-H
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.Domain\obj\Debug\MMY.PlatForm.Domain.pdb
+E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.PlatForm.Domain\bin\Debug\JK.Framework.Core.dll

@@ -40,7 +40,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// <returns></returns>
         public ActionResult ListOfCategory(Guid categoryGuid)
         {
-            var query=new QueryBase();
+            var query=new JK.Framework.Core.QueryBase();
             int total;
             var list=_product.GetProductVs("", categoryGuid, ProductStatusEnum.OffShelf, false, false, null, null, query.Skip, query.Take, out total);
             var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
@@ -53,7 +53,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// <returns></returns>
         public ActionResult Search(string searchName)
         {
-            var query = new QueryBase();
+            var query = new JK.Framework.Core.QueryBase();
             int total;
             var list = _product.GetProductVs(searchName, null, ProductStatusEnum.OffShelf, false, false, null, null, query.Skip, query.Take, out total);
             var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
@@ -65,7 +65,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// <returns></returns>
         public ActionResult Recommended()
         {
-            var query = new QueryBase();
+            var query = new JK.Framework.Core.QueryBase();
             int total;
             var list = _product.GetProductVs(null,null, ProductStatusEnum.OffShelf, false,true, null, null, query.Skip, query.Take, out total);
             var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
@@ -78,7 +78,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// <returns></returns>
         public ActionResult SpecialOffer()
         {
-            var query = new QueryBase();
+            var query = new JK.Framework.Core.QueryBase();
             int total;
             var list = _product.GetProductVs(null, null, ProductStatusEnum.OffShelf, true, false, null, null, query.Skip, query.Take, out total);
             var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
@@ -91,7 +91,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// <returns></returns>
         public ActionResult Hot()
         {
-            var query = new QueryBase();
+            var query = new JK.Framework.Core.QueryBase();
             int total;
             var list=_product.HotList(query.Skip,query.Take,out total);
             var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));
@@ -104,7 +104,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         /// <returns></returns>
         public ActionResult New()
         {
-            var query = new QueryBase();
+            var query = new JK.Framework.Core.QueryBase();
             int total;
             var list = _product.NewList(query.Skip, query.Take, out total);
             var resultList = list.Select(item => ProductListViewModel.CopyFrom(item));

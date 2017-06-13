@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JK.Framework.Core">
-      <HintPath>..\..\..\..\JK.Framework\JK.Framework.Web\bin\Debug\JK.Framework.Core.dll</HintPath>
+    <Reference Include="JK.Framework.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\libs\JK.Framework.Core.dll</HintPath>
     </Reference>
     <Reference Include="JK.Framework.Pay">
       <HintPath>..\..\..\New\MMY\Libs\libs\JK.Framework.Pay.dll</HintPath>

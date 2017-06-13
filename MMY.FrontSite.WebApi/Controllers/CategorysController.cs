@@ -36,6 +36,7 @@ namespace MMY.FrontSite.WebApi.Controllers
         public IList<CategoryListViewModel> List()
         {
             var categories = _productCategory.GetAllParentCategory();
+            throw new Exception("出错了");
             var resultList = categories.Select(item => CategoryListViewModel.CopyFrom(item)).ToList();
             BaseApiController.AppendHeader(resultList.Count);
             return resultList;

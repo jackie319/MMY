@@ -42,7 +42,7 @@ namespace MMY.FrontSite.WebUI.Controllers
         [JKAuthorize]
         public ActionResult List()
         {
-            var query = new QueryBase();
+            var query = new JK.Framework.Core.QueryBase();
             var mmyUser = (UserModel)HttpContext.User;
             int total;
             var list = _shoppingCart.GetList(mmyUser.UserGuid, query.Skip, query.Take, out total);
