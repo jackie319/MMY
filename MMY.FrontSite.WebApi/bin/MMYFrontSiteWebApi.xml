@@ -631,34 +631,9 @@
             分类名称
             </summary>
         </member>
-        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.TimeCreated">
-            <summary>
-            创建时间
-            </summary>
-        </member>
-        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.IsRecommended">
-            <summary>
-            是否推荐
-            </summary>
-        </member>
-        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.IsSpecialOffer">
-            <summary>
-            是否特卖
-            </summary>
-        </member>
         <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.PromotionPrice">
             <summary>
             优惠价格
-            </summary>
-        </member>
-        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.Price">
-            <summary>
-            价格
-            </summary>
-        </member>
-        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.SaleSubTitle">
-            <summary>
-            商品副标题
             </summary>
         </member>
         <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.SaleTitle">
@@ -671,34 +646,9 @@
             封面图片
             </summary>
         </member>
-        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.ProductNumber">
-            <summary>
-            库存数
-            </summary>
-        </member>
-        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.CategoryGuid">
-            <summary>
-            分类Guid
-            </summary>
-        </member>
         <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.Guid">
             <summary>
             当前条目Guid
-            </summary>
-        </member>
-        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.CategoryName">
-            <summary>
-            分类名称
-            </summary>
-        </member>
-        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.DisplayOrder">
-            <summary>
-            人工排序
-            </summary>
-        </member>
-        <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.VisitedTotal">
-            <summary>
-            访问数
             </summary>
         </member>
         <member name="P:MMY.FrontSite.WebApi.Models.Product.ProductListViewModel.SoldTotal">

@@ -37,6 +37,7 @@ namespace MMY.FrontSite.WebApi.Controllers
         {
             var categories = _productCategory.GetAllParentCategory();
             var resultList = categories.Select(item => CategoryListViewModel.CopyFrom(item)).ToList();
+            BaseApiController.AppendHeader(resultList.Count);
             return resultList;
         }
 
@@ -53,6 +54,7 @@ namespace MMY.FrontSite.WebApi.Controllers
             int total;
             var list = _product.GetProductVs("", categoryGuid, ProductStatusEnum.OffShelf, false, false, null, null, query.Skip, query.Take, out total);
             var resultList = list.Select(item => ProductListViewModel.CopyFrom(item)).ToList();
+            BaseApiController.AppendHeader(total);
             return resultList;
         }
     }
