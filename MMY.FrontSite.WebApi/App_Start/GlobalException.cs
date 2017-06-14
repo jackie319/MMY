@@ -11,9 +11,8 @@ namespace MMY.FrontSite.WebApi
 {
     public partial class WebApiConfig
     {
-        private static ApiResultModel GlobalExceptionHandler(HttpActionExecutedContext exceptionfiltercontext)
+        private  static ApiResultModel GlobalExceptionHandler(HttpActionExecutedContext exceptionfiltercontext)
         {
-          
             var exception = exceptionfiltercontext.Exception;
             string errorMsg = exception.Message;
             var url = exceptionfiltercontext.Request.RequestUri.ToString();
