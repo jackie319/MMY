@@ -6,6 +6,7 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using JK.Framework.API.Filter;
+using System.Web.Configuration;
 
 namespace MMY.FrontSite.WebApi
 {
@@ -18,6 +19,9 @@ namespace MMY.FrontSite.WebApi
             // config.SuppressDefaultHostAuthentication();
             // config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
             config.Filters.Add(new ApiGlobalExceptioinFilter(GlobalExceptionHandler));
+
+            string privateToken = WebConfigurationManager.AppSettings["PrivateToken"];
+            config.Filters.Add(new JKApiTokenAuthorizeAttribute(privateToken));
             // Web API 路由
             config.MapHttpAttributeRoutes();
 

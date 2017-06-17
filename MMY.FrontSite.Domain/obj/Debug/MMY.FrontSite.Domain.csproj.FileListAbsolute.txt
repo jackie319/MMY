@@ -98,3 +98,4 @@ D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\EntityFramework.xml
 D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\Code\Github\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.dll
 D:\Code\Github\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.pdb
+D:\Code\Github\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.csprojResolveAssemblyReference.cache
