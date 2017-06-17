@@ -43,6 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="libs\JK.Framework.API.dll" />
     <Content Include="libs\JK.Framework.Core.dll" />
     <Content Include="libs\JK.Framework.Data.dll" />
     <Content Include="libs\JK.Framework.Extensions.dll" />

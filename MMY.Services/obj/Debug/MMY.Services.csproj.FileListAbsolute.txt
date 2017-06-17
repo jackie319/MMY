@@ -101,3 +101,28 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\bin\Debug\zh-Hans\Ent
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.Services\obj\Debug\MMY.Services.pdb
+D:\Code\Github\MMY\MMY.Services\bin\Debug\MMY.Services.dll.config
+D:\Code\Github\MMY\MMY.Services\bin\Debug\MMY.Services.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\MMY.Services.pdb
+D:\Code\Github\MMY\MMY.Services\bin\Debug\Antlr3.Runtime.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\JK.Framework.Core.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\JK.Framework.Extensions.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\JK.Framework.Pay.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\JK.Framework.Sms.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\log4net.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\MMY.Data.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\Newtonsoft.Json.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\Senparc.Weixin.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\Senparc.Weixin.MP.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\WebGrease.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\EntityFramework.dll
+D:\Code\Github\MMY\MMY.Services\bin\Debug\MMY.Data.pdb
+D:\Code\Github\MMY\MMY.Services\bin\Debug\MMY.Data.dll.config
+D:\Code\Github\MMY\MMY.Services\bin\Debug\Antlr3.Runtime.pdb
+D:\Code\Github\MMY\MMY.Services\bin\Debug\log4net.xml
+D:\Code\Github\MMY\MMY.Services\bin\Debug\Newtonsoft.Json.xml
+D:\Code\Github\MMY\MMY.Services\bin\Debug\EntityFramework.xml
+D:\Code\Github\MMY\MMY.Services\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Code\Github\MMY\MMY.Services\obj\Debug\MMY.Services.csprojResolveAssemblyReference.cache
+D:\Code\Github\MMY\MMY.Services\obj\Debug\MMY.Services.dll
+D:\Code\Github\MMY\MMY.Services\obj\Debug\MMY.Services.pdb
