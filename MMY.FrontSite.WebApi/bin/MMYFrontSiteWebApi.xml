@@ -481,6 +481,33 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:MMY.FrontSite.WebApi.Controllers.AccountController.SubmitLogin(MMY.FrontSite.WebApi.Models.UserAccount.LogInViewModel)">
+            <summary>
+            登录
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MMY.FrontSite.WebApi.Controllers.AccountController.SendCode(System.String)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="phone"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MMY.FrontSite.WebApi.Controllers.AccountController.Register(MMY.FrontSite.WebApi.Models.UserAccount.RegisterViewModel)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MMY.FrontSite.WebApi.Controllers.AccountController.Logout">
+            <summary>
+            退出登录
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:MMY.FrontSite.WebApi.Controllers.CategorysController">
             <summary>
             商品分类
@@ -789,6 +816,16 @@
         <member name="P:MMY.FrontSite.WebApi.Models.ShoppingCart.ShoppingCartViewModel.ClassificationGuid">
             <summary>
             颜色分类
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.UserAccount.RegisterViewModel.MobilePhone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:MMY.FrontSite.WebApi.Models.UserAccount.RegisterViewModel.PasswordMd5">
+            <summary>
+            MD5密码
             </summary>
         </member>
         <member name="P:MMY.FrontSite.WebApi.Models.UserAccount.RegisterViewModel.SmsCode">

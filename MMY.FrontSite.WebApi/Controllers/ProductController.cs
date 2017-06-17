@@ -37,7 +37,7 @@ namespace MMY.FrontSite.WebApi.Controllers
         //    return resultList;
         //}
 
-      
+
         ///// <summary>
         ///// 推荐
         ///// </summary>
@@ -99,6 +99,7 @@ namespace MMY.FrontSite.WebApi.Controllers
         /// </summary>
         /// <param name="productGuid"></param>
         /// <returns></returns>
+        [System.Web.Http.Route("~/api/account")]
         [System.Web.Http.HttpGet]
         public ProductViewModel Detail(Guid productGuid)
         {
