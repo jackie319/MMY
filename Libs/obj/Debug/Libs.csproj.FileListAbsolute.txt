@@ -12,7 +12,3 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\Libs\bin\Debug\Libs.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\Libs\bin\Debug\Libs.pdb
 E:\tools\development tools\GItHub\mmy\MMY\MMY\Libs\obj\Debug\Libs.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\Libs\obj\Debug\Libs.pdb
-D:\Code\Github\MMY\Libs\bin\Debug\Libs.dll
-D:\Code\Github\MMY\Libs\bin\Debug\Libs.pdb
-D:\Code\Github\MMY\Libs\obj\Debug\Libs.dll
-D:\Code\Github\MMY\Libs\obj\Debug\Libs.pdb

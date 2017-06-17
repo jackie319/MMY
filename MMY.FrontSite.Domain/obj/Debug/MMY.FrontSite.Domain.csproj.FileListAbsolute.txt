@@ -85,17 +85,3 @@ E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\bin\Debug\zh-
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.csprojResolveAssemblyReference.cache
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.dll
 E:\tools\development tools\GItHub\mmy\MMY\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.pdb
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.FrontSite.Domain.dll
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.FrontSite.Domain.pdb
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Core.dll
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Web.dll
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.dll
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\EntityFramework.dll
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\JK.Framework.Extensions.dll
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.pdb
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\MMY.Data.dll.config
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\EntityFramework.xml
-D:\Code\Github\MMY\MMY.FrontSite.Domain\bin\Debug\zh-Hans\EntityFramework.resources.dll
-D:\Code\Github\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.csprojResolveAssemblyReference.cache
-D:\Code\Github\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.dll
-D:\Code\Github\MMY\MMY.FrontSite.Domain\obj\Debug\MMY.FrontSite.Domain.pdb
