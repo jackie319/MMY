@@ -231,10 +231,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\ApiSessionAuthorizeAttribute.cs" />
     <Compile Include="App_Start\AutoFacRegister.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\GlobalException.cs" />
+    <Compile Include="App_Start\GlobalHttpHeaderFilter.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />

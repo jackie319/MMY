@@ -2,6 +2,7 @@ using System.Web.Http;
 using WebActivatorEx;
 using MMY.FrontSite.WebApi;
 using Swashbuckle.Application;
+using MMY.FrontSite.WebApi.App_Start;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -152,6 +153,7 @@ namespace MMY.FrontSite.WebApi
                         // Operation filters.
                         //
                         //c.OperationFilter<AddDefaultResponse>();
+                        c.OperationFilter<GlobalHttpHeaderFilter>();
                         //
                         // If you've defined an OAuth2 flow as described above, you could use a custom filter
                         // to inspect some attribute on each action and infer which (if any) OAuth2 scopes are required
@@ -171,7 +173,7 @@ namespace MMY.FrontSite.WebApi
                         // with the same path (sans query string) and HTTP method. You can workaround this by providing a
                         // custom strategy to pick a winner or merge the descriptions for the purposes of the Swagger docs 
                         //
-                       // c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                        // c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 
                         // Wrap the default SwaggerGenerator with additional behavior (e.g. caching) or provide an
                         // alternative implementation for ISwaggerProvider with the CustomProvider option.
@@ -191,7 +193,7 @@ namespace MMY.FrontSite.WebApi
                         // "Logical Name" is passed to the method as shown above.
                         //
                         c.InjectJavaScript(thisAssembly, "MMY.FrontSite.WebApi.Scripts.swaggerui.swagger_lang.js");
-
+                
                         // The swagger-ui renders boolean data types as a dropdown. By default, it provides "true" and "false"
                         // strings as the possible choices. You can use this option to change these to something else,
                         // for example 0 and 1.
