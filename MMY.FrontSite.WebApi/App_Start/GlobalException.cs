@@ -6,6 +6,7 @@ using JK.Framework.Core;
 using log4net;
 using JK.Framework.API.Model;
 using System.Web.Http.Filters;
+using MMY.FrontSite.Domain;
 
 namespace MMY.FrontSite.WebApi
 {
@@ -21,10 +22,13 @@ namespace MMY.FrontSite.WebApi
                 exception = exception.InnerException;
                 errorMsg = exception.Message;
             }
-
             var logger = LogManager.GetLogger(typeof(WebApiConfig));
             logger.Error("出错了！错误信息：" + errorMsg + "访问路径：" + url + "堆栈：" + exception.StackTrace);
             var result = new ApiResultModel(false, errorMsg,  url) { };
+            if (exception is MMYAuthorizeException)
+            {
+                result = new ApiResultModel(false, errorMsg, url,JKExceptionType.NoAuthorized) { };
+            }
             return result;
         }
     }

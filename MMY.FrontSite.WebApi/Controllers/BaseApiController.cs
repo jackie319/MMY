@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MMY.FrontSite.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,10 +11,17 @@ namespace MMY.FrontSite.WebApi.Controllers
     public class BaseApiController : ApiController
     {
         private const string ResultTotal = "X-Total-Count";
-
-        public static void AppendHeader(int total)
+        private const string SessionKey = "X-SessionKey";
+        public static void AppendHeaderTotal(int total)
         {
             System.Web.HttpContext.Current.Response.AppendHeader(ResultTotal, Convert.ToString(total));
         }
+
+        public static void AppendHeaderSessionKey(string sessionKey)
+        {
+            System.Web.HttpContext.Current.Response.AppendHeader(SessionKey, sessionKey);
+        }
+
+
     }
 }

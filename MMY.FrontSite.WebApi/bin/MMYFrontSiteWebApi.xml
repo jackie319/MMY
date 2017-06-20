@@ -538,6 +538,12 @@
             <param name="productGuid"></param>
             <returns></returns>
         </member>
+        <member name="M:MMY.FrontSite.WebApi.Controllers.UserInfoController.UserInfo">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:MMY.FrontSite.WebApi.Models.ConfirmOrder.ConfirmOrderViewModel.ProductGuid">
             <summary>
             产品guid

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JK.Framework.Core.Caching;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,18 +9,12 @@ namespace MMY.FrontSite.Domain
 {
     public class SessionManager
     {
-        /// <summary>
-        /// 身份标识
-        /// </summary>
-        public string SessionKey { get; set; }
-        /// <summary>
-        /// 用户信息
-        /// </summary>
-        public UserModel UserInfo { get; set; }
+     
+        public static string GetSessionKey()
+        {
+            return Guid.NewGuid().ToString("N");
+        }
 
-        /// <summary>
-        /// 创建时间
-        /// </summary>
-        public DateTime TimeCreated { get; set; }
+      
     }
 }

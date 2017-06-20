@@ -21,6 +21,7 @@ using MMY.FrontSite.WebApi.Models.UserAccount;
 using JK.Framework.Core;
 using JK.Framework.API.Model;
 using MMY.FrontSite.Domain;
+using JK.Framework.Core.Caching;
 
 namespace MMY.FrontSite.WebApi.Controllers
 {
@@ -28,10 +29,12 @@ namespace MMY.FrontSite.WebApi.Controllers
     {
         private IUserAccount _userAccount;
         private ISms _sms;
-        public AccountController(IUserAccount userAccount, ISms sms)
+        private ICacheManager _cache;
+        public AccountController(IUserAccount userAccount, ISms sms,ICacheManager cache)
         {
             _userAccount = userAccount;
             _sms = sms;
+            _cache = cache;
         }
 
         /// <summary>
@@ -47,6 +50,9 @@ namespace MMY.FrontSite.WebApi.Controllers
             {
                 var account = _userAccount.Login(model.UserName,model.PasswordMd5);
                 UserModel userModel = new UserModel(account, account.NickName, true) { };
+                string sessionKey = SessionManager.GetSessionKey();
+                _cache.SetSliding(sessionKey, userModel,100);
+                BaseApiController.AppendHeaderSessionKey(sessionKey);
                 //HttpContext.User = userModel;
             }
             catch (CommonException)
