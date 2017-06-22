@@ -27,23 +27,29 @@ namespace MMY.FrontSite.WebApi.App_Start
                 }
                 if (string.IsNullOrEmpty(sessionkey))
                 {
-                    throw new MMYAuthorizeException("缺少参数sessionkey");
+                    throw new AuthorizeException("缺少参数sessionkey");
                 }
 
                 var flag=SessionKeyIsExist(sessionkey);
-                if(!flag) throw new MMYAuthorizeException("无效的sessionkey");
+                if(!flag) throw new AuthorizeException("无效的sessionkey");
+                HttpContext.Current.User = GetUser(sessionkey);
+
                 base.OnAuthorization(filterContext);
             }
             else
             {
-                throw new MMYAuthorizeException("缺少参数sessionkey");
+                throw new AuthorizeException("缺少参数sessionkey");
             }
        
         }
 
-        public bool SessionKeyIsExist(string sessionKey)
+        private bool SessionKeyIsExist(string sessionKey)
         {
             return _cache.IsSet(sessionKey);
+        }
+        private UserModel GetUser(string sessionKey)
+        {
+            return _cache.Get<UserModel>(sessionKey);
         }
     }
 }

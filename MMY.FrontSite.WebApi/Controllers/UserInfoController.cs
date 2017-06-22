@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 
 namespace MMY.FrontSite.WebApi.Controllers
@@ -31,8 +32,8 @@ namespace MMY.FrontSite.WebApi.Controllers
         [HttpGet]
         public UserInfoViewModel UserInfo()
         {
-            // var userModel = GerUserModel();
-            var userInfo = _UserAccount.FindUserAccount(Guid.NewGuid());
+            var userModel =(UserModel) HttpContext.Current.User;
+            var userInfo = _UserAccount.FindUserAccount(userModel.UserGuid);
             var result = UserInfoViewModel.CopyFrom(userInfo);
             return result;
 

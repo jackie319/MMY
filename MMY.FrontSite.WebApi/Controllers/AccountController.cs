@@ -53,7 +53,6 @@ namespace MMY.FrontSite.WebApi.Controllers
                 string sessionKey = SessionManager.GetSessionKey();
                 _cache.SetSliding(sessionKey, userModel,100);
                 BaseApiController.AppendHeaderSessionKey(sessionKey);
-                //HttpContext.User = userModel;
             }
             catch (CommonException)
             {

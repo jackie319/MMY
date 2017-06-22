@@ -23,40 +23,40 @@ namespace MMY.FrontSite.WebApi.Controllers
             System.Web.HttpContext.Current.Response.AppendHeader(SessionKey, sessionKey);
         }
 
-        private ICacheManager _cache;
-        public BaseApiController(ICacheManager cache)
-        {
-            _cache = cache;
-        }
+        //private ICacheManager _cache;
+        //public BaseApiController(ICacheManager cache)
+        //{
+        //    _cache = cache;
+        //}
 
-        [NonAction]
-        public UserModel GerUserModel()
-        {
-            var sessionkey = string.Empty;
-            if (Request.Headers.Contains("sessionkey"))
-            {
-                try
-                {
-                    sessionkey = Request.Headers.GetValues("sessionkey").FirstOrDefault();
-                }
-                catch (ArgumentException)
-                {
-                }
-                if (string.IsNullOrEmpty(sessionkey))
-                {
-                    throw new MMYAuthorizeException("无效的sessionkey");
-                }
+        //[NonAction]
+        //public UserModel GerUserModel()
+        //{
+        //    var sessionkey = string.Empty;
+        //    if (Request.Headers.Contains("sessionkey"))
+        //    {
+        //        try
+        //        {
+        //            sessionkey = Request.Headers.GetValues("sessionkey").FirstOrDefault();
+        //        }
+        //        catch (ArgumentException)
+        //        {
+        //        }
+        //        if (string.IsNullOrEmpty(sessionkey))
+        //        {
+        //            throw new MMYAuthorizeException("无效的sessionkey");
+        //        }
 
-                var flag = _cache.IsSet(sessionkey);
-                if (!flag) throw new MMYAuthorizeException("无效的sessionkey");
-                var userModel = _cache.Get<UserModel>(sessionkey);
-                return userModel;
-            }
-            else
-            {
-                throw new MMYAuthorizeException("缺少参数sessionkey");
-            }
-        }
+        //        var flag = _cache.IsSet(sessionkey);
+        //        if (!flag) throw new MMYAuthorizeException("无效的sessionkey");
+        //        var userModel = _cache.Get<UserModel>(sessionkey);
+        //        return userModel;
+        //    }
+        //    else
+        //    {
+        //        throw new MMYAuthorizeException("缺少参数sessionkey");
+        //    }
+        //}
 
     }
 }

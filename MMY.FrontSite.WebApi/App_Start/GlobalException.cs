@@ -25,7 +25,7 @@ namespace MMY.FrontSite.WebApi
             var logger = LogManager.GetLogger(typeof(WebApiConfig));
             logger.Error("出错了！错误信息：" + errorMsg + "访问路径：" + url + "堆栈：" + exception.StackTrace);
             var result = new ApiResultModel(false, errorMsg,  url) { };
-            if (exception is MMYAuthorizeException)
+            if (exception is AuthorizeException)
             {
                 result = new ApiResultModel(false, errorMsg, url,JKExceptionType.NoAuthorized) { };
             }
