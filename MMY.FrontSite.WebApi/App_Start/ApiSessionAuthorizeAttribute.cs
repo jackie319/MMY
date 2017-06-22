@@ -12,11 +12,7 @@ namespace MMY.FrontSite.WebApi.App_Start
 {
     public class ApiSessionAuthorizeAttribute : AuthorizeAttribute
     {
-        public ICacheManager _cache;
-        public ApiSessionAuthorizeAttribute(ICacheManager cache)
-        {
-            _cache = cache;
-        }
+        public ICacheManager _cache { get; set; }
         public override void OnAuthorization(HttpActionContext filterContext)
         {
             string sessionkey = string.Empty;
@@ -31,13 +27,18 @@ namespace MMY.FrontSite.WebApi.App_Start
                 }
                 if (string.IsNullOrEmpty(sessionkey))
                 {
-                    throw new CommonException("缺少参数sessionkey");
+                    throw new MMYAuthorizeException("缺少参数sessionkey");
                 }
 
                 var flag=SessionKeyIsExist(sessionkey);
-                if(!flag) throw new CommonException("无效的sessionkey");
+                if(!flag) throw new MMYAuthorizeException("无效的sessionkey");
                 base.OnAuthorization(filterContext);
             }
+            else
+            {
+                throw new MMYAuthorizeException("缺少参数sessionkey");
+            }
+       
         }
 
         public bool SessionKeyIsExist(string sessionKey)

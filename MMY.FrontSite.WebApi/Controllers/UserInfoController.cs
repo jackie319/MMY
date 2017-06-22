@@ -13,11 +13,11 @@ using System.Web.Http;
 
 namespace MMY.FrontSite.WebApi.Controllers
 {
-    public class UserInfoController : BaseApiController
+    public class UserInfoController :ApiController
     {
         private IUserAccount _UserAccount;
         private ICacheManager _cache;
-        public UserInfoController(IUserAccount userAccount,ICacheManager cache):base(cache)
+        public UserInfoController(IUserAccount userAccount,ICacheManager cache)
         {
             _UserAccount = userAccount;
             _cache = cache;
@@ -26,12 +26,13 @@ namespace MMY.FrontSite.WebApi.Controllers
         /// 获取用户信息
         /// </summary>
         /// <returns></returns>
+        [ApiSessionAuthorize]
         [Route("~/api/userinfo")]
         [HttpGet]
         public UserInfoViewModel UserInfo()
         {
-            var userModel = GerUserModel();
-            var userInfo = _UserAccount.FindUserAccount(userModel.UserGuid);
+            // var userModel = GerUserModel();
+            var userInfo = _UserAccount.FindUserAccount(Guid.NewGuid());
             var result = UserInfoViewModel.CopyFrom(userInfo);
             return result;
 

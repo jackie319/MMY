@@ -3,6 +3,7 @@ using Autofac;
 using Autofac.Integration.WebApi;
 using MMY.Services.IServices;
 using MMY.Services.ServicesImpl;
+using System.Web.Http;
 
 namespace MMY.FrontSite.WebApi
 {
@@ -21,6 +22,7 @@ namespace MMY.FrontSite.WebApi
             builder.RegisterType<ShoppingCartImpl>().As<IShoppingCart>().InstancePerDependency();
             builder.RegisterType<PayImpl>().As<IPay>().InstancePerDependency();
             builder.RegisterType<SmsImpl>().As<ISms>().InstancePerDependency();
+            builder.RegisterWebApiFilterProvider(GlobalConfiguration.Configuration);
         }
     }
 }
