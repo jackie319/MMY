@@ -22,6 +22,8 @@ using JK.Framework.Core;
 using JK.Framework.API.Model;
 using MMY.FrontSite.Domain;
 using JK.Framework.Core.Caching;
+using MMY.FrontSite.WebApi.App_Start;
+using System.Linq;
 
 namespace MMY.FrontSite.WebApi.Controllers
 {
@@ -30,7 +32,7 @@ namespace MMY.FrontSite.WebApi.Controllers
         private IUserAccount _userAccount;
         private ISms _sms;
         private ICacheManager _cache;
-        public AccountController(IUserAccount userAccount, ISms sms,ICacheManager cache)
+        public AccountController(IUserAccount userAccount, ISms sms, ICacheManager cache)
         {
             _userAccount = userAccount;
             _sms = sms;
@@ -48,10 +50,10 @@ namespace MMY.FrontSite.WebApi.Controllers
         {
             try
             {
-                var account = _userAccount.Login(model.UserName,model.PasswordMd5);
+                var account = _userAccount.Login(model.UserName, model.PasswordMd5);
                 UserModel userModel = new UserModel(account, account.NickName, true) { };
                 string sessionKey = SessionManager.GetSessionKey();
-                _cache.SetSliding(sessionKey, userModel,100);
+                _cache.SetSliding(sessionKey, userModel, 100);
                 BaseApiController.AppendHeaderSessionKey(sessionKey);
             }
             catch (CommonException)
@@ -95,19 +97,22 @@ namespace MMY.FrontSite.WebApi.Controllers
             }
             catch (CommonException ex)
             {
-                return this.ResultApiError(ex.Message); 
+                return this.ResultApiError(ex.Message);
             }
-            return this.ResultApiSuccess() ;
+            return this.ResultApiSuccess();
         }
         /// <summary>
         /// 退出登录
         /// </summary>
         /// <returns></returns>
         [Route("~/api/account/logout")]
+        [ApiSessionAuthorize]
         [HttpPost]
         public ApiResultModel Logout()
         {
-
+            //已经经过滤器进来，sessionkey一定有值
+            var sessionkey = Request.Headers.GetValues("sessionkey").FirstOrDefault();
+            _cache.Remove(sessionkey);
             return this.ResultApiSuccess();
         }
     }

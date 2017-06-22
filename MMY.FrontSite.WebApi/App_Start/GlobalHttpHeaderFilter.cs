@@ -25,7 +25,13 @@ namespace MMY.FrontSite.WebApi.App_Start
             //    operation.parameters.Add(new Parameter { name = "sessionkey", @in = "header", description = "sessionkey", required = false, type = "string" });
             //}
             operation.parameters.Add(new Parameter { name = "token", @in = "header", description = "token", required = false, type = "string" });
-            operation.parameters.Add(new Parameter { name = "sessionkey", @in = "header", description = "sessionkey", required = false, type = "string" });
+
+            var isNeedLogin = apiDescription.ActionDescriptor.GetCustomAttributes<ApiSessionAuthorizeAttribute>().Any();
+            if (isNeedLogin)
+            {
+                operation.parameters.Add(new Parameter { name = "sessionkey", @in = "header", description = "sessionkey", required = false, type = "string" });
+            }
+            
         }
     }
 }

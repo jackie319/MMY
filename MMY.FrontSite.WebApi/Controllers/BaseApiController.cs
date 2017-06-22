@@ -44,17 +44,17 @@ namespace MMY.FrontSite.WebApi.Controllers
         //        }
         //        if (string.IsNullOrEmpty(sessionkey))
         //        {
-        //            throw new MMYAuthorizeException("无效的sessionkey");
+        //            throw new AuthorizeException("无效的sessionkey");
         //        }
 
         //        var flag = _cache.IsSet(sessionkey);
-        //        if (!flag) throw new MMYAuthorizeException("无效的sessionkey");
+        //        if (!flag) throw new AuthorizeException("无效的sessionkey");
         //        var userModel = _cache.Get<UserModel>(sessionkey);
         //        return userModel;
         //    }
         //    else
         //    {
-        //        throw new MMYAuthorizeException("缺少参数sessionkey");
+        //        throw new AuthorizeException("缺少参数sessionkey");
         //    }
         //}
 
