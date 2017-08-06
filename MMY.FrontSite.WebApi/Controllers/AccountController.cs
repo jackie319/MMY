@@ -55,7 +55,7 @@ namespace MMY.FrontSite.WebApi.Controllers
             {
                 var account = _userAccount.Login(model.UserName, model.PasswordMd5);
                 UserModel userModel = new UserModel(account, account.NickName, true) { };
-                string sessionKey = SessionManager.GetSessionKey();
+                string sessionKey = SessionManager.GetSessionKey(userModel.UserGuid);
                 _cache.Remove(sessionKey);
                 _cache.SetSliding(sessionKey, userModel, 100);
                 var total = _cache.Total();
