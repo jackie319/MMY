@@ -24,6 +24,7 @@ using MMY.FrontSite.Domain;
 using JK.Framework.Core.Caching;
 using MMY.FrontSite.WebApi.App_Start;
 using System.Linq;
+using log4net;
 
 namespace MMY.FrontSite.WebApi.Controllers
 {
@@ -32,11 +33,13 @@ namespace MMY.FrontSite.WebApi.Controllers
         private IUserAccount _userAccount;
         private ISms _sms;
         private ICacheManager _cache;
+        private ILog _log;
         public AccountController(IUserAccount userAccount, ISms sms, ICacheManager cache)
         {
             _userAccount = userAccount;
             _sms = sms;
             _cache = cache;
+            _log = LogManager.GetLogger(typeof(AccountController));
         }
 
         /// <summary>
@@ -53,7 +56,10 @@ namespace MMY.FrontSite.WebApi.Controllers
                 var account = _userAccount.Login(model.UserName, model.PasswordMd5);
                 UserModel userModel = new UserModel(account, account.NickName, true) { };
                 string sessionKey = SessionManager.GetSessionKey();
+                _cache.Remove(sessionKey);
                 _cache.SetSliding(sessionKey, userModel, 100);
+                var total = _cache.Total();
+                _log.Info("已登录数：" + total.ToString());
                 BaseApiController.AppendHeaderSessionKey(sessionKey);
             }
             catch (CommonException)
